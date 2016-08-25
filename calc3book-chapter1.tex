@@ -829,9 +829,9 @@ The following theorem summarizes the basic properties of the dot product.
  (e) $\Dotprod{(\textbf{u} + \textbf{v})}{\textbf{w}} = \Dotprod{\textbf{u}}{\textbf{w}} +
  \Dotprod{\textbf{v}}{\textbf{w}}$ & \qquad\qquad Distributive Law\vspace{1mm}\\
  (f) $\abs{\Dotprod{\textbf{v}}{\textbf{w}}} \le \norm{\textbf{v}}\,\norm{\textbf{w}}$ & \qquad\qquad
- Cauchy-Schwarz Inequality\footnotemark\index{Cauchy-Schwarz Inequality}
+ Cauchy--Schwarz Inequality\footnotemark\index{Cauchy--Schwarz Inequality}
  \end{tabular}}
-}\footnotetext{Also known as the Cauchy-Schwarz-Buniakovski Inequality.}
+}\footnotetext{Also known as the Cauchy--Schwarz--Buniakovski Inequality.}
 \begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
  The proofs of parts (a)-(e) are straightforward applications of the definition of the dot product, and are left
  to the reader as exercises. We will prove part (f).\\(f)
@@ -906,7 +906,7 @@ shortest distance between two points is a straight line.''
  \item Let $\textbf{v} = -3\,\textbf{i} - 2\,\textbf{j} - \textbf{k}$ and
   $\textbf{w} = 6\,\textbf{i} + 4\,\textbf{j} + 2\,\textbf{k}$. Calculate $\Dotprod{\textbf{v}}{\textbf{w}}$.
 \suspend{enumerate}
-\par\noindent For Exercises 3-8, find the angle $\theta$ between the vectors $\textbf{v}$ and $\textbf{w}$.
+\par\noindent For Exercises 3--8, find the angle $\theta$ between the vectors $\textbf{v}$ and $\textbf{w}$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$
@@ -923,9 +923,9 @@ shortest distance between two points is a straight line.''
  \end{multicols}
  \item Let $\textbf{v} = (8,4,3)$ and $\textbf{w} = (-2,1,4)$. Is $\textbf{v} \perp \textbf{w}$? Justify your answer.
  \item Let $\textbf{v} = (6,0,4)$ and $\textbf{w} = (0,2,-1)$. Is $\textbf{v} \perp \textbf{w}$? Justify your answer.
- \item For $\textbf{v}$, $\textbf{w}$ from Exercise 5, verify the Cauchy-Schwarz Inequality
+ \item For $\textbf{v}$, $\textbf{w}$ from Exercise 5, verify the Cauchy--Schwarz Inequality
   $\abs{\Dotprod{\textbf{v}}{\textbf{w}}} \le \norm{\textbf{v}}\,\norm{\textbf{w}}$.
- \item For $\textbf{v}$, $\textbf{w}$ from Exercise 6, verify the Cauchy-Schwarz Inequality
+ \item For $\textbf{v}$, $\textbf{w}$ from Exercise 6, verify the Cauchy--Schwarz Inequality
   $\abs{\Dotprod{\textbf{v}}{\textbf{w}}} \le \norm{\textbf{v}}\,\norm{\textbf{w}}$.
  \item For $\textbf{v}$, $\textbf{w}$ from Exercise 5, verify the Triangle Inequality
   $\norm{\textbf{v} + \textbf{w}} \le \norm{\textbf{v}} + \norm{\textbf{w}}$.
@@ -933,7 +933,7 @@ shortest distance between two points is a straight line.''
   $\norm{\textbf{v} + \textbf{w}} \le \norm{\textbf{v}} + \norm{\textbf{w}}$.
 \suspend{enumerate}
 \probs{B}\vspace{1mm}
-\par\noindent Note: Consider only vectors in $\Real{3}$ for Exercises 15-25.\vspace{1mm}
+\par\noindent Note: Consider only vectors in $\Real{3}$ for Exercises 15--25.\vspace{1mm}
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item Prove Theorem \ref{thm:dotprop}(a).
@@ -973,6 +973,11 @@ shortest distance between two points is a straight line.''
   \cos^2 \gamma = 1$.\\
   (Note: $\alpha$, $\beta$, $\gamma$ are often called the \emph{direction angles}\index{direction angles} of \textbf{v},
   and $\cos \alpha$, $\cos \beta$, $\cos \gamma$ are called the \emph{direction cosines}\index{direction cosines}.)
+
+  \item Assume $\norm{\textbf{v}}=\norm{\textbf{w}}$. 
+  Show that 
+  $(\textbf{v}+\textbf{w})\perp(\textbf{v}-\textbf{w})$.
+
 \end{enumerate}
 \newpage
 %Begin Section 1.4
@@ -1648,7 +1653,7 @@ Interchanging the dot and cross products can be useful in proving vector identit
 \end{exmp}\vspace{-7.5mm}
 \startexercises\label{sec1dot4}
 \probs{A}
-\par\noindent For Exercises 1-6, calculate $\Crossprod{\textbf{v}}{\textbf{w}}$.
+\par\noindent For Exercises 1--6, calculate $\Crossprod{\textbf{v}}{\textbf{w}}$.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
   \item $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$
@@ -1665,7 +1670,7 @@ Interchanging the dot and cross products can be useful in proving vector identit
  \end{multicols}
 \suspend{enumerate}
 
-\par\noindent For Exercises 7-8, calculate the area of the triangle $\triangle PQR$.
+\par\noindent For Exercises 7--8, calculate the area of the triangle $\triangle PQR$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $P = (5,1,-2)$, $Q = (4,-4,3)$, $R =(2,4,0)$
@@ -1673,13 +1678,13 @@ Interchanging the dot and cross products can be useful in proving vector identit
  \end{multicols}
 \suspend{enumerate}
 
-\par\noindent For Exercises 9-10, calculate the area of the parallelogram $PQRS$.
+\par\noindent For Exercises 9--10, calculate the area of the parallelogram $PQRS$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \item $P = (2,1,3)$, $Q = (1,4,5)$, $R = (2,5,3)$, $S = (3,2,1)$
  \item $P = (-2,-2)$, $Q = (1,4)$, $R = (6,6)$, $S = (3,0)$
 \suspend{enumerate}
 
-\par\noindent For Exercises 11-12, find the volume of the parallelepiped with adjacent sides \textbf{u},
+\par\noindent For Exercises 11--12, find the volume of the parallelepiped with adjacent sides \textbf{u},
 \textbf{v}, \textbf{w}.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
@@ -1687,7 +1692,7 @@ Interchanging the dot and cross products can be useful in proving vector identit
  \item $\textbf{u} = (1,3,2)$, $\textbf{v} = (7,2,-10)$, $\textbf{w} = (1,0,1)$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 13-14, calculate $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ and
+\par\noindent For Exercises 13--14, calculate $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ and
 $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
@@ -1736,14 +1741,14 @@ $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$.
  \item Consider the vector equation $\thickspace\Crossprod{\textbf{a}}{\textbf{x}} = \textbf{b}\thickspace$
   in $\Real{3}$, where $\textbf{a} \ne \textbf{0}$. Show that:
   \begin{enumerate}[(a)]
-   \item $\Dotprod{\textbf{a}}{\textbf{b}} = 0$
-   \item $\textbf{x} = \dfrac{\Crossprod{\textbf{b}}{\textbf{a}}}{\norm{\textbf{a}}^2} + k \textbf{a}\thickspace$
-   is a solution to the equation, for any scalar $k$
+   \item If the equation has a solution then $\Dotprod{\textbf{a}}{\textbf{b}} = 0$.
+   \item In this case $\textbf{x} = \dfrac{\Crossprod{\textbf{b}}{\textbf{a}}}{\norm{\textbf{a}}^2} + k \textbf{a}\thickspace$
+   is a solution to the equation, for any scalar $k$.
   \end{enumerate}
  \item Prove the \emph{Jacobi identity}\index{Jacobi identity}:
   $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})} +
   \Crossprod{\textbf{v}}{(\Crossprod{\textbf{w}}{\textbf{u}})} +
-  \Crossprod{\textbf{w}}{(\Crossprod{\textbf{u}}{\textbf{v}})} = \textbf{0}$
+  \Crossprod{\textbf{w}}{(\Crossprod{\textbf{u}}{\textbf{v}})} = \textbf{0}$.
  \item Show that \textbf{u}, \textbf{v}, \textbf{w} lie in the same plane in $\Real{3}$ if and only if
   $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})} = 0$.
  \item For all vectors \textbf{u}, \textbf{v}, \textbf{w}, \textbf{z} in $\Real{3}$, show that
@@ -1933,7 +1938,7 @@ $\textbf{v} \ne \textbf{0}$, then:
   d = \frac{\norm{\Crossprod{\textbf{v}}{\textbf{w}}}}{\norm{\textbf{v}}} =
    \frac{\Norm{15\,\textbf{i} - 43\,\textbf{j} - 12\,\textbf{k}}}{\Norm{(7,3,-2)}}
   = \frac{\sqrt{15^2 + (-43)^2 + (-12)^2}}{\sqrt{7^2 + 3^2 + (-2)^2}}
-  = \frac{\sqrt{2218}}{\sqrt{62}} = 5.98
+  = \frac{\sqrt{2218}}{\sqrt{62}} \approx 5.98
  \end{gather*}
 \end{exmp}\vspace{-1mm}
 \hrule width \textwidth height 0.5pt
@@ -2189,7 +2194,7 @@ by setting one of the coordinate variables to zero, which leaves you to solve tw
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot5}
 \probs{A}
-\par\noindent For Exercises 1-4, write the line $L$ through the point $P$ and parallel to the vector \textbf{v} in the
+\par\noindent For Exercises 1--4, write the line $L$ through the point $P$ and parallel to the vector \textbf{v} in the
  following forms: (a) vector, (b) parametric, and (c) symmetric.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
@@ -2201,7 +2206,7 @@ by setting one of the coordinate variables to zero, which leaves you to solve tw
   \item $P = (0,0,0)$, $\textbf{v} = (7,2,-10)$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 5-6, write the line $L$ through the points $\ssub{P}{1}$ and $\ssub{P}{2}$ in parametric
+\par\noindent For Exercises 5--6, write the line $L$ through the points $\ssub{P}{1}$ and $\ssub{P}{2}$ in parametric
 form.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
@@ -2209,18 +2214,18 @@ form.
   \item $\ssub{P}{1} = (4,1,5)$, $\ssub{P}{2} = (-2,1,3)$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 7-8, find the distance $d$ from the point $P$ to the line $L$.
+\par\noindent For Exercises 7--8, find the distance $d$ from the point $P$ to the line $L$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \item $P = (1,-1,-1)$, $~L: x = -2 - 2t, \; y = 4t, \; z = 7 + t$
  \item $P = (0,0,0)$, $~L: x = 3 + 2t, \; y = 4 + 3t, \; z = 5 + 4t$
 \suspend{enumerate}
-\par\noindent For Exercises 9-10, find the point of intersection (if any) of the given lines.
+\par\noindent For Exercises 9--10, find the point of intersection (if any) of the given lines.
 \resume{enumerate}[{[\bfseries 1.]}]
  \item $x = 7 + 3s, \; y = -4 - 3s, \; z = -7 - 5s \quad \text{and} \quad x = 1 + 6t, \; y = 2 + t, \; z = 3 - 2t$
  \item $\dfrac{x - 6}{4} = y + 3 = z \quad \text{and} \quad \dfrac{x - 11}{3} = \dfrac{y - 14}{-6} =
   \dfrac{z + 9}{2}$
 \suspend{enumerate}
-\par\noindent For Exercises 11-12, write the normal form of the plane $P$ containing the point $Q$ and
+\par\noindent For Exercises 11--12, write the normal form of the plane $P$ containing the point $Q$ and
 perpendicular to the vector \textbf{n}.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
@@ -2228,7 +2233,7 @@ perpendicular to the vector \textbf{n}.
   \item $Q = (6,-2,0)$, $\textbf{n} = (2,6,4)$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 13-14, write the normal form of the plane containing the given points.
+\par\noindent For Exercises 13--14, write the normal form of the plane containing the given points.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $(1,0,3)$, $(1,2,-1)$, $(6,1,6)$
@@ -2237,14 +2242,14 @@ perpendicular to the vector \textbf{n}.
  \item Write the normal form of the plane containing the lines from Exercise 9.
  \item Write the normal form of the plane containing the lines from Exercise 10.
 \suspend{enumerate}
-\par\noindent For Exercises 17-18, find the distance $D$ from the point $Q$ to the plane $P$.
+\par\noindent For Exercises 17--18, find the distance $D$ from the point $Q$ to the plane $P$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $Q = (4,1,2)$, $P:  3x - y - 5z + 8 = 0$
   \item $Q = (0,2,0)$, $P:  -5x + 2y - 7z + 1 = 0$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 19-20, find the line of intersection (if any) of the given planes.
+\par\noindent For Exercises 19--20, find the line of intersection (if any) of the given planes.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $x + 3y + 2z - 6 = 0$, $2x - y + z + 2 = 0$
@@ -2688,8 +2693,8 @@ The traces in planes parallel to the $xy$-plane are ellipses, though in the $xy$
 single point. The traces in planes parallel to the $xz$- or $yz$-planes are parabolas. Figure 1.6.7 shows
 the case where $c > 0$. When $c < 0$ the surface is turned downward. In the case
 where $a = b$, the surface is called a \emph{paraboloid of revolution}\index{paraboloid!of revolution},
-which is often used as a reflecting surface, e.g. in vehicle headlights.\footnote{ For a
-discussion of this see pp. 157-158 in \cite{hec}.}
+which is often used as a reflecting surface, e.g. in vehicle headlights.\footnote{For a
+discussion of this see pp. 157--158 in \cite{hec}.}
 
 A more complicated quadric surface is the \textbf{hyperbolic paraboloid}\index{hyperbolic paraboloid},
 given by:\index{paraboloid!hyperbolic}
@@ -2757,8 +2762,9 @@ cone an example of a \emph{ruled surface}\index{ruled surface}\index{surface!rul
 The cylinder is also a ruled surface.
 
 What may not be as obvious is that both the hyperboloid of one sheet and the hyperbolic paraboloid are
-ruled surfaces. In fact, on both surfaces there are \emph{two} lines through each point on the surface (see Exercises
-11-12). Such surfaces are called \emph{doubly ruled surfaces}\index{doubly ruled surface}\index{surface!doubly ruled},
+ruled surfaces. In fact, on both surfaces there are \emph{two} lines through each point on the surface 
+(see Exercises 11--12). 
+Such surfaces are called \emph{doubly ruled surfaces}\index{doubly ruled surface}\index{surface!doubly ruled},
 and the pairs of lines are called a \emph{regulus}.
 
 It is clear that for each of the six types of quadric surfaces that we discussed, the surface can be translated away
@@ -2776,7 +2782,7 @@ hyperbolic paraboloid as in equation (\ref{eqn:hyperpara}), but rotated $45\Degr
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot6}
 \probs{A}
-\par\noindent For Exercises 1-4, determine if the given equation describes a sphere. If so, find its radius and
+\par\noindent For Exercises 1--4, determine if the given equation describes a sphere. If so, find its radius and
 center.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
@@ -3100,7 +3106,7 @@ equation simpler, if the sphere is not centered at the origin.
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot7}
 \probs{A}
-\par\noindent For Exercises 1-4, find the (a) cylindrical and (b) spherical coordinates of the point whose
+\par\noindent For Exercises 1--4, find the (a) cylindrical and (b) spherical coordinates of the point whose
 Cartesian coordinates are given.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{4}
@@ -3110,7 +3116,7 @@ Cartesian coordinates are given.
   \item $(0,\sqrt{2},2)$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 5-7, write the given equation in (a) cylindrical and (b) spherical coordinates.
+\par\noindent For Exercises 5--7, write the given equation in (a) cylindrical and (b) spherical coordinates.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{3}
   \item $x^2 + y^2 + z^2 = 25$
@@ -3140,8 +3146,8 @@ Cartesian coordinates are given.
    \cos \gamma = \cos \ssub{\phi}{1} \, \cos \ssub{\phi}{2} + \sin \ssub{\phi}{1} \, \sin \ssub{\phi}{2} \,
     \cos ( \, \ssub{\theta}{2} - \ssub{\theta}{1} \, ) .
   \end{displaymath}
-  This formula is used in electrodynamics to prove the addition theorem for spherical harmonics, which provides a
-  general expression for the electrostatic potential at a point due to a unit charge. See pp. 100-102 in \cite{jac}.
+This formula is used in electrodynamics to prove the addition theorem for spherical harmonics, which provides a general expression for the electrostatic potential at a point due to a unit charge. 
+See pp. 100--102 in \cite{jac}.
  \item Show that the distance $d$ between the points $\ssub{P}{1}$ and $\ssub{P}{2}$ with cylindrical coordinates
   $( \ssub{r}{1},\ssub{\theta}{1},\ssub{z}{1} )$ and $( \ssub{r}{2},\ssub{\theta}{2},\ssub{z}{2} )$, respectively, is
   \begin{displaymath}
@@ -3500,7 +3506,7 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  In general, the polygonal path determined by $n \ge 3$ noncollinear points in $\Real{3}$ can be used to define
  the B\'{e}zier curve recursively by a process called \emph{repeated linear interpolation}. This curve will be a
  vector-valued function whose components are polynomials of degree $n-1$, and its formula is given by
- \emph{de Casteljau's algorithm}.\footnote{See pp. 27-30 in \cite{far}.} In the exercises, the reader will be given the
+ \emph{de Casteljau's algorithm}.\footnote{See pp. 27--30 in \cite{far}.} In the exercises, the reader will be given the
  algorithm for the case of $n = 4$ points and asked to write the explicit formula for the B\'{e}zier curve for the four
  points shown in Figure \ref{fig:bezier3}.\vspace{-24mm}
  \begin{figure}[h]
@@ -3513,7 +3519,7 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
 \end{exmp}\vspace{-12mm}
 \startexercises\label{sec1dot8}
 \probs{A}
-\par\noindent For Exercises 1-4, calculate $\textbf{f}\,'(t)$ and find the tangent line at $\textbf{f}(0)$.
+\par\noindent For Exercises 1--4, calculate $\textbf{f}\,'(t)$ and find the tangent line at $\textbf{f}(0)$.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
   \item $\textbf{f}(t) = (t + 1 , t^2 + 1 , t^3 + 1)$
@@ -3524,7 +3530,7 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
   \item $\textbf{f}(t) = (\sin 2t , 2\sin^2 t , 2\cos t)$
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 5-6, find the velocity $\textbf{v}(t)$ and acceleration $\textbf{a}(t)$ of an object
+\par\noindent For Exercises 5--6, find the velocity $\textbf{v}(t)$ and acceleration $\textbf{a}(t)$ of an object
 with the given position vector $\textbf{r}(t)$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
@@ -3591,7 +3597,8 @@ with the given position vector $\textbf{r}(t)$.
    $\ssub{\textbf{b}}{0} = (0,0,0)$, $\ssub{\textbf{b}}{1} = (0,1,1)$, $\ssub{\textbf{b}}{2} = (2,3,0)$,
    $\ssub{\textbf{b}}{3} = (4,5,2)$.
   \end{enumerate}
- \item Let $\textbf{r}(t)$ be the position vector for a particle moving in $\Real{3}$. Show that
+ \item Let $\textbf{r}(t)$ be the position vector for a particle moving in $\Real{3}$. 
+Show that
   \begin{displaymath}
    \dfrac{d}{dt} ( \Crossprod{\textbf{r}}{( \Crossprod{\textbf{v}\,}{\,\textbf{r}} )} ) =
     \norm{\textbf{r}}^2 \textbf{a} + (\Dotprod{\textbf{r}}{\textbf{v}}) \textbf{v} -
@@ -3871,7 +3878,7 @@ The arc length for curves given in other coordinate systems can also be calculat
 
 \startexercises\label{sec1dot9}
 \probs{A}
-\par\noindent For Exercises 1-3, calculate the arc length of $\textbf{f}(t)$ over the given interval.
+\par\noindent For Exercises 1--3, calculate the arc length of $\textbf{f}(t)$ over the given interval.
 \begin{enumerate}[\bfseries 1.]
  \item $\textbf{f}(t) = (3\cos 2t, 3\sin 2t, 3t)$ on $[0,\pi/2]$
  \item $\textbf{f}(t) = ((t^2 + 1)\cos t, (t^2 + 1)\sin t, 2\sqrt{2} t)$ on $[0,1]$
@@ -3887,7 +3894,7 @@ The arc length for curves given in other coordinate systems can also be calculat
     \dfrac{\Crossprod{\textbf{f}(t)\,}{(\Crossprod{\textbf{f}\,'(t)\,}{\,\textbf{f}(t)})}}{\norm{\textbf{f}(t)}^3} .
   \end{displaymath}
 \suspend{enumerate}
-\par\noindent Exercises 7-9 develop the moving frame field \textbf{T}, \textbf{N}, \textbf{B} at a point on a
+\par\noindent Exercises 7--9 develop the moving frame field \textbf{T}, \textbf{N}, \textbf{B} at a point on a
 curve.
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Let $\textbf{f}(t)$ be a smooth curve such that $\textbf{f}\,'(t) \ne \textbf{0}$ for all $t$. Then we can
