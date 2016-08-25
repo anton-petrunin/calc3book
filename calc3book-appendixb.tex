@@ -1,0 +1,172 @@
+\addchap[Appendix B:$\quad$Proof of the Right-Hand Rule for the Cross Product]{Appendix B}
+We will prove the right-hand rule\index{right-hand rule} for the cross product of two vectors in $\Real{3}$.\\
+
+\par\noindent For any vectors \textbf{v} and \textbf{w} in $\Real{3}$, define a new vector,
+$\textbf{n}(\textbf{v},\textbf{w})$, as follows:
+\begin{enumerate}
+ \item If \textbf{v} and \textbf{w} are nonzero and not parallel, and $\theta$ is the angle between them, then
+  $\textbf{n}(\textbf{v},\textbf{w})$ is the vector in $\Real{3}$ such that:
+  \begin{enumerate}[(a)]
+   \item the magnitude of $\textbf{n}(\textbf{v},\textbf{w})$ is $\norm{\textbf{v}}\,\norm{\textbf{w}}\,\sin \theta$,
+   \item $\textbf{n}(\textbf{v},\textbf{w})$ is perpendicular to the plane containing \textbf{v} and \textbf{w}, and
+   \item \textbf{v}, \textbf{w}, $\textbf{n}(\textbf{v},\textbf{w})$ form a right-handed system.
+  \end{enumerate}
+ \item If \textbf{v} and \textbf{w} are nonzero and parallel, then $\textbf{n}(\textbf{v},\textbf{w}) = \textbf{0}$.
+ \item If either \textbf{v} or \textbf{w} is $\textbf{0}$, then $\textbf{n}(\textbf{v},\textbf{w}) = \textbf{0}$.
+\end{enumerate}
+The goal is to show that $\textbf{n}(\textbf{v},\textbf{w}) = \Crossprod{\textbf{v}}{\textbf{w}}$ for all
+\textbf{v}, \textbf{w} in $\Real{3}$, which would prove the right-hand rule for the cross product (by part 1(c) of
+our definition). To do this, we will perform the following steps:\\
+
+\par\noindent \emph{Step 1:} Show that $\textbf{n}(\textbf{v},\textbf{w}) = \Crossprod{\textbf{v}}{\textbf{w}}$ if
+\textbf{v} and \textbf{w} are any two of the basis vectors \textbf{i}, \textbf{j}, \textbf{k}.\vspace{1mm}
+\par\noindent This was already shown in Example \ref{exmp:crossijkfull} in Section 1.4.\enskip\checkmark\\
+
+\par\noindent \emph{Step 2:} Show that $\textbf{n}(a\textbf{v},b\textbf{w}) = ab(\Crossprod{\textbf{v}}{\textbf{w}})$
+for any scalars $a$, $b$ if \textbf{v} and \textbf{w} are any two of the basis vectors \textbf{i}, \textbf{j},
+\textbf{k}.\vspace{1mm}
+\par\noindent If either $a = 0$ or $b = 0$ then $\textbf{n}(a\textbf{v},b\textbf{w}) = \textbf{0} =
+ab(\Crossprod{\textbf{v}}{\textbf{w}})$, so the result holds. So assume that $a \ne 0$ and $b \ne 0$. Let \textbf{v} and
+\textbf{w} be any two of the basis vectors \textbf{i}, \textbf{j}, \textbf{k}. For example, we will show that the result
+holds for $\textbf{v} = \textbf{i}$ and $\textbf{w} = \textbf{k}$ (the other possibilities follow in a similar
+fashion).
+
+For $a\textbf{v} = a\textbf{i}$ and $b\textbf{w} = b\textbf{k}$, the
+angle $\theta$ between $a\textbf{v}$ and $b\textbf{w}$ is $90\Degrees$. Hence the magnitude of
+$\textbf{n}(a\textbf{v},b\textbf{w})$, by definition, is
+$\norm{a\textbf{i}}\,\norm{b\textbf{k}}\,\sin 90\Degrees = \abs{ab}$. Also, by definition,
+$\textbf{n}(a\textbf{v},b\textbf{w})$ is perpendicular to the plane containing $a\textbf{i}$ and $b\textbf{k}$, namely,
+the $xz$-plane. Thus, $\textbf{n}(a\textbf{v},b\textbf{w})$ must be a scalar multiple of \textbf{j}. Since its magnitude
+is $\abs{ab}$, then $\textbf{n}(a\textbf{v},b\textbf{w})$ must be either $\abs{ab}\textbf{j}$ or $-\abs{ab}\textbf{j}$.
+
+There are four possibilities for the combinations of signs for $a$ and $b$. We will consider the case when $a > 0$
+and $b > 0$ (the other three possibilities are handled similarly).
+\newpage
+In this case, $\textbf{n}(a\textbf{v},b\textbf{w})$
+must be either $ab\textbf{j}$ or $-ab\textbf{j}$. Now, since \textbf{i}, \textbf{j}, \textbf{k} form a
+right-handed system, then \textbf{i}, \textbf{k}, \textbf{j} form a left-handed system, and so \textbf{i}, \textbf{k},
+$-\textbf{j}$ form a right-handed system. Thus, $a\textbf{i}$, $b\textbf{k}$,
+$-ab\textbf{j}$ form a right-handed
+system (since $a > 0$, $b > 0$, and $ab > 0$). So since, by definition, $a\textbf{i}$, $b\textbf{k}$, 
+$\textbf{n}(a\textbf{i},b\textbf{k})$ form a right-handed system, and since $\textbf{n}(a\textbf{i},b\textbf{k})$ has to
+be either $ab\textbf{j}$ or $-ab\textbf{j}$, this means that we must have $\textbf{n}(a\textbf{i},b\textbf{k}) =
+-ab\textbf{j}$.
+
+But we know that $\Crossprod{a\textbf{i}}{b\textbf{k}} = ab (\Crossprod{\textbf{i}}{\textbf{k}}) =
+ab (-\textbf{j}) = -ab\textbf{j}$. Therefore, $\textbf{n}(a\textbf{i},b\textbf{k}) =
+ab(\Crossprod{\textbf{i}}{\textbf{k}})$, which is what we needed to show.\\
+$\therefore ~~ \textbf{n}(a\textbf{v},b\textbf{w}) = ab(\Crossprod{\textbf{v}}{\textbf{w}}) \enskip\checkmark$\\
+
+\par\noindent \emph{Step 3:} Show that $\textbf{n}(\textbf{u},\textbf{v} + \textbf{w}) =
+\textbf{n}(\textbf{u},\textbf{v}) + \textbf{n}(\textbf{u},\textbf{w})$ for any vectors \textbf{u}, \textbf{v},
+\textbf{w}.\vspace{1mm}
+\par\noindent If $\textbf{u} = \textbf{0}$ then the result holds trivially since $\textbf{n}(\textbf{u},\textbf{v} +
+\textbf{w})$, $\textbf{n}(\textbf{u},\textbf{v})$ and $\textbf{n}(\textbf{u},\textbf{w})$ are all the zero vector. If
+$\textbf{v} = \textbf{0}$, then the result follows easily since $\textbf{n}(\textbf{u},\textbf{v} + \textbf{w}) =
+\textbf{n}(\textbf{u},\textbf{0} + \textbf{w}) = \textbf{n}(\textbf{u},\textbf{w}) = \textbf{0} +
+\textbf{n}(\textbf{u},\textbf{w}) = \textbf{n}(\textbf{u},\textbf{0}) = \textbf{n}(\textbf{u},\textbf{w}) =
+\textbf{n}(\textbf{u},\textbf{v}) + \textbf{n}(\textbf{u},\textbf{w})$. A similar argument shows that the result holds
+if $\textbf{w} = \textbf{0}$.
+
+So now assume that \textbf{u}, \textbf{v} and \textbf{w} are all nonzero vectors.
+We will describe a geometric construction of $\textbf{n}(\textbf{u},\textbf{v})$, which is shown in the
+figure below. Let $P$ be a plane perpendicular to \textbf{u}. Multiply the vector \textbf{v} by the positive
+scalar $\norm{\textbf{u}}$, then project the vector $\norm{\textbf{u}}\,\textbf{v}$ straight down onto the plane $P$.
+You can think of this projection vector (denoted by $proj_{P} \norm{\textbf{u}}\,\textbf{v}$) as the shadow of the
+vector $\norm{\textbf{u}}\,\textbf{v}$ on the plane $P$, with the light source directly overhead the terminal point of
+$\norm{\textbf{u}}\,\textbf{v}$. If $\theta$ is the angle between \textbf{u} and \textbf{v}, then we see that
+$proj_{P} \norm{\textbf{u}}\,\textbf{v}$ has magnitude
+$\norm{\textbf{u}}\,\norm{\textbf{v}} \sin \theta$, which is the magnitude of $\textbf{n}(\textbf{u},\textbf{v})$. So
+rotating $proj_{P} \norm{\textbf{u}}\,\textbf{v}$ by $90\Degrees$ in a counter-clockwise direction in the plane $P$
+gives a vector whose magnitude is the same as that of $\textbf{n}(\textbf{u},\textbf{v})$ and which is perpendicular to
+$proj_{P} \norm{\textbf{u}}\,\textbf{v}$ (and hence perpendicular to \textbf{v}). Since this vector is in $P$ then it is
+also perpendicular to \textbf{u}. And we can see that \textbf{u}, \textbf{v} and this vector form a right-handed system.
+Hence this vector must be $\textbf{n}(\textbf{u},\textbf{v})$. Note that this holds even if $\textbf{u} \parallel
+\textbf{v}$, since in that case $\theta = 0\Degrees$ and so $\sin \theta = 0$ which means that
+$\textbf{n}(\textbf{u},\textbf{v})$ has magnitude $0$, which is what we would expect.
+
+\begin{center}
+ \includegraphics{figappb.1.0}
+\end{center}
+
+Now apply this same geometric construction to get $\textbf{n}(\textbf{u},\textbf{w})$ and
+$\textbf{n}(\textbf{u},\textbf{v} + \textbf{w})$. Since $\norm{\textbf{u}}\,(\textbf{v} + \textbf{w})$ is the sum of
+the vectors $\norm{\textbf{u}}\,\textbf{v}$ and $\norm{\textbf{u}}\,\textbf{w}$, then the projection vector
+$proj_{P} \norm{\textbf{u}}\,(\textbf{v} + \textbf{w})$ is the sum of the projection vectors
+$proj_{P} \norm{\textbf{u}}\,\textbf{v}$ and $proj_{P} \norm{\textbf{u}}\,\textbf{w}$ (to see this, using the shadow
+analogy again and the parallelogram rule for vector addition, think of how projecting a parallelogram onto a plane
+gives you a parallelogram in that plane). So then rotating all three projection vectors by $90\Degrees$ in a
+counter-clockwise direction in the plane $P$ preserves that sum (see the figure below), which means that
+$\textbf{n}(\textbf{u},\textbf{v} + \textbf{w}) = \textbf{n}(\textbf{u},\textbf{v}) +
+\textbf{n}(\textbf{u},\textbf{w}).\enskip\checkmark$\vspace{6mm}
+
+\begin{center}
+ \includegraphics{figappb.2.0}
+\end{center}\vspace{6mm}
+
+\par\noindent \emph{Step 4:} Show that $\textbf{n}(\textbf{w},\textbf{v}) = -\textbf{n}(\textbf{v},\textbf{w})$ for any
+vectors \textbf{v}, \textbf{w}.\vspace{1mm}
+\par\noindent If \textbf{v} and \textbf{w} are nonzero and parallel, or if either is $\textbf{0}$, then
+$\textbf{n}(\textbf{w},\textbf{v}) = \textbf{0} = -\textbf{n}(\textbf{v},\textbf{w})$, so the result holds. So assume
+that \textbf{v} and \textbf{w} are nonzero and not parallel. Then $\textbf{n}(\textbf{w},\textbf{v})$ has magnitude
+$\norm{\textbf{w}}\,\norm{\textbf{v}}\,\sin \theta$, which is the same as the magnitude of
+$\textbf{n}(\textbf{v},\textbf{w})$, and hence is the same as the magnitude of $-\textbf{n}(\textbf{v},\textbf{w})$.
+By definition, $\textbf{n}(\textbf{v},\textbf{w})$ is perpendicular to the plane containing \textbf{w} and
+\textbf{v}, and hence so is $-\textbf{n}(\textbf{v},\textbf{w})$. Also, \textbf{v}, \textbf{w},
+$\textbf{n}(\textbf{v},\textbf{w})$ form a right-handed system, and so \textbf{w}, \textbf{v},
+$\textbf{n}(\textbf{v},\textbf{w})$ form a left-handed system, and hence \textbf{w}, \textbf{v},
+$-\textbf{n}(\textbf{v},\textbf{w})$ form a right-handed system. Thus, we have shown that
+$-\textbf{n}(\textbf{v},\textbf{w})$ is a vector with the same magnitude as $\textbf{n}(\textbf{w},\textbf{v})$ and is
+perpendicular to the plane containing \textbf{w} and \textbf{v}, and that \textbf{w}, \textbf{v},
+$-\textbf{n}(\textbf{v},\textbf{w})$ form a right-handed system. So by definition this means that
+$-\textbf{n}(\textbf{v},\textbf{w})$ must be $\textbf{n}(\textbf{w},\textbf{v}). \enskip\checkmark$\\
+
+\par\noindent \emph{Step 5:} Show that $\textbf{n}(\textbf{v},\textbf{w}) = \Crossprod{\textbf{v}}{\textbf{w}}$ for all
+vectors \textbf{v}, \textbf{w}.\vspace{1mm}
+\par\noindent Write $\textbf{v} = \vecthreeijk{v}$ and $\textbf{w} = \vecthreeijk{w}$. Then by Steps 3 and 4, we have
+\newpage
+\begin{align*}
+ \textbf{n}(\textbf{v},\textbf{w}) ~&=~ \textbf{n}(\vecthreeijk{v},\vecthreeijk{w})\\
+ &=~ \textbf{n}(\vecthreeijk{v},\ssub{w}{1}\,\textbf{i}) ~+~ \textbf{n}(\vecthreeijk{v},\ssub{w}{2}\,\textbf{j} +
+  \ssub{w}{3}\,\textbf{k})\\
+ &=~ \textbf{n}(\vecthreeijk{v},\ssub{w}{1}\,\textbf{i}) ~+~ \textbf{n}(\vecthreeijk{v},\ssub{w}{2}\,\textbf{j}) ~+~
+  \textbf{n}(\vecthreeijk{v},\ssub{w}{3}\,\textbf{k})\\
+ &=~ -\textbf{n}(\ssub{w}{1}\,\textbf{i},\vecthreeijk{v}) ~+~ -\textbf{n}(\ssub{w}{2}\,\textbf{j},\vecthreeijk{v}) ~+~
+  -\textbf{n}(\ssub{w}{3}\,\textbf{k},\vecthreeijk{v}) .
+\end{align*}
+
+We can use Steps 1 and 2 to evaluate the three terms on the right side of the last equation above:
+\begin{align*}
+ -\textbf{n}(\ssub{w}{1}\,\textbf{i},\vecthreeijk{v}) ~&=~ -\textbf{n}(\ssub{w}{1}\,\textbf{i},\ssub{v}{1}\,\textbf{i}) ~+~
+ -\textbf{n}(\ssub{w}{1}\,\textbf{i},\ssub{v}{2}\,\textbf{j}) ~+~
+ -\textbf{n}(\ssub{w}{1}\,\textbf{i},\ssub{v}{3}\,\textbf{k})\\
+ &=~ -\ssub{v}{1}\ssub{w}{1}\textbf{n}(\textbf{i},\textbf{i}) ~+~ -\ssub{v}{2}\ssub{w}{1}\textbf{n}(\textbf{i},\textbf{j})
+  ~+~ -\ssub{v}{3}\ssub{w}{1}\textbf{n}(\textbf{i},\textbf{k})\\
+ &=~ -\ssub{v}{1}\ssub{w}{1}(\Crossprod{\textbf{i}}{\textbf{i}}) ~+~
+    -\ssub{v}{2}\ssub{w}{1}(\Crossprod{\textbf{i}}{\textbf{j}}) ~+~
+    -\ssub{v}{3}\ssub{w}{1}(\Crossprod{\textbf{i}}{\textbf{k}})\\
+ &=~ -\ssub{v}{1}\ssub{w}{1}\textbf{0} ~+~ -\ssub{v}{2}\ssub{w}{1}\,\textbf{k} ~+~ -\ssub{v}{3}\ssub{w}{1}(-\textbf{j})\\
+ -\textbf{n}(\ssub{w}{1}\,\textbf{i},\vecthreeijk{v}) ~&=~ -\ssub{v}{2}\ssub{w}{1}\,\textbf{k} ~+~
+  \ssub{v}{3}\ssub{w}{1}\,\textbf{j}
+\end{align*}
+Similarly, we can calculate
+\begin{align*}
+ -\textbf{n}(\ssub{w}{2}\,\textbf{j},\vecthreeijk{v}) ~&=~ \ssub{v}{1}\ssub{w}{2}\,\textbf{k} ~-~
+  \ssub{v}{3}\ssub{w}{2}\,\textbf{i}\\
+ \intertext{and}
+ -\textbf{n}(\ssub{w}{3}\,\textbf{j},\vecthreeijk{v}) ~&=~ -\ssub{v}{1}\ssub{w}{3}\,\textbf{j} ~+~
+  \ssub{v}{2}\ssub{w}{3}\,\textbf{i} ~.
+\end{align*}
+Thus, putting it all together, we have
+\begin{align*}
+ \textbf{n}(\textbf{v},\textbf{w}) ~&=~ -\ssub{v}{2}\ssub{w}{1}\,\textbf{k} ~+~ \ssub{v}{3}\ssub{w}{1}\,\textbf{j} ~+~
+  \ssub{v}{1}\ssub{w}{2}\,\textbf{k} ~-~ \ssub{v}{3}\ssub{w}{2}\,\textbf{i} ~-~ \ssub{v}{1}\ssub{w}{3}\,\textbf{j} ~+~
+  \ssub{v}{2}\ssub{w}{3}\,\textbf{i}\\
+ &=~ (\ssub{v}{2}\ssub{w}{3} - \ssub{v}{3}\ssub{w}{2})\textbf{i} ~+~ (\ssub{v}{3}\ssub{w}{1} -
+  \ssub{v}{1}\ssub{w}{3})\textbf{j} ~+~ (\ssub{v}{1}\ssub{w}{2} - \ssub{v}{2}\ssub{w}{1})\textbf{k}\\
+ &=~ \Crossprod{\textbf{v}}{\textbf{w}} \text{~~by definition of the cross product.}
+\end{align*}
+$\therefore ~~ \textbf{n}(\textbf{v},\textbf{w}) = \Crossprod{\textbf{v}}{\textbf{w}}$ for all vectors \textbf{v},
+\textbf{w}.\enskip\checkmark\vspace{1mm}
+\par\noindent So since \textbf{v}, \textbf{w}, $\textbf{n}(\textbf{v},\textbf{w})$ form a right-handed system, then
+\textbf{v}, \textbf{w}, $\Crossprod{\textbf{v}}{\textbf{w}}$ form a right-handed system, which completes the proof.

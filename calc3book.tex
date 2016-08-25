@@ -1,0 +1,240 @@
+\documentclass[letterpaper,11pt,titlepage,openany,twoside,numbers=noenddot,bibliography=totoc,index=totoc]{scrbook}
+\usepackage[dvips]{graphicx}
+\usepackage[intoc]{nomencl}
+\usepackage{phaistos}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage[dvips]{xcolor}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{shadethm}
+\usepackage{makeidx}
+\usepackage{fouriernc,bm}
+\usepackage[scaled=0.80]{beramono}
+\usepackage[T1]{fontenc}
+\usepackage{paralist}
+\usepackage{mdwlist}
+\usepackage{multicol}
+\usepackage[font=small,labelfont=bf,labelsep=none,format=plain]{caption}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{picins}
+\usepackage{framed}
+\usepackage{nextpage}
+\usepackage{listings}
+\lstloadlanguages{Java}
+\usepackage{jurabib}
+\citeswithoutentry{arn,bow,cm,euc,hr,kam,kui,mtw,pc,rud,ste}
+\bibliographystyle{jurabib}
+\jurabibsetup{
+ authorformat={smallcaps,and,firstnotreversed},
+ titleformat={italic,commasep},
+ commabeforerest,
+ annote
+}
+\usepackage[pdfproducer={dvips + GPL Ghostscript 9.06},pdfcreator={LaTeX + dvips},
+            pdfauthor={Michael Corral},pdftitle={Vector Calculus},
+            pdfsubject={Calculus},pdfkeywords={calculus,vector},
+            pdfdisplaydoctitle=true,dvips,bookmarks,pdfborder={0 0 0},
+            bookmarksnumbered=true,colorlinks=false]{hyperref}
+\usepackage{breakurl}
+% Set sans serif font to Helvetica
+\renewcommand\sfdefault{phv}
+\newcommand{\startexercises}{
+ \begin{center}\rule{\textwidth}{0.5pt}\end{center}
+%%\centerline{\cornersize{1}\ovalbox{\textsf{\textbf{\large Exercises}}}} %embeds extra font
+ \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}
+}
+\newcommand{\probs}[1]{\par\noindent\textsf{\textbf{\large #1}}}
+\setlength{\multicolsep}{2.5mm}
+\setlength{\leftmargini}{1.4em}
+\setlength{\shadeboxrule}{.4pt}
+\theoremstyle{definition}
+\newshadetheorem{defn}{Definition}[chapter]
+\newshadetheorem{thm}{Theorem}[chapter]
+\newshadetheorem{lem}[thm]{Lemma}
+\newshadetheorem{cor}[thm]{Corollary}
+\newtheoremstyle{itexmp}%
+ {\topsep}
+ {\topsep}
+ {\normalfont}
+ {0pt}
+ {\itshape\bfseries}{.}
+ { }
+ {#1 \textit{#2}}
+\theoremstyle{itexmp}
+\newtheorem{exmp}{Example}[chapter]
+\newcommand{\statedefn}[2]{
+ \definecolor{shadethmcolor}{cmyk}{0.1,0.05,0,0}
+ \definecolor{shaderulecolor}{cmyk}{0.73,0.19,0,0}
+ \begin{defn}\label{#1}{#2}\end{defn}
+}
+\newcommand{\statethm}[2]{
+% \definecolor{shadethmcolor}{HTML}{FFFF8B}
+% \definecolor{shadethmcolor}{HTML}{DCC3FF}
+ \definecolor{shadethmcolor}{HTML}{E8DCFF}
+% \definecolor{shaderulecolor}{HTML}{FBC14D}
+ \definecolor{shaderulecolor}{HTML}{9B5900}
+ \begin{thm}\label{#1}{#2}\end{thm}
+}
+\newcommand{\statecor}[2]{
+% \definecolor{shadethmcolor}{HTML}{FFFACD}
+% \definecolor{shadethmcolor}{HTML}{FFD100}
+ \definecolor{shadethmcolor}{HTML}{FFFF8B}
+ \definecolor{shaderulecolor}{HTML}{9B5900}
+ \begin{cor}\label{#1}{#2}\end{cor}
+}
+\newcommand{\statecomment}[2][0.96\textwidth]{
+ \par\noindent\tikzstyle{mybox} = [draw=green!70!black,fill=green!5,thick,rectangle,rounded corners,inner ysep=4pt]
+ \begin{tikzpicture}
+  \node [mybox] (box){%
+   \begin{minipage}{#1}{#2}\end{minipage}
+  };
+ \end{tikzpicture}
+}
+\newcommand\myclearpage{\cleartooddpage
+ [\thispagestyle{empty}]}
+\providecommand{\abs}[1]{\lvert\mspace{1mu}#1\mspace{1mu}\rvert}
+\providecommand{\Abs}[1]{\bigl\lvert\mspace{1mu}#1\mspace{1mu}\bigr\rvert}
+\providecommand{\norm}[1]{\lVert\mspace{1mu}#1\mspace{1mu}\rVert}
+\providecommand{\Norm}[1]{\bigl\lVert\mspace{1mu}#1\mspace{1mu}\bigr\rVert}
+\providecommand{\NORM}[1]{\Biggl\lVert\mspace{1mu}#1\mspace{1mu}\Biggr\rVert}
+\providecommand{\ssub}[2]{#1_{\scriptscriptstyle #2}}
+\providecommand{\vectwo}[1]{(#1_{\scriptscriptstyle 1},#1_{\scriptscriptstyle 2})}
+\providecommand{\vectwoadd}[2]{(#1_{\scriptscriptstyle 1} + #2_{\scriptscriptstyle 1},
+#1_{\scriptscriptstyle 2} + #2_{\scriptscriptstyle 2})}
+\providecommand{\vectwosub}[2]{(#1_{\scriptscriptstyle 1} - #2_{\scriptscriptstyle 1},
+#1_{\scriptscriptstyle 2} - #2_{\scriptscriptstyle 2})}
+\providecommand{\vecthree}[1]{(#1_{\scriptscriptstyle 1},#1_{\scriptscriptstyle 2},#1_{\scriptscriptstyle 3})}
+\providecommand{\vecthreeadd}[2]{(#1_{\scriptscriptstyle 1} + #2_{\scriptscriptstyle 1},
+#1_{\scriptscriptstyle 2} + #2_{\scriptscriptstyle 2},#1_{\scriptscriptstyle 3} + #2_{\scriptscriptstyle 3})}
+\providecommand{\vecthreesub}[2]{(#1_{\scriptscriptstyle 1} - #2_{\scriptscriptstyle 1},
+#1_{\scriptscriptstyle 2} - #2_{\scriptscriptstyle 2},#1_{\scriptscriptstyle 3} - #2_{\scriptscriptstyle 3})}
+\providecommand{\ssubsum}[3]{#1_{\scriptscriptstyle #3} + #2_{\scriptscriptstyle #3}}
+\providecommand{\vecthreeijk}[1]{\ssub{#1}{1}\,\textbf{i} + \ssub{#1}{2}\,\textbf{j} + \ssub{#1}{3}\,\textbf{k}}
+\providecommand{\Real}[1]{\mathbb{R}^{#1}}
+\providecommand{\Dotprod}[2]{#1 \bm{\cdot} #2}
+\providecommand{\Crossprod}[2]{#1 \bm{\times} #2}
+\providecommand{\Degrees}[0]{\ensuremath{^\circ}}
+\providecommand{\ival}[2]{\lbrack #1,#2 \rbrack}
+\providecommand{\lineintvec}[3]{\int_{#1} \Dotprod{\textbf{#2}}{d\textbf{#3}}}
+\providecommand{\olineintvec}[3]{\oint_{#1} \Dotprod{\textbf{#2}}{d\textbf{#3}}}
+\newenvironment{proofbar}{%
+  \def\FrameCommand{\vrule width 1pt \hspace{5pt}}%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+ {\endMakeFramed}
+\allowdisplaybreaks[1]
+\numberwithin{figure}{section}
+\setlength\oddsidemargin{20pt}
+\setlength\evensidemargin{20pt}
+\setlength\topmargin{0pt}
+
+% Define \clockint and \counterint line integral symbols
+\def\Xint#1{\mathchoice
+ {\XXint\displaystyle\textstyle{#1}}%
+ {\XXint\textstyle\scriptstyle{#1}}%
+ {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+ {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+ \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+ \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\clockint{\Xint\circlearrowright}
+\def\counterint{\Xint\rotcirclearrowleft}
+\def\rotcirclearrowleft{\mathpalette{\RotLSymbol{-30}}\circlearrowleft}
+\def\RotLSymbol#1#2#3{\rotatebox[origin=c]{#1}{$#2#3$}}	
+% End definition of \clockint and \counterint line integral symbols
+
+\makeindex
+\makenomenclature
+\begin{document}
+\deffootnote[1em]{0em}{1em}{\textsuperscript{\thefootnotemark}}
+\frontmatter
+\pagestyle{empty}
+%Put the front cover here
+%\centerline{\includegraphics[height=0.3\textheight]{sincplain.eps}}\vspace{-25mm}
+\centerline{\input{sincplaincover}}\vspace{-25mm}
+\centerline{\includegraphics[height=0.6\textheight]{calc3bookcover}}
+%Put the title page here
+\title{Vector Calculus}
+\author{\textsf{\textbf{Michael Corral}}}
+\date{\large \textsf{\textsl{Schoolcraft College}}}
+%Put the author/copyright info here
+\uppertitleback{\emph{About the author}:\\
+Michael Corral is an Adjunct Faculty member of the Department of Mathematics at Schoolcraft College. 
+He received a B.A. in Mathematics from the University of California at Berkeley, and received an M.A. in Mathematics and
+an M.S. in Industrial \& Operations Engineering from the University of Michigan.\\\\
+This text was typeset in \LaTeXe\medspace with the \textsf{KOMA-Script} bundle, using the GNU Emacs text editor on a
+Fedora Linux system. The graphics were created using MetaPost, PGF, and Gnuplot.}
+\lowertitleback{Copyright \copyright ~2008 ~Michael Corral.\\
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts. A copy of the license is included in the section entitled ``GNU
+Free Documentation License''.}
+\maketitle
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\biblnfont}{\textnormal}
+\renewcommand{\bibfnfont}{\textnormal}
+\renewcommand{\bibtfont}{\textit}
+\renewcommand{\bibansep}{, }
+\renewcommand{\bibatsep}{,}
+\renewcommand{\bibbdsep}{,}
+\renewcommand{\qedsymbol}{\textsf{\textbf{\textsc{\footnotesize{QED}}}}}
+\fancyhf{}
+\fancyhead[LE]{\sffamily\bfseries\thepage}
+\fancyhead[CE]{\sffamily\bfseries\leftmark}
+\fancyhead[CO]{\sffamily\bfseries\rightmark}
+\fancyhead[RO]{\sffamily\bfseries\thepage}
+%Put the preface here
+\include{calc3book-preface}
+\pdfbookmark[0]{\contentsname}{toc}
+%Put the table of contents here
+\tableofcontents
+\mainmatter
+%Put the main chapters here
+\include{calc3book-chapter1}
+\include{calc3book-chapter2}
+\include{calc3book-chapter3}
+\include{calc3book-chapter4}
+\newpage
+%Put the bibliography here
+\bibliography{calc3book}
+\nocite{*}
+%Put appendices here
+\include{calc3book-appendixa}
+\include{calc3book-appendixb}
+\include{calc3book-appendixc}
+\newpage
+%Put the GNU FDL here
+\include{gnupdl}
+%Put the history section here
+\addchap{History}
+This section contains the revision history of the book.  For persons making modifications to 
+the book, please record the pertinent information here, following the format in the first item below.
+
+\begin{enumerate}
+
+\item VERSION: 1.0
+\begin{description}
+\item[Date:] 2008-01-04
+\item[Author(s):] Michael Corral
+\item[Title:] Vector Calculus
+\item[Modification(s):] Initial version
+\end{description}
+
+\end{enumerate}
+
+\backmatter
+\clearpage
+\phantomsection
+%Put the index here
+\printindex
+
+%Add a blank page at the end to make the number of pages divisible by 4
+\myclearpage
+\end{document}
