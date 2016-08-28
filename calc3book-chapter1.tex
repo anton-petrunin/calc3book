@@ -1738,11 +1738,13 @@ $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$.
   where $\textbf{u} = PR$, $-\textbf{w} = PQ$, and $\textbf{v} = QR$, $\textbf{w} = QP$ as before. Similarly, show that
   $\frac{1}{2}\,\norm{\Crossprod{(-\textbf{u})}{(-\textbf{v}})} =
   \frac{1}{2}\,\norm{\Crossprod{\textbf{v}}{\textbf{w}}}$, where $-\textbf{u} = RP$ and $-\textbf{v} = RQ$.
- \item Consider the vector equation $\thickspace\Crossprod{\textbf{a}}{\textbf{x}} = \textbf{b}\thickspace$
-  in $\Real{3}$, where $\textbf{a} \ne \textbf{0}$. Show that:
+\item 
+Assume that the vector equation $\thickspace\Crossprod{\textbf{a}}{\textbf{x}} = \textbf{b}\thickspace$ in $\Real{3}$, 
+with unknown $\textbf{x}$ and $\textbf{a} \ne \textbf{0}$ has a solution.
+Show that:
   \begin{enumerate}[(a)]
-   \item If the equation has a solution then $\Dotprod{\textbf{a}}{\textbf{b}} = 0$.
-   \item In this case $\textbf{x} = \dfrac{\Crossprod{\textbf{b}}{\textbf{a}}}{\norm{\textbf{a}}^2} + k \textbf{a}\thickspace$
+   \item $\Dotprod{\textbf{a}}{\textbf{b}} = 0$.
+   \item $\textbf{x} = \dfrac{\Crossprod{\textbf{b}}{\textbf{a}}}{\norm{\textbf{a}}^2} + k \textbf{a}\thickspace$
    is a solution to the equation, for any scalar $k$.
   \end{enumerate}
  \item Prove the \emph{Jacobi identity}\index{Jacobi identity}:
@@ -3597,15 +3599,19 @@ with the given position vector $\textbf{r}(t)$.
    $\ssub{\textbf{b}}{0} = (0,0,0)$, $\ssub{\textbf{b}}{1} = (0,1,1)$, $\ssub{\textbf{b}}{2} = (2,3,0)$,
    $\ssub{\textbf{b}}{3} = (4,5,2)$.
   \end{enumerate}
- \item Let $\textbf{r}(t)$ be the position vector for a particle moving in $\Real{3}$. 
+\item 
+Let $\textbf{r}(t)$ be the position vector for a particle moving in $\Real{3}$,
+$\textbf{v}(t)$ be its velocity 
+and $\textbf{a}(t)$ be its acceleration.
 Show that
   \begin{displaymath}
    \dfrac{d}{dt} ( \Crossprod{\textbf{r}}{( \Crossprod{\textbf{v}\,}{\,\textbf{r}} )} ) =
     \norm{\textbf{r}}^2 \textbf{a} + (\Dotprod{\textbf{r}}{\textbf{v}}) \textbf{v} -
-    (\norm{\textbf{v}}^2 + \Dotprod{\textbf{r}}{\textbf{a}})\textbf{r} .
-  \end{displaymath}
- \item Let $\textbf{r}(t)$ be the position vector in $\Real{3}$ for a particle that moves with constant speed $c > 0$
-  in a circle of radius $a > 0$ in the $xy$-plane. Show that $\textbf{a}(t)$ points in the opposite direction as
+    (\norm{\textbf{v}}^2 + \Dotprod{\textbf{r}}{\textbf{a}})\textbf{r}.
+  \end{displaymath} 
+\item 
+Let $\textbf{r}(t)$ be the position vector in $\Real{3}$ for a particle that moves with constant speed $c > 0$ in a circle of radius $a > 0$ in the $xy$-plane. 
+Show that its acceleration $\textbf{a}(t)$ points in the opposite direction as
   $\textbf{r}(t)$ for all $t$. (\emph{Hint: Use Example \ref{exmp:absvecderiv} to show that} $\textbf{r}(t)
   \perp \textbf{v}(t)$ \emph{and} $\textbf{a}(t) \perp \textbf{v}(t)$, \emph{and hence} $\textbf{a}(t) \parallel
   \textbf{r}(t)$.)
