@@ -2640,14 +2640,16 @@ proof.
  for any closed surface $\Sigma$ which encloses the charges, with $S$ being the solid region enclosed by $\Sigma$.
  Show that $\Dotprod{\nabla}{\textbf{E}} = 4\pi\rho$. This is one of \emph{Maxwell's Equations}.\footnote{In Gaussian
  (or CGS) units.}\vspace{1mm}
- \par\noindent\emph{Solution:} By the Divergence Theorem, we have
+ \par\noindent\emph{Solution:} By the Divergence Theorem and Gauss' Law, we have
  \begin{align*}
   \iiint\limits_{S} \Dotprod{\nabla}{\textbf{E}} ~dV ~&=~ \iint\limits_{\Sigma} \Dotprod{\textbf{E}}{d\bm{\sigma}}\\
-   &=~ 4\pi\,\iiint\limits_{S} \rho ~dV \quad\text{by Gauss' Law, so combining the integrals gives}\\
-   \iiint\limits_{S} ( \Dotprod{\nabla}{\textbf{E}} - 4\pi\rho ) ~dV ~&=~ 0 \quad\text{, so}\\
-   \Dotprod{\nabla}{\textbf{E}} - 4\pi\rho ~&=~ 0 \quad\text{since $\Sigma$ and hence $S$ was arbitrary, so}\\
-   \Dotprod{\nabla}{\textbf{E}} ~&=~ 4\pi\rho ~.
- \end{align*}
+   &=~ 4\pi\,\iiint\limits_{S} \rho ~dV.
+   \intertext{Combining the integrals gives}
+   \iiint\limits_{S} ( \Dotprod{\nabla}{\textbf{E}} - 4\pi\rho ) ~dV ~&=~ 0 ~. 
+\end{align*}
+Since $\Sigma$ and hence $S$ was arbitrary, 
+we get $\Dotprod{\nabla}{\textbf{E}} ~=~ 4\pi\rho$.
+
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \vspace{3mm}

@@ -1191,14 +1191,18 @@ traditional geometric methods.
  \end{tikzpicture}
  }
  \par\noindent\emph{Solution:} Let $\textbf{v} = \overrightarrow{PQ}$ and $\textbf{w} = \overrightarrow{PR}$, as in
- Figure 1.4.4. Then $\textbf{v} = (3,7,18) - (2,4,-7) = (1,3,25)$ and $\textbf{w} = (-5,12,8) - (2,4,-7) = (-7,8,15)$,
+ Figure 1.4.4. 
+ Then 
+ \[\textbf{v} = (3,7,18) - (2,4,-7) = (1,3,25)\] 
+ and 
+ \[\textbf{w} = (-5,12,8) - (2,4,-7) = (-7,8,15),\]
  so the area $A$ of the triangle $\triangle PQR$ is
  \begin{align*}
  A &= \frac{1}{2}\,\norm{\Crossprod{\textbf{v}}{\textbf{w}}} = \frac{1}{2}\,\norm{\Crossprod{(1,3,25)}{(-7,8,15)}}\\
  &= \frac{1}{2}\,\Norm{((3)(15) - (25)(8), (25)(-7) - (1)(15), (1)(8) - (3)(-7))}\\
  &= \frac{1}{2}\,\Norm{(-155, -190, 29)}\\
- &= \frac{1}{2}\,\sqrt{(-155)^2 + (-190)^2 + 29^2} = \frac{1}{2}\,\sqrt{60966}\\
- A &\approx 123.46
+ &= \frac{1}{2}\,\sqrt{(-155)^2 + (-190)^2 + 29^2} = \frac{1}{2}\,\sqrt{60966}.\\
+ A &\approx 123.46.
  \end{align*}
  \end{exmp}
 \hrule width \textwidth height 0.5pt
@@ -1207,19 +1211,25 @@ traditional geometric methods.
  $S = (4,2)$.\vspace{1mm}
  \piccaption[]{}\parpic[r]{\includegraphics{fig1.4.5.0}}
  \par\noindent\emph{Solution:} Let $\textbf{v} = \overrightarrow{SP}$ and $\textbf{w} = \overrightarrow{SR}$, as in
- Figure 1.4.5. Then $\textbf{v} = (1,1) - (4,2) = (-3,-1)$ and $\textbf{w} = (5,4) - (4,2) = (1,2)$. But these are
+ Figure 1.4.5. 
+ Then 
+ \[\textbf{v} = (1,1) - (4,2) = (-3,-1)\quad\text{and}\quad\textbf{w} = (5,4) - (4,2) = (1,2).\] 
+ But these are
  vectors in $\Real{2}$, and the cross product is only defined for vectors in $\Real{3}$. However, $\Real{2}$ can
  be thought of as the subset of $\Real{3}$ such that the $z$-coordinate is always $0$. So we can write
- $\textbf{v} = (-3,-1,0)$ and $\textbf{w} = (1,2,0)$. Then the area $A$ of $PQRS$ is
+ $\textbf{v} = (-3,-1,0)$ and $\textbf{w} = (1,2,0)$. 
+ Then the area $A$ of the parallelogram $PQRS$ is
  \begin{align*}
  A &= \norm{\Crossprod{\textbf{v}}{\textbf{w}}} = \Norm{\Crossprod{(-3,-1,0)}{(1,2,0)}}\\
  &= \Norm{((-1)(0) - (0)(2), (0)(1) - (-3)(0), (-3)(2) - (-1)(1))}\\
- &= \Norm{(0,0, -5)}\\
- A &= 5
+ &= \Norm{(0,0, -5)}.\\
+ A &= 5.
  \end{align*}
 \end{exmp}
+
 \hrule width \textwidth height 0.5pt
-\newpage
+\vspace{4mm}
+
 The following theorem summarizes the basic properties of the cross product.
 
 \statethm{thm:crossprop}{
@@ -1304,12 +1314,13 @@ $\textbf{v}_{1}$, $\textbf{v}_{2}$, $\textbf{v}_{3}$ in $\Real{3}$, where $0 \le
  $\Crossprod{\textbf{v}}{\textbf{w}}$. By Theorem \ref{thm:dotprod} we know that
  \begin{align*}
   \cos \theta &= \frac{\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}}{\norm{\textbf{u}} \,
-  \norm{\Crossprod{\textbf{v}}{\textbf{w}}}}. \text{~~Hence,}\\
+  \norm{\Crossprod{\textbf{v}}{\textbf{w}}}}. 
+  \intertext{Hence,}
   \text{vol}(P) &= A \, h\\
   &= \norm{\Crossprod{\textbf{v}}{\textbf{w}}} \,
   \frac{\norm{\textbf{u}} \, \Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}}{\norm{\textbf{u}} \,
   \norm{\Crossprod{\textbf{v}}{\textbf{w}}}}\\
-  &= \Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}
+  &= \Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}.
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
@@ -1374,13 +1385,14 @@ vector? The following example may help to see how this works.
 \begin{exmp}
  Find $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ for $\textbf{u} = (1, 2, 4)$,
  $\textbf{v} = (2, 2, 0)$, $\textbf{w} = (1, 3, 0)$.\vspace{1mm}
- \par\noindent\emph{Solution:} Since $\Dotprod{\textbf{u}}{\textbf{v}} = 6$ and
+ \par\noindent\emph{Solution:} 
+ Since $\Dotprod{\textbf{u}}{\textbf{v}} = 6$ and
  $\Dotprod{\textbf{u}}{\textbf{w}} = 7$, then
  \begin{align*}
   \Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})} &= (\Dotprod{\textbf{u}}{\textbf{w}})\textbf{v} -
    (\Dotprod{\textbf{u}}{\textbf{v}})\textbf{w}\\
    &= 7\,(2, 2, 0) - 6\,(1, 3, 0) = (14, 14, 0) - (6, 18, 0)\\
-   &= (8, -4, 0)
+   &= (8, -4, 0).
  \end{align*}
  Note that \textbf{v} and \textbf{w} lie in the $xy$-plane, and that
  $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ also lies in that plane. Also,
@@ -1440,7 +1452,8 @@ A \textbf{$\bm{2 \times 2}$ matrix}\index{matrix} is an array of two rows and tw
   c & d
  \end{pmatrix}
 \end{displaymath}
-where $a, b, c, d$ are scalars. The \textbf{determinant} of such a matrix, written as
+where $a, b, c, d$ are scalars. 
+The \textbf{determinant} of such a matrix, written as
 \begin{displaymath}
  \begin{vmatrix}
   a & b\\
@@ -1500,7 +1513,8 @@ and its determinant is given by the formula:
  \end{vmatrix}
  = \ssub{a}{1} \begin{vmatrix} \ssub{b}{2} & \ssub{b}{3} \\ \ssub{c}{2} & \ssub{c}{3} \end{vmatrix} \;-\;
  \ssub{a}{2} \begin{vmatrix} \ssub{b}{1} & \ssub{b}{3} \\ \ssub{c}{1} & \ssub{c}{3} \end{vmatrix} \;+\;
- \ssub{a}{3} \begin{vmatrix} \ssub{b}{1} & \ssub{b}{2} \\ \ssub{c}{1} & \ssub{c}{2} \end{vmatrix}\label{eqn:det3}
+ \ssub{a}{3} \begin{vmatrix} \ssub{b}{1} & \ssub{b}{2} \\ \ssub{c}{1} & \ssub{c}{2} \end{vmatrix}.
+ \label{eqn:det3}
 \end{equation}
 One way to remember the above formula is the following: multiply each scalar in the first row by the determinant
 of the $2 \times 2$ matrix that remains after removing the row and column that contain that scalar, then sum those
@@ -1523,7 +1537,7 @@ products up, putting alternating plus and minus signs in front of each (starting
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+\vspace{2mm}
 
 We defined the determinant as a scalar, derived from algebraic operations on scalar entries in a matrix. However,
 if we put three \emph{vectors} in the first row of a $3 \times 3$ matrix, then the definition still
@@ -1540,7 +1554,7 @@ cross product of $\;\textbf{v} = \vecthreeijk{v}$ and $\textbf{w} = \vecthreeijk
  \begin{vmatrix} \ssub{v}{1} & \ssub{v}{2} \\ \ssub{w}{1} & \ssub{w}{2} \end{vmatrix} \textbf{k}\\
  &= (\ssub{v}{2}\ssub{w}{3} -
 \ssub{v}{3}\ssub{w}{2})\textbf{i} + (\ssub{v}{3}\ssub{w}{1} - \ssub{v}{1}\ssub{w}{3})\textbf{j} +
-(\ssub{v}{1}\ssub{w}{2} - \ssub{v}{2}\ssub{w}{1})\textbf{k}
+(\ssub{v}{1}\ssub{w}{2} - \ssub{v}{2}\ssub{w}{1})\textbf{k} ~.
 \end{align*}
 
 \vspace{2mm}
@@ -1558,7 +1572,7 @@ cross product of $\;\textbf{v} = \vecthreeijk{v}$ and $\textbf{w} = \vecthreeijk
   = \left|\begin{array}{rr} -1 & 3 \\ 0 & 2 \end{array}\right| \textbf{i} \;-\;
   \left|\begin{array}{rr} 4 & 3 \\ 1 & 2 \end{array}\right| \textbf{j} \;+\;
   \left|\begin{array}{rr} 4 & -1 \\ 1 & 0 \end{array}\right| \textbf{k}
-  = -2\,\textbf{i} - 5\,\textbf{j} + \textbf{k}
+  = -2\,\textbf{i} - 5\,\textbf{j} + \textbf{k} ~.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
@@ -1577,7 +1591,7 @@ left-handed system would give the negative volume).
    \ssub{u}{1} & \ssub{u}{2} &\ssub{u}{3}\\
    \ssub{v}{1} & \ssub{v}{2} &\ssub{v}{3}\\
    \ssub{w}{1} & \ssub{w}{2} &\ssub{w}{3}
-  \end{vmatrix}
+  \end{vmatrix}~.
  \end{equation}}}
 
 \vspace{2mm}
@@ -1618,12 +1632,14 @@ left-handed system would give the negative volume).
   &= 2 \left|\begin{array}{rr} 3 & 2 \\ 1 & -2 \end{array}\right| \;-\;
   1 \left|\begin{array}{rr} -1 & 2 \\ 1 & -2 \end{array}\right| \;+\;
   3 \left|\begin{array}{rr} -1 & 3 \\ 1 & 1 \end{array}\right|\\
-  &= 2(-8) - 1(0) + 3(-4) = -28 \text{,~so}\\
+  &= 2(-8) - 1(0) + 3(-4) = -28, 
+ \intertext{so}
   \text{vol}(P) &= \abs{-28} = 28.
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+\vspace{2mm}
+
 Interchanging the dot and cross products can be useful in proving vector identities:
 
 \vspace{3mm}
@@ -1648,7 +1664,7 @@ Interchanging the dot and cross products can be useful in proving vector identit
   (\Dotprod{\textbf{u}}{\textbf{z}})(\Dotprod{\textbf{v}}{\textbf{w}}) \text{~~(by commutativity of the dot product).}\\
   &= \begin{vmatrix}
    \Dotprod{\textbf{u}}{\textbf{w}} & \Dotprod{\textbf{u}}{\textbf{z}}\\
-   \Dotprod{\textbf{v}}{\textbf{w}} & \Dotprod{\textbf{v}}{\textbf{z}}\end{vmatrix}
+   \Dotprod{\textbf{v}}{\textbf{w}} & \Dotprod{\textbf{v}}{\textbf{z}}\end{vmatrix}~.
  \end{align*}
 \end{exmp}\vspace{-7.5mm}
 \startexercises\label{sec1dot4}
@@ -1656,48 +1672,48 @@ Interchanging the dot and cross products can be useful in proving vector identit
 \par\noindent For Exercises 1--6, calculate $\Crossprod{\textbf{v}}{\textbf{w}}$.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
-  \item $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$
-  \item $\textbf{v} = (7,2,-10)$, $\textbf{w} = (2,6,4)$
+  \item $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$;
+  \item $\textbf{v} = (7,2,-10)$, $\textbf{w} = (2,6,4)$;
  \end{multicols}
  \begin{multicols}{2}
-  \item $\textbf{v} = (2,1,4)$, $\textbf{w} = (1,-2,0)$
-  \item $\textbf{v} = (1,3,2)$, $\textbf{w} = (7,2,-10)$
+  \item $\textbf{v} = (2,1,4)$, $\textbf{w} = (1,-2,0)$;
+  \item $\textbf{v} = (1,3,2)$, $\textbf{w} = (7,2,-10)$;
  \end{multicols}
  \begin{multicols}{2}
   \item $\textbf{v} = -\,\textbf{i} + 2\,\textbf{j} + \textbf{k}$,
-   $\textbf{w} = -3\,\textbf{i} + 6\,\textbf{j} + 3\,\textbf{k}$
-  \item $\textbf{v} = \textbf{i}$, $\textbf{w} = 3\,\textbf{i} + 2\,\textbf{j} + 4\textbf{k}$
+   $\textbf{w} = -3\,\textbf{i} + 6\,\textbf{j} + 3\,\textbf{k}$;
+  \item $\textbf{v} = \textbf{i}$, $\textbf{w} = 3\,\textbf{i} + 2\,\textbf{j} + 4\textbf{k}$.
  \end{multicols}
 \suspend{enumerate}
 
 \par\noindent For Exercises 7--8, calculate the area of the triangle $\triangle PQR$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $P = (5,1,-2)$, $Q = (4,-4,3)$, $R =(2,4,0)$
-  \item $P = (4,0,2)$, $Q = (2,1,5)$, $R =(-1,0,-1)$
+  \item $P = (5,1,-2)$, $Q = (4,-4,3)$, $R =(2,4,0)$;
+  \item $P = (4,0,2)$, $Q = (2,1,5)$, $R =(-1,0,-1)$.
  \end{multicols}
 \suspend{enumerate}
 
 \par\noindent For Exercises 9--10, calculate the area of the parallelogram $PQRS$.
 \resume{enumerate}[{[\bfseries 1.]}]
- \item $P = (2,1,3)$, $Q = (1,4,5)$, $R = (2,5,3)$, $S = (3,2,1)$
- \item $P = (-2,-2)$, $Q = (1,4)$, $R = (6,6)$, $S = (3,0)$
+ \item $P = (2,1,3)$, $Q = (1,4,5)$, $R = (2,5,3)$, $S = (3,2,1)$;
+ \item $P = (-2,-2)$, $Q = (1,4)$, $R = (6,6)$, $S = (3,0)$.
 \suspend{enumerate}
 
 \par\noindent For Exercises 11--12, find the volume of the parallelepiped with adjacent sides \textbf{u},
 \textbf{v}, \textbf{w}.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
- \item $\textbf{u} = (1,1,3)$, $\textbf{v} = (2,1,4)$, $\textbf{w} = (5,1,-2)$
- \item $\textbf{u} = (1,3,2)$, $\textbf{v} = (7,2,-10)$, $\textbf{w} = (1,0,1)$
+ \item $\textbf{u} = (1,1,3)$, $\textbf{v} = (2,1,4)$, $\textbf{w} = (5,1,-2)$;
+ \item $\textbf{u} = (1,3,2)$, $\textbf{v} = (7,2,-10)$, $\textbf{w} = (1,0,1)$.
  \end{multicols}
 \suspend{enumerate}
 \par\noindent For Exercises 13--14, calculate $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ and
 $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $\textbf{u} = (1,1,1)$, $\textbf{v} = (3,0,2)$, $\textbf{w} = (2,2,2)$
-  \item $\textbf{u} = (1,0,2)$, $\textbf{v} = (-1,0,3)$, $\textbf{w} = (2,0,-2)$
+  \item $\textbf{u} = (1,1,1)$, $\textbf{v} = (3,0,2)$, $\textbf{w} = (2,2,2)$;
+  \item $\textbf{u} = (1,0,2)$, $\textbf{v} = (-1,0,3)$, $\textbf{w} = (2,0,-2)$.
  \end{multicols}
  \item Calculate $\Dotprod{(\Crossprod{\textbf{u}}{\textbf{v}})}{(\Crossprod{\textbf{w}}{\textbf{z}})}$ for
  $\textbf{u} = (1,1,1)$, $\textbf{v} = (3,0,2)$, $\textbf{w} = (2,2,2)$, $\textbf{z} = (2,1,4)$.
@@ -1758,9 +1774,9 @@ Show that:
    is a solution to the equation, for any scalar $k$.
   \end{enumerate}
  \item Prove the \emph{Jacobi identity}\index{Jacobi identity}:
-  $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})} +
+  \[\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})} +
   \Crossprod{\textbf{v}}{(\Crossprod{\textbf{w}}{\textbf{u}})} +
-  \Crossprod{\textbf{w}}{(\Crossprod{\textbf{u}}{\textbf{v}})} = \textbf{0}$.
+  \Crossprod{\textbf{w}}{(\Crossprod{\textbf{u}}{\textbf{v}})} = \textbf{0}.\]
  \item Show that \textbf{u}, \textbf{v}, \textbf{w} lie in the same plane in $\Real{3}$ if and only if
   $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})} = 0$.
  \item For all vectors \textbf{u}, \textbf{v}, \textbf{w}, \textbf{z} in $\Real{3}$, show that
