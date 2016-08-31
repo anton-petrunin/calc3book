@@ -3008,15 +3008,17 @@ vector field $\textbf{r}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} +z\,\textbf{k}$)
  \item Use $\textbf{f} = u\,\nabla v$ in the Divergence Theorem to prove:
   \begin{enumerate}[(a)]
    \item \emph{Green's first identity:}\index{Green's identities}
-    $\iiint\limits_{S} (u\,\Delta\,v ~+~ \Dotprod{(\nabla u)}{(\nabla v)})\,dV =
-    \iint\limits_{\Sigma} \Dotprod{(u\,\nabla v)}{d\bm{\sigma}}$
+    \[\iiint_{S} (u\,\Delta\,v ~+~ \Dotprod{(\nabla u)}{(\nabla v)})\,dV =
+    \iint_{\Sigma} \Dotprod{(u\,\nabla v)}{d\bm{\sigma}}\]
    \item \emph{Green's second identity:}
-    $\iiint\limits_{S} (u\,\Delta\,v ~-~ v\,\Delta\,u)\,dV =
-    \iint\limits_{\Sigma} \Dotprod{(u\,\nabla v ~-~ v\,\nabla u)}{d\bm{\sigma}}$
+    \[\iiint_{S} (u\,\Delta\,v ~-~ v\,\Delta\,u)\,dV =
+    \iint_{\Sigma} \Dotprod{(u\,\nabla v ~-~ v\,\nabla u)}{d\bm{\sigma}}\]
   \end{enumerate}
  \item Suppose that $\Delta\,u = 0$ (i.e. $u$ is \emph{harmonic}) over $\Real{3}$.\index{harmonic} Define the
   \emph{normal derivative}\index{normal derivative} $\frac{\partial u}{\partial n}$ of $u$ over a closed surface
   $\Sigma$ with outward unit normal vector \textbf{n} by $\frac{\partial u}{\partial n} = \ssub{D}{\textbf{n}}u =
-  \Dotprod{\textbf{n}}{\nabla u}$. Show that $\iint\limits_{\Sigma} \frac{\partial u}{\partial n} \,d\sigma = 0$.
+  \Dotprod{\textbf{n}}{\nabla u}$. 
+  Show that 
+  \[\iint_{\Sigma} \frac{\partial u}{\partial n} \,d\sigma = 0.\]
   (\emph{Hint: Use Green's second identity.})
 \end{enumerate}

@@ -16,6 +16,7 @@
 *.gz
 *.tar
 *.kilepr
+*.mpx
 !/book.kilepr
 *.bts
 *.blg
