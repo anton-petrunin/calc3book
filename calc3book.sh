@@ -14,4 +14,5 @@ bibtex calc3book
 latex calc3book.tex
 latex calc3book.tex
 dvips -Ppdf -G0 -z calc3book.dvi -o
-ps2pdf14 -dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true -dPDFSETTINGS=/printer calc3book.ps
+ps2pdf14 -dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true calc3book.ps
+#-dUseCIEColor=true -dPDFSETTINGS=/printer

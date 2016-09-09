@@ -1575,7 +1575,8 @@ n = 100: (-0.6703832459238667,0.42501465652420045)
 \end{verbatim}
 
 Again, it is easy to confirm that both $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ vanish
-at the point\\$(-0.6703832459238667,0.42501465652420045)$, which means it is a critical point. And
+at the point\\$(-0.6703832459238667,0.42501465652420045)$, which means it is a critical point. 
+And
 \begin{gather*}
  D(-0.6703832459238667,0.42501465652420045) = 15.3853578526055 > 0\\
  \frac{\partial^2 f}{\partial x^2}(-0.6703832459238667,0.42501465652420045) = -4.0222994755432 < 0
@@ -1615,19 +1616,18 @@ applications. A maximization problem can always be turned into a minimization pr
 methods have been developed to find the global minimum of functions of any number of variables. This field
 of study is called \emph{nonlinear programming}. Many of these methods are based on the \emph{steepest
 descent} technique, which is based on an idea that we discussed in Section 2.4. Recall that the negative gradient
-$-\nabla f$ gives the direction of the fastest rate of decrease of a function $f$. The crux of the steepest descent
-idea, then, is that starting from some initial point, you move a certain amount in the direction of $-\nabla f$ at
-that point. Wherever that takes you becomes your new point, and you then just keep repeating that procedure until
+$-\nabla f$ gives the direction of the fastest rate of decrease of a function $f$. 
+The crux of the steepest descent idea, then, is that starting from some initial point, you move a certain amount in the direction of $-\nabla f$ at that point. 
+Wherever that takes you becomes your new point, and you then just keep repeating that procedure until
 eventually (hopefully) you reach the point where $f$ has its smallest value. There is a ``pure'' steepest descent
-method, and a multitude of variations on it that improve the rate of convergence, ease of calculation, etc. In fact,
-Newton's algorithm can be interpreted as a modified steepest descent method. For more discussion of this, and
+method, and a multitude of variations on it that improve the rate of convergence, ease of calculation, etc. 
+In fact, Newton's algorithm can be interpreted as a modified steepest descent method. For more discussion of this, and
 of nonlinear programming in general, see \cite{bss}.\index{steepest descent}
 \startexercises\label{sec2dot6}
 \probs{C}\vspace{1mm}
 \begin{enumerate}[\bfseries 1.]
- \item Recall Example \ref{exmp:globalmin} from the previous section, where we showed that the point $(2,1)$ was a
-  global minimum for the function $f(x,y) = (x-2)^4 + (x-2y)^2$. Notice that our computer program can be modified
-  fairly easily to use this function (just change the return values in the fx, fy, fxx, fyy and fxy
+ \item Recall Example \ref{exmp:globalmin} from the previous section, where we showed that the point $(2,1)$ was a global minimum for the function $f(x,y) = (x-2)^4 + (x-2y)^2$. 
+ Notice that our computer program can be modified fairly easily to use this function (just change the return values in the fx, fy, fxx, fyy and fxy
   function definitions to use the appropriate
   partial derivative). Either modify that program or write one of your own in a programming language of your
   choice to show that Newton's algorithm does lead to the point $(2,1)$. First use the initial point $(0,3)$, then use
@@ -1702,8 +1702,8 @@ variables? The following example illustrates a simple case of this type of probl
 \hrule width \textwidth height 0.5pt
 \vspace{3mm}
 
-Notice in the above example that the ease of the solution depended on being able to solve for one variable in terms of
-the other in the equation $2x+2y=20$. But what if that were not possible (which is often the case)?
+Notice in the above example that the ease of the solution depended on being able to solve for one variable in terms of the other in the equation $2x+2y=20$. 
+But what if that were not possible (which is often the case)?
 In this section we will use a general method, called the
 \emph{Lagrange multiplier method}\footnote{Named after the French mathematician Joseph Louis Lagrange (1736--1813).}, for
 solving \emph{constrained optimization} problems:

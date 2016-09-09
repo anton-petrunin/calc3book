@@ -83,9 +83,10 @@ then a number (the volume). This process of going through two iterations of inte
 integration}, and the last expression in equation (\ref{eqn:voliterx}) is called a \textbf{double integral}.
 
 Notice that integrating $f(x,y)$ with respect to $y$ is the inverse operation of taking the partial
-derivative of $f(x,y)$ with respect to $y$. Also, we could just as easily have taken the area of cross-sections under
-the surface which were parallel to the $xz$-plane, which would then depend only on the variable $y$, so that the volume
-$V$ would be
+derivative of $f(x,y)$ with respect to $y$. 
+
+Also, we could have taken the area of cross-sections under
+the surface which were parallel to the $xz$-plane, which would then depend only on the variable $y$, so that the volume would be
 \begin{equation}\label{eqn:volitery}
  V ~=~ \int_c^d \left[ \int_a^b f(x,y)\,dx \right] \,dy ~.
 \end{equation}
@@ -933,7 +934,7 @@ so that we get
 \begin{align*}
  \int_1^2 x^3 \sqrt{x^2 - 1}\,dx ~&=~ \int_1^2 \tfrac{1}{2}x^2 \cdot 2x \sqrt{x^2 - 1}\,dx\\
  &=~ \int_0^3 \tfrac{1}{2}(u+1)\sqrt{u}\,du\\
- &=~ \tfrac{1}{2} \int_0^3 \left( u^{3/2} + u^{1/2} \right)\,du ~~,~\text{which can be easily integrated to give}\\
+ &=~ \tfrac{1}{2} \int_0^3 \left( u^{3/2} + u^{1/2} \right)\,du ~~,~\text{which can be integrated to give}\\
  &=~ \tfrac{14\sqrt{3}}{5} ~.
 \end{align*}
 Let us take a different look at what happened when we did that substitution, which will give some motivation for how
@@ -1392,7 +1393,7 @@ $\delta(x,y) = 1$ throughout $R$ in the formulas in (\ref{eqn:moment2}).
   \bar{y} ~=~ \frac{M_x}{M} ~=~ \frac{5/7}{9/10} ~=~ \frac{50}{63} ~.
  \end{displaymath}
  Note how this center of mass is a little further towards the upper corner of the region $R$ than when the density is
- uniform (it is easy to use the formulas in (\ref{eqn:moment1}) to show that $(\bar{x},\bar{y}) =
+ uniform (use the formulas in (\ref{eqn:moment1}) to show that $(\bar{x},\bar{y}) =
  \left( \frac{3}{4},\frac{3}{5} \right)$ in that case). This makes sense since the density
  function $\delta(x,y) = x+y$ increases as $(x,y)$ approaches that upper corner, where there is quite a bit of area.
 \end{exmp}

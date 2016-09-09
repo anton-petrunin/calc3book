@@ -1563,9 +1563,8 @@ real-valued function, and hence we can use Definition \ref{defn:surfintreal} to 
 \hrule width \textwidth height 0.5pt
 \vspace{3mm}
 
-Computing surface integrals can often be tedious, especially when the formula for the
-outward unit normal vector at each point of $\Sigma$ changes. The following theorem provides an easier way
-in the case
+Computing surface integrals can often be tedious, especially when the formula for the outward unit normal vector at each point of $\Sigma$ changes. 
+The following theorem provides an easier way in the case
 when $\Sigma$ is a \textbf{closed surface}, that is, when $\Sigma$ encloses a bounded solid in $\Real{3}$. For example,
 spheres, cubes, and ellipsoids are closed surfaces, but planes and paraboloids are not.\index{closed surface}
 \newpage
@@ -1711,9 +1710,8 @@ surface $\Sigma$.
 \newpage
 %Begin Section 4.5
 \section{Stokes' Theorem}
-So far the only types of line integrals which we have discussed are those along curves in $\Real{2}$. But the
-definitions and properties which were covered in Sections 4.1 and 4.2 can easily be extended to include
-functions of three variables, so that we can now discuss line integrals along curves in $\Real{3}$.
+So far the only types of line integrals which we have discussed are those along curves in $\Real{2}$. 
+But the definitions and properties which were covered in Sections 4.1 and 4.2 can easily be extended to include functions of three variables, so that we can now discuss line integrals along curves in $\Real{3}$.
 
 \statedefn{defn:lineintscalar3}{
  For a real-valued function $f(x,y,z)$ and a curve $C$ in $\Real{3}$, parametrized by $x=x(t)$, $y=y(t)$, $z=z(t)$,
@@ -1842,7 +1840,7 @@ proofs are similar to their two-variable equivalents).
 \begin{exmp}
  Let $\textbf{f}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} + 2z\,\textbf{k}$ be a vector field in $\Real{3}$.
  Using the same curve $C$ from Example \ref{exmp:conhelix}, evaluate $\lineintvec{C}{f}{r}$.\vspace{1.5mm}
- \par\noindent \emph{Solution:} It is easy to see that $F(x,y,z)=\frac{x^2}{2}+\frac{y^2}{2}+z^2$ is a potential for
+ \par\noindent \emph{Solution:} Note that $F(x,y,z)=\frac{x^2}{2}+\frac{y^2}{2}+z^2$ is a potential for
  $\textbf{f}(x,y,z)$ (i.e. $\nabla F = \textbf{f}$). So by Theorem \ref{thm:lineintsuffpath3} we know that
  \begin{align*}
   \lineintvec{C}{f}{r} ~&=~ F(B) ~-~ F(A) ~~,~\text{where $A=(x(0),y(0),z(0))$ and $B=(x(8\pi),y(8\pi),z(8\pi))$, so}\\
@@ -2212,8 +2210,9 @@ always be the case.
  Calculate $\olineintvec{C}{f}{r}$ for $\textbf{f}(x,y,z)=(9xz+2y)\textbf{i}+(2x+y^2 )\textbf{j}+(-2y^2 +2z)\textbf{k}$,
  where $C$ is traversed counterclockwise.\vspace{1mm}
  \par\noindent\emph{Solution:} The surface is similar to the one in Example \ref{exmp:stokesparab}, except now the
- boundary curve $C$ is the ellipse $\frac{x^2}{4}+\frac{y^2}{9}=1$ laying in the plane $z=1$. In this case, using
- Stokes' Theorem is easier than computing the line integral directly. As in Example \ref{exmp:stokesparab}, at each
+ boundary curve $C$ is the ellipse $\frac{x^2}{4}+\frac{y^2}{9}=1$ laying in the plane $z=1$. 
+ In this case, using Stokes' Theorem is easier than computing the line integral directly. 
+ As in Example \ref{exmp:stokesparab}, at each
  point $(x,y,z(x,y))$ on the surface $z=z(x,y)=\frac{x^2}{4}+\frac{y^2}{9}$ the vector
  \begin{displaymath}
   \textbf{n} ~=~
