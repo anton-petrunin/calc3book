@@ -13,8 +13,8 @@ the number of \emph{dimensions} of the plane.  The Euclidean plane has two perpe
 \textbf{coordinate axes}: the $x$-axis and the $y$-axis.
 
 In vector (or multivariable) calculus, we will deal with functions of two or three variables (usually $x, y$ or
-$x, y, z$, respectively).  The graph of a function of two variables, say, $z = f(x,y)$, lies in
-\textbf{Euclidean space}\index{Euclidean space}, which in the Cartesian coordinate system consists of all ordered
+$x, y, z$, respectively).  
+The graph of a function of two variables, say, $z = f(x,y)$, lies in \textbf{Euclidean space}\index{Euclidean space}, which in the Cartesian coordinate system consists of all ordered
 triples of real numbers $(a, b, c)$.  Since Euclidean space is 3-dimensional, we denote it by
 $\Real{3}$\index{$\Real{3}$}.  The graph of $f$ consists
 of the points $(x, y, z) = (x, y, f(x, y))$.  The 3-dimensional coordinate system of Euclidean space can be
@@ -39,7 +39,7 @@ the $xy$-plane, $yz$-plane and $xz$-plane (see Figure \ref{fig:euc2}).
  \label{fig:euc2}
 \end{minipage}
 \end{figure}
-\newpage
+
 The coordinate system shown in Figure \ref{fig:euc1} is known as a
 \textbf{right-handed coordinate system}\index{coordinates!right-handed}, because
 it is possible, using the right hand, to point the index finger in the positive direction of the $x$-axis,
@@ -50,7 +50,7 @@ $z$-axis, as in Figure \ref{fig:rhs}.
  \begin{center}
   \input{righthand}
  \end{center}
- \caption[]{\quad Right-handed coordinate system}
+ \caption[]{\quad Right-handed coordinate system.}
  \label{fig:rhs}
 \end{figure}
 
@@ -72,7 +72,7 @@ So far, we have discussed the \emph{position} of an object in 2-dimensional or 3
 But what about something such as the velocity\index{velocity} of the object, or its acceleration\index{acceleration}?
 Or the gravitational force acting on the object? These phenomena all seem to involve motion and \emph{direction} in some
 way.  This is where the idea of a \emph{vector} comes in.
-\newpage
+
 You have already dealt with velocity and acceleration in single-variable calculus.  For example, for motion along a
 straight line, if $y = f(t)$ gives the displacement of an object after time $t$, then $dy/dt = f\,'(t)$ is the velocity
 of the object at time $t$.  The derivative\index{derivative}
@@ -112,10 +112,10 @@ Note that our definition could apply to systems with any number of dimensions (s
  \subfloat[][Two dimensions]{\includegraphics{fig1.1.4b.0}}
  \qquad
  \subfloat[][Three dimensions]{\includegraphics{fig1.1.4c.0}}
- \caption[]{\quad Vectors in different dimensions}
+ \caption[]{\quad Vectors in different dimensions.}
  \label{fig:vecs}
 \end{figure}
-\newpage
+
 A few things need to be noted about the zero vector\index{vector!zero}.
 Our motivation for what a vector is included the notions of
 magnitude and direction. What is the magnitude of the zero vector? We define it to be zero, i.e.
@@ -157,7 +157,7 @@ So we can see that there are an infinite number of vectors for a given magnitude
 being equal and differing only by their initial and terminal points.  Is there a single vector which we can choose to
 represent all those equal vectors?  The answer is yes, and is suggested by the vector \textbf{w} in Figure
 \ref{fig:veceq}.
-\newpage
+
 \statecomment{
  {Unless otherwise indicated, when speaking of ``the vector'' with a given magnitude and direction, we will mean the
   one whose initial point is at the origin of the coordinate system.}
@@ -186,7 +186,7 @@ vector and its terminal point.
  \subfloat[][The point (3,4,5)]{\includegraphics{fig1.1.6a.0}}
  \qquad\qquad
  \subfloat[][The vector (3,4,5)]{\includegraphics{fig1.1.6b.0}}
- \caption[]{\quad Correspondence between points and vectors}
+ \caption[]{\quad Correspondence between points and vectors.}
  \label{fig:corresp}
 \end{figure}
 \hrule width \textwidth height 0.5pt
@@ -311,7 +311,7 @@ The proof will use the following result:
  \sqrt{a^2 + b^2 + c^2}$.\\
  This proves the theorem. \qquad \qedhere \vspace{-3mm}
 \end{proof}\end{proofbar}
-\newpage
+
 \begin{exmp}
  Calculate the following:
  \begin{enumerate}[(a)]
@@ -358,6 +358,7 @@ The proof will use the following result:
  $\ssub{z}{2} > \ssub{z}{1} > 0$.\\(\emph{Hint: Think of Case 4 in the proof of
  Theorem \ref{thm:mag03}, and consider Figure 1.1.9.})\\
 \end{enumerate}
+
 \newpage
 %Begin Section 1.2
 \section{Vector Algebra}
@@ -408,7 +409,7 @@ the \emph{sum}\index{vector!addition} of two vectors.
  $\textbf{v} + \textbf{w}$ is the initial point of \textbf{v}, and its terminal point is the new terminal point of
  \textbf{w}.}
 }
-\newpage
+
 Intuitively, adding \textbf{w} to \textbf{v} means tacking on \textbf{w} to the end of \textbf{v} (see Figure
 \ref{fig:sum}).
 
@@ -419,7 +420,7 @@ Intuitively, adding \textbf{w} to \textbf{v} means tacking on \textbf{w} to the 
  \subfloat[][Translate \textbf{w} to the end of \textbf{v}]{\includegraphics{fig1.2.2b.0}}
  \qquad
  \subfloat[][The sum $\textbf{v} + \textbf{w}$]{\includegraphics{fig1.2.2c.0}}
- \caption[]{\quad Adding vectors \textbf{v} and \textbf{w}}
+ \caption[]{\quad Adding vectors \textbf{v} and \textbf{w}.}
  \label{fig:sum}
 \end{figure}
 
@@ -437,7 +438,7 @@ $\textbf{v} - \textbf{w} = \textbf{v} + (-\textbf{w})$. See Figure \ref{fig:subt
  \subfloat[][Translate $-\textbf{w}$ to the end of \textbf{v}]{\includegraphics{fig1.2.3b.0}}
  \qquad
  \subfloat[][The difference $\textbf{v} - \textbf{w}$]{\includegraphics{fig1.2.3c.0}}
- \caption[]{\quad Subtracting vectors \textbf{v} and \textbf{w}}
+ \caption[]{\quad Subtracting vectors \textbf{v} and \textbf{w}.}
  \label{fig:subtract}
 \end{figure}
 
@@ -454,7 +455,7 @@ $\textbf{w}$. And (c) shows how you can think of $\textbf{v} - \textbf{w}$ as th
  \subfloat[][Subtract vectors]{\includegraphics{fig1.2.4b.0}}
  \qquad
  \subfloat[][Combined add/subtract]{\includegraphics{fig1.2.4c.0}}
- \caption[]{\quad ``Geometric'' vector algebra}
+ \caption[]{\quad ``Geometric'' vector algebra.}
  \label{fig:pgram}
 \end{figure}
 
@@ -573,7 +574,7 @@ b\,\textbf{j} + c\,\textbf{k}$ in $\Real{3}$.\index{scalar!combination} See Figu
  \subfloat[][$\Real{3}$]{\includegraphics{fig1.2.7c.0}}
  \quad
  \subfloat[][$\textbf{v} = a\,\textbf{i} + b\,\textbf{j} + c\,\textbf{k}$]{\includegraphics{fig1.2.7d.0}}
- \caption[]{\quad Basis vectors in different dimensions}
+ \caption[]{\quad Basis vectors in different dimensions.}
  \label{fig:basis}
 \end{figure}
 
@@ -612,7 +613,7 @@ that $\textbf{v}$ is in \emph{component form}\index{vector!components}, and that
  \end{enumerate} 
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+
 We can now easily prove Theorem \ref{thm:dist3} from the previous section. The distance $d$ between two
 points $P = (\ssub{x}{1},\ssub{y}{1},\ssub{z}{1})$ and $Q = (\ssub{x}{2},\ssub{y}{2},\ssub{z}{2})$ in $\Real{3}$ is the
 same as the length of the vector $\textbf{w} - \textbf{v}$, where the vectors \textbf{v} and \textbf{w} are
@@ -626,7 +627,7 @@ $d = \norm{\textbf{w} - \textbf{v}} = \sqrt{(\ssub{x}{2} - \ssub{x}{1})^2 + (\ss
  \begin{center}
   \includegraphics{fig1.2.8.0}
  \end{center}
- \caption[]{\quad Proof of Theorem \ref{thm:mag03}: $d = \norm{\textbf{w} - \textbf{v}}$}
+ \caption[]{\quad Proof of Theorem \ref{thm:mag03}: $d = \norm{\textbf{w} - \textbf{v}}$.}
  \label{fig:dist3p}
 \end{figure}\vspace{-4mm}
 \startexercises\label{sec1dot2}
@@ -665,10 +666,9 @@ $d = \norm{\textbf{w} - \textbf{v}} = \sqrt{(\ssub{x}{2} - \ssub{x}{1})^2 + (\ss
  \textbf{j}, i.e. for any vector \textbf{v} in $\Real{3}$, are there scalars $m$, $n$ such that $\textbf{v} =
  m\,\textbf{i} + n\,\textbf{j}$? Justify your answer.
 \end{enumerate}
+
+
 \newpage
-
-
-
 %Begin Section 1.3
 \section{Dot Product}
 You may have noticed that while we did define multiplication of a vector by a scalar in the previous section on
@@ -718,7 +718,7 @@ We will always choose the smallest nonnegative angle $\theta$ between them, so t
  \subfloat[][$\theta = 180\Degrees$]{\includegraphics{fig1.3.1b.0}}
  \qquad
  \subfloat[][$\theta = 0\Degrees$]{\includegraphics{fig1.3.1c.0}}
- \caption[]{\quad Angle between vectors}
+ \caption[]{\quad Angle between vectors.}
  \label{fig:angle}
 \end{figure}
 
@@ -785,7 +785,7 @@ Since $\cos 90\Degrees = 0$, we have the following important corollary to Theore
  0$.}
 }
 We will write $\textbf{v} \perp \textbf{w}$ to indicate that $\textbf{v}$ and $\textbf{w}$ are perpendicular.
-\newpage
+
 Since $\cos \theta > 0$ for $0\Degrees \le \theta < 90\Degrees$ and $\cos \theta < 0$ for\index{vector!perpendicular}
 $90\Degrees < \theta \le 180\Degrees$, we also have:
 
@@ -812,7 +812,7 @@ respectively. See Figure \ref{fig:dotsign}.
  \subfloat[][$\Dotprod{\textbf{v}}{\textbf{w}} < 0$]{\includegraphics{fig1.3.3b.0}}
  \qquad\qquad
  \subfloat[][$\Dotprod{\textbf{v}}{\textbf{w}} = 0$]{\includegraphics{fig1.3.3c.0}}
- \caption[]{\quad Sign of the dot product \& angle between vectors}
+ \caption[]{\quad Sign of the dot product \& angle between vectors.}
  \label{fig:dotsign}
 \end{figure}
 
@@ -990,6 +990,8 @@ shortest distance between two points is a straight line.''
   $(\textbf{v}+\textbf{w})\perp(\textbf{v}-\textbf{w})$.
 
 \end{enumerate}
+
+
 \newpage
 %Begin Section 1.4
 \section{Cross Product}
@@ -1070,7 +1072,7 @@ while rotating \textbf{v} towards \textbf{w} with the remaining four fingers.
  \begin{center}
   \includegraphics{fig1.4.2.0}\vspace{-5mm}
  \end{center}
- \caption[]{\quad Direction of $\Crossprod{\textbf{v}}{\textbf{w}}$}
+ \caption[]{\quad Direction of $\Crossprod{\textbf{v}}{\textbf{w}}$.}
  \label{fig:crossnormal}
 \end{figure}
 
@@ -1113,7 +1115,7 @@ We will now derive a formula for the magnitude of $\Crossprod{\textbf{v}}{\textb
 \statecomment{
  {If $\theta$ is the angle between nonzero vectors \textbf{v} and \textbf{w} in $\Real{3}$, then
  \begin{equation}
-  \norm{\Crossprod{\textbf{v}}{\textbf{w}}} = \norm{\textbf{v}}\,\norm{\textbf{w}}\,\sin \theta \label{eqn:crossmag}
+  \norm{\Crossprod{\textbf{v}}{\textbf{w}}} = \norm{\textbf{v}}\,\norm{\textbf{w}}\,\sin \theta. \label{eqn:crossmag}
  \end{equation}}}\vspace{2mm}
 
 It may seem strange to bother with the above formula, when the magnitude of the cross product can be calculated
@@ -1808,6 +1810,8 @@ Show that:
   \end{align*}
   Why do both equations make sense geometrically?
 \end{enumerate}
+
+
 \newpage
 %Begin Section 1.5
 \section{Lines and Planes}
@@ -1910,7 +1914,8 @@ On the other hand, the parametric representation \emph{always} gives just the po
  \par\noindent (d) Letting $t=1$ and $t=2$ in part(b) yields the points $(6,2,11)$ and $(10,1,17)$ on $L$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+\vskip3mm
+\pagebreak[3]
 \par\noindent\textbf{\large{Line through two points}}\normalsize\vspace{1.5mm}
 
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.5.3.0}}
@@ -2040,9 +2045,8 @@ system of 3 equations in 2 unknowns ($s$ and $t$).
  Letting $s = 0$ in the equations for the first line, or letting $t = 2$ in the equations for the second line,
  gives the point of intersection $(-1,2,1)$.
 \end{exmp}
-\hrule width \textwidth height 0.5pt
-\newpage
-We will now consider planes\index{plane} in 3-dimensional Euclidean space\index{plane!in space}.\vspace{1.5mm}
+%\hrule width \textwidth height 0.5pt
+%\vskip3mm ???
 
 \par\noindent\textbf{\large{Plane through a point, perpendicular to a vector}}\normalsize\vspace{1.5mm}
 
@@ -2059,7 +2063,7 @@ And if $\textbf{r} = \textbf{0}$ then we still have $\Dotprod{\textbf{n}}{\textb
  \begin{center}
   \includegraphics{fig1.5.6.0}
  \end{center}\vspace{-5mm}
- \caption[]{\quad The plane $P$}
+ \caption[]{\quad The plane $P$.}
  \label{fig:planenorm}
 \end{figure}
 
@@ -2099,7 +2103,7 @@ equation of the plane in \textbf{normal form}\index{plane!normal form}:
  ax + by + cz + d = 0.
 \end{equation}
 For example, the normal form of the plane in Example \ref{exmp:pointnormal} is $2x + 4y + 8z - 22 = 0$.
-\newpage
+\pagebreak[3]
 \par\noindent\textbf{\large{Plane containing three noncollinear points}}\normalsize\vspace{1.5mm}
 
 In 2-dimensional and 3-dimensional space, two points determine a line. Two points do not determine a plane in
@@ -2117,7 +2121,7 @@ $\textbf{n} = \Crossprod{\overrightarrow{QR}}{\overrightarrow{QS}}$ (see Figure 
  \begin{center}
   \includegraphics{fig1.5.7.0}
  \end{center}\vspace{-5mm}
- \caption[]{\quad Noncollinear points $Q$, $R$, $S$}
+ \caption[]{\quad Noncollinear points $Q$, $R$, $S$.}
  \label{fig:plane3pts}
 \end{figure}
 
@@ -2148,7 +2152,7 @@ In both cases, to
 find the equation of the plane that contains those two lines, simply pick from the two lines a total of three
 noncollinear points (i.e. one point from one line and two points from the other), then use the technique above, as in
 Example \ref{exmp:plane3pts}, to write the equation. We will leave examples of this as exercises for the reader.
-\newpage
+\pagebreak[3]
 \par\noindent\textbf{\large{Distance between a point and a plane}}\normalsize\vspace{1.5mm}
 
 The distance between a point in $\Real{3}$ and a plane is the length of the line segment from that point to the plane
@@ -2206,7 +2210,7 @@ The following theorem gives a formula for that distance.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
-\newpage
+\pagebreak[3]
 \par\noindent\textbf{\large{Line of intersection of two planes}}\normalsize\vspace{1.5mm}
 
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.5.9.0}}
@@ -2263,7 +2267,7 @@ by setting one of the coordinate variables to zero, which leaves you to solve tw
  \end{displaymath} 
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot5}
 \probs{A}
@@ -2360,7 +2364,7 @@ cylinder.
  \end{equation}
  Using vector notation, this can be written in the equivalent form:
  \begin{equation}\label{eqn:spherev}
-  S = \lbrace \, \textbf{x}: \, \norm{\textbf{x} - \ssub{\textbf{x}}{0}} = r \, \rbrace
+  S = \lbrace \, \textbf{x}: \, \norm{\textbf{x} - \ssub{\textbf{x}}{0}} = r \, \rbrace,
  \end{equation}
  where $\textbf{x} = (x,y,z)$ and $\ssub{\textbf{x}}{0} = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$ are vectors.}
  }
@@ -2415,7 +2419,7 @@ Figure \ref{fig:spheres} illustrates the vectorial approach to spheres.\index{sp
   \fill (2,2) circle (2pt);
   \fill (2.4,3.5) circle (2pt);
  \end{tikzpicture}}
- \caption[]{\quad Spheres in $\Real{3}$}
+ \caption[]{\quad Spheres in $\Real{3}$.}
  \label{fig:spheres}
 \end{figure}
 
@@ -2455,6 +2459,7 @@ the $xz$-plane and the $yz$-plane. In general, a plane intersects a sphere eithe
  \end{align*}
  which is a circle of radius $5$ centered at $(0,0,12)$, parallel to the $xy$-plane (see Figure 1.6.2).
 \end{exmp}
+\vspace{2mm}
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
 \vspace{2mm}
 
@@ -2502,7 +2507,7 @@ where $\textbf{x}=(x,y,z)$ and $\textbf{v}=(a,b,c)$.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
-\newpage
+\pagebreak[3]
 If two spheres intersect, they do so either at a single point or in a circle.
 
 \vspace{2mm}
@@ -2517,7 +2522,8 @@ If two spheres intersect, they do so either at a single point or in a circle.
   \Rightarrow \quad z = 13/4\\
   &\Rightarrow \quad  x^2 + y^2 = 25 -  (13/4)^2 = 231/16.
  \end{align*}
- $\therefore$ The intersection is the circle $x^2 + y^2 = \frac{231}{16}$ of radius $\frac{\sqrt{231}}{4} \approx 3.8$
+ $\therefore$ 
+ The intersection is the circle $x^2 + y^2 = \frac{231}{16}$ in the plane $z=13/4$. It has radius $\frac{\sqrt{231}}{4} \approx 3.8$ and
  centered at $(0,0,\frac{13}{4})$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
@@ -2601,7 +2607,7 @@ planes (see Figure \ref{fig:cyls}).
   \draw [dashed,line width=0.2pt] (0,0) -- (-0.7071,0.7071);
   \node [below] at (-0.35,0.35) {\small $r$};
  \end{tikzpicture}}
- \caption[]{\quad Cylinders in $\Real{3}$}
+ \caption[]{\quad Cylinders in $\Real{3}$.}
  \label{fig:cyls}
 \end{figure}
 
@@ -2696,7 +2702,7 @@ and the \textbf{hyperboloid of two sheets}\index{hyperboloid!two sheets}, whose 
   \pgfputat{\pgfpointxyz{0.05}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
  \end{tikzpicture}\vspace{-6mm}
  \end{center}
- \caption[]{\quad Hyperboloid of one sheet}
+ \caption[]{\quad Hyperboloid of one sheet.}
  \label{fig:hyper1}
 \end{minipage}
 \begin{minipage}[t]{7.5cm}
@@ -2731,11 +2737,11 @@ and the \textbf{hyperboloid of two sheets}\index{hyperboloid!two sheets}, whose 
   \pgfputat{\pgfpointxyz{0.05}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
   \end{tikzpicture}\vspace{-6mm}
  \end{center}
- \caption[]{\quad Hyperboloid of two sheets}
+ \caption[]{\quad Hyperboloid of two sheets.}
  \label{fig:hyper2}
 \end{minipage}
 \end{figure}
-\newpage
+
 For the hyperboloid of one sheet, the trace in any plane parallel to the $xy$-plane is an ellipse. The traces in the
 planes parallel to the $xz$- or $yz$-planes are hyperbolas (see Figure \ref{fig:hyper1}), except for the
 special cases $x = \pm a$ and $y = \pm b$; in those planes the traces are pairs of intersecting lines (see Exercise 8).
@@ -2790,10 +2796,10 @@ given by:\index{paraboloid!hyperbolic}
  \begin{center}
   \input{fig168}
  \end{center}\vspace{-12mm}
- \caption[]{\quad Hyperbolic paraboloid}
+ \caption[]{\quad Hyperbolic paraboloid.}
  \label{fig:hyperpara}
 \end{figure}
-\newpage
+
 The hyperbolic paraboloid can be tricky to draw; using graphing software on a computer can make it
 easier.
 For example, Figure \ref{fig:hyperpara} was created using the free Gnuplot package (see Appendix C). It shows the graph
@@ -2959,21 +2965,15 @@ The two types of curvilinear coordinates which we will consider are cylindrical\
 spherical\index{coordinates!spherical} coordinates.
 Instead of referencing a point in terms of sides of a rectangular parallelepiped, as with Cartesian coordinates, we will
 think of the point as lying on a cylinder or sphere.
-Cylindrical coordinates are often used when there is symmetry around the $z$-axis; spherical
-coordinates are useful when there is symmetry about the origin.U
+Cylindrical coordinates are often used when there is symmetry around the $z$-axis; 
+spherical coordinates are useful when there is symmetry about the origin.
 
 If a problem is given in curvilinear coordinates, 
-the typical solution consist of (1) converting the data in Cartesian coordinates, (2) solving it in the Cartesian coordinates and (3) converting the results back to the original curvilinear coordinates.
+the typical solution consist of (1) converting the data in Cartesian coordinates, (2) solving it in the Cartesian coordinates and (3) converting the results back to the original curvilinear coordinates if necessarily.
 Unless you know what you are doing, we suggest to follow this procedure.
 
 Let $P = (x,y,z)$ be
-a point in Cartesian coordinates in $\Real{3}$, and let $\ssub{P}{0} = (x,y,0)$ be the projection of $P$ upon the
-$xy$-plane. 
-Treating $(x,y)$ as a point in $\Real{2}$, let $(r,\theta)$ be its polar coordinates (see
-Figure 1.7.2). 
-Let\index{coordinates!polar}
-$\rho$ be the length of the line segment from the origin to $P$, and let $\phi$ be the angle between that line segment
-and the positive $z$-axis (see Figure 1.7.3). $\phi$ is called the \emph{zenith angle}\index{zenith angle}. 
+a point in Cartesian coordinates in $\Real{3}$.
 Then the
 \textbf{cylindrical coordinates} $(r,\theta,z)$  and the \textbf{spherical coordinates} $ (\rho,\theta,\phi)$ of
 $P(x,y,z)$ are defined as follows:\footnote{This ``standard'' definition of
@@ -3006,7 +3006,18 @@ of $\theta$ and $\phi$ to make $(\rho,\theta,\phi)$ a right-handed system.}\vspa
 \picskip{1}\par Both $\theta$ and $\phi$ are measured in radians.
 Note that $r \ge 0$, $0 \le \theta < 2\pi$, $\rho \ge 0$ and $0 \le \phi \le \pi$.
 Also, $\theta$ is undefined when $(x,y) = (0,0)$, and $\phi$ is undefined when $(x,y,z) = (0,0,0)$.
-\newpage
+
+Assume $\ssub{P}{0} = (x,y,0)$ is the projection of $P$ upon the
+$xy$-plane and $(r,\theta,z)$ are cylindrical coordinates of $P=(x,y,z)$.
+Then $(r,\theta)$ are the polar coordinates of $\ssub{P}{0}$ (see
+Figure 1.7.2).
+
+In the spherical coordinates\index{coordinates!polar}
+$\rho$ is length of the line segment from the origin to $P$, 
+and $\phi$ be the angle between that line segment
+and the positive $z$-axis (see Figure 1.7.3).
+The angle $\phi$ is called the \emph{zenith angle}\index{zenith angle}. 
+
 \begin{exmp}
  Convert the point $(-2,-2,1)$ from Cartesian coordinates to (a) cylindrical and (b) spherical
  coordinates.\vspace{1.5mm}
@@ -3087,7 +3098,7 @@ parallel to the $xy$-plane.
   \fill (0,1.2) circle (1pt);
   \node [left] at (0,1.2) {\small $\ssub{z}{0}$};
  \end{tikzpicture}}
- \caption[]{\quad Cylindrical coordinate surfaces}
+ \caption[]{\quad Cylindrical coordinate surfaces.}
  \label{fig:cylcoordsurf}
 \end{figure}
 
@@ -3157,7 +3168,7 @@ circular cone whose vertex is at the origin.
   \draw [dashed,line width=0.2pt,-latex] (0,1.4) arc (100:65:1 and 1.2);
   \node [above] at (0.3,0.9) {\small $\ssub{\phi}{0}$};
  \end{tikzpicture}}
- \caption[]{\quad Spherical coordinate surfaces}
+ \caption[]{\quad Spherical coordinate surfaces.}
  \label{fig:sphcoordsurf}
 \end{figure}
 
@@ -3202,17 +3213,19 @@ equation simpler, if the sphere is not centered at the origin.
  So this sweeps out a (ruled!)
  surface shaped like a spiral staircase, where the spiral has an infinite radius. 
  Figure \ref{fig:helicoid} shows a
- section of this surface restricted to $0 \le z \le 4\pi$ and $0 \le r \le 2$.\vspace{-20mm}
+ section of this surface restricted to $0 \le z \le 4\pi$ and $0 \le r \le 2$.
+ \vspace{-25mm}
  \begin{figure}[h]
   \begin{center}
    \input{fig176}
-  \end{center}\vspace{-12mm}
- \caption[]{\quad Helicoid $\theta = z$}
+  \end{center}\vspace{-18mm}
+ \caption[]{\quad Helicoid $\theta = z$.}
  \label{fig:helicoid}
  \end{figure}
-\end{exmp}\vspace{-4mm}
-\hrule width \textwidth height 0.5pt
+\end{exmp}
 \newpage
+\vspace{-4mm}
+\hrule width \textwidth height 0.5pt
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot7}
 \probs{A}
@@ -3273,6 +3286,8 @@ See pp. 100--102 in \cite{jac}.
     \cos \ssub{\phi}{1} \, \cos \ssub{\phi}{2} ]} \, .
   \end{displaymath}
 \end{enumerate}
+
+
 \newpage
 %Begin Section 1.8
 \section{Vector-Valued Functions}
@@ -3404,7 +3419,7 @@ Figure \ref{fig:vectangent}).\vspace{-4mm}
   \node [below,rotate=-40] at (3.05,1.52) {$\textbf{f}(a + h) - \textbf{f}(a)$};
   \end{tikzpicture}\vspace{-5mm}
  \end{center}
- \caption[]{\quad Tangent vector $\textbf{f}\,'(a)$ and tangent line $L = \textbf{f}(a) + s \textbf{f}\,'(a)$}
+ \caption[]{\quad Tangent vector $\textbf{f}\,'(a)$ and tangent line $L = \textbf{f}(a) + s \textbf{f}\,'(a)$.}
  \label{fig:vectangent}
 \end{figure}
 \hrule width \textwidth height 0.5pt
@@ -3502,7 +3517,7 @@ $\textbf{f}\,'(t)$ is always perpendicular to the \emph{position vector} $\textb
   \begin{center}
    \input{fig183}
   \end{center}\vspace{-13.5mm}
- \caption[]{\quad Spherical spiral with $a = 0.2$}
+ \caption[]{\quad Spherical spiral with $a = 0.2$.}
  \label{fig:sphspiral}
  \end{figure}
 \end{exmp}\vspace{-4mm}
@@ -3603,7 +3618,7 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
   \begin{center}
    \input{fig184}
   \end{center}\vspace{-16mm}
- \caption[]{\quad B\'{e}zier curve approximation for three points}
+ \caption[]{\quad B\'{e}zier curve approximation for three points.}
  \label{fig:bezier2}
  \end{figure}
 
@@ -3617,7 +3632,7 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
   \begin{center}
    \input{fig185}
   \end{center}\vspace{-16mm}
- \caption[]{\quad B\'{e}zier curve approximation for four points}
+ \caption[]{\quad B\'{e}zier curve approximation for four points.}
  \label{fig:bezier3}
  \end{figure}
 \end{exmp}\vspace{-12mm}
@@ -3848,7 +3863,7 @@ functions (the proof is left as an exercise):\index{Chain Rule}
  $\alpha(s) = 2\pi s$ shows that $\textbf{h}(s)$ is equivalent to $\textbf{f}(t)$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+
 A curve can have many parametrizations, with different speeds, so which one is the best to use? In some situations
 the \textbf{arc length parametrization} can be useful. The idea behind this is to replace the parameter $t$, for any
 given smooth parametrization $\textbf{f}(t)$ defined on $[a,b]$, by the parameter $s$ given by
@@ -3935,16 +3950,27 @@ into the formula for $\textbf{f}(t)$ to get $\textbf{g}(s)$.
 \hrule width \textwidth height 0.5pt
 \vspace{2mm} 
 
-The arc length parametrization plays an important role in the field of mathematics known as \emph{differential
-geometry}.\footnote{See \cite{one} for an introduction to elementary differential geometry.}
-If the smooth curve $\textbf{g}$ parametrized by arc length, 
-then the value
-\[\kappa=\norm{\textbf{g}\,''(s)}\] 
-are called \index{curvature}\emph{curvature} of curve $\textbf{g}$ at the point $\textbf{g}(s)$.
-The curvature $\kappa$ describes geometric shape of the set traced by $\textbf{g}$;
-for example if $\textbf{g}$ parametrize a circle of radius $R$ then $\kappa=\frac1R$ and the straight lines have curvature zero.
+In the field of mathematics known as \emph{differential
+geometry}%
+\footnote{See \cite{one} for an introduction to elementary differential geometry.} 
+ special attention is given to the parametrization-independent constructions.
+For example, depending on the parametrization, the velocity vector of the curve at given point can be multiplied by a scalar, so it is not parametrization-independent;
+on the other hand the tangent line at given point is parametrization-independent --- although it is defined using parametrization the resulting line is the same.
+The arc length parametrization is particularly useful to make such constructions.
 
-Assume you want to calculate curvature of the given curve using the definition above.
+For example, 
+assume a smooth curve $\textbf{g}$ with the arc length parametrization.
+Note that if $\textbf{g}$ para\-met\-rize a straight line 
+then $\textbf{g}'(s)$ is a constant unit vector and therefore $\textbf{g}''(s)=\textbf{0}$ at all points.
+Therefore the value $\kappa(s)=\norm{\textbf{g}''(s)}$ measures how fast the curve deviates from the straight line at.
+The value $\kappa(s)$ and the vector $\textbf{g}''(s)$ are called \emph{curvature} and \emph{curvature vector} of the curve $\textbf{g}$ at the point $\textbf{g}(s)$.
+
+If $\kappa(s)\ne 0$ then the value $R(s)=\tfrac1{\kappa(s)}$
+is called \emph{curvature radius} of $\textbf{g}$ at the point $\textbf{g}(s)$. 
+It is called this way since the best approximation of the curve $\textbf{g}$ at the point $\textbf{g}(s)$ by a circle, so called \emph{osculating circle}, has radius $R(s)$.
+If $\kappa(s)=0$ then osculating circle degenerates to the tangent line.
+
+Assume you want to find the curvature of the given curve using the definition above.
 Then you first have to find the arc length parametrization and then apply the formula above at the given point.
 Finding this parametrization often leads to an integral that is either difficult or impossible
 to evaluate explicitly. 
@@ -3956,7 +3982,8 @@ are polynomial functions in $\Real{3}$.
 This makes their computation relatively simple, which, in Computer-aided design, is desirable.
 But their arc length parametrizations are not only \emph{not} polynomials, they are in fact usually impossible to
 calculate at all.}
-The following theorem provides a simple way to calculate the curvature directly, without passing to the reparametrization
+
+The following theorem provides a direct way to calculate the curvature, without passing to the reparametrization.
 
 \statethm{thm:curvature-expressions}{
 The curvature $\kappa$ of a smooth curve $\textbf{f}$ at the point $\textbf{f}(t)$ can be found using the following formula:
@@ -3966,8 +3993,9 @@ The curvature $\kappa$ of a smooth curve $\textbf{f}$ at the point $\textbf{f}(t
 \end{align}
 }
 
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
-Let $\textbf{g}(s)$ be the arc length parametrization of $\textbf{f}(t)$.
+\begin{proofbar}\vspace{-3mm}
+\begin{proof}[Proof:]
+Let $\textbf{g}(s)$ be the arc length parametrization of $\textbf{f}(t)$; in particular $\norm{\textbf{g}'(s)}=1$ for any $s$.
 As above, we assume $t=\alpha(s)$ and therefore  $\textbf{g}(s)=\textbf{f}(\alpha(s))$ and $\alpha'(s)=\frac{1}{\norm{\textbf{f}'(t)}}$.
 
 Applying Chain and Product Rules, we get
@@ -3980,7 +4008,7 @@ Applying Chain and Product Rules, we get
 \\
 &=\frac{\textbf{f}\,''(t)}{\norm{\textbf{f}\,'(t)}^2}+\textbf{f}\,'(t)\alpha''(s),
 \end{align*}
-Since $\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,'(t)}=0$,
+Since $\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,'(t)}=\textbf{0}$,
 we get
 \begin{align*}
 \frac{\Crossprod{\textbf{f}\,''(t)}{\textbf{f}\,'(t)}}{\norm{\textbf{f}\,'(t)}^3}
@@ -3988,20 +4016,18 @@ we get
 \Crossprod{\left(\frac{\textbf{f}\,''(t)}{\norm{\textbf{f}\,'(t)}^2}+\textbf{f}\,'(t)\alpha''(s)\right)}{\frac{\textbf{f}\,'(t)}{\norm{\textbf{f}\,'(t)}}}
 \\
 &=
-\Crossprod{\textbf{g}\,''(s)}{\textbf{g}\,'(s)}
+\Crossprod{\textbf{g}\,''(s)}{\textbf{g}\,'(s)}.
 \end{align*}
 
 Since $\norm{\textbf{g}\,'(s)}=1$, we have
 \[0=(\Dotprod{\textbf{g}\,'(s)}{\textbf{g}\,'(s)})'=2\,\Dotprod{\textbf{g}\,''(s)}{\textbf{g}\,'(s)}.\]
-That is $\textbf{g}\,''(s)\perp\textbf{g}\,'(s)$ for any $s$ and therefore
+That is, $\textbf{g}\,''(s)\perp\textbf{g}\,'(s)$ for any $s$.  Since $\norm{\textbf{g}\,'(s)}=1$, we can continue
 \begin{align*}
 \frac{\norm{\Crossprod{\textbf{f}\,''(t)}{\textbf{f}\,'(t)}}}{\norm{\textbf{f}\,'(t)}^3}
 &=
 \norm{\Crossprod{\textbf{g}\,''(s)}{\textbf{g}\,'(s)}}
 \\
 &=\norm{\textbf{g}\,''(s)}\,\norm{\textbf{g}\,'(s)}
-\\
-&=\norm{\textbf{g}\,''(s)}\,1
 \\
 &=\kappa.
 \end{align*}
@@ -4082,5 +4108,6 @@ curve.
   \begin{displaymath}
    L = \int_{a}^{b} \sqrt{\rho\,'(t)^2 + (\rho(t)^2 \sin^2 \phi(t))\,\theta\,'(t)^2 + \rho(t)^2 \phi\,'(t)^2}\,\, dt .
   \end{displaymath}
+  \emph{(Hint: Convert the data in Cartesian coordinates.)}
 \end{enumerate}\index{vector!unit tangent \textbf{T}}\index{vector!principal normal \textbf{N}}\index{vector!unit
 binormal \textbf{B}}
