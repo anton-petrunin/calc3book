@@ -757,9 +757,8 @@ the dot product by establishing a relationship between the dot product of two ve
   &=
   \norm{\textbf{v}}^2 + \norm{\textbf{w}}^2 - 2(\Dotprod{\textbf{v}}{\textbf{w}}) \text{~,~so}\\
   -2\,\norm{\textbf{v}}\,\norm{\textbf{w}} \cos \theta &= -2(\Dotprod{\textbf{v}}{\textbf{w}}) \text{~,~so since
-  $\textbf{v} \ne \textbf{0}$ and $\textbf{w} \ne \textbf{0}$ then}\\
-  \cos \theta &= \frac{\Dotprod{\textbf{v}}{\textbf{w}}}{\norm{\textbf{v}} \, \norm{\textbf{w}}} \text{~,~since
-  $\norm{\textbf{v}} > 0$ and $\norm{\textbf{w}} > 0$. \hfill\qedhere}
+  $\textbf{v} \ne \textbf{0}$ and $\textbf{w} \ne \textbf{0}$,}\\
+  \cos \theta &= \frac{\Dotprod{\textbf{v}}{\textbf{w}}}{\norm{\textbf{v}} \, \norm{\textbf{w}}}.\qquad\qedhere
  \end{align*}
 \end{proof}\vspace{-3mm}\end{proofbar}
 
@@ -2881,8 +2880,8 @@ describes a hyperbolic paraboloid as in equation (\ref{eqn:hyperpara}), but rota
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot6}
 \probs{A}
-\par\noindent For Exercises 1--4, determine if the given equation describes a sphere. If so, find its radius and
-center.
+\par\noindent For Exercises 1--4, determine if the given equation describes a sphere. 
+If so, find its radius and center.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
   \item $x^2 + y^2 + z^2 - 4x - 6y - 10z + 37 = 0$;
@@ -2948,7 +2947,13 @@ center.
   $c$.\\(Note: Every point in the $xy$-plane can be matched with a point on $S^*$, and
   vice versa, in this manner. 
   This method is called \emph{stereographic projection}\index{stereographic projection},
-  which essentially identifies all of $\Real{2}$ with a ``punctured'' sphere.)\picskip{0}
+  which essentially identifies all of $\Real{2}$ with a ``punctured'' sphere.)
+  \picskip{0}
+  
+ \item Given two points $P$ and $Q$ in the space consider the set of points $X$ such that the distance from $X$ to $P$ is twice larger than the distance from $X$ to $Q$.
+ Show that this set is a sphere. 
+ Find its radius and center if $P=(1,2,3)$ and $Q=(2,4,5)$.
+ 
  \item Show that equidistant set from two skew lines is formed by a hyperbolic paraboloid. 
  \emph{(Hint: Note that the pair of lines has three orthogonal axis of symmetry. Use them as the axis of your coordinate system 
  then the equation for the set will take form (\ref{eqn:hyperpara-xy}).)}
@@ -3736,6 +3741,12 @@ Show that its acceleration $\textbf{a}(t)$ points in the opposite direction as
   \perp \textbf{v}(t)$ \emph{and} $\textbf{a}(t) \perp \textbf{v}(t)$, \emph{and hence} $\textbf{a}(t) \parallel
   \textbf{r}(t)$.)
  \item Prove Theorem \ref{thm:vecdiffprops}(g).
+ \item Assume that the trajectory of the back wheel of an ideal bicycle is given by smooth plane curve $\textbf{b}(t)$, here $t$ denotes time. 
+ We assume that in the ideal bicycle the distance from back wheel and front wheel is fixed, let us denote it by $R$ and the back wheel always moves in the direction to the front wheel.
+ 
+ Write an expression for the trajectory of the front wheel $\textbf{b}(t)$. 
+ Use it to show that the speed of the back wheel can not exceed the speed of the front wheel.
+ 
  \item Show that there is no plane which is \emph{tangent}\footnote{A plane is called tangent to a curve $\textbf{f}(t)$ at point $\textbf{f}(t_0)$ it it contains the tangent line at $\textbf{f}(t_0)$.} to the curve $\textbf{f}(t)=(t,t^2,t^3)$ at two distinct points.
 \end{enumerate}
 \newpage
@@ -3962,7 +3973,7 @@ For example,
 assume a smooth curve $\textbf{g}$ with the arc length parametrization.
 Note that if $\textbf{g}$ para\-met\-rize a straight line 
 then $\textbf{g}'(s)$ is a constant unit vector and therefore $\textbf{g}''(s)=\textbf{0}$ at all points.
-Therefore the value $\kappa(s)=\norm{\textbf{g}''(s)}$ measures how fast the curve deviates from the straight line at.
+Therefore the value $\kappa(s)=\norm{\textbf{g}''(s)}$ can be used to measure how fast the curve deviates from the straight line.
 The value $\kappa(s)$ and the vector $\textbf{g}''(s)$ are called \emph{curvature} and \emph{curvature vector} of the curve $\textbf{g}$ at the point $\textbf{g}(s)$.
 
 If $\kappa(s)\ne 0$ then the value $R(s)=\tfrac1{\kappa(s)}$
@@ -3984,6 +3995,7 @@ But their arc length parametrizations are not only \emph{not} polynomials, they 
 calculate at all.}
 
 The following theorem provides a direct way to calculate the curvature, without passing to the reparametrization.
+Exercises 7--9 guide you through similar calculations.
 
 \statethm{thm:curvature-expressions}{
 The curvature $\kappa$ of a smooth curve $\textbf{f}$ at the point $\textbf{f}(t)$ can be found using the following formula:
@@ -3996,7 +4008,7 @@ The curvature $\kappa$ of a smooth curve $\textbf{f}$ at the point $\textbf{f}(t
 \begin{proofbar}\vspace{-3mm}
 \begin{proof}[Proof:]
 Let $\textbf{g}(s)$ be the arc length parametrization of $\textbf{f}(t)$; in particular $\norm{\textbf{g}'(s)}=1$ for any $s$.
-As above, we assume $t=\alpha(s)$ and therefore  $\textbf{g}(s)=\textbf{f}(\alpha(s))$ and $\alpha'(s)=\frac{1}{\norm{\textbf{f}'(t)}}$.
+As above, we assume $t=\alpha(s)$ and therefore  $\textbf{g}(s)=\textbf{f}(\alpha(s))$ and $\alpha'(s)=\frac{1}{\norm{\textbf{f}\,'(t)}}$.
 
 Applying Chain and Product Rules, we get
 \begin{align*}
@@ -4109,5 +4121,8 @@ curve.
    L = \int_{a}^{b} \sqrt{\rho\,'(t)^2 + (\rho(t)^2 \sin^2 \phi(t))\,\theta\,'(t)^2 + \rho(t)^2 \phi\,'(t)^2}\,\, dt .
   \end{displaymath}
   \emph{(Hint: Convert the data in Cartesian coordinates.)}
+  \item Let $\textbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
+  Show that 
+  \[\Dotprod{\textbf{g}\,'''(s)}{\textbf{g}\,'(s)}=-\kappa(s)^2.\]
 \end{enumerate}\index{vector!unit tangent \textbf{T}}\index{vector!principal normal \textbf{N}}\index{vector!unit
 binormal \textbf{B}}
