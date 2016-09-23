@@ -3315,9 +3315,11 @@ A vector-valued function of a real variable can be written in component form as
  \textbf{f}(t) = \ssub{f}{1}(t) \textbf{i} + \ssub{f}{2}(t) \textbf{j} + \ssub{f}{3}(t) \textbf{k}\quad\text{or}\quad\textbf{f}(t) = ( \ssub{f}{1}(t),\ssub{f}{2}(t),\ssub{f}{3}(t) )
 \end{displaymath}
 for some real-valued functions $\ssub{f}{1}(t)$, $\ssub{f}{2}(t)$, $\ssub{f}{3}(t)$, called the \emph{component 
-functions} of \textbf{f}. The first form is often used when emphasizing that $\textbf{f}(t)$ is a vector, and the
-second form is useful when considering just the terminal points of the vectors.
-By identifying vectors with their terminal points, a curve in space can be written as a vector-valued function.
+functions} of \textbf{f}. 
+The first form is often used when emphasizing that $\textbf{f}(t)$ is a vector, and the second form is useful when considering just the terminal points of the vectors.
+
+If \textbf{f} is continuous (see the definition below) then it is also called a \emph{curve};
+in this case we identify vector $\textbf{f}(t)$ with its terminal points.
 
 \vspace{2mm}
 \hrule width \textwidth height 0.5pt
@@ -3343,7 +3345,8 @@ By identifying vectors with their terminal points, a curve in space can be writt
 \begin{exmp}
  Define $\textbf{f}: \mathbb{R} \rightarrow \Real{3}$ by $\textbf{f}(t) = ( \cos t , \sin t , t )$.\\ 
  This is a parametric equation of a \emph{helix}\index{helix} (see Figure 1.8.1). As the value of $t$ increases, the terminal points of
- $\textbf{f}(t)$ trace out a curve spiraling upward. For each $t$, the $x$- and $y$-coordinates of $\textbf{f}(t)$
+ $\textbf{f}(t)$ trace out a curve spiraling upward. 
+ For each $t$, the $x$- and $y$-coordinates of $\textbf{f}(t)$
  are $x = \cos t$ and $y = \sin t$, so
  \begin{displaymath}
  x^2 + y^2 = \cos^2 t + \sin^2 t = 1.
@@ -3741,11 +3744,6 @@ Show that its acceleration $\textbf{a}(t)$ points in the opposite direction as
   \perp \textbf{v}(t)$ \emph{and} $\textbf{a}(t) \perp \textbf{v}(t)$, \emph{and hence} $\textbf{a}(t) \parallel
   \textbf{r}(t)$.)
  \item Prove Theorem \ref{thm:vecdiffprops}(g).
- \item Assume that the trajectory of the back wheel of an ideal bicycle is given by smooth plane curve $\textbf{b}(t)$, here $t$ denotes time. 
- We assume that in the ideal bicycle the distance from back wheel and front wheel is fixed, let us denote it by $R$ and the back wheel always moves in the direction to the front wheel.
- 
- Write an expression for the trajectory of the front wheel $\textbf{b}(t)$. 
- Use it to show that the speed of the back wheel can not exceed the speed of the front wheel.
  
  \item Show that there is no plane which is \emph{tangent}\footnote{A plane is called tangent to a curve $\textbf{f}(t)$ at point $\textbf{f}(t_0)$ it it contains the tangent line at $\textbf{f}(t_0)$.} to the curve $\textbf{f}(t)=(t,t^2,t^3)$ at two distinct points.
 \end{enumerate}
@@ -3760,13 +3758,13 @@ traveled by the object from time $t = a$ to $t = b$ as the definite integral\ind
 \begin{equation}\label{eqn:arclenspeed}
  s = \int_{a}^{b} \norm{\textbf{v}(t)}\,dt = \int_{a}^{b} \sqrt{x\,'(t)^2 + y\,'(t)^2 + z\,'(t)^2} \, dt \, .
 \end{equation}
-This is analogous to the case from single-variable calculus for parametric functions in $\Real{2}$. This is indeed how
-we will define the distance traveled and, in general, the arc length of a curve in $\Real{3}$.
+This this integral will be used to define the arc length of a curve in $\Real{3}$.
 
 \statedefn{defn:arclen}{
  {Let $\textbf{f}(t) = (x(t),y(t),z(t))$ be a curve in $\Real{3}$ whose domain includes the interval $[a,b]$. Suppose
  that in the interval $(a,b)$ the first derivative of each component function $x(t)$, $y(t)$ and $z(t)$
- exists and is continuous, and that no section of the curve is repeated. Then the \textbf{arc length} $L$ of the curve
+ exists and is continuous. 
+ Then the \textbf{arc length} $L$ of the curve
  from $t =a$ to $t = b$ is
  \begin{equation}\label{eqn:arclen}
   L = \int_{a}^{b} \norm{\textbf{f}\,'(t)}\,dt = \int_{a}^{b} \sqrt{x\,'(t)^2 + y\,'(t)^2 + z\,'(t)^2}
@@ -3779,8 +3777,12 @@ A real-valued function whose first derivative is continuous is called\index{arc 
 $C^{\infty}$}
 function), and a function whose derivatives of all orders are continuous is called \emph{smooth}\index{smooth function} 
 (or a $C^{\infty}$ function). All the functions we will consider will be
-smooth. A \emph{smooth curve} $\textbf{f}(t)$ is one whose derivative $\textbf{f}\,'(t)$ is never the zero vector and
-whose component functions are all smooth.
+smooth. 
+A \emph{smooth curve} $\textbf{f}(t)$ is one whose component functions are all smooth;
+if in addition the derivative $\textbf{f}\,'(t)$ is never the zero vector then it is called \emph{smooth regular curve}.
+
+We will be mostly interested in the curves without self-intersections;
+that is $\textbf{f}(t_1)\ne \textbf{f}(t_2)$ if $t_1\ne t_2$.
 
 \vspace{2mm}
 \hrule width \textwidth height 0.5pt
@@ -3805,7 +3807,9 @@ component functions are continuously differentiable (except at the endpoints, wh
 In this case, the arc length over $[a,b]$ is defined as
 the sum of the arc lengths over the subintervals.
 
-Notice that the set traced out by the function $\textbf{f}(t) = (\cos t , \sin t , t)$ from Example
+Let consider the set traced out by the given curve $\textbf{f}(t)$.
+
+Notice that the set traced out by the curve $\textbf{f}(t) = (\cos t , \sin t , t)$ from Example
 \ref{exmp:arclenhelix} is also traced out by the function $\textbf{g}(t) = (\cos 2t , \sin 2t , 2t)$.
 For example, over the interval $[0,\pi]$, $\textbf{g}(t)$ traces out the same section of the curve as $\textbf{f}(t)$
 does over the interval $[0,2\pi]$. Intuitively, this says that $\textbf{g}(t)$ traces the curve twice as fast as
@@ -3819,8 +3823,9 @@ We say that $\textbf{g}(t)$ is a reparametrization of curve $\textbf{f}(t)$.\ind
  $[a,b]$, and let $\alpha:[c,d] \rightarrow [a,b]$ be a smooth one-to-one mapping of an interval $[c,d]$ onto $[a,b]$.
  Then the function $\textbf{g}:[c,d] \rightarrow \Real{3}$ defined by $\textbf{g}(s) = \textbf{f}(\alpha(s))$ is
  a \textbf{reparametrization} of $\textbf{f}(t)$ with \textbf{parameter} $s$. 
- If $\alpha$ positive derivatives then we
- say that $\textbf{g}(s)$ is \emph{equivalent} to $\textbf{f}(t)$.}
+ If $\alpha$ positive derivatives 
+ then we say that the reparametrization is \emph{regular reparametrization}\emph{regular} and 
+ $\textbf{g}(s)$ is \emph{equivalent} to $\textbf{f}(t)$.}
 }
 
 \begin{center}
@@ -3958,8 +3963,53 @@ into the formula for $\textbf{f}(t)$ to get $\textbf{g}(s)$.
  in $[0,2\sqrt{2} \pi]$. 
  Note that $\norm{\textbf{g}\,'(s)} = 1$.
 \end{exmp}
-\hrule width \textwidth height 0.5pt
-\vspace{2mm} 
+
+\startexercises\label{sec1dot9}
+\probs{A}
+\par\noindent For Exercises 1--3, calculate the arc length of $\textbf{f}(t)$ over the given interval.
+\begin{enumerate}[\bfseries 1.]
+ \item $\textbf{f}(t) = (3\cos 2t, 3\sin 2t, 3t)$ on $[0,\pi/2]$;
+ \item $\textbf{f}(t) = ((t^2 + 1)\cos t, (t^2 + 1)\sin t, 2\sqrt{2} t)$ on $[0,1]$;
+ \item $\textbf{f}(t) = (2\cos 3t, 2\sin 3t, 2t^{3/2})$ on $[0,1]$.
+ \item Parametrize the curve from Exercise 1 by arc length.
+ \item Parametrize the curve from Exercise 3 by arc length. 
+\suspend{enumerate}
+\probs{B}
+\resume{enumerate}[{[\bfseries 1.]}]
+ \item Assume that $\textbf{g}(s)$ is a \emph{regular reparametrization} of $\textbf{f}(t)$. 
+ Show that both curves have the same length.
+ \item Let $\textbf{f}(t)$ be a differentiable curve such that $\textbf{f}(t) \ne \textbf{0}$ for all $t$. Show that
+  \begin{displaymath}
+   \frac{d}{dt} \left( \dfrac{\textbf{f}(t)}{\Norm{\textbf{f}(t)}} \right) =
+    \dfrac{\Crossprod{\textbf{f}(t)\,}{(\Crossprod{\textbf{f}\,'(t)\,}{\,\textbf{f}(t)})}}{\norm{\textbf{f}(t)}^3} .
+  \end{displaymath}
+
+ \item Show that the arc length $L$ of a curve whose spherical coordinates are $\rho = \rho(t)$, $\theta = \theta(t)$
+  and $\phi = \phi(t)$ for $t$ in an interval $[a,b]$ is
+  \begin{displaymath}
+   L = \int_{a}^{b} \sqrt{\rho\,'(t)^2 + (\rho(t)^2 \sin^2 \phi(t))\,\theta\,'(t)^2 + \rho(t)^2 \phi\,'(t)^2}\,\, dt .
+  \end{displaymath}
+  \emph{(Hint: Convert the data in Cartesian coordinates.)}
+  
+  \item Let $\textbf{f}(t)$ be a smooth curve. 
+  The \index{pedal curve}\emph{pedal curve} of $\textbf{f}(t)$ is traced by the orthogonal projections of the origin on the tangent lines to $\textbf{f}$. Write a parametric equation for the pedal curve $\textbf{h}(t)$ for the given smooth curve $\textbf{f}(t)$.
+  
+  \suspend{enumerate}
+\probs{C}
+\resume{enumerate}[{[\bfseries 1.]}]
+  
+  \item Assume that the trajectory of the back wheel of an ideal bicycle is given by smooth plane curve $\textbf{b}(t)$, here $t$ denotes time. 
+  We assume that in the ideal bicycle the distance from back wheel and front wheel is fixed, let us denote it by $R$ and the back wheel always moves in the direction to the front wheel.
+  
+  \begin{enumerate}[(a)]
+  \item Write an expression for the trajectory of the front wheel $\textbf{f}(t)$. 
+  \item Show that the speed of the back wheel can not exceed the speed of the front wheel.
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+%Begin Section 1.10
+\section{Curvature}
 
 In the field of mathematics known as \emph{differential
 geometry}%
@@ -3967,10 +4017,20 @@ geometry}%
  special attention is given to the parametrization-independent constructions.
 For example, depending on the parametrization, the velocity vector of the curve at given point can be multiplied by a scalar, so it is not parametrization-independent;
 on the other hand the tangent line at given point is parametrization-independent --- although it is defined using parametrization the resulting line is the same.
-The arc length parametrization is particularly useful to make such constructions.
 
-For example, 
-assume a smooth curve $\textbf{g}$ with the arc length parametrization.
+An other example is so called \emph{osculating plane}.
+Given a smooth regular curve $\textbf{f}$,
+its \emph{osculating plane} at $\textbf{f}(t)$
+is the plane passing thru $\textbf{f}(t)$ and containing the velocity vector $\textbf{f}'(t)$ and the acceleration $\textbf{f}''(t)$.
+The osculating plane is defined if $\textbf{f}'(t)$ is not parallel to $\textbf{f}''(t)$.
+Note that in this case the cross product $\Crossprod{\textbf{f}'(t)}{\textbf{f}''(t)}$ is perpendicular to the osculating plane.
+Therefore the equation of the osculating plane at $\textbf{f}(t)$ can be written as
+\[\Dotprod{(\textbf{x}-\textbf{f}(t))}{(\Crossprod{\textbf{f}'(t)}{\textbf{f}''(t)})}=0\]
+with the unknown $\textbf{x}$.
+Note that for the plane curves osculating plane does not change.
+
+Yet an other example is so called \emph{curvature}. 
+Assume a smooth regular curve $\textbf{g}$ has arc length parametrization.
 Note that if $\textbf{g}$ para\-met\-rize a straight line 
 then $\textbf{g}'(s)$ is a constant unit vector and therefore $\textbf{g}''(s)=\textbf{0}$ at all points.
 Therefore the value $\kappa(s)=\norm{\textbf{g}''(s)}$ can be used to measure how fast the curve deviates from the straight line.
@@ -3979,7 +4039,9 @@ The value $\kappa(s)$ and the vector $\textbf{g}''(s)$ are called \emph{curvatur
 If $\kappa(s)\ne 0$ then the value $R(s)=\tfrac1{\kappa(s)}$
 is called \emph{curvature radius} of $\textbf{g}$ at the point $\textbf{g}(s)$. 
 It is called this way since the best approximation of the curve $\textbf{g}$ at the point $\textbf{g}(s)$ by a circle, so called \emph{osculating circle}, has radius $R(s)$.
-If $\kappa(s)=0$ then osculating circle degenerates to the tangent line.
+This is a circle lying in the osculating plane,
+its center is lies in the direction of curvature vector $\textbf{g}''(s)$ from $\textbf{g}(s)$ on the distance $R(s)$;
+if $\kappa(s)=0$ then it degenerates to the tangent line.
 
 Assume you want to find the curvature of the given curve using the definition above.
 Then you first have to find the arc length parametrization and then apply the formula above at the given point.
@@ -3995,7 +4057,7 @@ But their arc length parametrizations are not only \emph{not} polynomials, they 
 calculate at all.}
 
 The following theorem provides a direct way to calculate the curvature, without passing to the reparametrization.
-Exercises 7--9 guide you through similar calculations.
+Exercises 9 guides you through similar calculations.
 
 \statethm{thm:curvature-expressions}{
 The curvature $\kappa$ of a smooth curve $\textbf{f}$ at the point $\textbf{f}(t)$ can be found using the following formula:
@@ -4043,86 +4105,63 @@ That is, $\textbf{g}\,''(s)\perp\textbf{g}\,'(s)$ for any $s$.  Since $\norm{\te
 \\
 &=\kappa.
 \end{align*}
-\vspace{-7mm}
-\end{proof}\end{proofbar}
-                             
-
-
+\end{proof}\vspace{-3mm}\end{proofbar}
 
 \startexercises\label{sec1dot9}
 \probs{A}
-\par\noindent For Exercises 1--3, calculate the arc length of $\textbf{f}(t)$ over the given interval.
+\par\noindent For Exercises 1--4, 
+find the tangent line, 
+the osculating plane and the curvature at each point of the curve  $\textbf{f}(t)$.
 \begin{enumerate}[\bfseries 1.]
- \item $\textbf{f}(t) = (3\cos 2t, 3\sin 2t, 3t)$ on $[0,\pi/2]$;
- \item $\textbf{f}(t) = ((t^2 + 1)\cos t, (t^2 + 1)\sin t, 2\sqrt{2} t)$ on $[0,1]$;
- \item $\textbf{f}(t) = (2\cos 3t, 2\sin 3t, 2t^{3/2})$ on $[0,1]$.
- \item Parametrize the curve from Exercise 1 by arc length.
- \item Parametrize the curve from Exercise 3 by arc length.
+\begin{multicols}{2}
+ \item $\textbf{f}(t) = (\cos t ,\sin t,t)$;
+ 
+\item $\textbf{f}(t) = (t ,t^2,t^3)$;
+\end{multicols}
+\begin{multicols}{2}
+ \item $\textbf{f}(t) = (t\sin t, t\cos t)$;
+  
+\item $\textbf{f}(t) = (e^t\sin t, e^t\cos t)$.
+\end{multicols}
+
+
+  
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Let $\textbf{f}(t)$ be a differentiable curve such that $\textbf{f}(t) \ne \textbf{0}$ for all $t$. Show that
-  \begin{displaymath}
-   \frac{d}{dt} \left( \dfrac{\textbf{f}(t)}{\Norm{\textbf{f}(t)}} \right) =
-    \dfrac{\Crossprod{\textbf{f}(t)\,}{(\Crossprod{\textbf{f}\,'(t)\,}{\,\textbf{f}(t)})}}{\norm{\textbf{f}(t)}^3} .
-  \end{displaymath}
-\suspend{enumerate}
-\par\noindent Exercises 7--9 develop the moving frame field \textbf{T}, \textbf{N}, \textbf{B} at a point on a
-curve.
-\resume{enumerate}[{[\bfseries 1.]}]
- \item Let $\textbf{f}(t)$ be a smooth curve such that $\textbf{f}\,'(t) \ne \textbf{0}$ for all $t$. Then we can
+  
+   \item Let $\textbf{f}(t)$ be a smooth regular curve; in particular, $\textbf{f}\,'(t) \ne \textbf{0}$ for all $t$. Then we can
   define the \emph{unit tangent vector} \textbf{T} by
   \begin{displaymath}
    \textbf{T}(t) = \dfrac{\textbf{f}\,'(t)}{\norm{\textbf{f}\,'(t)}} .
   \end{displaymath}
+   \begin{enumerate}[(a)]
+  \item 
   Show that
   \begin{displaymath}
    \textbf{T}\,'(t) = \dfrac{\Crossprod{\textbf{f}\,'(t)\,}{(\Crossprod{\textbf{f}\,''(t)\,}{\,\textbf{f}\,'(t)})}}{
     \norm{\textbf{f}\,'(t)}^3} .
   \end{displaymath}
- \item Continuing Exercise 7, assume that $\textbf{f}\,'(t)$ and $\textbf{f}\,''(t)$ are not parallel.
-  Then $\textbf{T}\,'(t) \ne \textbf{0}$ so we can define the \emph{unit principal normal vector} \textbf{N} by
-  \begin{displaymath}
-   \textbf{N}(t) = \dfrac{\textbf{T}\,'(t)}{\norm{\textbf{T}\,'(t)}} .
-  \end{displaymath}
-  Show that
-  \begin{displaymath}
-   \textbf{N}(t) = \dfrac{\Crossprod{\textbf{f}\,'(t)\,}{(\Crossprod{\textbf{f}\,''(t)\,}{\,\textbf{f}\,'(t)})}}{
-    \norm{\textbf{f}\,'(t)} \,\norm{\Crossprod{\textbf{f}\,''(t)\,}{\,\textbf{f}\,'(t)}}} .
-  \end{displaymath}
- \item Continuing Exercise 8, the \emph{unit binormal vector} \text{B} is defined by
-  \begin{displaymath}
-   \textbf{B}(t) = \Crossprod{\textbf{T}(t)\,}{\,\textbf{N}(t)} .
-  \end{displaymath}
-  Show that
-  \begin{displaymath}
-   \textbf{B}(t) = \dfrac{\Crossprod{\textbf{f}\,'(t)\,}{\,\textbf{f}\,''(t)}}{
-    \norm{\Crossprod{\textbf{f}\,'(t)\,}{\,\textbf{f}\,''(t)}}} .
-  \end{displaymath}
-  Note: The vectors $\textbf{T}(t)$, $\textbf{N}(t)$ and $\textbf{B}(t)$ form a right-handed system of mutually
-  perpendicular unit vectors (called \emph{orthonormal vectors}) at each point on the curve $\textbf{f}(t)$.
- \item Continuing Exercise 9, the \emph{curvature} $\kappa$  is defined by\index{orthonormal vectors}
-  \begin{displaymath}
-   \kappa(t) = \dfrac{\norm{\textbf{T}\,'(t)}}{\norm{\textbf{f}\,'(t)}} =
-    \dfrac{\norm{\Crossprod{\textbf{f}\,'(t)\,}{(\Crossprod{\textbf{f}\,''(t)\,}{\,\textbf{f}\,'(t)})}}}{
-    \norm{\textbf{f}\,'(t)}^4}.
-  \end{displaymath}
-  Show that
-  \begin{displaymath}
-   \kappa(t) = \dfrac{\norm{\Crossprod{\textbf{f}\,'(t)\,}{\,\textbf{f}\,''(t)}}}{\norm{\textbf{f}\,'(t)}^3}
-   \text{~~and that~~} \textbf{T}\,'(t) = \norm{\textbf{f}\,'(t)} \,\kappa(t) \, \textbf{N}(t) .
-  \end{displaymath}
-  Note: $\kappa(t)$ gives a sense of how ``curved'' the curve $\textbf{f}(t)$ is at each point.
- \item Find \textbf{T}, \textbf{N}, \textbf{B} and $\kappa$ at each point of the helix
-  $\textbf{f}(t) = (\cos t ,\sin t,t)$. 
- \item Show that the arc length $L$ of a curve whose spherical coordinates are $\rho = \rho(t)$, $\theta = \theta(t)$
-  and $\phi = \phi(t)$ for $t$ in an interval $[a,b]$ is
-  \begin{displaymath}
-   L = \int_{a}^{b} \sqrt{\rho\,'(t)^2 + (\rho(t)^2 \sin^2 \phi(t))\,\theta\,'(t)^2 + \rho(t)^2 \phi\,'(t)^2}\,\, dt .
-  \end{displaymath}
-  \emph{(Hint: Convert the data in Cartesian coordinates.)}
-  \item Let $\textbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
+  \item Use this formula to get an other proof of Theorem~\ref{thm:curvature-expressions}.
+   \end{enumerate}
+   \item Let $\textbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
   Show that 
   \[\Dotprod{\textbf{g}\,'''(s)}{\textbf{g}\,'(s)}=-\kappa(s)^2.\]
-\end{enumerate}\index{vector!unit tangent \textbf{T}}\index{vector!principal normal \textbf{N}}\index{vector!unit
-binormal \textbf{B}}
+  
+  \item Let $\textbf{g}$ be a smooth curve with arc length parametrization defined on $[0,a]$.
+  The curve $\textbf{h}(s)=\textbf{g}(s)-s\textbf{g}'(s)$ is called \index{involute}\emph{involute} of $\textbf{g}(s)$.
+  \begin{enumerate}[(a)]
+  \item Show that 
+  \[\norm{\textbf{h}'(s)}=s\,\kappa(s)\] 
+  for $0<s<a$, where $\kappa(s)$ is curvature of $\textbf{g}$ at $\textbf{g}(s)$
+  \item Show that the curvature of $\textbf{h}$ at $\textbf{h}(s)$ equals to $\tfrac1s$ for $0<s<a$.
+  \end{enumerate}
+\suspend{enumerate}
+\probs{C}
+\resume{enumerate}[{[\bfseries 1.]}]
+   \item Let $\textbf{f}(t)$ be a smooth curve in the plane.
+   Assume its curvature $\kappa(t)$ is increasing in $t$.
+   Show that the curve has \emph{no self-intersections};
+   that is, if $t_0\ne t_1$ then $\textbf{f}(t_0)\ne\textbf{f}(t_1)$.
+   (\textit{Hint: Write an expression for the center and radius of the osculating circles and use it to show that they do not intersect each other.}
+\end{enumerate}
