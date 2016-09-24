@@ -2345,7 +2345,7 @@ gives the distance between the skew lines $AB$ and $PQ$.
 
 \newpage
 %Begin Section 1.6
-\section{Surfaces}
+\section{Elementary surfaces}
 In the previous section we discussed planes in Euclidean space. A plane is an example of a \emph{surface}, which we
 will define informally\footnote{See \cite{one} for a deeper and more rigorous discussion of surfaces.} as the
 solution set of the equation $F(x,y,z) = 0$ in $\Real{3}$, for some real-valued function $F$. For example, a plane
@@ -3293,7 +3293,7 @@ See pp. 100--102 in \cite{jac}.
 \end{enumerate}
 
 
-\newpage
+\chapter{Curves}
 %Begin Section 1.8
 \section{Vector-Valued Functions}
 Now that we are familiar with vectors and their operations, we can begin discussing functions whose values are
@@ -3301,12 +3301,15 @@ vectors.\index{function!vector-valued}
 
 \statedefn{defn:vecfcn}{
  {A \textbf{vector-valued function of a real variable} is a rule that associates a vector $\textbf{f}(t)$ with a real
-  number $t$, where $t$ is in some subset $D$ of $\Real{1}$ (called the \textbf{domain} of \textbf{f}). We write
+  number $t$, where $t$ is in $\Real{}$ or its interval (called the \textbf{domain} of \textbf{f}). 
+  We write
   $\textbf{f}: D \rightarrow \Real{3}$ to denote that \textbf{f} is a mapping of $D$ into $\Real{3}$.}
 }
 
 For example, $\textbf{f}(t) = t \textbf{i} + t^2 \textbf{j} + t^3 \textbf{k}$ is a vector-valued function in $\Real{3}$,
-defined for all real numbers $t$. We would write $\textbf{f}: \mathbb{R} \rightarrow \Real{3}$. At $t = 1$
+defined for all real numbers $t$. 
+We would write $\textbf{f}: \Real{} \rightarrow \Real{3}$. 
+At $t = 1$
 the value of the function is the vector $\textbf{i} + \textbf{j} + \textbf{k}$, which in Cartesian coordinates has the
 terminal point $(1,1,1)$.
 
@@ -3317,9 +3320,6 @@ A vector-valued function of a real variable can be written in component form as
 for some real-valued functions $\ssub{f}{1}(t)$, $\ssub{f}{2}(t)$, $\ssub{f}{3}(t)$, called the \emph{component 
 functions} of \textbf{f}. 
 The first form is often used when emphasizing that $\textbf{f}(t)$ is a vector, and the second form is useful when considering just the terminal points of the vectors.
-
-If \textbf{f} is continuous (see the definition below) then it is also called a \emph{curve};
-in this case we identify vector $\textbf{f}(t)$ with its terminal points.
 
 \vspace{2mm}
 \hrule width \textwidth height 0.5pt
@@ -3344,14 +3344,15 @@ in this case we identify vector $\textbf{f}(t)$ with its terminal points.
 }
 \begin{exmp}
  Define $\textbf{f}: \mathbb{R} \rightarrow \Real{3}$ by $\textbf{f}(t) = ( \cos t , \sin t , t )$.\\ 
- This is a parametric equation of a \emph{helix}\index{helix} (see Figure 1.8.1). As the value of $t$ increases, the terminal points of
- $\textbf{f}(t)$ trace out a curve spiraling upward. 
+ This is a parametric equation of a \emph{helix}\index{helix} (see Figure 1.8.1). 
+ As the value of $t$ increases, the terminal points of
+ $\textbf{f}(t)$ is spiraling upward. 
  For each $t$, the $x$- and $y$-coordinates of $\textbf{f}(t)$
  are $x = \cos t$ and $y = \sin t$, so
  \begin{displaymath}
  x^2 + y^2 = \cos^2 t + \sin^2 t = 1.
  \end{displaymath}
- Thus, the curve lies on the surface of the right circular cylinder $x^2 + y^2 = 1$.
+ Thus, $\textbf{f}(t)$ lies on the surface of the right circular cylinder $x^2 + y^2 = 1$ for any $t$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \vspace{2mm}
@@ -3395,11 +3396,35 @@ defined in terms of its component functions.\index{continuity}\index{derivative!
  $a$ if $\textbf{f}\,'(a)$ exists.
 }
 
+A real-valued function whose first derivative is continuous is called\index{arc length}
+\emph{continuously differentiable}\index{continuously differentiable} (or a $C^1$\index{$C^1$,
+$C^{\infty}$}
+function), and a function whose derivatives of all orders are continuous is called \emph{smooth}\index{smooth function} 
+(or a $C^{\infty}$ function). 
+All the functions we will consider will be smooth.
+
+\begin{wrapfigure}{o}{32mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/Semicubical_parabola(1)}
+%\lbl[r]{10.5,2;$\~p$}
+\end{lpic}
+\end{wrapfigure}
+
+Continuous vector valued functions are also called \emph{curves};
+in this case the vector $\textbf{f}(t)$ is usually regarded as its terminal point.
+A \emph{regular curve} $\textbf{f}(t)$ is one whose derivative $\textbf{f}\,'(t)$ is never the zero vector.
+
+For example consider the plane curve $\textbf{f}(t)=(t^2,t^3)$;
+it is so called \emph{semicubical parabola} shown on the picture.
+The curve has smooth components but it is not regular since $\textbf{f}\,'(t)=(2t,3t^2)$ vanish at $t=0$.
+In fact this curve does not look ``smooth'' at $t=0$; 
+it has so called cusp at this point.
+
 Recall that the derivative of a real-valued function of a single variable is a real number, representing the slope of the tangent line to the graph of the function at a point. 
 Similarly, the derivative of a vector-valued function is a
 \textbf{tangent vector}\index{vector!tangent} to the curve in space which the function represents, and it lies on the
 \emph{tangent line} to the curve (see
-Figure \ref{fig:vectangent}).\vspace{-4mm}
+Figure \ref{fig:vectangent}).
+\vspace{0mm}
 
 \begin{figure}[h]
  \begin{center}
@@ -3425,7 +3450,7 @@ Figure \ref{fig:vectangent}).\vspace{-4mm}
   \node [left,above] at (1,1.2) {$\textbf{f}(a)$};
   \node [below] at (3.8,0.5) {$\textbf{f}(a + h)$};
   \node [below,rotate=-40] at (3.05,1.52) {$\textbf{f}(a + h) - \textbf{f}(a)$};
-  \end{tikzpicture}\vspace{-5mm}
+  \end{tikzpicture}\vspace{-0mm}
  \end{center}
  \caption[]{\quad Tangent vector $\textbf{f}\,'(a)$ and tangent line $L = \textbf{f}(a) + s \textbf{f}\,'(a)$.}
  \label{fig:vectangent}
@@ -3524,11 +3549,11 @@ $\textbf{f}\,'(t)$ is always perpendicular to the \emph{position vector} $\textb
  \begin{figure}[h]
   \begin{center}
    \input{fig183}
-  \end{center}\vspace{-13.5mm}
+  \end{center}\vspace{0mm}
  \caption[]{\quad Spherical spiral with $a = 0.2$.}
  \label{fig:sphspiral}
  \end{figure}
-\end{exmp}\vspace{-4mm}
+\end{exmp}\vspace{-0mm}
 \hrule width \textwidth height 0.5pt
 \vskip3mm
 Just as in single-variable calculus, higher-order derivatives of vector-valued functions are obtained by repeatedly
@@ -3621,11 +3646,11 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t) = ( 2t + 2t^2, 4t + t^2, 6t - 4t^2 )$, as shown in Figure
  \ref{fig:bezier2}, where the line segments are $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 1}(t)$ and
  $\ssub{\textbf{b}}{1}^{\scriptscriptstyle 1}(t)$, and the curve is
- $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t)$.\vspace{-14mm}
+ $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t)$.\vspace{-0mm}
  \begin{figure}[h]
   \begin{center}
    \input{fig184}
-  \end{center}\vspace{-16mm}
+  \end{center}\vspace{-0mm}
  \caption[]{\quad B\'{e}zier curve approximation for three points.}
  \label{fig:bezier2}
  \end{figure}
@@ -3635,15 +3660,15 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  vector-valued function whose components are polynomials of degree $n-1$, and its formula is given by
  \emph{de Casteljau's algorithm}.\footnote{See pp. 27--30 in \cite{far}.} In the exercises, the reader will be given the
  algorithm for the case of $n = 4$ points and asked to write the explicit formula for the B\'{e}zier curve for the four
- points shown in Figure \ref{fig:bezier3}.\vspace{-24mm}
+ points shown in Figure \ref{fig:bezier3}.\vspace{-0mm}
  \begin{figure}[h]
   \begin{center}
    \input{fig185}
-  \end{center}\vspace{-16mm}
+  \end{center}\vspace{-0mm}
  \caption[]{\quad B\'{e}zier curve approximation for four points.}
  \label{fig:bezier3}
  \end{figure}
-\end{exmp}\vspace{-12mm}
+\end{exmp}\vspace{-0mm}
 \startexercises\label{sec1dot8}
 \probs{A}
 \par\noindent For Exercises 1--4, calculate $\textbf{f}\,'(t)$ and find the tangent line at $\textbf{f}(0)$.
@@ -3750,16 +3775,6 @@ Show that its acceleration $\textbf{a}(t)$ points in the opposite direction as
 \newpage
 %Begin Section 1.9
 \section{Arc Length}
-Let $\textbf{r}(t) = (x(t),y(t),z(t))$ be the position vector of an object moving in $\Real{3}$. 
-Its speed at time $t$ is $\norm{\textbf{v}(t)}$;
-that is the magnitude  of the velocity vector.
-Therefore it seems natural to define the distance $s$
-traveled by the object from time $t = a$ to $t = b$ as the definite integral\index{integral}
-\begin{equation}\label{eqn:arclenspeed}
- s = \int_{a}^{b} \norm{\textbf{v}(t)}\,dt = \int_{a}^{b} \sqrt{x\,'(t)^2 + y\,'(t)^2 + z\,'(t)^2} \, dt \, .
-\end{equation}
-This this integral will be used to define the arc length of a curve in $\Real{3}$.
-
 \statedefn{defn:arclen}{
  {Let $\textbf{f}(t) = (x(t),y(t),z(t))$ be a curve in $\Real{3}$ whose domain includes the interval $[a,b]$. Suppose
  that in the interval $(a,b)$ the first derivative of each component function $x(t)$, $y(t)$ and $z(t)$
@@ -3772,17 +3787,11 @@ This this integral will be used to define the arc length of a curve in $\Real{3}
  \end{equation}}
 }
 
-A real-valued function whose first derivative is continuous is called\index{arc length}
-\emph{continuously differentiable}\index{continuously differentiable} (or a $C^1$\index{$C^1$,
-$C^{\infty}$}
-function), and a function whose derivatives of all orders are continuous is called \emph{smooth}\index{smooth function} 
-(or a $C^{\infty}$ function). All the functions we will consider will be
-smooth. 
-A \emph{smooth curve} $\textbf{f}(t)$ is one whose component functions are all smooth;
-if in addition the derivative $\textbf{f}\,'(t)$ is never the zero vector then it is called \emph{smooth regular curve}.
-
-We will be mostly interested in the curves without self-intersections;
-that is $\textbf{f}(t_1)\ne \textbf{f}(t_2)$ if $t_1\ne t_2$.
+If $\textbf{f}(t) = (x(t),y(t),z(t))$ is the position vector of an object moving in $\Real{3}$ then 
+its speed at time $t$ is $\norm{\textbf{f}\,'(t)}$,
+that is the magnitude  of the velocity vector.
+Therefore it seems natural to define the distance $s$
+traveled by as the definite integral of its speed in the time interval (\ref{eqn:arclen}).
 
 \vspace{2mm}
 \hrule width \textwidth height 0.5pt
@@ -3800,14 +3809,6 @@ that is $\textbf{f}(t_1)\ne \textbf{f}(t_2)$ if $t_1\ne t_2$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \vspace{2mm}
-
-If there are values of $t$ in the interval $[a,b]$ where the derivative of a
-component function is not continuous then it is often possible to partition $[a,b]$ into subintervals where all the
-component functions are continuously differentiable (except at the endpoints, which can be ignored).
-In this case, the arc length over $[a,b]$ is defined as
-the sum of the arc lengths over the subintervals.
-
-Let consider the set traced out by the given curve $\textbf{f}(t)$.
 
 Notice that the set traced out by the curve $\textbf{f}(t) = (\cos t , \sin t , t)$ from Example
 \ref{exmp:arclenhelix} is also traced out by the function $\textbf{g}(t) = (\cos 2t , \sin 2t , 2t)$.
@@ -3879,8 +3880,9 @@ functions (the proof is left as an exercise):\index{Chain Rule}
  $\alpha(s) = 2\pi s$ shows that $\textbf{h}(s)$ is equivalent to $\textbf{f}(t)$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
+\vskip3mm
 
-A curve can have many parametrizations, with different speeds, so which one is the best to use? In some situations
+A curve can be reparametrized, with different speeds, so which one is the best to use? In some situations
 the \textbf{arc length parametrization} can be useful. The idea behind this is to replace the parameter $t$, for any
 given smooth parametrization $\textbf{f}(t)$ defined on $[a,b]$, by the parameter $s$ given by
 \begin{equation}\label{eqn:arclenfcn}
@@ -3947,7 +3949,7 @@ In practice, parametrizing a curve $\textbf{f}(t)$ by arc length requires you to
 \norm{\textbf{f}\,'(u)}\,du$ explicitly as a function of $t$, 
 so that you could then solve for $t$ in terms of $s$. 
 If that can be done, you would then substitute the expression for $t$ in terms of $s$ (which we called $\alpha(s)$)
-into the formula for $\textbf{f}(t)$ to get $\textbf{g}(s)$.
+into the formula for $\textbf{f}(t)$ to get $\textbf{g}(s)=\textbf{f}(\alpha(s))$.
 
 \vspace{2mm}
 \hrule width \textwidth height 0.5pt
@@ -4039,9 +4041,9 @@ The value $\kappa(s)$ and the vector $\textbf{g}''(s)$ are called \emph{curvatur
 If $\kappa(s)\ne 0$ then the value $R(s)=\tfrac1{\kappa(s)}$
 is called \emph{curvature radius} of $\textbf{g}$ at the point $\textbf{g}(s)$. 
 It is called this way since the best approximation of the curve $\textbf{g}$ at the point $\textbf{g}(s)$ by a circle, so called \emph{osculating circle}, has radius $R(s)$.
-This is a circle lying in the osculating plane,
-its center is lies in the direction of curvature vector $\textbf{g}''(s)$ from $\textbf{g}(s)$ on the distance $R(s)$;
-if $\kappa(s)=0$ then it degenerates to the tangent line.
+This circle is lying in the osculating plane,
+its center lies in the direction of curvature vector $\textbf{g}''(s)$ from $\textbf{g}(s)$ on the distance $R(s)$.
+If $\kappa(s)=0$ then the osculating circle degenerates to the tangent line.
 
 Assume you want to find the curvature of the given curve using the definition above.
 Then you first have to find the arc length parametrization and then apply the formula above at the given point.
@@ -4129,6 +4131,7 @@ the osculating plane and the curvature at each point of the curve  $\textbf{f}(t
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
+  \item Let $\textbf{f}(t)$ be a smooth regular curve and $\textbf{g}(s)=\textbf{f}(\alpha(s))$ be its regular reparametrization. Show that the osculating plane of $\textbf{f}$ at $\textbf{f}(t)$ coinsides with the osculating plane of $\textbf{g}$ at $\textbf{g}(s)$ if $t=\alpha(s)$.  
   
    \item Let $\textbf{f}(t)$ be a smooth regular curve; in particular, $\textbf{f}\,'(t) \ne \textbf{0}$ for all $t$. Then we can
   define the \emph{unit tangent vector} \textbf{T} by
@@ -4144,17 +4147,17 @@ the osculating plane and the curvature at each point of the curve  $\textbf{f}(t
   \end{displaymath}
   \item Use this formula to get an other proof of Theorem~\ref{thm:curvature-expressions}.
    \end{enumerate}
-   \item Let $\textbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
+   \item\label{ex:g'''} Let $\textbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
   Show that 
   \[\Dotprod{\textbf{g}\,'''(s)}{\textbf{g}\,'(s)}=-\kappa(s)^2.\]
   
-  \item Let $\textbf{g}$ be a smooth curve with arc length parametrization defined on $[0,a]$.
+  \item Let $\textbf{g}$ be a smooth plane curve with arc length parametrization.
   The curve $\textbf{h}(s)=\textbf{g}(s)-s\textbf{g}'(s)$ is called \index{involute}\emph{involute} of $\textbf{g}(s)$.
   \begin{enumerate}[(a)]
   \item Show that 
   \[\norm{\textbf{h}'(s)}=s\,\kappa(s)\] 
-  for $0<s<a$, where $\kappa(s)$ is curvature of $\textbf{g}$ at $\textbf{g}(s)$
-  \item Show that the curvature of $\textbf{h}$ at $\textbf{h}(s)$ equals to $\tfrac1s$ for $0<s<a$.
+  where $\kappa(s)$ is curvature of $\textbf{g}$ at $\textbf{g}(s)$
+  \item Show that the curvature of $\textbf{h}$ at $\textbf{h}(s)$ equals to $\tfrac1s$ for $s>0$. (Hint: Use Exercise~\ref{ex:g'''}.)
   \end{enumerate}
 \suspend{enumerate}
 \probs{C}
