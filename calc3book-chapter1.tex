@@ -969,7 +969,7 @@ shortest distance between two points is a straight line.''
   \textbf{v}, \textbf{w}.
 
  \piccaption[]{}\parpic[r]{\includegraphics{fig1.3.5.0}}
- \item For nonzero vectors \textbf{v} and \textbf{w}, the \emph{projection}\index{projection} of \textbf{v} onto
+ \item \label{ex:projection} For nonzero vectors \textbf{v} and \textbf{w}, the \emph{projection}\index{projection} of \textbf{v} onto
   \textbf{w} (sometimes written as $proj_{\textbf{w}}\textbf{v}$) is the vector \textbf{u} along the same line $L$ as
   \textbf{w} whose terminal point is obtained by dropping a perpendicular line from the terminal point of \textbf{v}
   to $L$ (see Figure 1.3.5). Show that
@@ -3462,6 +3462,7 @@ Figure \ref{fig:vectangent}).
  (1,0,2\pi) + s(0,1,1)$, or in parametric form: $x = 1$, $y = s$, $z = 2\pi + s$ for $-\infty < s < \infty$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
+\vskip3mm
 A \textbf{scalar function}\index{scalar function}\index{function!scalar} is a real-valued function. Note that if
 $u(t)$ is a scalar function and $\textbf{f}(t)$ is a vector-valued function, then their product, defined by
 $(u\,\textbf{f})(t) = u(t)\,\textbf{f}(t)$ for all $t$, is a vector-valued function (since the product of a scalar
@@ -3661,14 +3662,45 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  \emph{de Casteljau's algorithm}.\footnote{See pp. 27--30 in \cite{far}.} In the exercises, the reader will be given the
  algorithm for the case of $n = 4$ points and asked to write the explicit formula for the B\'{e}zier curve for the four
  points shown in Figure \ref{fig:bezier3}.\vspace{-0mm}
- \begin{figure}[h]
-  \begin{center}
-   \input{fig185}
-  \end{center}\vspace{-0mm}
- \caption[]{\quad B\'{e}zier curve approximation for four points.}
- \label{fig:bezier3}
- \end{figure}
 \end{exmp}\vspace{-0mm}
+
+\hrule width \textwidth height 0.5pt
+\vspace{2mm}
+
+\begin{exmp}
+The \emph{pedal curve} is traced by the orthogonal projection of a fixed point $P$ on the tangent lines of a given curve $\textbf{f}(t)$.
+\end{exmp}
+
+Write a parametric expression $\textbf{h}(t)$ for the pedal curve for the unit circle $\textbf{f}(t)=(\cos(t),\sin t)$ and the point $P=(1,0)$, so its position vector is $\textbf{i}$. (This curve is called cardioid.)
+
+\begin{wrapfigure}{r}{32 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/pedal-curve(1)}
+\lbl[rt]{22.5,15.5;$P$}
+\end{lpic}
+\end{wrapfigure}
+
+Denote by $\textbf{w}(t)$ the projection of $\textbf{v}(t)=\textbf{i}-\textbf{f}(t)$ to the tangent line at $\textbf{f}(t)$, so $\textbf{h}(t)=\textbf{f}(t)+\textbf{w}(t)$.
+
+The velocity vector $\textbf{f}\,'(t)=(-\sin t,\cos t)$ is parallel to the tangent line at $\textbf{f}(t)$.
+Note that $\|\textbf{f}\,'(t)\|=1$ for any $t$.
+
+By Exercise \ref{ex:projection},
+\begin{align*}
+\textbf{w}(t)
+&=
+(\textbf{f}\,'(t)\cdot\textbf{v}(t))\,\textbf{f}\,'(t)
+\\
+&=(\textbf{f}\,'(t)\cdot(\textbf{i}-\textbf{f}(t)))\,\textbf{f}\,'(t)
+\\
+&=(\sin^2 t,-\sin t\cos t).
+\intertext{and} 
+\textbf{h}(t)
+&=\textbf{f}(t)+\textbf{w}(t)
+\\
+&=(\cos t+\sin^2t,\sin t-\sin t\cos t).
+\end{align*}
+
+
 \startexercises\label{sec1dot8}
 \probs{A}
 \par\noindent For Exercises 1--4, calculate $\textbf{f}\,'(t)$ and find the tangent line at $\textbf{f}(0)$.
@@ -3771,7 +3803,16 @@ Show that its acceleration $\textbf{a}(t)$ points in the opposite direction as
  \item Prove Theorem \ref{thm:vecdiffprops}(g).
  
  \item Show that there is no plane which is \emph{tangent}\footnote{A plane is called tangent to a curve $\textbf{f}(t)$ at point $\textbf{f}(t_0)$ it it contains the tangent line at $\textbf{f}(t_0)$.} to the curve $\textbf{f}(t)=(t,t^2,t^3)$ at two distinct points.
+ \item Wrie a parametric equation for the pedal curve to $\textbf{f}(t)=(t,t^2,t^3)$ with respect to the origin.
 \end{enumerate}
+\begin{figure}[h]
+  \begin{center}
+   \input{fig185}
+  \end{center}\vspace{-0mm}
+ \caption[]{\quad B\'{e}zier curve approximation for four points.}
+ \label{fig:bezier3}
+ \end{figure}
+ 
 \newpage
 %Begin Section 1.9
 \section{Arc Length}
@@ -4023,13 +4064,45 @@ on the other hand the tangent line at given point is parametrization-independent
 An other example is so called \emph{osculating plane}.
 Given a smooth regular curve $\textbf{f}$,
 its \emph{osculating plane} at $\textbf{f}(t)$
-is the plane passing thru $\textbf{f}(t)$ and containing the velocity vector $\textbf{f}'(t)$ and the acceleration $\textbf{f}''(t)$.
-The osculating plane is defined if $\textbf{f}'(t)$ is not parallel to $\textbf{f}''(t)$.
-Note that in this case the cross product $\Crossprod{\textbf{f}'(t)}{\textbf{f}''(t)}$ is perpendicular to the osculating plane.
+is the plane passing thru $\textbf{f}(t)$ and containing the velocity vector $\textbf{f}\,'(t)$ and the acceleration $\textbf{f}\,''(t)$.
+The osculating plane is defined if $\textbf{f}\,'(t)$ is not parallel to $\textbf{f}\,''(t)$.
+Note that in this case the cross product $\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)}$ is perpendicular to the osculating plane.
 Therefore the equation of the osculating plane at $\textbf{f}(t)$ can be written as
-\[\Dotprod{(\textbf{x}-\textbf{f}(t))}{(\Crossprod{\textbf{f}'(t)}{\textbf{f}''(t)})}=0\]
+\[\Dotprod{(\textbf{x}-\textbf{f}(t))}{(\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)})}=0\]
 with the unknown $\textbf{x}$.
-Note that for the plane curves osculating plane does not change.
+
+\vspace{3mm}
+\hrule width \textwidth height 0.5pt
+
+\begin{exmp} Let us show that osculating plane does at given point does not depend on the parametrization.
+That is, if $\textbf{g}(s)=\textbf{f}(\alpha(s))$ is a regular reparametrization then 
+the plane thru $\textbf{g}(s)$ and containing the velocity vector $\textbf{g}'(s)$ and the acceleration $\textbf{g}''(s)$
+is the same as  
+the plane thru $\textbf{f}(t)$ and containing the velocity vector $\textbf{f}\,'(t)$ and the acceleration $\textbf{f}\,''(t)$
+for $t=\alpha(s)$.
+
+Since $\textbf{f}(t)=\textbf{g}(s)$, 
+we only need to show that
+$\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)}\parallel\Crossprod{\textbf{g}'(s)}{\textbf{g}''(s)}$.
+
+By chain rule
+\[\textbf{g}'(s)=\textbf{f}\,'(\alpha(s))\alpha'(s)\] 
+and by chain rule again
+\[\textbf{g}''(s)=\textbf{f}\,''(\alpha(s))\alpha'(s)^2+\textbf{f}\,'(\alpha(s))\alpha''(s).\] 
+Since $\Crossprod{\textbf{f}\,'}{\textbf{f}\,'}=\textbf{0}$ and $t=\alpha(s)$ we get
+\begin{align*}
+\Crossprod{\textbf{g}'(s)}{\textbf{g}''(s)}
+&
+=\Crossprod{\textbf{f}\,'(t)\alpha'(s)}{(\textbf{f}\,''(t)\alpha'(s)^2+\textbf{f}\,'(t)\alpha''(s))}
+\\
+&=
+\alpha'(s)^3\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)}.
+\end{align*}
+Since the reparametrization is regular, $\alpha'(s)\ne0$.
+Therefore $\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)}\parallel\Crossprod{\textbf{g}'(s)}{\textbf{g}''(s)}$ as requred.
+\end{exmp}
+\hrule width \textwidth height 0.5pt
+\vspace{3mm}
 
 Yet an other example is so called \emph{curvature}. 
 Assume a smooth regular curve $\textbf{g}$ has arc length parametrization.
@@ -4044,6 +4117,12 @@ It is called this way since the best approximation of the curve $\textbf{g}$ at 
 This circle is lying in the osculating plane,
 its center lies in the direction of curvature vector $\textbf{g}''(s)$ from $\textbf{g}(s)$ on the distance $R(s)$.
 If $\kappa(s)=0$ then the osculating circle degenerates to the tangent line.
+
+\begin{center}
+\begin{lpic}[t(3mm),b(5mm),r(0mm),l(0mm)]{pics/osculating-circle(1)}
+\lbl[t]{40,-3;The osculating circle to the sinusoid at two points.}
+\end{lpic}
+\end{center}
 
 Assume you want to find the curvature of the given curve using the definition above.
 Then you first have to find the arc length parametrization and then apply the formula above at the given point.

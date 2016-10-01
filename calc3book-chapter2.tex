@@ -101,8 +101,8 @@ what is meant by the limit of a function of two variables.
 }
 
 A similar definition can be made for functions of three variables.
-The idea behind the above definition is that the values of $f(x,y)$ can get arbitrarily close to $L$ (i.e.
-within $\epsilon$ of $L$) if we pick $(x,y)$ sufficiently close to $(a,b)$ (i.e. inside a circle centered at
+The idea behind the above definition is that the values of $f(x,y)$ can get arbitrarily close to $L$ (i.e. within $\epsilon$ of $L$) 
+if we pick $(x,y)$ sufficiently close to $(a,b)$ (i.e. inside a circle centered at
 $(a,b)$ with some sufficiently small radius $\delta$).
 
 If you recall the ``epsilon-delta'' proofs of limits of real-valued functions of a single variable, you may remember
@@ -326,8 +326,8 @@ start to develop an idea of a derivative of a function of two or more variables.
 around 1740, to distinguish it from the letter $d$ used for the ``usual'' derivative.}
 
 Recall that the derivative of a function $f(x)$ can be interpreted as the rate of change of that function in the
-(positive) $x$ direction. From the definitions above, we can see that the partial derivative of a function
-$f(x,y)$ with respect to $x$ or $y$ is the rate of change of $f(x,y)$ in the (positive) $x$ or $y$ direction,
+(positive) $x$ direction. 
+From the definitions above, we can see that the partial derivative of a function $f(x,y)$ with respect to $x$ or $y$ is the rate of change of $f(x,y)$ in the (positive) $x$ or $y$ direction,
 respectively. What this means is that the partial derivative of a function $f(x,y)$ with respect to $x$ can be
 calculated by treating the $y$ \emph{variable} as a \emph{constant}, and then simply differentiating $f(x,y)$ as if it
 were a function of $x$ alone, using the usual rules from single-variable calculus. Likewise, the partial derivative of
@@ -818,7 +818,7 @@ directions, respectively. What about other directions? It turns out that we can 
 
 \statedefn{defn:dirderiv}{\index{directional derivative}\index{derivative!directional}
  {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$, and let $(a,b)$ be a point in $D$. Let
-  \textbf{v} be a unit vector in $\Real{2}$. Then the
+  \textbf{v} be a vector in $\Real{2}$. Then the
   \textbf{directional derivative of $\bm{f}$ at $\bm{(a,b)}$ in the direction of v}, denoted by
   $\ssub{D}{\textbf{v}}f(a,b)$, is defined as
   \begin{equation}\label{eqn:dirderiv}
@@ -834,10 +834,9 @@ the reader should be used to by now. If we were to write the vector \textbf{v} a
 \end{equation}
 From this we can immediately recognize that the partial derivatives $\tfrac{\partial f}{\partial x}$ and
 $\tfrac{\partial f}{\partial y}$ are special cases of the directional derivative with $\textbf{v} = \textbf{i} = (1,0)$
-and $\textbf{v} = \textbf{j} = (0,1)$, respectively. That is, $\tfrac{\partial f}{\partial x} = \ssub{D}{\textbf{i}}f$
-and $\tfrac{\partial f}{\partial y} = \ssub{D}{\textbf{j}}f$. Since there are many vectors with the same
-direction, we use a unit vector in the definition, as that represents a ``standard'' vector for a given
-direction.
+and $\textbf{v} = \textbf{j} = (0,1)$, respectively. 
+That is, $\tfrac{\partial f}{\partial x} = \ssub{D}{\textbf{i}}f$
+and $\tfrac{\partial f}{\partial y} = \ssub{D}{\textbf{j}}f$. 
 
 If $f(x,y)$ has continuous partial derivatives $\tfrac{\partial f}{\partial x}$ and
 $\tfrac{\partial f}{\partial y}$ (which will always be the case in this text), then there is a simple formula for the
@@ -846,11 +845,12 @@ directional derivative:\index{$\ssub{D}{\textbf{v}}f$}
 \statethm{thm:dirderiv}{
  {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$ such that the partial derivatives
  $\tfrac{\partial f}{\partial x}$ and $\tfrac{\partial f}{\partial y}$ exist and are continuous in $D$. Let $(a,b)$ be
- a point in $D$, and let $\textbf{v} = \vectwo{v}$ be a unit vector in $\Real{2}$. Then
+ a point in $D$. Then
   \begin{equation}\label{eqn:dirderivfor}
    \ssub{D}{\textbf{v}}f(a,b) = \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) +
     \ssub{v}{2}\frac{\partial f}{\partial y}(a,b) ~.
   \end{equation}}
+  for any vector $\textbf{v} = \vectwo{v}$ in $\Real{2}$
 }
 \begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
  Note that if $\textbf{v} = \textbf{i} = (1,0)$ then the above formula reduces to
@@ -858,35 +858,33 @@ directional derivative:\index{$\ssub{D}{\textbf{v}}f$}
  $\ssub{D}{\textbf{i}}f = \tfrac{\partial f}{\partial x}$, as we noted earlier. Similarly, for
  $\textbf{v} = \textbf{j} = (0,1)$ the formula reduces to $\ssub{D}{\textbf{v}}f(a,b) =
  \tfrac{\partial f}{\partial y}(a,b)$, which is true since $\ssub{D}{\textbf{j}}f = \tfrac{\partial f}{\partial y}$.
- So since $\textbf{i} = (1,0)$ and $\textbf{j} = (0,1)$ are the only unit vectors in $\Real{2}$ with a zero component,
- then we need only show the
- formula holds for unit vectors $\textbf{v} = \vectwo{v}$ with $\ssub{v}{1} \ne 0$ and
- $\ssub{v}{2} \ne 0$. So fix such a vector \textbf{v} and fix a number $h \ne 0$.
-\newpage
-\noindent Then
+ Fix such a vector $\textbf{v} = \vectwo{v}$ and fix a number $h \ne 0$.
+Then
  \begin{equation}\label{eqn:dirderivdiff}
   f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a,b) = f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b) +
    f(a+h\ssub{v}{1},b) - f(a,b) ~.
  \end{equation}
- Since $h \ne 0$ and $\ssub{v}{2} \ne 0$, then $h\ssub{v}{2} \ne 0$ and thus any number $c$ between $b$ and
- $b+h\ssub{v}{2}$ can be written as $c=b+\alpha h\ssub{v}{2}$ for some number $0 < \alpha < 1$. So since the
- function $f(a+h\ssub{v}{1},y)$ is a real-valued function of $y$ (since $a+h\ssub{v}{1}$ is a fixed number), then
- the Mean Value Theorem from single-variable calculus can be applied to the function $g(y) = f(a+h\ssub{v}{1},y)$ on the
- interval $\lbrack b, b+h\ssub{v}{2} \rbrack$ (or $\lbrack b+h\ssub{v}{2}, b \rbrack$ if one of $h$ or $\ssub{v}{2}$ is
- negative) to find a number $0 < \alpha < 1$ such that
- \begin{displaymath}
-  \frac{\partial f}{\partial y}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) = g\,'(b+\alpha h\ssub{v}{2}) = 
-   \frac{g(b+h\ssub{v}{2}) - g(b)}{b+h\ssub{v}{2} - b} =
-   \frac{f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b)}{h\ssub{v}{2}}
- \end{displaymath}
- and so
- \begin{displaymath}
-  f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b) ~~=~~ h\ssub{v}{2} 
-   \frac{\partial f}{\partial y}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) ~.
- \end{displaymath}
+ Since $g(\alpha)=f(a+h\ssub{v}{1},y+\alpha h\ssub{v}{2})$ is a real-valued function,
+ we can apply
+ the Mean Value Theorem from single-variable calculus on the interval $[0,1]$.
+ It provides a number $0 < \alpha < 1$ such that
+ \begin{align*}
+  g\,'(\alpha) 
+  &= 
+   \frac{g(1) - g(0)}{1-0} 
+   \\
+   &=
+   f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b).
+ \end{align*}
+ By chain rule
+ \[g\,'(\alpha)=\frac{\partial f}{\partial y}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) h\ssub{v}{2}.\]
+ Therefore 
+ \[f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b)
+ =
+ h\ssub{v}{2}\frac{\partial f}{\partial x}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) .\]
  By a similar argument, there exists a number $0 < \beta < 1$ such that
  \begin{displaymath}
-  f(a+h\ssub{v}{1},b) - f(a,b) ~~=~~ h\ssub{v}{1} \frac{\partial f}{\partial x}(a+\beta h\ssub{v}{1},b) ~.
+  f(a+h\ssub{v}{1},b) - f(a,b) = h\ssub{v}{1} \frac{\partial f}{\partial x}(a+\beta h\ssub{v}{1},b) ~.
  \end{displaymath}
  Thus, by equation (\ref{eqn:dirderivdiff}), we have
  \begin{align*}
@@ -918,11 +916,12 @@ Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\parti
   \begin{equation}\label{eqn:gradxy}
    \nabla f = \biggl(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\biggr)
   \end{equation}
-  in $\Real{2}$. For a real-valued function $f(x,y,z)$, the gradient is the vector
+  in $\Real{2}$. 
+  For a real-valued function $f(x,y,z)$, the gradient is the vector
   \begin{equation}\label{eqn:gradxyz}
    \nabla f = \biggl(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\biggr)
   \end{equation}
-  in $\Real{3}$. The symbol $\nabla$ is pronounced ``del''.\footnotemark}
+  in $\Real{3}$. The symbol $\nabla$ is pronounced ``del'' or ``nabla''.\footnotemark}
 }\footnotetext{Sometimes the notation grad($f$) is used instead of $\nabla f$.}
 
 \vspace{-4mm}
@@ -946,8 +945,9 @@ Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\parti
 
 A real-valued function $z=f(x,y)$ whose partial derivatives $\tfrac{\partial f}{\partial x}$ and
 $\frac{\partial f}{\partial y}$ exist and are continuous is called \emph{continuously differentiable}.
-Assume that $f(x,y)$ is such a function and that $\nabla f \ne \textbf{0}$. Let $c$ be a real number in the range of
-$f$ and let \textbf{v} be a unit vector in $\Real{2}$ which is tangent to the
+Assume that $f(x,y)$ is such a function and that $\nabla f \ne \textbf{0}$. 
+Let $c$ be a real number in the range of
+$f$ and let \textbf{v} be a vector in $\Real{2}$ which is tangent to the
 level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).\vspace{-1mm}\index{continuously differentiable}
 \begin{figure}[h]
  \begin{center}
@@ -976,14 +976,13 @@ level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).\vspace{-1mm}\index{co
 \end{figure}\vspace{-2mm}
 
 The value of $f(x,y)$ is constant along a level curve, so since \textbf{v} is a tangent vector to this curve, then
-the rate of change of $f$ in the direction of \textbf{v} is 0, i.e. $\ssub{D}{\textbf{v}}f = 0$. But we know that
-$\ssub{D}{\textbf{v}}f = \Dotprod{\textbf{v}}{\nabla f} = \norm{\textbf{v}}\,\norm{\nabla f}\,\cos \theta$,
-where $\theta$ is the angle between \textbf{v} and $\nabla f$. So since $\norm{\textbf{v}} = 1$ then
-$\ssub{D}{\textbf{v}}f = \norm{\nabla f}\,\cos \theta$. So since $\nabla f \ne \textbf{0}$ then
-$\ssub{D}{\textbf{v}}f = 0 \Rightarrow \cos \theta = 0 \Rightarrow \theta = 90\Degrees$. In other words, $\nabla f
+the rate of change of $f$ in the direction of \textbf{v} is 0, i.e. $\ssub{D}{\textbf{v}}f = 0$. 
+But we know that
+$\ssub{D}{\textbf{v}}f = \Dotprod{\textbf{v}}{\nabla f}$.
+In other words, $\nabla f
 \perp \textbf{v}$, which means that $\nabla f$ is \emph{normal} to the level curve.\index{normal to a curve}
 
-In general, for any unit vector \textbf{v} in $\Real{2}$, we still have 
+In general, for any unit vector \textbf{v} in $\Real{2}$, we have 
 $\ssub{D}{\textbf{v}}f = \norm{\nabla f}\,\cos \theta$, where $\theta$ is the angle between \textbf{v} and $\nabla f$.
 At a fixed point $(x,y)$ the length $\norm{\nabla f}$ is fixed,
 and the value of $\ssub{D}{\textbf{v}}f$ then varies as $\theta$ varies. The largest value
@@ -1007,8 +1006,10 @@ the direction of $-\nabla f$ (since $\theta = 180\Degrees$ in that case). We hav
  In which direction does the function $f(x,y) = xy^2 + x^3 y$ increase the fastest from the point $(1,2)$?
  In which direction does it decrease the fastest?\vspace{1mm}
  \par\noindent\emph{Solution:} Since $\nabla f = (y^2 + 3x^2 y, 2xy + x^3)$, then
- $\nabla f(1,2) = (10,5) \ne \textbf{0}$. A unit vector in that direction is $\textbf{v} =
- \frac{\nabla f}{\norm{\nabla f}} = \biggl( \frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}} \biggr)$. Thus, $f$ increases the
+ $\nabla f(1,2) = (10,5) \ne \textbf{0}$. 
+ A unit vector in that direction is $\textbf{v} =
+ \frac{\nabla f}{\norm{\nabla f}} = \biggl( \frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}} \biggr)$. 
+ Thus, $f$ increases the
  fastest in the direction of $\biggl( \frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}} \biggr)$ and decreases the fastest in
  the direction of $\biggl( \frac{-2}{\sqrt{5}}, \frac{-1}{\sqrt{5}} \biggr)$.
 \end{exmp}
@@ -1023,7 +1024,9 @@ three-dimensional case can also be defined by the formula $\ssub{D}{\textbf{v}}f
 \vspace{3mm}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- The temperature $T$ of a solid is given by the function $T(x,y,z) = e^{-x} + e^{-2y} + e^{4z}$, where
+ The temperature $T$ of a solid is given by the function 
+ \[T(x,y,z) = e^{-x} + e^{-2y} + e^{4z},\] 
+ where
  $x$, $y$, $z$ are space coordinates relative to the center of the solid. In which direction from the point $(1,1,1)$
  will the temperature decrease the fastest?\vspace{1mm}
  \par\noindent\emph{Solution:} Since $\nabla f = (-e^{-x},-2e^{-2y},4e^{4z})$, then the temperature will decrease the
@@ -1383,27 +1386,16 @@ $x^2 + y^2 = 1$ are local maximum points for $f$.
 \section{Unconstrained Optimization: Numerical Methods}
 The types of problems that we solved in the previous section were examples of \emph{unconstrained optimization}
 problems. That is, we tried to find local (and perhaps even global) maximum and minimum points of real-valued
-functions $f(x,y)$, where the points $(x,y)$ could be any points in the domain of $f$. The method we used
-required us to find the critical points of $f$, which meant having to solve the equation
-$\nabla f = \textbf{0}$, which in general is a system of two equations in two unknowns ($x$ and $y$). While this
-was relatively simple for the examples we did, in general this will not be the case. If the equations involve
-polynomials in $x$ and $y$ of degree three or higher, or complicated expressions involving trigonometric,
-exponential, or logarithmic functions, then solving even one such equation, let alone two, could be impossible
+functions $f(x,y)$, where the points $(x,y)$ could be any points in the domain of $f$. 
+The method we used required us to find the critical points of $f$, which meant having to solve the equation
+$\nabla f = \textbf{0}$, which in general is a system of two equations in two unknowns ($x$ and $y$). 
+While this was relatively simple for the examples we did, in general this will not be the case. 
+It might be impossible to solve these equations 
 by elementary means.\footnote{This is also a problem
 for the equivalent method (the Second Derivative Test) in single-variable calculus, though one that is not usually
 emphasized.}
 
-For example, if one of the equations that had to be solved was\index{Newton's algorithm}
-\begin{displaymath}
- x^3 + 9x - 2 = 0 ~,
-\end{displaymath}
-you may have a hard time getting the exact solutions. Trial and error would not help much, especially
-since the only real solution\footnote{There are
-also two nonreal, complex number solutions. Cubic polynomial equations in one variable can be solved using
-\emph{Cardan's formulas}, which are not quite as simple as the familiar quadratic formula. See \cite{usp} for
-more details. There are formulas for solving polynomial equations of degree 4, but it can be proved that there is no
-general formula for solving equations for polynomials of degree five or higher.} turns out to be
-$\sqrt[3]{\smash[b]{\sqrt{28}} + 1} - \sqrt[3]{\smash[b]{\sqrt{28}} - 1}$. In a situation such as this, the
+In a situation such as this, the
 only choice may be to find a solution using some numerical method which gives a sequence of numbers which
 converge to the actual solution. For example, Newton's method for solving equations $f(x) = 0$, which you probably
 learned in single-variable calculus. In this section we will describe another method of Newton for
@@ -1434,8 +1426,13 @@ define:
      \frac{\partial f}{\partial y}(\ssub{x}{n},\ssub{y}{n})
     \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})}
 \end{equation}
-Then the sequence of points $(\ssub{x}{n},\ssub{y}{n})_{n=1}^{\infty}$ converges to a critical point. If there are
-several critical points, then you will have to try different initial points to find them.
+Then the sequence of points $(\ssub{x}{n},\ssub{y}{n})_{n=1}^{\infty}$ typically converges to a critical point. 
+If there are several critical points, then you will have to try different initial points to find them.
+
+The choice of the formulas in (\ref{eqn:newton}) is motivated by the following fact, which can be checked by direct calculations.
+Assume that the partial derivatives $\tfrac{\partial^2 f}{\partial x^2}(x,y)$, $\tfrac{\partial^2 f}{\partial x\partial y}(x,y)$ and $\tfrac{\partial^2 f}{\partial y^2}(x,y)$ are constants;
+in other words, the function $f(x,y)$ can be expressed as a quadratic polynomial in $x$ and $y$, say $f(x,y)=a+bx+cy+lx^2+mxy+ny^2$.
+Then for any choice $(\ssub{x}{0},\ssub{y}{0})$ the formulas (\ref{eqn:newton}) returns a critical point $(\ssub{x}{1},\ssub{y}{1})$, which is unique in this case.
 
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = x^3 - xy - x + xy^3 - y^4$.\vspace{1mm}
@@ -1468,7 +1465,7 @@ point, and since the computations are quite tedious, we will let a computer do t
 write a simple program, using the Java programming language, which will take a given initial point as a parameter
 and then perform 100 iterations of Newton's algorithm. In each iteration the new point will be printed, so that we
 can see if there is convergence. The full code is shown in Listing \ref{java}.
-\newpage
+
 \definecolor{codecolor}{HTML}{FFF7E0}
 \lstset{language=Java,showstringspaces=false,
 basicstyle={\small\fontfamily{fvm}\fontseries{m}\selectfont},
@@ -1635,19 +1632,20 @@ initial point) requires techniques beyond the scope of this text. See \cite{rr} 
 detail and for discussion of other numerical methods. Our description of Newton's algorithm is the special
 two-variable case of a more general algorithm that can be applied to functions of $n \ge 2$ variables.
 
-In the case of functions which have a global maximum or minimum, Newton's algorithm can be used to find those
-points. In general, global maxima and minima tend to be more interesting than local versions, at least in practical
-applications. A maximization problem can always be turned into a minimization problem (why?), so a large number of
-methods have been developed to find the global minimum of functions of any number of variables. This field
-of study is called \emph{nonlinear programming}. Many of these methods are based on the \emph{steepest
+In the case of functions which have a global maximum or minimum, 
+Newton's algorithm can be used to find those points. 
+In general, global maxima and minima tend to be more interesting than local versions, at least in practical applications. 
+A maximization problem can always be turned into a minimization problem (why?), so a large number of methods have been developed to find the global minimum of functions of any number of variables. 
+This field of study is called \emph{nonlinear programming}. 
+
+Many of these methods are based on the \emph{steepest
 descent} technique, which is based on an idea that we discussed in Section 2.4. Recall that the negative gradient
 $-\nabla f$ gives the direction of the fastest rate of decrease of a function $f$. 
 The crux of the steepest descent idea, then, is that starting from some initial point, you move a certain amount in the direction of $-\nabla f$ at that point. 
 Wherever that takes you becomes your new point, and you then just keep repeating that procedure until
 eventually (hopefully) you reach the point where $f$ has its smallest value. There is a ``pure'' steepest descent
 method, and a multitude of variations on it that improve the rate of convergence, ease of calculation, etc. 
-In fact, Newton's algorithm can be interpreted as a modified steepest descent method. For more discussion of this, and
-of nonlinear programming in general, see \cite{bss}.\index{steepest descent}
+For more discussion of this, and of nonlinear programming in general, see \cite{bss}.\index{steepest descent}
 \startexercises\label{sec2dot6}
 \probs{C}\vspace{1mm}
 \begin{enumerate}[\bfseries 1.]
@@ -1928,7 +1926,7 @@ for solving constrained optimization problems, though we will not discuss them h
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Find the constrained maxima and minima of $f(x,y,z) = x+y^2 +2z$ given that $4x^2 + 9y^2 -36z^2 =36$.
- \item Find the volume of the largest rectangular parallelepiped that can be inscribed in the ellipsoid
+ \item Find the volume of the largest rectangular parallelepiped with edges parallel to the coordinate axis that can be inscribed in the ellipsoid
   \begin{displaymath}
    \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 ~.
   \end{displaymath}
