@@ -163,7 +163,7 @@ represent all those equal vectors?  The answer is yes, and is suggested by the v
   one whose initial point is at the origin of the coordinate system.}
 }
 
-\vspace{3mm}
+\medskip
 Thinking of vectors as starting from the origin provides a way of dealing with vectors in a standard way, since every
 coordinate system has an origin.  But there
 will be times when it is convenient to consider a different initial point for a vector (for example, when adding
@@ -172,7 +172,7 @@ vectors, which we will do in the next section).
 Another advantage of using the origin as the initial point is that it provides an natural correspondence between a
 vector and its terminal point.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Let \textbf{v} be the vector in $\Real{3}$ whose initial point is at the origin and whose terminal point
@@ -190,7 +190,7 @@ vector and its terminal point.
  \label{fig:corresp}
 \end{figure}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 Unless otherwise stated, when we refer to vectors as $\textbf{v} = (a,b)$ in $\Real{2}$ or $\textbf{v} = (a,b,c)$
 in $\Real{3}$, we mean vectors in Cartesian coordinates starting at the origin.  Also, we will write
@@ -228,22 +228,22 @@ the ``new'' vector whose initial point is the origin.  Do this for each original
  \label{fig:ex1.2}
 \end{figure}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 Recall the distance\index{distance} formula for points in the Euclidean plane\index{distance!between points}:
 
-\vspace{3mm}
+\medskip
 \statecomment{
  {For points $P = (\ssub{x}{1},\ssub{y}{1})$, $Q =
  (\ssub{x}{2},\ssub{y}{2})$ in $\Real{2}$, the distance $d$ between $P$ and $Q$ is:
   \begin{equation}
    d = \sqrt{(\ssub{x}{2} - \ssub{x}{1})^2 + (\ssub{y}{2} - \ssub{y}{1})^2}.
   \end{equation}}}
-\vspace{3mm}
+\medskip
 
 By this formula, we have the following result:
 
-\vspace{3mm}
+\medskip
 \statecomment{
  {For a vector $\overrightarrow{PQ}$ in $\Real{2}$ with initial point
   $P = (\ssub{x}{1},\ssub{y}{1})$ and terminal point\\
@@ -256,14 +256,14 @@ By this formula, we have the following result:
 Finding the magnitude of a vector $\textbf{v} = (a,b)$ in $\Real{2}$ is a
 special case of formula (\ref{eq:mag2}) with $P = (0,0)$ and $Q = (a,b)$ :
 
-\vspace{3mm}
+\medskip
 \statecomment{
  {For a vector $\textbf{v} = (a,b)$ in $\Real{2}$, the magnitude\index{vector!magnitude} of \textbf{v} is:
   \begin{equation}
    \norm{\textbf{v}} = \sqrt{a^2 + b^2}. 
    \label{eq:mag02}
   \end{equation}}}
-\vspace{1mm}
+\smallskip
 
 To calculate the magnitude of vectors in $\Real{3}$, we need a distance formula for points in Euclidean
 space\index{distance!between points} (we will postpone the proof until the next section):
@@ -285,22 +285,22 @@ The proof will use the following result:
    \label{eq:mag03}
   \end{equation}}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  There are four cases to consider:
  \par\noindent\emph{Case 1: $a = b = c = 0$}.  Then $\textbf{v} = \textbf{0}$, so $\norm{\textbf{v}}
  = 0 = \sqrt{0^2 + 0^2 + 0^2} = \sqrt{a^2 + b^2 + c^2}$.
- \vspace{3mm}
+ \medskip
  \par\noindent\emph{Case 2: exactly two of $a, b, c$ are $0$.}  Without loss of generality, we assume that $a = b = 0$
  and $c \ne 0$ (the other two possibilities are handled in a similar manner).
  Then $\textbf{v} = (0,0,c)$, which is a vector of length $\abs{c}$ along the $z$-axis.
  So $\norm{\textbf{v}} = | c | = \sqrt{c^2} = \sqrt{0^2 + 0^2 + c^2} = \sqrt{a^2 + b^2 + c^2}$.
- \vspace{3mm}
+ \medskip
  \par\noindent\emph{Case 3: exactly one of $a, b, c$ is $0$.}  Without loss of generality, we assume that $a = 0$,
  $b \ne 0$ and $c \ne 0$ (the other two possibilities are handled in a similar manner).
  Then $\textbf{v} = (0,b,c)$, which is a vector in the $yz$-plane, so by the Pythagorean
  Theorem we have $\norm{\textbf{v}} = \sqrt{b^2 + c^2} = \sqrt{0^2 + b^2 + c^2} =
  \sqrt{a^2 + b^2 + c^2}$.
- \vspace{1mm}
+ \smallskip
  \piccaption[]{}\parpic[r]{\includegraphics{fig1.1.8.0}}
  \par\noindent\emph{Case 4: none of $a, b, c$ are $0$.}  Without loss of generality, we can assume that
  $a, b, c$ are all positive (the other seven possibilities are handled in a similar manner).
@@ -309,7 +309,7 @@ The proof will use the following result:
  application of the Pythagorean Theorem, this time to the right triangle $\triangle PQR$, gives $\norm{\textbf{v}}
  = \left\lvert PQ \right\rvert = \sqrt{\left\vert PR \right\vert^2 + \left\vert QR \right\vert^2} =
  \sqrt{a^2 + b^2 + c^2}$.\\
- This proves the theorem. \qquad \qedhere \vspace{-3mm}
+ This proves the theorem. \qquad \qedhere 
 \end{proof}\end{proofbar}
 
 \begin{exmp}
@@ -324,7 +324,7 @@ The proof will use the following result:
    By formula (\ref{eq:dist3}), the distance $d = \sqrt{(4 - 2)^2 + (2 - (-1))^2 + (-3 - 4)^2} =$\\$\sqrt{4 + 9 + 49} =
    \sqrt{62}$.
   \item The magnitude of the vector $\textbf{v} = (5,8,-2)$ in $\Real{3}$.\\\emph{Solution:} By formula
-   (\ref{eq:mag03}), $\norm{\textbf{v}} = \sqrt{5^2 + 8^2 + (-2)^2} = \sqrt{25 + 64 + 4} = \sqrt{93}$.\vspace{-4mm}
+   (\ref{eq:mag03}), $\norm{\textbf{v}} = \sqrt{5^2 + 8^2 + (-2)^2} = \sqrt{25 + 64 + 4} = \sqrt{93}$.
  \end{enumerate}
 \end{exmp}
 \startexercises\label{sec1dot1}
@@ -393,11 +393,11 @@ the vector, and as flipping the vector in the opposite direction if the scalar i
 
 \begin{figure}[h]
  \begin{center}
-  \includegraphics{fig1.2.1.0}\vspace{-3mm}
+  \includegraphics{fig1.2.1.0}
  \end{center}
  \caption[]{}
  \label{fig:scalar}
-\end{figure}\vspace{-2mm}
+\end{figure}
 
 Recall that \textbf{translating}\index{vector!translation} a nonzero vector means that the initial point of the vector
 is changed but the magnitude and direction are preserved. We are now ready to define
@@ -467,10 +467,11 @@ starting at the origin.
 \statethm{thm:cart2}{
  {Let $\textbf{v} = \vectwo{v}$, $\textbf{w} = \vectwo{w}$ be vectors in $\Real{2}$, and let $k$ be a scalar.
  Then\\(a)
- $k\textbf{v} = \vectwo{kv}$;\vspace{1mm}\\(b)
+ $k\textbf{v} = \vectwo{kv}$;
+ \smallskip\\(b)
  $\textbf{v + w} = \vectwoadd{v}{w}$.}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:] (a)
+\begin{proofbar}\begin{proof}[Proof:] (a)
  Without loss of generality, we assume that $\ssub{v}{1}, \ssub{v}{2} > 0$ (the other
  possibilities are handled in a similar manner). If $k = 0$ then $k\textbf{v} = 0\textbf{v} = \textbf{0} = (0,0)
  = \vectwo{0v} = \vectwo{kv}$, which
@@ -483,7 +484,8 @@ starting at the origin.
  (\ssub{kv}{2})^2} = \sqrt{k^2 \ssub{v}{1}^2 + k^2 \ssub{v}{2}^2} = \sqrt{k^2 (\ssub{v}{1}^2 + \ssub{v}{2}^2)} =
  \abs{k} \,\sqrt{\ssub{v}{1}^2 + \ssub{v}{2}^2} = \abs{k} \,\norm{\textbf{v}}$.
  So $k\textbf{v}$ and $\vectwo{kv}$ have the same magnitude and direction.
- This proves (a).\vspace{1mm}
+ This proves (a).
+ \smallskip
  
  \piccaption[]{}\parpic[r]{\includegraphics{fig1.2.5.0}}
  \par\noindent(b)
@@ -491,30 +493,39 @@ starting at the origin.
  \ssub{w}{1},\ssub{w}{2} > 0$ (the other possibilities are handled in a similar manner).
  From Figure 1.2.5, we see that when translating \textbf{w} to start at the end of \textbf{v}, the new
  terminal point of \textbf{w} is $\vectwoadd{v}{w}$, so by the definition of $\textbf{v} + \textbf{w}$ this must
- be the terminal point of $\textbf{v} + \textbf{w}$. This proves (b).\vspace{-3mm}
+ be the terminal point of $\textbf{v} + \textbf{w}$. 
+ This proves (b).
 \end{proof}\end{proofbar}
 \statethm{thm:cart3}{
  {Let $\textbf{v} = \vecthree{v}$, $\textbf{w} = \vecthree{w}$ be vectors in $\Real{3}$, let $k$ be a scalar.
  Then\\
- (a) $k\textbf{v} = \vecthree{kv}$;\vspace{1mm}\\(b)
+ (a) $k\textbf{v} = \vecthree{kv}$;
+ \smallskip\\(b)
  $\textbf{v + w} = \vecthreeadd{v}{w}$.}
 }
 The following theorem summarizes the basic laws of vector algebra.
 \statethm{thm:vecalg}{
  {For any vectors \textbf{u}, \textbf{v}, \textbf{w}, and scalars $k, l$,
  we have\par\noindent\begin{tabular}{@{} l r @{}}
- (a) $\textbf{v} + \textbf{w} = \textbf{w} + \textbf{v}$ & \qquad\qquad Commutative Law;\vspace{1mm}\\
+ (a) $\textbf{v} + \textbf{w} = \textbf{w} + \textbf{v}$ & \qquad\qquad Commutative Law;
+ \smallskip\\
  (b) $\textbf{u} + (\textbf{v} + \textbf{w}) = (\textbf{u} + \textbf{v}) + \textbf{w}$
- & \qquad\qquad Associative Law;\vspace{1mm}\\
- (c) $\textbf{v} + \textbf{0} = \textbf{v} = \textbf{0} + \textbf{v}$ & \qquad\qquad Additive Identity;\vspace{1mm}\\
- (d) $\textbf{v} +  (-\textbf{v}) = \textbf{0}$ & \qquad\qquad Additive Inverse;\vspace{1mm}\\
- (e) $k(l\textbf{v}) = (kl)\textbf{v}$ & \qquad\qquad Associative Law;\vspace{1mm}\\
- (f) $k(\textbf{v} + \textbf{w}) = k\textbf{v} + k\textbf{w}$ & \qquad\qquad Distributive Law;\vspace{1mm}\\
+ & \qquad\qquad Associative Law;
+ \smallskip\\
+ (c) $\textbf{v} + \textbf{0} = \textbf{v} = \textbf{0} + \textbf{v}$ & \qquad\qquad Additive Identity;
+ \smallskip\\
+ (d) $\textbf{v} +  (-\textbf{v}) = \textbf{0}$ & \qquad\qquad Additive Inverse;
+ \smallskip\\
+ (e) $k(l\textbf{v}) = (kl)\textbf{v}$ & \qquad\qquad Associative Law;
+ \smallskip\\
+ (f) $k(\textbf{v} + \textbf{w}) = k\textbf{v} + k\textbf{w}$ & \qquad\qquad Distributive Law;
+ \smallskip\\
  (g) $(k + l)\textbf{v} = k\textbf{v} + l\textbf{v}$ & \qquad\qquad Distributive Law.
  \end{tabular}}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
- (a) We already presented a geometric proof of this in Figure \ref{fig:pgram}(a).\vspace{1mm}\\(b)
+\begin{proofbar}\begin{proof}[Proof:]
+ (a) We already presented a geometric proof of this in Figure \ref{fig:pgram}(a).
+ \smallskip\\(b)
  To illustrate the difference between analytic proofs and geometric proofs in vector algebra, we will present both types
  here. For the analytic proof, we will use vectors in $\Real{3}$
  (the proof for $\Real{2}$ is similar).
@@ -535,9 +546,9 @@ The following theorem summarizes the basic laws of vector algebra.
 
  \piccaption[]{\quad Associative Law for vector addition}\parpic(\textwidth,0in){\includegraphics{fig1.2.6.0}
  \piccaptioninside}
- \par\mbox{}\newline\vspace{1mm}\picskip{0}
+ \par\mbox{}\newline\smallskip\picskip{0}
  
- \par\noindent(c) We already discussed this on p.10.\vspace{1mm}\\(d) We already discussed this on p.10.\vspace{1mm}\\(e)
+ \par\noindent(c) We already discussed this on p.10.\smallskip\\(d) We already discussed this on p.10.\smallskip\\(e)
  We will prove this for a vector $\textbf{v} = \vecthree{v}$ in $\Real{3}$ (the proof for
  $\Real{2}$ is similar):
  \begin{flalign*}
@@ -547,7 +558,7 @@ The following theorem summarizes the basic laws of vector algebra.
   & = (kl)\textbf{v}&
  \end{flalign*}
  
- \par\noindent(f) and (g): Left as exercises for the reader.\vspace{-3mm}
+ \par\noindent(f) and (g): Left as exercises for the reader.
 \end{proof}\end{proofbar}
 
 A \textbf{unit vector}\index{vector!unit} is a vector with magnitude 1.
@@ -629,21 +640,21 @@ $d = \norm{\textbf{w} - \textbf{v}} = \sqrt{(\ssub{x}{2} - \ssub{x}{1})^2 + (\ss
  \end{center}
  \caption[]{\quad Proof of Theorem \ref{thm:mag03}: $d = \norm{\textbf{w} - \textbf{v}}$.}
  \label{fig:dist3p}
-\end{figure}\vspace{-4mm}
+\end{figure}
 \startexercises\label{sec1dot2}
 \probs{A}
 \begin{enumerate}[\bfseries 1.]
- \item Let $\textbf{v} = (-1,5,-2)$ and $\textbf{w} = (3,1,1)$.\vspace{1mm}\\
+ \item Let $\textbf{v} = (-1,5,-2)$ and $\textbf{w} = (3,1,1)$.\smallskip\\
   \begin{tabular}{@{} l l l l @{}}
    (a) Find $\textbf{v} - \textbf{w}$. & (b) Find $\textbf{v} + \textbf{w}$. &
    (c) Find $\frac{\textbf{v}}{\norm{\textbf{v}}}$. &
-   (d) Find $\Norm{\frac{1}{2}(\textbf{v} - \textbf{w})}$.\vspace{1mm}\\
-   (e) Find $\Norm{\frac{1}{2}(\textbf{v} + \textbf{w})}$.\vspace{1mm} & (f) Find $-2\,\textbf{v} +
-   4\,\textbf{w}$.\vspace{1mm} & (g) Find $\textbf{v} - 2\,\textbf{w}$.\\
+   (d) Find $\Norm{\frac{1}{2}(\textbf{v} - \textbf{w})}$.\smallskip\\
+   (e) Find $\Norm{\frac{1}{2}(\textbf{v} + \textbf{w})}$.\smallskip & (f) Find $-2\,\textbf{v} +
+   4\,\textbf{w}$.\smallskip & (g) Find $\textbf{v} - 2\,\textbf{w}$.\\
    \multicolumn{3}{@{} l}{(h) Find the vector \textbf{u} such that $\textbf{u} + \textbf{v} + \textbf{w} =
-   \textbf{i}$.}\vspace{1mm}\\
+   \textbf{i}$.}\smallskip\\
    \multicolumn{3}{@{} l}{(i) Find the vector \textbf{u} such that $\textbf{u} + \textbf{v} + \textbf{w} =
-   2\,\textbf{j} + \textbf{k}$.}\vspace{1mm}\\
+   2\,\textbf{j} + \textbf{k}$.}\smallskip\\
    \multicolumn{3}{@{} l}{(j) Is there a scalar $m$ such that $m(\textbf{v} + 2\,\textbf{w}) = \textbf{k}$? If so,
    find it.}
   \end{tabular}
@@ -731,7 +742,7 @@ the dot product by establishing a relationship between the dot product of two ve
   \cos \theta = \frac{\Dotprod{\textbf{v}}{\textbf{w}}}{\norm{\textbf{v}} \, \norm{\textbf{w}}} \label{eqn:dotprod}
  \end{equation}}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  We will prove the theorem for vectors in $\Real{3}$ (the proof for $\Real{2}$ is similar). Let
  $\textbf{v} = \vecthree{v}$ and $\textbf{w} = \vecthree{w}$. 
  By the Law of Cosines (see Figure 1.3.2), we
@@ -742,7 +753,7 @@ the dot product by establishing a relationship between the dot product of two ve
  \end{equation}
  (note that equation (\ref{eqn:cosines}) holds even for the ``degenerate'' cases $\theta = 0\Degrees$ and $180\Degrees)$.
  \piccaption[]{}\parpic(\textwidth,0in){\includegraphics{fig1.3.2.0}\piccaptioninside}
- \par\mbox{}\newline\vspace{1mm}\picskip{0}
+ \par\mbox{}\newline\smallskip\picskip{0}
 
  Since $\textbf{v} - \textbf{w} = \vecthreesub{v}{w}$, expanding $\norm{\textbf{v} - \textbf{w}}^2$
  in equation (\ref{eqn:cosines}) gives
@@ -760,12 +771,13 @@ the dot product by establishing a relationship between the dot product of two ve
   $\textbf{v} \ne \textbf{0}$ and $\textbf{w} \ne \textbf{0}$,}\\
   \cos \theta &= \frac{\Dotprod{\textbf{v}}{\textbf{w}}}{\norm{\textbf{v}} \, \norm{\textbf{w}}}.\qquad\qedhere
  \end{align*}
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find the angle $\theta$ between the vectors $\textbf{v} = (2,1,-1)$ and $\textbf{w} =
- (3,-4,1)$.\vspace{2mm}\\\emph{Solution:}
+ (3,-4,1)$.\smallskip
+ \\\emph{Solution:}
  Since $\Dotprod{\textbf{v}}{\textbf{w}} = (2)(3) + (1)(-4) + (-1)(1) = 1$,
  $\norm{\textbf{v}} = \sqrt{6}$, and $\norm{\textbf{w}} = \sqrt{26}$, then
  \begin{displaymath}
@@ -774,7 +786,7 @@ the dot product by establishing a relationship between the dot product of two ve
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 Two nonzero vectors are \textbf{perpendicular}\index{vector!perpendicular} if the angle between them is $90\Degrees$.
 Since $\cos 90\Degrees = 0$, we have the following important corollary to Theorem \ref{thm:dotprod}:
@@ -817,30 +829,30 @@ respectively. See Figure \ref{fig:dotsign}.
 
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Are the vectors $\textbf{v} = (-1,5,-2)$ and $\textbf{w} = (3,1,1)$ perpendicular?\vspace{2mm}\\\emph{Solution:}
+ Are the vectors $\textbf{v} = (-1,5,-2)$ and $\textbf{w} = (3,1,1)$ perpendicular?\smallskip\\\emph{Solution:}
  Yes, $\textbf{v} \perp \textbf{w}$ since $\Dotprod{\textbf{v}}{\textbf{w}} = (-1)(3) + (5)(1) + (-2)(1) = 0$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 The following theorem summarizes the basic properties of the dot product.
 
 \statethm{thm:dotprop}{
  {For any vectors \textbf{u}, \textbf{v}, \textbf{w}, and scalar $k$,
  we have\par\noindent\begin{tabular}{@{} l r @{}}
- (a) $\Dotprod{\textbf{v}}{\textbf{w}} = \Dotprod{\textbf{w}}{\textbf{v}}$ & \qquad\qquad Commutative Law;\vspace{1mm}\\
+ (a) $\Dotprod{\textbf{v}}{\textbf{w}} = \Dotprod{\textbf{w}}{\textbf{v}}$ & \qquad\qquad Commutative Law;\smallskip\\
  (b) $\Dotprod{(k\textbf{v})}{\textbf{w}} = \Dotprod{\textbf{v}}{(k\textbf{w})} = k(\Dotprod{\textbf{v}}{\textbf{w}})$
- & \qquad\qquad Associative Law;\vspace{1mm}\\
- (c) $\Dotprod{\textbf{v}}{\textbf{0}} = 0 = \Dotprod{\textbf{0}}{\textbf{v}}$;\vspace{1mm}\\
+ & \qquad\qquad Associative Law;\smallskip\\
+ (c) $\Dotprod{\textbf{v}}{\textbf{0}} = 0 = \Dotprod{\textbf{0}}{\textbf{v}}$;\smallskip\\
  (d) $\Dotprod{\textbf{u}}{(\textbf{v} + \textbf{w})} = \Dotprod{\textbf{u}}{\textbf{v}} +
- \Dotprod{\textbf{u}}{\textbf{w}}$ & \qquad\qquad Distributive Law;\vspace{1mm}\\
+ \Dotprod{\textbf{u}}{\textbf{w}}$ & \qquad\qquad Distributive Law;\smallskip\\
  (e) $\Dotprod{(\textbf{u} + \textbf{v})}{\textbf{w}} = \Dotprod{\textbf{u}}{\textbf{w}} +
- \Dotprod{\textbf{v}}{\textbf{w}}$ & \qquad\qquad Distributive Law;\vspace{1mm}\\
+ \Dotprod{\textbf{v}}{\textbf{w}}$ & \qquad\qquad Distributive Law;\smallskip\\
  (f) $\abs{\Dotprod{\textbf{v}}{\textbf{w}}} \le \norm{\textbf{v}}\,\norm{\textbf{w}}$ & \qquad\qquad
  Cauchy--Schwarz Inequality.\footnotemark\index{Cauchy--Schwarz Inequality}
  \end{tabular}}
 }\footnotetext{Also known as the Cauchy--Schwarz--Buniakovski Inequality.}
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  The proofs of parts (a)--(e) are straightforward applications of the definition of the dot product, and are left
  to the reader as exercises. We will prove part (f).\\(f)
  If either $\textbf{v} = \textbf{0}$ or $\textbf{w} = \textbf{0}$, then $\Dotprod{\textbf{v}}{\textbf{w}} = 0$
@@ -852,19 +864,19 @@ The following theorem summarizes the basic properties of the dot product.
   \abs{\Dotprod{\textbf{v}}{\textbf{w}}} &\le \norm{\textbf{v}}\,\norm{\textbf{w}}
    \text{~~since $\abs{\cos \theta} \le 1$. \qquad \qedhere}
  \end{align*}
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
 Using Theorem \ref{thm:dotprop}, we see that if $\Dotprod{\textbf{u}}{\textbf{v}} = 0$ and
 $\Dotprod{\textbf{u}}{\textbf{w}} = 0$, then 
 \[\Dotprod{\textbf{u}}{(k\textbf{v} + l\textbf{w})} =
 k(\Dotprod{\textbf{u}}{\textbf{v}}) + l(\Dotprod{\textbf{u}}{\textbf{w}}) = k(0) + l(0) =0\] for all scalars $k, l$.
-Thus, we have the following fact:\vspace{2mm}
+Thus, we have the following fact:\smallskip
 \statecomment{
  {\begin{center}If $\textbf{u} \perp \textbf{v}$ and $\textbf{u} \perp \textbf{w}$, then
   $\textbf{u} \perp (k\textbf{v} + l\textbf{w})$ for all scalars $k, l$.\end{center}}
 }
 
-\vspace{2mm}
+\smallskip
 For vectors \textbf{v} and \textbf{w}, the collection of all scalar combinations $k\textbf{v} + l\textbf{w}$
 is called the \textbf{span} of \textbf{v} and \textbf{w}\index{span}. If nonzero vectors \textbf{v} and \textbf{w} are
 parallel, then their span is a line; if they are not parallel, then their span is a plane. So what we showed above is
@@ -877,12 +889,12 @@ The dot product can be used to derive properties of the magnitudes of vectors, t
  {For any vectors \textbf{v}, \textbf{w}, we have\par\noindent\begin{tabular}{@{} l r @{}}
   (a) $\norm{\textbf{v}}^2 = \Dotprod{\textbf{v}}{\textbf{v}}$;\\
   (b) $\norm{\textbf{v} + \textbf{w}} \le \norm{\textbf{v}} + \norm{\textbf{w}}$
-   & \qquad\qquad Triangle Inequality\index{triangle inequality};\vspace{1mm}\\
+   & \qquad\qquad Triangle Inequality\index{triangle inequality};\smallskip\\
   (c) $\norm{\textbf{v} - \textbf{w}} \ge \norm{\textbf{v}} - \norm{\textbf{w}}$.
  \end{tabular}}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
- (a) Left as an exercise for the reader.\vspace{1mm}\\(b) By part (a) and Theorem \ref{thm:dotprop}, we have
+\begin{proofbar}\begin{proof}[Proof:]
+ (a) Left as an exercise for the reader.\smallskip\\(b) By part (a) and Theorem \ref{thm:dotprop}, we have
   \begin{align*}
    \norm{\textbf{v} + \textbf{w}}^2 &= \Dotprod{(\textbf{v} + \textbf{w})}{(\textbf{v} + \textbf{w})}
    = \Dotprod{\textbf{v}}{\textbf{v}} + \Dotprod{\textbf{v}}{\textbf{w}} + \Dotprod{\textbf{w}}{\textbf{v}} +
@@ -899,7 +911,7 @@ The dot product can be used to derive properties of the magnitudes of vectors, t
   \par\noindent(c) Since $\textbf{v} = \textbf{w} + (\textbf{v} - \textbf{w})$, then $\norm{\textbf{v}} = 
   \norm{\textbf{w} + (\textbf{v} - \textbf{w})} \le \norm{\textbf{w}} + \norm{\textbf{v} - \textbf{w}}$
   by the Triangle Inequality, so subtracting $\norm{\textbf{w}}$ from both sides gives
-  $\norm{\textbf{v}} - \norm{\textbf{w}} \le \norm{\textbf{v} - \textbf{w}}$. \qquad \qedhere \vspace{-3mm}
+  $\norm{\textbf{v}} - \norm{\textbf{w}} \le \norm{\textbf{v} - \textbf{w}}$. \qquad \qedhere 
 \end{proof}\end{proofbar}
 
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.3.4.0}}
@@ -907,7 +919,7 @@ The dot product can be used to derive properties of the magnitudes of vectors, t
 the lengths of the other two sides (see Figure 1.3.4). Another way of saying this is with the familiar statement ``the
 shortest distance between two points is a straight line.''
 
-\vspace{-6mm}
+
 \startexercises\label{sec1dot3}
 \probs{A}
 \begin{enumerate}[\bfseries 1.]
@@ -915,10 +927,10 @@ shortest distance between two points is a straight line.''
  \item Let $\textbf{v} = -3\,\textbf{i} - 2\,\textbf{j} - \textbf{k}$ and
   $\textbf{w} = 6\,\textbf{i} + 4\,\textbf{j} + 2\,\textbf{k}$. Calculate $\Dotprod{\textbf{v}}{\textbf{w}}$.
 \suspend{enumerate}
-\par\noindent For Exercises 3--8, find the angle $\theta$ between the vectors $\textbf{v}$ and $\textbf{w}$.
+\par\noindent For Exercises \ref{ex:theta:first}--\ref{ex:theta:last}, find the angle $\theta$ between the vectors $\textbf{v}$ and $\textbf{w}$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$;
+  \item\label{ex:theta:first} $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$;
   \item $\textbf{v} = (7,2,-10)$, $\textbf{w} = (2,6,4)$;
  \end{multicols}
  \begin{multicols}{2}
@@ -928,7 +940,7 @@ shortest distance between two points is a straight line.''
  \begin{multicols}{2}
   \item $\textbf{v} = -\,\textbf{i} + 2\,\textbf{j} + \textbf{k}$,
    $\textbf{w} = -3\,\textbf{i} + 6\,\textbf{j} + 3\,\textbf{k}$;
-  \item $\textbf{v} = \textbf{i}$, $\textbf{w} = 3\,\textbf{i} + 2\,\textbf{j} + 4\textbf{k}$.
+  \item\label{ex:theta:last} $\textbf{v} = \textbf{i}$, $\textbf{w} = 3\,\textbf{i} + 2\,\textbf{j} + 4\textbf{k}$.
  \end{multicols}
  \item Let $\textbf{v} = (8,4,3)$ and $\textbf{w} = (-2,1,4)$. Is $\textbf{v} \perp \textbf{w}$? Justify your answer.
  \item Let $\textbf{v} = (6,0,4)$ and $\textbf{w} = (0,2,-1)$. Is $\textbf{v} \perp \textbf{w}$? Justify your answer.
@@ -941,8 +953,8 @@ shortest distance between two points is a straight line.''
  \item For $\textbf{v}$, $\textbf{w}$ from Exercise 6, verify the Triangle Inequality
   $\norm{\textbf{v} + \textbf{w}} \le \norm{\textbf{v}} + \norm{\textbf{w}}$.
 \suspend{enumerate}
-\probs{B}\vspace{1mm}
-\par\noindent Note: Consider only vectors in $\Real{3}$ for Exercises 15--25.\vspace{1mm}
+\probs{B}
+\smallskip
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item Prove Theorem \ref{thm:dotprop}(a).
@@ -977,17 +989,15 @@ shortest distance between two points is a straight line.''
    \norm{\textbf{u}} = \frac{\abs{\Dotprod{\textbf{v}}{\textbf{w}}}}{\norm{\textbf{w}}}.
   \end{displaymath}
   \emph{(Hint: Consider the angle between} \textbf{v} \emph{and} \textbf{w}.\emph{)}
- \item Let $\alpha$, $\beta$, and $\gamma$ be the angles between a nonzero vector \textbf{v} in $\Real{3}$ and the
-  vectors \textbf{i}, \textbf{j}, and \textbf{k}, respectively. 
-  Show that $\cos^2 \alpha + \cos^2 \beta +
-  \cos^2 \gamma = 1$.\\
-  (Note: $\alpha$, $\beta$, $\gamma$ are often called the \emph{direction angles}\index{direction angles} of \textbf{v},
-  and $\cos \alpha$, $\cos \beta$, $\cos \gamma$ are called the \emph{direction cosines}\index{direction cosines}.)
-
   \item Assume $\norm{\textbf{v}}=\norm{\textbf{w}}$. 
   Show that 
   $(\textbf{v}+\textbf{w})\perp(\textbf{v}-\textbf{w})$.
-
+  \item Let $\alpha$, $\beta$, and $\gamma$ be the angles between a nonzero vector \textbf{v} in $\Real{3}$ and the
+  vectors \textbf{i}, \textbf{j}, and \textbf{k}, respectively. 
+  Show that $\cos^2 \alpha + \cos^2 \beta +
+  \cos^2 \gamma = 1$.
+  (The angles $\alpha$, $\beta$, $\gamma$ are often called the \emph{direction angles}\index{direction angles} of \textbf{v},
+  and $\cos \alpha$, $\cos \beta$, $\cos \gamma$ are called the \emph{direction cosines}\index{direction cosines}.)
 \end{enumerate}
 
 
@@ -1013,7 +1023,7 @@ it shortly.
 \hrule width \textwidth height 0.5pt
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.4.1.0}}
 \begin{exmp}\label{exmp:crossijk}
- Find $\Crossprod{\textbf{i}}{\textbf{j}}$.\vspace{2mm}\\\emph{Solution:}
+ Find $\Crossprod{\textbf{i}}{\textbf{j}}$.\smallskip\\\emph{Solution:}
  Since $\textbf{i} = (1,0,0)$ and $\textbf{j} = (0,1,0)$, then
  \begin{align*}
   \Crossprod{\textbf{i}}{\textbf{j}} &= ((0)(0) - (0)(1),(0)(0) - (1)(0),(1)(1) - (0)(0))\\
@@ -1024,7 +1034,7 @@ Similarly it can be shown that $\Crossprod{\textbf{j}}{\textbf{k}} = \textbf{i}$
 $\Crossprod{\textbf{k}}{\textbf{i}} = \textbf{j}$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 \picskip{0}In the above example, the cross product of the given vectors was perpendicular to both those vectors. It
 turns out that this will always be the case.
@@ -1033,7 +1043,7 @@ turns out that this will always be the case.
  {If the cross product $\Crossprod{\textbf{v}}{\textbf{w}}$ of two nonzero vectors $\textbf{v}$ and $\textbf{w}$ is also
  a nonzero vector, then it is perpendicular to both $\textbf{v}$ and $\textbf{w}$.}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  We will show that $\Dotprod{(\Crossprod{\textbf{v}}{\textbf{w}})}{\textbf{v}} = 0$:
  \begin{align*}
   \Dotprod{(\Crossprod{\textbf{v}}{\textbf{w}})}{\textbf{v}} &= \Dotprod{(\ssub{v}{2}\ssub{w}{3} -
@@ -1048,7 +1058,7 @@ turns out that this will always be the case.
  \end{align*}
  $\therefore \Crossprod{\textbf{v}}{\textbf{w}} \perp \textbf{v}$ by Corollary \ref{cor:dotperp}.\\
  The proof that $\Crossprod{\textbf{v}}{\textbf{w}} \perp \textbf{w}$ is similar.
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
 As a consequence of the above theorem and Theorem \ref{thm:dotprop}, we have the following:
 
@@ -1069,7 +1079,7 @@ while rotating \textbf{v} towards \textbf{w} with the remaining four fingers.
 
 \begin{figure}[h]
  \begin{center}
-  \includegraphics{fig1.4.2.0}\vspace{-5mm}
+  \includegraphics{fig1.4.2.0}
  \end{center}
  \caption[]{\quad Direction of $\Crossprod{\textbf{v}}{\textbf{w}}$.}
  \label{fig:crossnormal}
@@ -1115,20 +1125,20 @@ We will now derive a formula for the magnitude of $\Crossprod{\textbf{v}}{\textb
  {If $\theta$ is the angle between nonzero vectors \textbf{v} and \textbf{w} in $\Real{3}$, then
  \begin{equation}
   \norm{\Crossprod{\textbf{v}}{\textbf{w}}} = \norm{\textbf{v}}\,\norm{\textbf{w}}\,\sin \theta. \label{eqn:crossmag}
- \end{equation}}}\vspace{2mm}
+ \end{equation}}}\smallskip
 
 It may seem strange to bother with the above formula, when the magnitude of the cross product can be calculated
 directly, like for any other vector. The formula is more useful for its applications in geometry, as in the
 following example.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:crossarea}
  Let $\triangle PQR$ and $PQRS$ be a triangle and parallelogram, respectively, as shown in Figure \ref{fig:crossarea}.
 
  \begin{figure}[h]
  \begin{center}
-  \includegraphics{fig1.4.3.0}\vspace{-5mm}
+  \includegraphics{fig1.4.3.0}
  \end{center}
  \caption[]{}
  \label{fig:crossarea}
@@ -1152,7 +1162,7 @@ following example.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 By the discussion in Example \ref{exmp:crossarea}, we have proved the following theorem:
 \statethm{thm:crossarea}{
@@ -1180,11 +1190,11 @@ Theorem \ref{thm:crossarea} is valid.
 Theorem \ref{thm:crossarea} makes it simpler to calculate the area of a triangle in 3-dimensional space than by using
 traditional geometric methods.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Calculate the area of the triangle $\triangle PQR$, where $P = (2,4,-7)$, $Q = (3,7,18)$, and
- $R =(-5,12,8)$.\vspace{1mm}
+ $R =(-5,12,8)$.\smallskip
  \piccaption[]{}\parpic[r]{\begin{tikzpicture}
   \usetikzlibrary{arrows}
   \draw [black!60,line width=0.3pt,-latex] (0,0) -- (2.3,0,0);
@@ -1222,7 +1232,7 @@ traditional geometric methods.
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Calculate the area of the parallelogram $PQRS$, where $P = (1,1)$, $Q = (2,3)$, $R = (5,4)$, and
- $S = (4,2)$.\vspace{1mm}
+ $S = (4,2)$.\smallskip
  \piccaption[]{}\parpic[r]{\includegraphics{fig1.4.5.0}}
  \par\noindent\emph{Solution:} Let $\textbf{v} = \overrightarrow{SP}$ and $\textbf{w} = \overrightarrow{SR}$, as in
  Figure 1.4.5. 
@@ -1242,7 +1252,7 @@ traditional geometric methods.
 \end{exmp}
 
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 The following theorem summarizes the basic properties of the cross product.
 
@@ -1250,19 +1260,19 @@ The following theorem summarizes the basic properties of the cross product.
  {For any vectors \textbf{u}, \textbf{v}, \textbf{w} in $\Real{3}$, and scalar $k$,
  we have\par\noindent\begin{tabular}{@{} l r @{}}
  (a) $\Crossprod{\textbf{v}}{\textbf{w}} = -\Crossprod{\textbf{w}}{\textbf{v}}$ &
-  \qquad\qquad Anticommutative Law\vspace{1mm}\\
+  \qquad\qquad Anticommutative Law\smallskip\\
  (b) $\Crossprod{\textbf{u}}{(\textbf{v} + \textbf{w})} = \Crossprod{\textbf{u}}{\textbf{v}} +
-  \Crossprod{\textbf{u}}{\textbf{w}}$ & \qquad\qquad Distributive Law\vspace{1mm}\\
+  \Crossprod{\textbf{u}}{\textbf{w}}$ & \qquad\qquad Distributive Law\smallskip\\
  (c) $\Crossprod{(\textbf{u} + \textbf{v})}{\textbf{w}} = \Crossprod{\textbf{u}}{\textbf{w}} +
-  \Crossprod{\textbf{v}}{\textbf{w}}$ & \qquad\qquad Distributive Law\vspace{1mm}\\
+  \Crossprod{\textbf{v}}{\textbf{w}}$ & \qquad\qquad Distributive Law\smallskip\\
  (d) $\Crossprod{(k\textbf{v})}{\textbf{w}} = \Crossprod{\textbf{v}}{(k\textbf{w})} =
- k(\Crossprod{\textbf{v}}{\textbf{w}})$ & \qquad\qquad Associative Law\vspace{1mm}\\
- (e) $\Crossprod{\textbf{v}}{\textbf{0}} = \textbf{0} = \Crossprod{\textbf{0}}{\textbf{v}}$\vspace{1mm}\\
- (f) $\Crossprod{\textbf{v}}{\textbf{v}} = \textbf{0}$\vspace{1mm}\\
+ k(\Crossprod{\textbf{v}}{\textbf{w}})$ & \qquad\qquad Associative Law\smallskip\\
+ (e) $\Crossprod{\textbf{v}}{\textbf{0}} = \textbf{0} = \Crossprod{\textbf{0}}{\textbf{v}}$\smallskip\\
+ (f) $\Crossprod{\textbf{v}}{\textbf{v}} = \textbf{0}$\smallskip\\
  (g) $\Crossprod{\textbf{v}}{\textbf{w}} = \textbf{0}$ if and only if $\textbf{v} \parallel \textbf{w}$
  \end{tabular}}
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  The proofs of properties (b)--(f) are straightforward. We will prove parts (a) and (g) and leave the rest to the
  reader as exercises.
  \piccaption[]{}\parpic[r]{\includegraphics{fig1.4.6.0}}
@@ -1279,7 +1289,7 @@ The following theorem summarizes the basic properties of the cross product.
  \end{align*}
  Note that this says that $\Crossprod{\textbf{v}}{\textbf{w}}$ and $\Crossprod{\textbf{w}}{\textbf{v}}$ have the same
  magnitude but opposite direction (see Figure 1.4.6).\picskip{0}
- \vspace{-9mm}\par\noindent(g)
+ \par\noindent(g)
  If either \textbf{v} or \textbf{w} is $\textbf{0}$ then $\Crossprod{\textbf{v}}{\textbf{w}} = \textbf{0}$ by part (e),
  and either $\textbf{v} = \textbf{0} = 0\textbf{w}$ or $\textbf{w} = \textbf{0} = 0\textbf{v}$, so \textbf{v} and
  \textbf{w} are scalar multiples, i.e. they are parallel.
@@ -1290,9 +1300,9 @@ The following theorem summarizes the basic properties of the cross product.
  $\norm{\textbf{v}} > 0$ and $\norm{\textbf{w}} > 0)$. So since $0\Degrees \le \theta \le 180\Degrees$, then
  $\sin \theta = 0$ if and only if $\theta = 0\Degrees$ or $180\Degrees$. But the angle between \textbf{v} and \textbf{w}
  is $0\Degrees$ or $180\Degrees$ if and only if $\textbf{v} \parallel \textbf{w}$.
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:crossijkfull}
  Adding to Example \ref{exmp:crossijk}, we have
@@ -1310,7 +1320,7 @@ The following theorem summarizes the basic properties of the cross product.
  \end{gather*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 Recall that a \emph{parallelepiped}\index{parallelepiped} is a 3-dimensional solid with 6 faces, all of
 which are parallelograms.\footnote{An equivalent definition of a  parallelepiped is: the collection of
@@ -1342,7 +1352,7 @@ $\textbf{v}_{1}$, $\textbf{v}_{2}$, $\textbf{v}_{3}$ in $\Real{3}$, where $0 \le
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 In Example \ref{exmp:piped} the height $h$ of the parallelepiped is $\norm{\textbf{u}}\,\cos \theta$, and not
 $-\norm{\textbf{u}}\,\cos \theta$, because the vector $\textbf{u}$ is on the same side of the base parallelogram's plane
@@ -1351,7 +1361,7 @@ is the same no matter which base and height we use, then repeating the same step
 the base determined by \textbf{u} and \textbf{v} (since \textbf{w} is on the same side of that base's
 plane as $\Crossprod{\textbf{u}}{\textbf{v}}$), the volume is
 $\Dotprod{\textbf{w}}{(\Crossprod{\textbf{u}}{\textbf{v}})}$. Repeating this with the base determined by \textbf{w} and
-\textbf{u}, we have the following result:\vspace{2mm}
+\textbf{u}, we have the following result:\smallskip
 
 \statecomment{
  {For any vectors \textbf{u}, \textbf{v}, \textbf{w} in $\Real{3}$,
@@ -1361,7 +1371,7 @@ $\Dotprod{\textbf{w}}{(\Crossprod{\textbf{u}}{\textbf{v}})}$. Repeating this wit
    \Dotprod{\textbf{v}}{(\Crossprod{\textbf{w}}{\textbf{u}})}.
   \end{equation}}}
 
-\par\noindent(Note that the equalities hold trivially if any of the vectors are $\textbf{0}$.)\vspace{2mm}
+\par\noindent(Note that the equalities hold trivially if any of the vectors are $\textbf{0}$.)\smallskip
 
 Since $\Crossprod{\textbf{v}}{\textbf{w}} = -\Crossprod{\textbf{w}}{\textbf{v}}$ for any vectors \textbf{v}, \textbf{w}
 in $\Real{3}$, then picking the wrong order for the three adjacent sides in the scalar triple product in formula
@@ -1398,11 +1408,11 @@ that $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ lies in the 
 $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ also perpendicular to \textbf{u}, which could be any
 vector? The following example may help to see how this works.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ for $\textbf{u} = (1, 2, 4)$,
- $\textbf{v} = (2, 2, 0)$, $\textbf{w} = (1, 3, 0)$.\vspace{1mm}
+ $\textbf{v} = (2, 2, 0)$, $\textbf{w} = (1, 3, 0)$.\smallskip
  \par\noindent\emph{Solution:} 
  Since $\Dotprod{\textbf{u}}{\textbf{v}} = 6$ and
  $\Dotprod{\textbf{u}}{\textbf{w}} = 7$, then
@@ -1441,14 +1451,14 @@ vector? The following example may help to see how this works.
     \draw [semithick,-latex] (0,0,0) -- (-2,0,4);
     \draw [line width=0.1pt] (.15,.3,.075) -- (-.1,.24,.2) -- (-.18,0,.36);
     \draw [dashed] (1,2,.5) -- (1,0,.5);
-   \end{tikzpicture}\vspace{-4mm}
+   \end{tikzpicture}
   \end{center}
   \caption[]{}
   \label{fig:vectripleprod}
- \end{figure}\vspace{-2mm}
+ \end{figure}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 For vectors $\textbf{v} = \vecthreeijk{v}$ and $\textbf{w} = \vecthreeijk{w}$ in component form, the cross
 product is written as: $\Crossprod{\textbf{v}}{\textbf{w}} = (\ssub{v}{2}\ssub{w}{3} -
@@ -1494,7 +1504,7 @@ is the scalar defined by the following formula:
 It may help to remember this formula as being the product of the scalars on the downward diagonal minus the product of
 the scalars on the upward diagonal.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  \begin{displaymath}
@@ -1506,7 +1516,7 @@ the scalars on the upward diagonal.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 A \textbf{$\bm{3 \times 3}$ matrix} is an array of three rows and three columns of scalars, written as
 \begin{displaymath}
@@ -1538,7 +1548,7 @@ One way to remember the above formula is the following: multiply each scalar in 
 of the $2 \times 2$ matrix that remains after removing the row and column that contain that scalar, then sum those
 products up, putting alternating plus and minus signs in front of each (starting with a plus).
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  \begin{displaymath}
@@ -1555,7 +1565,7 @@ products up, putting alternating plus and minus signs in front of each (starting
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 We defined the determinant as a scalar, derived from algebraic operations on scalar entries in a matrix. However,
 if we put three \emph{vectors} in the first row of a $3 \times 3$ matrix, then the definition still
@@ -1575,7 +1585,7 @@ cross product of $\;\textbf{v} = \vecthreeijk{v}$ and $\textbf{w} = \vecthreeijk
 (\ssub{v}{1}\ssub{w}{2} - \ssub{v}{2}\ssub{w}{1})\textbf{k} ~.
 \end{align*}
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Let $\textbf{v} = 4\,\textbf{i} - \textbf{j} + 3\,\textbf{k}$ and $\textbf{w} = \textbf{i} + 2\,\textbf{k}$. Then
@@ -1594,7 +1604,7 @@ cross product of $\;\textbf{v} = \vecthreeijk{v}$ and $\textbf{w} = \vecthreeijk
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 The scalar triple product can also be written as a determinant. In fact, by Example \ref{exmp:piped}, the following
 theorem provides an alternate definition of the determinant of a $3 \times 3$ matrix as the volume
@@ -1612,11 +1622,11 @@ left-handed system would give the negative volume).
   \end{vmatrix}~.
  \end{equation}}}
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find the volume of the parallelepiped with adjacent sides $\textbf{u} = (2, 1, 3)$, $\textbf{v} = (-1, 3, 2)$,
- $\textbf{w} = (1, 1, -2)$ (see Figure 1.4.9).\vspace{1mm} 
+ $\textbf{w} = (1, 1, -2)$ (see Figure 1.4.9).\smallskip 
  \piccaption[]{\quad $P$}\parpic[r]{\begin{tikzpicture}
   \usetikzlibrary{arrows}
   \draw [black!60,line width=0.3pt,-latex] (0,0) -- (2.8,0,0);
@@ -1656,18 +1666,19 @@ left-handed system would give the negative volume).
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 Interchanging the dot and cross products can be useful in proving vector identities:
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:quadcrossdot}
  Prove: $\Dotprod{(\Crossprod{\textbf{u}}{\textbf{v}})}{(\Crossprod{\textbf{w}}{\textbf{z}})} =
  \begin{vmatrix}
    \Dotprod{\textbf{u}}{\textbf{w}} & \Dotprod{\textbf{u}}{\textbf{z}}\\
    \Dotprod{\textbf{v}}{\textbf{w}} & \Dotprod{\textbf{v}}{\textbf{z}}\end{vmatrix}$ for all vectors \textbf{u},
-   \textbf{v}, \textbf{w}, \textbf{z} in $\Real{3}$.\vspace{0.5mm}
+   \textbf{v}, \textbf{w}, \textbf{z} in $\Real{3}$.
+   \smallskip
  \par\noindent\emph{Solution:} Let $\textbf{x} = \Crossprod{\textbf{u}}{\textbf{v}}$. Then
  \begin{align*}
   \Dotprod{(\Crossprod{\textbf{u}}{\textbf{v}})}{(\Crossprod{\textbf{w}}{\textbf{z}})} &=
@@ -1684,13 +1695,13 @@ Interchanging the dot and cross products can be useful in proving vector identit
    \Dotprod{\textbf{u}}{\textbf{w}} & \Dotprod{\textbf{u}}{\textbf{z}}\\
    \Dotprod{\textbf{v}}{\textbf{w}} & \Dotprod{\textbf{v}}{\textbf{z}}\end{vmatrix}~.
  \end{align*}
-\end{exmp}\vspace{-7.5mm}
+\end{exmp}
 \startexercises\label{sec1dot4}
 \probs{A}
-\par\noindent For Exercises 1--6, calculate $\Crossprod{\textbf{v}}{\textbf{w}}$.
+\par\noindent For Exercises \ref{ex:Crossprod:first}--\ref{ex:Crossprod:last}, calculate $\Crossprod{\textbf{v}}{\textbf{w}}$.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
-  \item $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$;
+  \item\label{ex:Crossprod:first} $\textbf{v} = (5,1,-2)$, $\textbf{w} = (4,-4,3)$;
   \item $\textbf{v} = (7,2,-10)$, $\textbf{w} = (2,6,4)$;
  \end{multicols}
  \begin{multicols}{2}
@@ -1700,38 +1711,38 @@ Interchanging the dot and cross products can be useful in proving vector identit
  \begin{multicols}{2}
   \item $\textbf{v} = -\,\textbf{i} + 2\,\textbf{j} + \textbf{k}$,
    $\textbf{w} = -3\,\textbf{i} + 6\,\textbf{j} + 3\,\textbf{k}$;
-  \item $\textbf{v} = \textbf{i}$, $\textbf{w} = 3\,\textbf{i} + 2\,\textbf{j} + 4\textbf{k}$.
+  \item\label{ex:Crossprod:last} $\textbf{v} = \textbf{i}$, $\textbf{w} = 3\,\textbf{i} + 2\,\textbf{j} + 4\textbf{k}$.
  \end{multicols}
 \suspend{enumerate}
 
-\par\noindent For Exercises 7--8, calculate the area of the triangle $\triangle PQR$.
+\par\noindent For Exercises \ref{ex:trig-area:first}--\ref{ex:trig-area:last}, calculate the area of the triangle $\triangle PQR$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $P = (5,1,-2)$, $Q = (4,-4,3)$, $R =(2,4,0)$;
-  \item $P = (4,0,2)$, $Q = (2,1,5)$, $R =(-1,0,-1)$.
+  \item\label{ex:trig-area:first} $P = (5,1,-2)$, $Q = (4,-4,3)$, $R =(2,4,0)$;
+  \item\label{ex:trig-area:last} $P = (4,0,2)$, $Q = (2,1,5)$, $R =(-1,0,-1)$.
  \end{multicols}
 \suspend{enumerate}
 
-\par\noindent For Exercises 9--10, calculate the area of the parallelogram $PQRS$.
+\par\noindent For Exercises \ref{ex:par-area:first}--\ref{ex:par-area:last}, calculate the area of the parallelogram $PQRS$.
 \resume{enumerate}[{[\bfseries 1.]}]
- \item $P = (2,1,3)$, $Q = (1,4,5)$, $R = (2,5,3)$, $S = (3,2,1)$;
- \item $P = (-2,-2)$, $Q = (1,4)$, $R = (6,6)$, $S = (3,0)$.
+ \item\label{ex:par-area:first} $P = (2,1,3)$, $Q = (1,4,5)$, $R = (2,5,3)$, $S = (3,2,1)$;
+ \item\label{ex:par-area:last} $P = (-2,-2)$, $Q = (1,4)$, $R = (6,6)$, $S = (3,0)$.
 \suspend{enumerate}
 
-\par\noindent For Exercises 11--12, find the volume of the parallelepiped with adjacent sides \textbf{u},
+\par\noindent For Exercises \ref{ex:volume:first}--\ref{ex:volume:last}, find the volume of the parallelepiped with adjacent sides \textbf{u},
 \textbf{v}, \textbf{w}.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
- \item $\textbf{u} = (1,1,3)$, $\textbf{v} = (2,1,4)$, $\textbf{w} = (5,1,-2)$;
- \item $\textbf{u} = (1,3,2)$, $\textbf{v} = (7,2,-10)$, $\textbf{w} = (1,0,1)$.
+ \item\label{ex:volume:first} $\textbf{u} = (1,1,3)$, $\textbf{v} = (2,1,4)$, $\textbf{w} = (5,1,-2)$;
+ \item\label{ex:volume:last} $\textbf{u} = (1,3,2)$, $\textbf{v} = (7,2,-10)$, $\textbf{w} = (1,0,1)$.
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 13--14, calculate $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ and
+\par\noindent For Exercises \ref{ex:dotcross:first}--\ref{ex:dotcross:last}, calculate $\Dotprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$ and
 $\Crossprod{\textbf{u}}{(\Crossprod{\textbf{v}}{\textbf{w}})}$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $\textbf{u} = (1,1,1)$, $\textbf{v} = (3,0,2)$, $\textbf{w} = (2,2,2)$;
-  \item $\textbf{u} = (1,0,2)$, $\textbf{v} = (-1,0,3)$, $\textbf{w} = (2,0,-2)$.
+  \item\label{ex:dotcross:first} $\textbf{u} = (1,1,1)$, $\textbf{v} = (3,0,2)$, $\textbf{w} = (2,2,2)$;
+  \item\label{ex:dotcross:last} $\textbf{u} = (1,0,2)$, $\textbf{v} = (-1,0,3)$, $\textbf{w} = (2,0,-2)$.
  \end{multicols}
  \item Calculate $\Dotprod{(\Crossprod{\textbf{u}}{\textbf{v}})}{(\Crossprod{\textbf{w}}{\textbf{z}})}$ for
  $\textbf{u} = (1,1,1)$, $\textbf{v} = (3,0,2)$, $\textbf{w} = (2,2,2)$, $\textbf{z} = (2,1,4)$.
@@ -1819,9 +1830,9 @@ like lines and planes, in the language of vectors.
 As you will see, using vectors makes it easier
 to study objects in 3-dimensional Euclidean space. 
 
-We will first consider lines\index{line}.\vspace{4mm}
+We will first consider lines\index{line}.\medskip
 
-\par\noindent\textbf{\large{Line through a point, parallel to a vector}}\normalsize\vspace{2mm}
+\par\noindent\textbf{\large{Line through a point, parallel to a vector}}\normalsize\smallskip
 
 Let $P = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$ be a point in $\Real{3}$, let $\textbf{v} = (a,b,c)$ be a nonzero
 vector, and let $L$ be the line through $P$ which is parallel to \textbf{v} (see Figure \ref{fig:linepvec}).
@@ -1829,7 +1840,7 @@ vector, and let $L$ be the line through $P$ which is parallel to \textbf{v} (see
 \begin{figure}[h]
  \begin{center}
   \includegraphics{fig1.5.1.0}
- \end{center}\vspace{-5mm}
+ \end{center}
  \caption[]{}
  \label{fig:linepvec}
 \end{figure}
@@ -1839,7 +1850,7 @@ multiplying the vector \textbf{v} by a scalar $t$ lengthens or shrinks \textbf{v
 if $t > 0$, and reversing its direction if $t < 0$, then we see from Figure \ref{fig:linepvec} that every point on the
 line $L$ can be obtained by adding the vector $t \textbf{v}$ to the vector \textbf{r} for some scalar $t$. That is, as
 $t$ varies over all real numbers, the vector $\textbf{r} + t \textbf{v}$ will point to every point on $L$. We can
-summarize the \emph{vector representation of $L$}\index{line!vector representation} as follows:\vspace{1mm}
+summarize the \emph{vector representation of $L$}\index{line!vector representation} as follows:\smallskip
 \statecomment{
  For a point $P = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$ and nonzero vector \textbf{v} in $\Real{3}$, the line $L$
  through $P$ parallel to \textbf{v} is given by
@@ -1849,11 +1860,11 @@ summarize the \emph{vector representation of $L$}\index{line!vector representati
  where $\textbf{r} = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$ is the vector pointing to $P$.
 }
 
-\vspace{1mm}
+\smallskip
 Note that we used the correspondence between a vector and its terminal point. Since $\textbf{v} = (a,b,c)$, then the
 terminal point of the vector $\textbf{r} + t \textbf{v}$ is $(\ssub{x}{0} + at,\ssub{y}{0} + bt,\ssub{z}{0} + ct)$. We
 then get the \emph{parametric representation of $L$}\index{line!parametric representation} with the
-\emph{parameter}\index{parameter} $t$:\vspace{1mm}
+\emph{parameter}\index{parameter} $t$:\smallskip
 \statecomment{
  For a point $P = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$ and nonzero vector $\textbf{v} = (a,b,c)$ in $\Real{3}$, the
  line $L$ through $P$ parallel to \textbf{v} consists of all points $(x,y,z)$ given by
@@ -1866,7 +1877,7 @@ Note that in both representations we get the point $P$ on $L$ by letting $t = 0$
 In formula (\ref{eqn:linepvecp}), if $a \ne 0$, then we can solve for the parameter $t$: $t = (x - \ssub{x}{0})/a$.
 We can also solve for $t$ in terms of $y$ and in terms of $z$ if neither $b$ nor $c$, respectively, is zero:
 $t = (y - \ssub{y}{0})/b$ and $t = (z - \ssub{z}{0})/c$. These three values all equal the same value $t$,
-so we can write the following system of equalities, called the \emph{symmetric representation of $L$}:\vspace{1mm}
+so we can write the following system of equalities, called the \emph{symmetric representation of $L$}:\smallskip
 \statecomment{
  For a point $P = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$ and vector $\textbf{v} = (a,b,c)$ in $\Real{3}$ with $a$, $b$
  and $c$ all nonzero, the line $L$ through $P$ parallel to \textbf{v} consists of all points $(x,y,z)$ given by the
@@ -1875,7 +1886,7 @@ so we can write the following system of equalities, called the \emph{symmetric r
   \frac{x - \ssub{x}{0}}{a} = \frac{y - \ssub{y}{0}}{b} = \frac{z - \ssub{z}{0}}{c}.
  \end{equation}}
 
-\vspace{1mm}
+\smallskip
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.5.2.0}}
 What if, say, $a = 0$ in the above scenario? We can not divide by zero, but we do know that $x = \ssub{x}{0} + at$, and
 so $x = \ssub{x}{0} + 0t = \ssub{x}{0}$. Then the symmetric representation\index{line!symmetric representation} of $L$
@@ -1892,12 +1903,12 @@ though, the vector representation gives us the \emph{vectors} whose terminal poi
 itself. So you have to remember to identify the vectors $\textbf{r} + t \textbf{v}$ with their terminal points.
 On the other hand, the parametric representation \emph{always} gives just the points on $L$ and nothing else.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Write the line $L$ through the point $P = (2,3,5)$ and parallel to the vector $\textbf{v} = (4,-1,6)$, in the
  following forms: (a) vector, (b) parametric, (c) symmetric. Lastly: (d) find two points on $L$ distinct from
- $P$.\vspace{1mm}
+ $P$.\smallskip
  \par\noindent\emph{Solution:} (a) Let $\textbf{r} = (2,3,5)$. Then by formula (\ref{eqn:linepvecv}), $L$ is given by:
  \begin{displaymath}
   \textbf{r} + t \textbf{v} = (2,3,5) + t(4,-1,6), \text{~~for~} -\infty < t < \infty.
@@ -1915,7 +1926,8 @@ On the other hand, the parametric representation \emph{always} gives just the po
 \hrule width \textwidth height 0.5pt
 \vskip3mm
 \pagebreak[3]
-\par\noindent\textbf{\large{Line through two points}}\normalsize\vspace{1.5mm}
+\par\noindent\textbf{\large{Line through two points}}\normalsize
+\smallskip
 
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.5.3.0}}
 Let $\ssub{P}{1} = (\ssub{x}{1},\ssub{y}{1},\ssub{z}{1})$ and $\ssub{P}{2} = (\ssub{x}{2},\ssub{y}{2},\ssub{z}{2})$
@@ -1926,12 +1938,12 @@ as we can see from Figure 1.5.3, $\ssub{\textbf{r}}{2} - \ssub{\textbf{r}}{1}$ i
 $\ssub{P}{2}$.
 So if we multiply the vector $\ssub{\textbf{r}}{2} - \ssub{\textbf{r}}{1}$ by a scalar $t$ and add it
 to the vector $\ssub{\textbf{r}}{1}$, we will get the entire line $L$ as $t$ varies over all real numbers.
-The following is a summary of the vector, parametric, and symmetric forms for the line $L$:\vspace{2mm}
+The following is a summary of the vector, parametric, and symmetric forms for the line $L$:\smallskip
 \statecomment{
  Let $\ssub{P}{1} = (\ssub{x}{1},\ssub{y}{1},\ssub{z}{1})$, $\ssub{P}{2} = (\ssub{x}{2},\ssub{y}{2},\ssub{z}{2})$
  be distinct points in $\Real{3}$, and let $\ssub{\textbf{r}}{1} = (\ssub{x}{1},\ssub{y}{1},\ssub{z}{1})$,
  $\ssub{\textbf{r}}{2} = (\ssub{x}{2},\ssub{y}{2},\ssub{z}{2})$.
-  Then the line $L$ through $\ssub{P}{1}$ and $\ssub{P}{2}$ has the following representations:\vspace{1mm}
+  Then the line $L$ through $\ssub{P}{1}$ and $\ssub{P}{2}$ has the following representations:\smallskip
  \par\noindent\emph{Vector:}
  \begin{equation}\label{eqn:lineptptv}
   \ssub{\textbf{r}}{1} + t(\ssub{\textbf{r}}{2} - \ssub{\textbf{r}}{1}) \text{~,~~for~} -\infty < t < \infty.
@@ -1948,26 +1960,31 @@ The following is a summary of the vector, parametric, and symmetric forms for th
   \text{(if $\ssub{x}{1} \ne \ssub{x}{2}$, $\ssub{y}{1} \ne \ssub{y}{2}$, and $\ssub{z}{1} \ne \ssub{z}{2}$)}.
  \end{equation}}\index{line!through two points}
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:linethrupts}
  Write the line $L$ through the points $\ssub{P}{1} = (-3,1,-4)$ and $\ssub{P}{2} = (4,4,-6)$ in parametric
- form.\vspace{1mm}
+ form.\smallskip
  \par\noindent\emph{Solution:} By formula (\ref{eqn:lineptptp}), $L$ consists of the points $(x,y,z)$ such that
  \begin{displaymath}
   x = -3 + 7t, \quad y = 1 +3t, \quad z = -4 -2t, \text{~~for~} -\infty < t < \infty.
  \end{displaymath}
-\end{exmp}\vspace{-1mm}
+\end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\medskip
 
-\par\noindent\textbf{\large{Distance between a point and a line}}\normalsize\vspace{1.5mm}
+\par\noindent\textbf{\large{Distance from a point to a line}}
+\normalsize
+\smallskip
+
 
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.5.4.0}}
 Let $L$ be a line in $\Real{3}$ in vector form as $\textbf{r} + t \textbf{v}$ (for $-\infty < t < \infty$), and
-let $P$ be a point not on $L$. The distance\index{distance!from point to line} $d$ from $P$ to $L$ is the length
+let $P$ be a point not on $L$. 
+The distance\index{distance!from point to line} $d$ from $P$ to $L$ is the length
 of the line segment from $P$ to $L$ which is perpendicular to $L$ (see Figure 1.5.4).
-Pick a point $Q$ on $L$, and let \textbf{w} be the vector from $Q$ to $P$. If $\theta$ is the angle between \textbf{w}
+Pick a point $Q$ on $L$, and let \textbf{w} be the vector from $Q$ to $P$. 
+If $\theta$ is the angle between \textbf{w}
 and \textbf{v}, then $d = \norm{\textbf{w}}\,\sin \theta$. So since
 $\norm{\Crossprod{\textbf{v}}{\textbf{w}}} = \norm{\textbf{v}}\,\norm{\textbf{w}}\,\sin \theta$ and
 $\textbf{v} \ne \textbf{0}$, then:
@@ -1981,9 +1998,11 @@ Since its area is $\norm{\Crossprod{\textbf{v}}{\textbf{w}}}$
 and its base $\norm{\textbf{v}}$, we get the expression (\ref{eqn:distptline}).
 
 \begin{exmp}
- Find the distance $d$ from the point $P = (1,1,1)$ to the line $L$ in Example \ref{exmp:linethrupts}.\vspace{1mm}
- \par\noindent\emph{Solution:} From Example \ref{exmp:linethrupts}, we see that we can represent $L$ in vector form as:
- $\textbf{r} + t \textbf{v}$, for $\textbf{r} = (-3,1,-4)$ and $\textbf{v} = (7,3,-2)$. Since the point $Q = (-3,1,-4)$
+ Find the distance $d$ from the point $P = (1,1,1)$ to the line $L$ in Example \ref{exmp:linethrupts}.\smallskip
+ \par\noindent\emph{Solution:} 
+ From Example \ref{exmp:linethrupts}, we see that we can represent $L$ in vector form as:
+ $\textbf{r} + t \textbf{v}$, for $\textbf{r} = (-3,1,-4)$ and $\textbf{v} = (7,3,-2)$. 
+ Since the point $Q = (-3,1,-4)$
  is on $L$, then for $\textbf{w} = \overrightarrow{QP} = (1,1,1) - (-3,1,-4) = (4,0,5)$, we have:
  \begin{gather*}
   \Crossprod{\textbf{v}}{\textbf{w}} = \left|\begin{array}{rrr}\textbf{i} & \textbf{j} & \textbf{k}\\7 & 3 & -2\\
@@ -1997,9 +2016,11 @@ and its base $\norm{\textbf{v}}$, we get the expression (\ref{eqn:distptline}).
   = \frac{\sqrt{15^2 + (-43)^2 + (-12)^2}}{\sqrt{7^2 + 3^2 + (-2)^2}}
   = \frac{\sqrt{2218}}{\sqrt{62}} \approx 5.98.
  \end{gather*}
-\end{exmp}\vspace{-1mm}
+\end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\medskip
+\par\noindent\textbf{\large{Two lines}}\normalsize
+\smallskip
 
 It is clear that two lines $\ssub{L}{1}$ and $\ssub{L}{2}$, represented in vector form as
 $\ssub{\textbf{r}}{1} + s \ssub{\textbf{v}}{1}$ and $\ssub{\textbf{r}}{2} + t \ssub{\textbf{v}}{2}$, respectively, are
@@ -2021,7 +2042,7 @@ parameters may not be the same at the point of intersection.
 Setting the two $(x,y,z)$ triples equal will result in a
 system of 3 equations in 2 unknowns ($s$ and $t$).
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find the point of intersection (if any) of the following lines:
@@ -2047,7 +2068,7 @@ system of 3 equations in 2 unknowns ($s$ and $t$).
 %\hrule width \textwidth height 0.5pt
 %\vskip3mm ???
 
-\par\noindent\textbf{\large{Plane through a point, perpendicular to a vector}}\normalsize\vspace{1.5mm}
+\par\noindent\textbf{\large{Plane through a point, perpendicular to a vector}}\normalsize\smallskip
 
 Let $P$ be a plane in $\Real{3}$, and suppose it contains a point
 $\ssub{P}{0} = (\ssub{x}{0},\ssub{y}{0},\ssub{z}{0})$. Let $\textbf{n} = (a,b,c)$ be a nonzero vector which is
@@ -2061,7 +2082,7 @@ And if $\textbf{r} = \textbf{0}$ then we still have $\Dotprod{\textbf{n}}{\textb
 \begin{figure}[h]
  \begin{center}
   \includegraphics{fig1.5.6.0}
- \end{center}\vspace{-5mm}
+ \end{center}
  \caption[]{\quad The plane $P$.}
  \label{fig:planenorm}
 \end{figure}
@@ -2086,7 +2107,7 @@ so $(x,y,z)$ lies in $P$. This proves the following theorem:
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:pointnormal}
  Find the equation of the plane $P$ containing the point $(-3,1,3)$ and perpendicular to the vector $\textbf{n} =
- (2,4,8)$.\vspace{1mm}
+ (2,4,8)$.\smallskip
  \par\noindent\emph{Solution:} By formula (\ref{eqn:pointnormal}), the plane $P$ consists of all points $(x,y,z)$ such
  that:
  \begin{displaymath}
@@ -2094,7 +2115,7 @@ so $(x,y,z)$ lies in $P$. This proves the following theorem:
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 If we multiply out the terms in formula (\ref{eqn:pointnormal}) and combine the constant terms, we get an
 equation of the plane in \textbf{normal form}\index{plane!normal form}:
@@ -2103,7 +2124,7 @@ equation of the plane in \textbf{normal form}\index{plane!normal form}:
 \end{equation}
 For example, the normal form of the plane in Example \ref{exmp:pointnormal} is $2x + 4y + 8z - 22 = 0$.
 \pagebreak[3]
-\par\noindent\textbf{\large{Plane containing three noncollinear points}}\normalsize\vspace{1.5mm}
+\par\noindent\textbf{\large{Plane containing three noncollinear points}}\normalsize\smallskip
 
 In 2-dimensional and 3-dimensional space, two points determine a line. Two points do not determine a plane in
 $\Real{3}$. 
@@ -2119,14 +2140,14 @@ $\textbf{n} = \Crossprod{\overrightarrow{QR}}{\overrightarrow{QS}}$ (see Figure 
 \begin{figure}[h]
  \begin{center}
   \includegraphics{fig1.5.7.0}
- \end{center}\vspace{-5mm}
+ \end{center}
  \caption[]{\quad Noncollinear points $Q$, $R$, $S$.}
  \label{fig:plane3pts}
 \end{figure}
 
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:plane3pts}
- Find the equation of the plane $P$ containing the points $(2,1,3)$, $(1,-1,2)$ and $(3,2,1)$.\vspace{1mm}
+ Find the equation of the plane $P$ containing the points $(2,1,3)$, $(1,-1,2)$ and $(3,2,1)$.\smallskip
  \par\noindent\emph{Solution:} Let $Q = (2,1,3)$, $R = (1,-1,2)$ and $S = (3,2,1)$. Then for the vectors
  $\overrightarrow{QR} = (-1,-2,-1)$ and $\overrightarrow{QS} = (1,1,-2)$, the plane $P$ has a normal vector
  \begin{displaymath}
@@ -2141,7 +2162,7 @@ $\textbf{n} = \Crossprod{\overrightarrow{QR}}{\overrightarrow{QS}}$ (see Figure 
  \end{gather*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 We mentioned earlier that skew lines in $\Real{3}$ lie on separate, parallel planes. 
 So two skew lines do not determine
@@ -2152,7 +2173,7 @@ find the equation of the plane that contains those two lines, simply pick from t
 noncollinear points (i.e. one point from one line and two points from the other), then use the technique above, as in
 Example \ref{exmp:plane3pts}, to write the equation. We will leave examples of this as exercises for the reader.
 \pagebreak[3]
-\par\noindent\textbf{\large{Distance between a point and a plane}}\normalsize\vspace{1.5mm}
+\par\noindent\textbf{\large{Distance between a point and a plane}}\normalsize\smallskip
 
 The distance between a point in $\Real{3}$ and a plane is the length of the line segment from that point to the plane
 which is perpendicular to the plane. 
@@ -2164,7 +2185,7 @@ The following theorem gives a formula for that distance.
  \begin{equation}\label{eqn:distptplane}
   D = \frac{\abs{a\ssub{x}{0} + b\ssub{y}{0} + c\ssub{z}{0} + d}}{\sqrt{a^2 + b^2 + c^2}}.
  \end{equation}}}
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  \par\noindent Let $R = (x,y,z)$ be any point in the plane $P$ (so that $ax + by + cz + d = 0$)
  and let $\textbf{r} = \overrightarrow{RQ} =
  (\ssub{x}{0} - x,\ssub{y}{0} - y,\ssub{z}{0} - z)$. 
@@ -2180,7 +2201,7 @@ The following theorem gives a formula for that distance.
 
  \piccaption[]{}\parpic(\textwidth,0in){\includegraphics{fig1.5.8.0}
  \piccaptioninside}
- \par\mbox{}\newline\vspace{1mm}\picskip{0}
+ \par\mbox{}\newline\smallskip\picskip{0}
 
  By Theorem \ref{thm:dotprod} in Section 1.3, we know that 
  $\,\cos \theta = \dfrac{\Dotprod{\textbf{n}}{\textbf{r}}}{\norm{\textbf{n}}\,\norm{\textbf{r}}}$, so
@@ -2197,11 +2218,11 @@ The following theorem gives a formula for that distance.
  If $\textbf{n}$ points away from the side of $P$ where the point $Q$ is located, then $90\Degrees < \theta <
  180\Degrees$ and so $\cos \theta < 0$. The distance $D$ is then $\abs{\cos \theta} \, \norm{\textbf{r}}$, and thus
  repeating the same argument as above still gives the same result. \hfill \qedhere
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:distptplane}
- Find the distance $D$ from $(2,4,-5)$ to the plane from Example \ref{exmp:plane3pts}.\vspace{1mm}
+ Find the distance $D$ from $(2,4,-5)$ to the plane from Example \ref{exmp:plane3pts}.\smallskip
  \par\noindent\emph{Solution:} Recall that the plane is given by $5x - 3y + z - 10 = 0$. So
  \begin{displaymath}
   D = \frac{\abs{5(2) - 3(4) + 1(-5) - 10}}{\sqrt{5^2 + (-3)^2 + 1^2}} = \frac{\abs{-17}}{\sqrt{35}} =
@@ -2210,7 +2231,7 @@ The following theorem gives a formula for that distance.
 \end{exmp}
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
 \pagebreak[3]
-\par\noindent\textbf{\large{Line of intersection of two planes}}\normalsize\vspace{1.5mm}
+\par\noindent\textbf{\large{Line of intersection of two planes}}\normalsize\smallskip
 
 \piccaption[]{}\parpic[r]{\includegraphics{fig1.5.9.0}}
 Note that two planes are parallel if they have normal vectors that are parallel, and the planes are perpendicular if
@@ -2233,13 +2254,15 @@ write $L$ in the following vector form:\index{line!intersection of planes}\index
  L: \textbf{r} + t(\Crossprod{\ssub{\textbf{n}}{1}}{\ssub{\textbf{n}}{2}}) \text{~,~~for~} -\infty < t < \infty
 \end{equation}
 where \textbf{r} is any vector pointing to a point belonging to both planes. To find a point in both planes,
-find a common solution $(x,y,z)$ to the two normal form equations of the planes. This can often be made easier
+find a common solution $(x,y,z)$ to the two normal form equations of the planes. 
+This can often be made easier
 by setting one of the coordinate variables to zero, which leaves you to solve two equations in just two unknowns.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:planeinter}
- Find the line of intersection $L$ of the planes $5x - 3y + z - 10 = 0$ and $2x + 4y - z + 3 = 0$.\vspace{1mm}
+ Find the line of intersection $L$ of the planes $5x - 3y + z - 10 = 0$ and $2x + 4y - z + 3 = 0$.
+ \smallskip
  \par\noindent\emph{Solution:} The plane $5x - 3y + z - 10 = 0$ has normal vector $\ssub{\textbf{n}}{1} = (5,-3,1)$ and
  the plane $2x + 4y - z + 3 = 0$ has normal vector $\ssub{\textbf{n}}{2} = (2,4,-1)$. Since $\ssub{\textbf{n}}{1}$ and
  $\ssub{\textbf{n}}{2}$ are not scalar multiples, then the two planes are not parallel and hence will intersect. A
@@ -2267,6 +2290,49 @@ by setting one of the coordinate variables to zero, which leaves you to solve tw
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 
+
+\medskip
+\par\noindent\textbf{\large{Projections}}\normalsize
+\smallskip
+
+Assume we need to find the orthogonal projection $S$ of the given point $Q$ with the position vector $\textbf{q}$ to the line $L$ given by parametric equation $\textbf{r}+t\textbf{v}$.
+
+Note that $S$ is the point of intersection of line $L$ and the plane $P$ thru $Q$ perpendicular to $\textbf{v}$.
+This plane $P$ is given by the equation $\Dotprod{(\textbf{x}-\textbf{q})}{\textbf{v}}=0$ with unknown $\textbf{x}$.
+
+Since $S$ belongs to $L$,
+its position vector is  $\textbf{r}+t\textbf{v}$ some $t$.
+Since it lies on the plane, we get
+\[\Dotprod{(\textbf{r}+t\textbf{v}-\textbf{q})}{\textbf{v}}=0.\]
+Solving for $t$, we get
+\[t=\frac{\Dotprod{(\textbf{q}-\textbf{r})}{\textbf{v}}}{\Dotprod{\textbf{v}}{\textbf{v}}}.\]
+Therefore 
+\[\textbf{r}+\frac{\Dotprod{(\textbf{q}-\textbf{r})}{\textbf{v}}}{\Dotprod{\textbf{v}}{\textbf{v}}}\textbf{v}\]
+is the position vector of the projection of $P$ on $L$.
+
+Note that $S$ is also the projecction of point $R$ with the position vector $\textbf{r}$ to the plane $P$.
+Therefore the same formula can be used to find the projection of to the plane.
+
+\hrule width \textwidth height 0.5pt
+\smallskip
+\begin{exmp}
+\label{exmp:projection}
+ Find the projections of the point $Q = (1,1,1)$ to the line $x=1+4t, y=2+5t, z=3+6t$.
+ \smallskip
+ \par\noindent\emph{Solution:} The vector form of the parametric equation is $(1,2,3)+t(4,5,6)$.
+ Applying the formula above, we get
+\begin{align*}
+(1,2,3)+\frac{(1-1)4+(1-2)5+(1-3)6}{4^2+5^2+6^2}(4,5,6)
+&=(1,2,3)+\frac{17}{77}(4,5,6)
+\\
+&=(\tfrac{145}{77},\tfrac{239}{77},\tfrac{333}{77})
+\\
+&\approx(1.88,3.1,4.32)
+\end{align*}
+is the position vector of the projection.
+\end{exmp}
+\hrule width \textwidth height 0.5pt
+
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot5}
 \probs{A}
@@ -2290,7 +2356,7 @@ form.
   \item $\ssub{P}{1} = (4,1,5)$, $\ssub{P}{2} = (-2,1,3)$.
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 7--8, find the distance $d$ from the point $P$ to the line $L$.
+\par\noindent For Exercises 7--8, (a) find the distance $d$ from the point $P$ to the line $L$ (b) find the orthogonal projection of $P$ to $L$
 \resume{enumerate}[{[\bfseries 1.]}]
  \item $P = (1,-1,-1)$, $~L: x = -2 - 2t, \; y = 4t, \; z = 7 + t$;
  \item $P = (0,0,0)$, $~L: x = 3 + 2t, \; y = 4 + 3t, \; z = 5 + 4t$.
@@ -2318,7 +2384,7 @@ perpendicular to the vector \textbf{n}.
  \item Write the normal form of the plane containing the lines from Exercise 9.
  \item Write the normal form of the plane containing the lines from Exercise 10.
 \suspend{enumerate}
-\par\noindent For Exercises 17--18, find the distance $D$ from the point $Q$ to the plane $P$.
+\par\noindent For Exercises 17--18, (a) find the distance $D$ from the point $Q$ to the plane $P$ and (b) find the projection of $Q$ to the plane $P$
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $Q = (4,1,2)$, $P:  3x - y - 5z + 8 = 0$;
@@ -2427,7 +2493,7 @@ Note in Figure \ref{fig:spheres}(a) that the intersection of the sphere with the
 the $xz$-plane and the $yz$-plane. In general, a plane intersects a sphere either at a single point or in a circle.
 
 \begin{exmp}\label{exmp:sphereplane}
- Find the intersection of the sphere $x^2 + y^2 + z^2 = 169$ with the plane $z = 12$.\vspace{1mm}
+ Find the intersection of the sphere $x^2 + y^2 + z^2 = 169$ with the plane $z = 12$.\smallskip
  \piccaption[]{}\parpic[r]{\begin{tikzpicture}
   \usetikzlibrary{arrows}
   \definecolor{spherecolor}{HTML}{80DCFF}
@@ -2458,9 +2524,9 @@ the $xz$-plane and the $yz$-plane. In general, a plane intersects a sphere eithe
  \end{align*}
  which is a circle of radius $5$ centered at $(0,0,12)$, parallel to the $xy$-plane (see Figure 1.6.2).
 \end{exmp}
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
-\vspace{2mm}
+\smallskip
 
 If the equation in formula (\ref{eqn:sphere}) is multiplied out, we get an equation of the form:
 \begin{equation}\label{eqn:spheregeneral}
@@ -2475,10 +2541,10 @@ Note that the equation (\ref{eqn:spheregeneral}) could be written as
 \]
 where $\textbf{x}=(x,y,z)$ and $\textbf{v}=(a,b,c)$.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
 \begin{exmp}\label{exmp:sphereeqn}
- Is $2x^2 + 2y^2 + 2z^2 - 8x + 4y - 16z + 10 = 0$ the equation of a sphere?\vspace{1mm}
+ Is $2x^2 + 2y^2 + 2z^2 - 8x + 4y - 16z + 10 = 0$ the equation of a sphere?\smallskip
  \par\noindent\emph{Solution:} Dividing both sides of the equation by $2$ gives
  \begin{gather*}
   x^2 + y^2 + z^2 - 4x + 2y - 8z + 5 = 0,\\
@@ -2490,7 +2556,8 @@ where $\textbf{x}=(x,y,z)$ and $\textbf{v}=(a,b,c)$.
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
 \begin{exmp}\label{exmp:sphereline}
  Find the points(s) of intersection (if any) of the sphere from Example \ref{exmp:sphereeqn} and the line
- $x = 3 + t$, $y = 1 + 2t$, $z = 3 - t$.\vspace{1mm}
+ $x = 3 + t$, $y = 1 + 2t$, $z = 3 - t$.
+ \smallskip
  \par\noindent\emph{Solution:} Put the equations of the line into the equation of the sphere, which was
  $(x - 2)^2 + (y + 1)^2 + (z - 4)^2 = 16$, and solve for $t$:
  \begin{align*}
@@ -2509,10 +2576,11 @@ where $\textbf{x}=(x,y,z)$ and $\textbf{v}=(a,b,c)$.
 \pagebreak[3]
 If two spheres intersect, they do so either at a single point or in a circle.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
 \begin{exmp}\label{exmp:spheresphere}
- Find the intersection (if any) of the spheres $x^2 + y^2 + z^2 = 25$ and $x^2 + y^2 + (z - 2)^2 = 16$.\vspace{1mm}
+ Find the intersection (if any) of the spheres $x^2 + y^2 + z^2 = 25$ and $x^2 + y^2 + (z - 2)^2 = 16$.
+ \smallskip
  \par\noindent\emph{Solution:} For any point $(x,y,z)$ on both spheres, we see that
  \begin{align*}
   x^2 + y^2 + z^2 = 25 \quad &\Rightarrow \quad x^2 + y^2 = 25 -  z^2, \text{~and}\\
@@ -2526,7 +2594,7 @@ If two spheres intersect, they do so either at a single point or in a circle.
  centered at $(0,0,\frac{13}{4})$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt\index{distance!point to plane}
-\vspace{2mm}
+\smallskip
 
 The cylinders that we will consider are \emph{right circular cylinders}. These are
 cylinders\index{cylinder} obtained by moving a line $L$ along a circle $C$ in
@@ -2699,7 +2767,7 @@ and the \textbf{hyperboloid of two sheets}\index{hyperboloid!two sheets}, whose 
   \pgfputat{\pgfpointxyz{0.2}{2.9}{0}}{\pgfbox[center,center]{\small $z$}};
   \pgfputat{\pgfpointxyz{0.2}{0}{6.8}}{\pgfbox[center,center]{\small $x$}};
   \pgfputat{\pgfpointxyz{0.05}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
- \end{tikzpicture}\vspace{-6mm}
+ \end{tikzpicture}
  \end{center}
  \caption[]{\quad Hyperboloid of one sheet.}
  \label{fig:hyper1}
@@ -2734,7 +2802,7 @@ and the \textbf{hyperboloid of two sheets}\index{hyperboloid!two sheets}, whose 
   \pgfputat{\pgfpointxyz{0.2}{2.9}{0}}{\pgfbox[center,center]{\small $z$}};
   \pgfputat{\pgfpointxyz{0.2}{0}{6.8}}{\pgfbox[center,center]{\small $x$}};
   \pgfputat{\pgfpointxyz{0.05}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
-  \end{tikzpicture}\vspace{-6mm}
+  \end{tikzpicture}
  \end{center}
  \caption[]{\quad Hyperboloid of two sheets.}
  \label{fig:hyper2}
@@ -2789,12 +2857,12 @@ A more complicated quadric surface is the \textbf{hyperbolic paraboloid}\index{h
 given by:\index{paraboloid!hyperbolic}
 \begin{equation}\label{eqn:hyperpara}
  \frac{x^2}{a^2} - \frac{y^2}{b^2} = \frac{z}{c}.
-\end{equation}\vspace{-21mm}
+\end{equation}
 
 \begin{figure}[h]
  \begin{center}
   \input{fig168}
- \end{center}\vspace{-12mm}
+ \end{center}
  \caption[]{\quad Hyperbolic paraboloid.}
  \label{fig:hyperpara}
 \end{figure}
@@ -2834,7 +2902,7 @@ of the traces in planes parallel to the $xz$- or $yz$-planes would be reversed.
  \pgfputat{\pgfpointxyz{0.2}{2.8}{0}}{\pgfbox[center,center]{\small $z$}};
  \pgfputat{\pgfpointxyz{0.2}{0}{4.8}}{\pgfbox[center,center]{\small $x$}};
  \pgfputat{\pgfpointxyz{0.05}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
-\end{tikzpicture}\vspace{-1mm}
+\end{tikzpicture}
 }
 The last type of quadric surface that we will consider is the \textbf{elliptic cone}\index{elliptic cone}, which has
 an equation of the form:
@@ -2894,7 +2962,8 @@ If so, find its radius and center.
  \item Find the point(s) of intersection of the sphere $(x - 3)^2 + (y + 1)^2 + (z - 3)^2 = 9$ and the line
   $x = -1 + 2t$, $y = -2 - 3t$, $z = 3 + t$.
 \suspend{enumerate}
-\probs{B}\vspace{1mm}
+\probs{B}
+\smallskip
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Find the intersection of the spheres $x^2 + y^2 + z^2 = 9$ and $(x - 4)^2 + (y + 2)^2 + (z - 4)^2 = 9$.
  \item Find the intersection of the sphere $x^2 + y^2 + z^2 = 9$ and the cylinder $x^2 + y^2 = 4$.
@@ -2985,7 +3054,7 @@ $P(x,y,z)$ are defined as follows:\footnote{This ``standard'' definition of
 spherical coordinates used by mathematicians results in a
 left-handed system. 
 For this reason, physicists usually switch the definitions
-of $\theta$ and $\phi$ to make $(\rho,\theta,\phi)$ a right-handed system.}\vspace{2mm}
+of $\theta$ and $\phi$ to make $(\rho,\theta,\phi)$ a right-handed system.}\smallskip
 
 \piccaption[]{\\Cylindrical coordinates}\parpic[r]{\includegraphics{fig1.7.2.0}}
 \statecomment[0.64\textwidth]{\textbf{Cylindrical coordinates} $(r,\theta,z)$:
@@ -2994,10 +3063,10 @@ of $\theta$ and $\phi$ to make $(\rho,\theta,\phi)$ a right-handed system.}\vspa
   y &= r \sin \theta, & \theta &= \tan^{-1} \left( \tfrac{y}{x} \right),\\
   z &= z, & z &= z,
  \end{align*}
- \vspace{3mm}where $~0 \le \theta \le \pi~~$ if $~~y \ge 0~~$ and $~~\pi < \theta < 2\pi~~$ if $~~y < 0$.
+ \medskip where $~0 \le \theta \le \pi~~$ if $~~y \ge 0~~$ and $~~\pi < \theta < 2\pi~~$ if $~~y < 0$.
 }
 
-\vspace{6mm}
+\bigskip
 \piccaption[]{\\Spherical coordinates}\parpic[r]{\includegraphics{fig1.7.3.0}}
 \statecomment[0.64\textwidth]{\textbf{Spherical coordinates} $(\rho,\theta,\phi)$:
  \begin{align*}
@@ -3006,7 +3075,7 @@ of $\theta$ and $\phi$ to make $(\rho,\theta,\phi)$ a right-handed system.}\vspa
   z &= \rho \cos \phi, & \phi &= \cos^{-1} \biggl( \tfrac{z}{\sqrt{x^2 + y^2 + z^2}} \biggr),
  \end{align*}
  where $~0 \le \theta \le \pi~~$ if $~~y \ge 0~~$ and $~~\pi < \theta < 2\pi~~$ if $~~y < 0$.
-}\vspace{2mm}
+}\smallskip
 
 \picskip{1}\par Both $\theta$ and $\phi$ are measured in radians.
 Note that $r \ge 0$, $0 \le \theta < 2\pi$, $\rho \ge 0$ and $0 \le \phi \le \pi$.
@@ -3025,16 +3094,16 @@ The angle $\phi$ is called the \emph{zenith angle}\index{zenith angle}.
 
 \begin{exmp}
  Convert the point $(-2,-2,1)$ from Cartesian coordinates to (a) cylindrical and (b) spherical
- coordinates.\vspace{1.5mm}
+ coordinates.\smallskip
  \par\noindent\emph{Solution:} (a) $r = \sqrt{(-2)^2 + (-2)^2} = 2\sqrt{2}$, $\theta =
  \tan^{-1} \left( \frac{-2}{-2} \right) = \tan^{-1}(1) = \frac{5 \pi}{4}$, since $y = -2 < 0$.\\
- $\therefore ~ (r,\theta,z) = \left( 2\sqrt{2},\frac{5 \pi}{4},1 \right)$.\vspace{2mm}
+ $\therefore ~ (r,\theta,z) = \left( 2\sqrt{2},\frac{5 \pi}{4},1 \right)$.\smallskip
  \par\noindent (b) $\rho = \sqrt{(-2)^2 + (-2)^2 + 1^2} = \sqrt{9} = 3$, $\phi = \cos^{-1} \left( \frac{1}{3} \right)
  \approx 1.23$ radians.\\
  $\therefore ~ (\rho,\theta,\phi) = \left( 3,\frac{5 \pi}{4}, 1.23 \right)$.
  \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 For cylindrical coordinates $(r,\theta,z)$, and constants $\ssub{r}{0}$, $\ssub{\theta}{0}$ and $\ssub{z}{0}$, we see
 from Figure \ref{fig:cylcoordsurf}
@@ -3182,23 +3251,23 @@ Figures \ref{fig:cylcoordsurf}(a) and \ref{fig:sphcoordsurf}(a) show how these c
 Sometimes the equation of a surface in Cartesian coordinates can be transformed into a simpler equation in some other
 coordinate system, as in the following example.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Write the equation of the cylinder $x^2 + y^2 = 4$ in cylindrical coordinates.\vspace{1mm}
+ Write the equation of the cylinder $x^2 + y^2 = 4$ in cylindrical coordinates.\smallskip
  \par\noindent \emph{Solution:} Since $r = \sqrt{x^2 + y^2}$, then the equation in cylindrical
  coordinates is $r =2$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 Using spherical coordinates to write the equation of a sphere does not necessarily make the
 equation simpler, if the sphere is not centered at the origin.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Write the equation $(x - 2)^2 + (y - 1)^2 + z^2 = 9$ in spherical coordinates.\vspace{1mm}
+ Write the equation $(x - 2)^2 + (y - 1)^2 + z^2 = 9$ in spherical coordinates.\smallskip
  \par\noindent \emph{Solution:} Multiplying the equation out gives
  \begin{align*}
   x^2 + y^2 + z^2 - 4x - 2y + 5 &= 9 \text{~, so we get}\\
@@ -3211,7 +3280,7 @@ equation simpler, if the sphere is not centered at the origin.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:helicoid}
- Describe the surface given by $\theta = z$ in cylindrical coordinates.\vspace{1mm}
+ Describe the surface given by $\theta = z$ in cylindrical coordinates.\smallskip
  \par\noindent \emph{Solution:} This surface is called a \emph{helicoid}\index{helicoid}. 
  As the (vertical) $z$
  coordinate increases, so does the angle $\theta$, while the radius $r$ is unrestricted. 
@@ -3219,17 +3288,16 @@ equation simpler, if the sphere is not centered at the origin.
  surface shaped like a spiral staircase, where the spiral has an infinite radius. 
  Figure \ref{fig:helicoid} shows a
  section of this surface restricted to $0 \le z \le 4\pi$ and $0 \le r \le 2$.
- \vspace{-25mm}
+
  \begin{figure}[h]
   \begin{center}
    \input{fig176}
-  \end{center}\vspace{-18mm}
+  \end{center}
  \caption[]{\quad Helicoid $\theta = z$.}
  \label{fig:helicoid}
  \end{figure}
 \end{exmp}
-\newpage
-\vspace{-4mm}
+
 \hrule width \textwidth height 0.5pt
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec1dot7}
@@ -3252,7 +3320,8 @@ Cartesian coordinates are given.
   \item $x^2 + y^2 + 9z^2 = 36$.
  \end{multicols}
 \suspend{enumerate}
-\probs{B}\vspace{1mm}
+\probs{B}
+\smallskip
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Describe the intersection of the surfaces whose equations in spherical coordinates are $\theta = \frac{\pi}{2}$
   and $\phi = \frac{\pi}{4}$.
@@ -3321,7 +3390,7 @@ for some real-valued functions $\ssub{f}{1}(t)$, $\ssub{f}{2}(t)$, $\ssub{f}{3}(
 functions} of \textbf{f}. 
 The first form is often used when emphasizing that $\textbf{f}(t)$ is a vector, and the second form is useful when considering just the terminal points of the vectors.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \piccaption[]{}\parpic[r]{\begin{tikzpicture}
  \usetikzlibrary{arrows}
@@ -3355,7 +3424,7 @@ The first form is often used when emphasizing that $\textbf{f}(t)$ is a vector, 
  Thus, $\textbf{f}(t)$ lies on the surface of the right circular cylinder $x^2 + y^2 = 1$ for any $t$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 Since each of the three component functions are real-valued, it will sometimes be the case that results
 from single-variable calculus can simply be applied to each of the component functions to yield a similar result for the
@@ -3424,7 +3493,6 @@ Similarly, the derivative of a vector-valued function is a
 \textbf{tangent vector}\index{vector!tangent} to the curve in space which the function represents, and it lies on the
 \emph{tangent line} to the curve (see
 Figure \ref{fig:vectangent}).
-\vspace{0mm}
 
 \begin{figure}[h]
  \begin{center}
@@ -3450,7 +3518,7 @@ Figure \ref{fig:vectangent}).
   \node [left,above] at (1,1.2) {$\textbf{f}(a)$};
   \node [below] at (3.8,0.5) {$\textbf{f}(a + h)$};
   \node [below,rotate=-40] at (3.05,1.52) {$\textbf{f}(a + h) - \textbf{f}(a)$};
-  \end{tikzpicture}\vspace{-0mm}
+  \end{tikzpicture}
  \end{center}
  \caption[]{\quad Tangent vector $\textbf{f}\,'(a)$ and tangent line $L = \textbf{f}(a) + s \textbf{f}\,'(a)$.}
  \label{fig:vectangent}
@@ -3473,24 +3541,25 @@ The basic properties of derivatives of vector-valued functions are summarized in
 \statethm{thm:vecdiffprops}{
  {Let $\textbf{f}(t)$ and $\textbf{g}(t)$ be differentiable vector-valued functions, let $u(t)$ be a differentiable
  scalar function, let $k$ be a scalar, and let \textbf{c} be a constant vector. Then\\
- \par\noindent (a) $\dfrac{d}{dt} ( \textbf{c} ) = \textbf{0}$;\vspace{2mm}
- \par\noindent (b) $\dfrac{d}{dt} ( k \textbf{f} ) = k \dfrac{d \textbf{f}}{dt}$;\vspace{2mm}
+ \par\noindent (a) $\dfrac{d}{dt} ( \textbf{c} ) = \textbf{0}$;\smallskip
+ \par\noindent (b) $\dfrac{d}{dt} ( k \textbf{f} ) = k \dfrac{d \textbf{f}}{dt}$;\smallskip
  \par\noindent (c) $\dfrac{d}{dt} ( \textbf{f} + \textbf{g} ) = \dfrac{d \textbf{f}}{dt} \,+\,
-  \dfrac{d \textbf{g}}{dt}$;\vspace{2mm}
+  \dfrac{d \textbf{g}}{dt}$;\smallskip
  \par\noindent (d) $\dfrac{d}{dt} ( \textbf{f} - \textbf{g} ) = \dfrac{d \textbf{f}}{dt} \,-\,
-  \dfrac{d \textbf{g}}{dt}$;\vspace{2mm}
+  \dfrac{d \textbf{g}}{dt}$;\smallskip
  \par\noindent (e) $\dfrac{d}{dt} ( u\,\textbf{f} ) = \dfrac{du}{dt}\,\textbf{f} \,+\,
-  u \dfrac{d \textbf{f}}{dt}$;\vspace{2mm}
+  u \dfrac{d \textbf{f}}{dt}$;\smallskip
  \par\noindent (f) $\dfrac{d}{dt} ( \Dotprod{\textbf{f}}{\textbf{g}} ) = \Dotprod{\dfrac{d \textbf{f}}{dt}}{\textbf{g}}
-  \,+\, \Dotprod{\textbf{f}}{\dfrac{d \textbf{g}}{dt}}$;\vspace{2mm}
+  \,+\, \Dotprod{\textbf{f}}{\dfrac{d \textbf{g}}{dt}}$;\smallskip
  \par\noindent (g) $\dfrac{d}{dt} ( \Crossprod{\textbf{f}\,}{\,\textbf{g}} ) =
   \Crossprod{\dfrac{d \textbf{f}}{dt}}{\,\textbf{g}} \,+\, \Crossprod{\textbf{f}\,}{\dfrac{d \textbf{g}}{dt}}$.
  }
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}\begin{proof}[Proof:]
  The proofs of parts (a)--(e) follow easily by differentiating the component functions and using the rules for derivatives from single-variable calculus. 
  We will prove part (f), and leave the proof of part (g) as an exercise for
- the reader.\vspace{1mm}\\(f)
+ the reader.
+ \smallskip\\(f)
  Write $\textbf{f}(t) = ( \ssub{f}{1}(t),\ssub{f}{2}(t),\ssub{f}{3}(t) )$ and
  $\textbf{g}(t) = ( \ssub{g}{1}(t),\ssub{g}{2}(t),\ssub{g}{3}(t) )$, where the component functions
  $\ssub{f}{1}(t)$, $\ssub{f}{2}(t)$, $\ssub{f}{3}(t)$, $\ssub{g}{1}(t)$, $\ssub{g}{2}(t)$, $\ssub{g}{3}(t)$ are all
@@ -3510,10 +3579,11 @@ The basic properties of derivatives of vector-valued functions are summarized in
   &= \Dotprod{\dfrac{d\textbf{f}}{dt}(t)}{\textbf{g}(t)} \,+\, \Dotprod{\textbf{f}(t)}{\dfrac{d\textbf{g}}{dt}(t)}
    \text{~~for all $t$.} \qedhere
  \end{align*}
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
 \begin{exmp}\label{exmp:absvecderiv}
- Suppose $\textbf{f}(t)$ is differentiable. Find the derivative of $\norm{\textbf{f}(t)}$.\vspace{1mm}
+ Suppose $\textbf{f}(t)$ is differentiable. Find the derivative of $\norm{\textbf{f}(t)}$.
+ \smallskip
  \par\noindent \emph{Solution:} Since $\norm{\textbf{f}(t)}$ is a real-valued function of $t$, then by the Chain
  Rule for real-valued functions, we know that
   $\dfrac{d}{dt} \norm{\textbf{f}(t)}^2 = 2 \norm{\textbf{f}(t)} \, \dfrac{d}{dt} \norm{\textbf{f}(t)}$.
@@ -3543,18 +3613,18 @@ $\textbf{f}\,'(t)$ is always perpendicular to the \emph{position vector} $\textb
 \begin{exmp}\label{exmp:sphspiral}
  The \emph{spherical spiral}\index{spherical spiral}
  $\textbf{f}(t) = \biggl( \dfrac{\cos t}{\sqrt{1 + a^2 t^2}},\dfrac{\sin t}{\sqrt{1 + a^2 t^2}},
-  \dfrac{-at}{\sqrt{1 + a^2 t^2}} \biggr)$, for $a \ne 0$.\vspace{1.5mm}
+  \dfrac{-at}{\sqrt{1 + a^2 t^2}} \biggr)$, for $a \ne 0$.\smallskip
   \par\noindent Figure \ref{fig:sphspiral} shows the graph of the curve when $a = 0.2$. In the exercises, the reader will be asked to
   show that this curve lies on the sphere $x^2 + y^2 + z^2 = 1$ and to verify directly that
-  $\Dotprod{\textbf{f}\,'(t)}{\textbf{f}(t)} = 0$ for all $t$.\vspace{-18mm}
+  $\Dotprod{\textbf{f}\,'(t)}{\textbf{f}(t)} = 0$ for all $t$.
  \begin{figure}[h]
   \begin{center}
    \input{fig183}
-  \end{center}\vspace{0mm}
+  \end{center}
  \caption[]{\quad Spherical spiral with $a = 0.2$.}
  \label{fig:sphspiral}
  \end{figure}
-\end{exmp}\vspace{-0mm}
+\end{exmp}
 \hrule width \textwidth height 0.5pt
 \vskip3mm
 Just as in single-variable calculus, higher-order derivatives of vector-valued functions are obtained by repeatedly
@@ -3587,14 +3657,17 @@ The magnitude $\norm{\textbf{v}(t)}$ of the velocity vector is called the \emph{
 Note that since the mass $m$ is a constant, the force equation becomes the familiar
 $\textbf{F}(t) = m \textbf{a}(t)$.\index{velocity}\index{acceleration}\index{momentum}\index{force}
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Let $\textbf{r}(t) = (5 \cos t , 3 \sin t , 4 \sin t )$ be the position vector of an object at time $t \ge 0$. Find
- its (a) velocity and (b) acceleration vectors.\vspace{1mm}
+ its (a) velocity and (b) acceleration vectors.
+ \smallskip
  \par\noindent \emph{Solution:} (a) $\textbf{v}(t) = \dot{\textbf{r}}(t) = (-5 \sin t , 3 \cos t ,
- 4 \cos t )$.\vspace{1mm}
- \par\noindent (b) $\textbf{a}(t) = \dot{\textbf{v}}(t) = (-5 \cos t , -3 \sin t , -4 \sin t )$.\vspace{1mm}
+ 4 \cos t )$.
+ \smallskip
+ \par\noindent (b) $\textbf{a}(t) = \dot{\textbf{v}}(t) = (-5 \cos t , -3 \sin t , -4 \sin t )$.
+ \smallskip
  
  \par\noindent Note that $\norm{\textbf{r}(t)} = \sqrt{25 \cos^2 t + 25 \sin^2 t} = 5$ for all $t$, so by Example
  \ref{exmp:absvecderiv} we know that $\Dotprod{\textbf{r}(t)}{\dot{\textbf{r}}(t)} = 0$ for all $t$ (which we can verify
@@ -3620,7 +3693,7 @@ in $\Real{3}$. A function of the form
 $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \ssub{b}{2}t + \ssub{c}{2},
 \ssub{a}{3}t^2 + \ssub{b}{3}t + \ssub{c}{3})$ represents a (possibly degenerate) parabola in $\Real{3}$.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:bezier}
  \emph{B\'{e}zier curves}\index{B\'{e}zier curve} are used in Computer Aided Design to approximate the shape of a
@@ -3629,7 +3702,8 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  define
  \begin{align*}
   \ssub{\textbf{b}}{0}^{\scriptscriptstyle 1}(t) &= ( 1 - t )\ssub{\textbf{b}}{0} + t \ssub{\textbf{b}}{1},\\
-  \ssub{\textbf{b}}{1}^{\scriptscriptstyle 1}(t) &= ( 1 - t )\ssub{\textbf{b}}{1} + t \ssub{\textbf{b}}{2},\vspace{1mm}\\
+  \ssub{\textbf{b}}{1}^{\scriptscriptstyle 1}(t) &= ( 1 - t )\ssub{\textbf{b}}{1} + t \ssub{\textbf{b}}{2},
+  \\
   \ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t) &=
   ( 1 - t )\ssub{\textbf{b}}{0}^{\scriptscriptstyle 1}(t) + t \ssub{\textbf{b}}{1}^{\scriptscriptstyle 1}(t)\\
   &= (1 - t)^2 \ssub{\textbf{b}}{0} + 2t(1 - t) \ssub{\textbf{b}}{1} + t^2 \ssub{\textbf{b}}{2}
@@ -3647,11 +3721,11 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t) = ( 2t + 2t^2, 4t + t^2, 6t - 4t^2 )$, as shown in Figure
  \ref{fig:bezier2}, where the line segments are $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 1}(t)$ and
  $\ssub{\textbf{b}}{1}^{\scriptscriptstyle 1}(t)$, and the curve is
- $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t)$.\vspace{-0mm}
+ $\ssub{\textbf{b}}{0}^{\scriptscriptstyle 2}(t)$.
  \begin{figure}[h]
   \begin{center}
    \input{fig184}
-  \end{center}\vspace{-0mm}
+  \end{center}
  \caption[]{\quad B\'{e}zier curve approximation for three points.}
  \label{fig:bezier2}
  \end{figure}
@@ -3661,11 +3735,11 @@ $\textbf{f}(t) = (\ssub{a}{1}t^2 + \ssub{b}{1}t + \ssub{c}{1},\ssub{a}{2}t^2 + \
  vector-valued function whose components are polynomials of degree $n-1$, and its formula is given by
  \emph{de Casteljau's algorithm}.\footnote{See pp. 27--30 in \cite{far}.} In the exercises, the reader will be given the
  algorithm for the case of $n = 4$ points and asked to write the explicit formula for the B\'{e}zier curve for the four
- points shown in Figure \ref{fig:bezier3}.\vspace{-0mm}
-\end{exmp}\vspace{-0mm}
+ points shown in Figure \ref{fig:bezier3}.
+\end{exmp}
 
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 \begin{exmp}
 The \emph{pedal curve} is traced by the orthogonal projection of a fixed point $P$ on the tangent lines of a given curve $\textbf{f}(t)$.
@@ -3682,9 +3756,9 @@ Write a parametric expression $\textbf{h}(t)$ for the pedal curve for the unit c
 Denote by $\textbf{w}(t)$ the projection of $\textbf{v}(t)=\textbf{i}-\textbf{f}(t)$ to the tangent line at $\textbf{f}(t)$, so $\textbf{h}(t)=\textbf{f}(t)+\textbf{w}(t)$.
 
 The velocity vector $\textbf{f}\,'(t)=(-\sin t,\cos t)$ is parallel to the tangent line at $\textbf{f}(t)$.
-Note that $\|\textbf{f}\,'(t)\|=1$ for any $t$.
 
-By Exercise \ref{ex:projection},
+Note that $\|\textbf{f}\,'(t)\|=1$ for any $t$.
+Therefore the vector $\textbf{w}(t)$ can be found useing the following formula (compare to  Example~\ref{exmp:projection} and Exercise~\ref{ex:projection}, on page~\pageref{ex:projection})
 \begin{align*}
 \textbf{w}(t)
 &=
@@ -3758,6 +3832,7 @@ with the given position vector $\textbf{r}(t)$.
  \begin{displaymath}
   \textbf{f}\,'(t) = \dfrac{\textbf{f}(2\pi) - \textbf{f}(0)}{2\pi - 0} .
  \end{displaymath}
+ \item Wrie a parametric equation for the pedal curve to $\textbf{f}(t)=(t,t^2,t^3)$ with respect to the origin.
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
@@ -3803,12 +3878,11 @@ Show that its acceleration $\textbf{a}(t)$ points in the opposite direction as
  \item Prove Theorem \ref{thm:vecdiffprops}(g).
  
  \item Show that there is no plane which is \emph{tangent}\footnote{A plane is called tangent to a curve $\textbf{f}(t)$ at point $\textbf{f}(t_0)$ it it contains the tangent line at $\textbf{f}(t_0)$.} to the curve $\textbf{f}(t)=(t,t^2,t^3)$ at two distinct points.
- \item Wrie a parametric equation for the pedal curve to $\textbf{f}(t)=(t,t^2,t^3)$ with respect to the origin.
 \end{enumerate}
 \begin{figure}[h]
   \begin{center}
    \input{fig185}
-  \end{center}\vspace{-0mm}
+  \end{center}
  \caption[]{\quad B\'{e}zier curve approximation for four points.}
  \label{fig:bezier3}
  \end{figure}
@@ -3834,11 +3908,12 @@ that is the magnitude  of the velocity vector.
 Therefore it seems natural to define the distance $s$
 traveled by as the definite integral of its speed in the time interval (\ref{eqn:arclen}).
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:arclenhelix}
  Find the length $L$ of the helix\index{helix} $\textbf{f}(t) = ( \cos t , \sin t , t )$ from $t = 0$ to $t =
- 2\pi$.\vspace{1mm}
+ 2\pi$.
+ \smallskip
  \par\noindent \emph{Solution:} 
  By formula (\ref{eqn:arclen}), we have
  \begin{align*}
@@ -3849,7 +3924,7 @@ traveled by as the definite integral of its speed in the time interval (\ref{eqn
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{2mm}
+\smallskip
 
 Notice that the set traced out by the curve $\textbf{f}(t) = (\cos t , \sin t , t)$ from Example
 \ref{exmp:arclenhelix} is also traced out by the function $\textbf{g}(t) = (\cos 2t , \sin 2t , 2t)$.
@@ -3865,8 +3940,7 @@ We say that $\textbf{g}(t)$ is a reparametrization of curve $\textbf{f}(t)$.\ind
  $[a,b]$, and let $\alpha:[c,d] \rightarrow [a,b]$ be a smooth one-to-one mapping of an interval $[c,d]$ onto $[a,b]$.
  Then the function $\textbf{g}:[c,d] \rightarrow \Real{3}$ defined by $\textbf{g}(s) = \textbf{f}(\alpha(s))$ is
  a \textbf{reparametrization} of $\textbf{f}(t)$ with \textbf{parameter} $s$. 
- If $\alpha$ positive derivatives 
- then we say that the reparametrization is \emph{regular reparametrization}\emph{regular} and 
+ If the derivative of $\alpha$ does not vanish, we say that the reparametrization is \index{regular reparametrization}\emph{regular} and 
  $\textbf{g}(s)$ is \emph{equivalent} to $\textbf{f}(t)$.}
 }
 
@@ -3906,19 +3980,21 @@ functions (the proof is left as an exercise):\index{Chain Rule}
  for any $s$ where the composite function $\textbf{f}(\alpha(s))$ is defined.}
 }
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:paramhelix}
- The following are all equivalent parametrizations of the same curve:
+ The following are all regular reparametrizations of one curve:
  \begin{align*}
   \textbf{f}(t) &= (\cos t , \sin t , t) \text{~~for $t$ in~$[0,2\pi]$},\\
   \textbf{g}(s) &= (\cos 2s , \sin 2s , 2s) \text{~~for $s$ in~$[0,\pi]$},\\
   \textbf{h}(s) &= (\cos 2\pi s , \sin 2\pi s , 2\pi s) \text{~~for $s$ in~$[0,1]$.}
  \end{align*}
- To see that $\textbf{g}(s)$ is equivalent to $\textbf{f}(t)$, define $\alpha:[0,\pi] \rightarrow [0,2\pi]$ by
- $\alpha(s) = 2s$. Then $\alpha$ is smooth, one-to-one, maps $[0,\pi]$ onto $[0,2\pi]$, and is strictly increasing
- (since $\alpha\,'(s) = 2 > 0$ for all $s$). Likewise, defining $\alpha:[0,1] \rightarrow [0,2\pi]$ by
- $\alpha(s) = 2\pi s$ shows that $\textbf{h}(s)$ is equivalent to $\textbf{f}(t)$.
+ To see that $\textbf{g}(s)$ is regular reparametrization of  $\textbf{f}(t)$, define $\alpha:[0,\pi] \rightarrow [0,2\pi]$ by
+ $\alpha(s) = 2s$. 
+ Then $\alpha$ is smooth, one-to-one, maps $[0,\pi]$ onto $[0,2\pi]$, and is strictly increasing
+ (since $\alpha\,'(s) = 2 > 0$ for all $s$). 
+ Likewise, defining $\alpha:[0,1] \rightarrow [0,2\pi]$ by
+ $\alpha(s) = 2\pi s$ shows that $\textbf{h}(s)$ is regular reparametrization of  $\textbf{f}(t)$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \vskip3mm
@@ -3992,10 +4068,11 @@ so that you could then solve for $t$ in terms of $s$.
 If that can be done, you would then substitute the expression for $t$ in terms of $s$ (which we called $\alpha(s)$)
 into the formula for $\textbf{f}(t)$ to get $\textbf{g}(s)=\textbf{f}(\alpha(s))$.
 
-\vspace{2mm}
+\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:arcparamhelix}
- Parametrize the helix $\textbf{f}(t) = (\cos t , \sin t , t)$, for $t$ in~$[0,2\pi]$, by arc length.\vspace{1mm}
+ Parametrize the helix $\textbf{f}(t) = (\cos t , \sin t , t)$, for $t$ in~$[0,2\pi]$, by arc length.
+ \smallskip
  \par\noindent \emph{Solution:} By Example \ref{exmp:arclenhelix} and formula (\ref{eqn:arclenfcn}), we have
  \begin{displaymath}
   s = \int_{0}^{t} \norm{\textbf{f}\,'(u)}\,du = \int_{0}^{t} \sqrt{2} \,du = \sqrt{2}\,t
@@ -4071,7 +4148,7 @@ Therefore the equation of the osculating plane at $\textbf{f}(t)$ can be written
 \[\Dotprod{(\textbf{x}-\textbf{f}(t))}{(\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)})}=0\]
 with the unknown $\textbf{x}$.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 
 \begin{exmp} Let us show that osculating plane does at given point does not depend on the parametrization.
@@ -4102,7 +4179,7 @@ Since the reparametrization is regular, $\alpha'(s)\ne0$.
 Therefore $\Crossprod{\textbf{f}\,'(t)}{\textbf{f}\,''(t)}\parallel\Crossprod{\textbf{g}'(s)}{\textbf{g}''(s)}$ as requred.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 Yet an other example is so called \emph{curvature}. 
 Assume a smooth regular curve $\textbf{g}$ has arc length parametrization.
@@ -4148,7 +4225,7 @@ The curvature $\kappa$ of a smooth curve $\textbf{f}$ at the point $\textbf{f}(t
 \end{align}
 }
 
-\begin{proofbar}\vspace{-3mm}
+\begin{proofbar}
 \begin{proof}[Proof:]
 Let $\textbf{g}(s)$ be the arc length parametrization of $\textbf{f}(t)$; in particular $\norm{\textbf{g}'(s)}=1$ for any $s$.
 As above, we assume $t=\alpha(s)$ and therefore  $\textbf{g}(s)=\textbf{f}(\alpha(s))$ and $\alpha'(s)=\frac{1}{\norm{\textbf{f}\,'(t)}}$.
@@ -4186,7 +4263,7 @@ That is, $\textbf{g}\,''(s)\perp\textbf{g}\,'(s)$ for any $s$.  Since $\norm{\te
 \\
 &=\kappa.
 \end{align*}
-\end{proof}\vspace{-3mm}\end{proofbar}
+\end{proof}\end{proofbar}
 
 \startexercises\label{sec1dot9}
 \probs{A}

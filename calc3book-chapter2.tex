@@ -1,18 +1,19 @@
 \chapter{Functions of Several Variables}
 %Begin Section 2.1
 \section{Functions of Two or Three Variables}
-In Section 1.8 we discussed vector-valued functions of a single real variable. We will now examine real-valued
-functions of a point (or vector) in $\Real{2}$ or $\Real{3}$. For the most part these functions will be defined
-on sets of points in $\Real{2}$, but there will be times when we will use points in $\Real{3}$, and there will also be
+In Section 1.8 we discussed vector-valued functions of a single real variable. We will now examine real-valued functions of a point (or vector) in $\Real{2}$ or $\Real{3}$. 
+For the most part these functions will be defined on sets of points in $\Real{2}$, but there will be times when we will use points in $\Real{3}$, and there will also be
 times when it will be convenient to think of the points as vectors (or terminal points of vectors).
 
 A \textbf{real-valued function} $f$ defined on a subset $D$ of $\Real{2}$ is a rule that assigns to each point
-$(x,y)$ in $D$ a real number $f(x,y)$. The largest possible set $D$ in $\Real{2}$ on which $f$ is defined is
+$(x,y)$ in $D$ a real number $f(x,y)$. 
+The largest possible set $D$ in $\Real{2}$ on which $f$ is defined is
 called the \textbf{domain} of $f$, and the \textbf{range} of $f$ is the set of all real numbers $f(x,y)$ as $(x,y)$
-varies over the domain $D$. A similar definition holds for functions $f(x,y,z)$ defined on points
+varies over the domain $D$. 
+A similar definition holds for functions $f(x,y,z)$ defined on points
 $(x,y,z)$ in $\Real{3}$.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  The domain of the function
@@ -28,7 +29,8 @@ $(x,y,z)$ in $\Real{3}$.
   f(x,y) = \dfrac{1}{x-y}
  \end{displaymath}
  is all of $\Real{2}$ except the points $(x,y)$ for which $x = y$.
- That is, the domain is the set $D = \lbrace (x,y): x \ne y \rbrace$. The range of $f$ is all real numbers except $0$.
+ That is, the domain is the set $D = \lbrace (x,y): x \ne y \rbrace$. 
+ The range of $f$ is all real numbers except $0$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
@@ -37,8 +39,10 @@ $(x,y,z)$ in $\Real{3}$.
   f(x,y) = \sqrt{1 - x^2 - y^2}
  \end{displaymath}
  is the set $D = \lbrace (x,y): x^2 + y^2 \le 1 \rbrace$, since the quantity inside the square root is nonnegative if
- and only if $1 - ( x^2 + y^2 ) \ge 0$. We see that $D$ consists of all points on and inside the unit circle in
- $\Real{2}$ ($D$ is sometimes called the \emph{closed unit disk}\index{unit disk}). The range of $f$ is the interval
+ and only if $1 - ( x^2 + y^2 ) \ge 0$. 
+ We see that $D$ consists of all points on and inside the unit circle in
+ $\Real{2}$ ($D$ is sometimes called the \emph{closed unit disk}\index{unit disk}). 
+ The range of $f$ is the interval
  $\lbrack 0,1 \rbrack$ in $\mathbb{R}$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
@@ -51,45 +55,50 @@ $(x,y,z)$ in $\Real{3}$.
  is all of $\Real{3}$, and the range of $f$ is all positive real numbers.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 A function $f(x,y)$ defined in $\Real{2}$ is often written as $z = f(x,y)$, as was mentioned in Section 1.1,
-so that the \textbf{graph} of $f(x,y)$ is the set $\lbrace (x,y,z): z = f(x,y) \rbrace$ in $\Real{3}$. So we
-see that this graph is a surface in $\Real{3}$, since it satisfies an equation of the form $F(x,y,z) = 0$ 
-(namely, $F(x,y,z) = f(x,y) - z$). The traces of this surface in the planes $z  = c$, where $c$ varies over
-$\mathbb{R}$, are called the \textbf{level curves}\index{level curve} of the function. Equivalently, the level
-curves are the solution
-sets of the equations $f(x,y) = c$, for $c$ in $\mathbb{R}$. Level curves are often projected onto the $xy$-plane
+so that the \textbf{graph} of $f(x,y)$ is the set $\lbrace (x,y,z): z = f(x,y) \rbrace$ in $\Real{3}$. 
+So we see that this graph is a surface in $\Real{3}$, since it satisfies an equation of the form $F(x,y,z) = 0$ 
+(namely, $F(x,y,z) = f(x,y) - z$). 
+The traces of this surface in the planes $z  = c$, where $c$ varies over
+$\mathbb{R}$, are called the \textbf{level curves}\index{level curve} of the function. 
+Equivalently, the level curves are the solution sets of the equations $f(x,y) = c$, for $c$ in $\mathbb{R}$. 
+Level curves are often projected onto the $xy$-plane
 to give an idea of the various ``elevation'' levels of the surface (as is done in topography).
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:sinc}
  The graph of the function
  \begin{displaymath}
   f(x,y) = \dfrac{\sin \sqrt{x^2 + y^2}}{\sqrt{x^2 + y^2}}
  \end{displaymath}
- is shown below. Note that the level curves (shown both on the surface and projected onto the $xy$-plane) are groups
- of concentric circles.\vspace{-20mm}
+ is shown below. 
+ Note that the level curves (shown both on the surface and projected onto the $xy$-plane) are groups
+ of concentric circles.
  \begin{figure}[h]
  \begin{center}
   \input{sincplain}
- \end{center}\vspace{-12mm}
+ \end{center}
  \caption[]{\quad The function $f(x,y) = \frac{\sin \sqrt{x^2 + y^2}}{\sqrt{x^2 + y^2}}$.}
  \label{fig:sinc}
 \end{figure}
-\end{exmp}\vspace{-4mm}
+\end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 You may be wondering what happens to the function in Example \ref{exmp:sinc} at the point $(x,y) = (0,0)$, since both
-the numerator and denominator are $0$ at that point. The function is not defined at $(0,0)$, but the
-\emph{limit} of the function exists (and equals $1$) as $(x,y)$ \emph{approaches} $(0,0)$. We will now state explicitly
+the numerator and denominator are $0$ at that point. 
+The function is not defined at $(0,0)$, but the
+\emph{limit} of the function exists (and equals $1$) as $(x,y)$ \emph{approaches} $(0,0)$. 
+We will now state explicitly
 what is meant by the limit of a function of two variables.
-\newpage
+
 \statedefn{defn:mlim}{\index{limit}
  {Let $(a,b)$ be a point in $\Real{2}$, and let $f(x,y)$ be a real-valued function defined on some set
- containing $(a,b)$ (but not necessarily defined at $(a,b)$ itself). Then we say that the \textbf{limit} of
+ containing $(a,b)$ (but not necessarily defined at $(a,b)$ itself). 
+ Then we say that the \textbf{limit} of
  $f(x,y)$ equals $L$ as $(x,y)$ approaches $(a,b)$, written as
  \begin{equation}\label{eqn:mlim}
   \lim_{(x,y) \to (a,b)} f(x,y) = L ~,
@@ -106,13 +115,15 @@ if we pick $(x,y)$ sufficiently close to $(a,b)$ (i.e. inside a circle centered 
 $(a,b)$ with some sufficiently small radius $\delta$).
 
 If you recall the ``epsilon-delta'' proofs of limits of real-valued functions of a single variable, you may remember
-how awkward they can be, and how they can usually only be done easily for simple functions. In general, the
-multivariable cases are at least equally awkward to go through, so we will not bother with such proofs. Instead, we
+how awkward they can be, and how they can usually only be done easily for simple functions. 
+In general, the
+multivariable cases are at least equally awkward to go through, so we will not bother with such proofs. 
+Instead, we
 will simply state that when the function $f(x,y)$ is given by a single formula and is defined at the point
 $(a,b)$ (e.g. is not some indeterminate form like $0/0$) then you can just substitute $(x,y) = (a,b)$ into the formula
 for $f(x,y)$ to find the limit.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  \begin{displaymath}
@@ -121,12 +132,14 @@ for $f(x,y)$ to find the limit.
  since $f(x,y) = \frac{xy}{x^2 + y^2}$ is properly defined at the point $(1,2)$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 The major difference between limits in one variable and limits in two or more variables has to do with how a point is
-approached. In the single-variable case, the statement ``$x \rightarrow a$'' means that $x$ gets closer to the value $a$
+approached. 
+In the single-variable case, the statement ``$x \rightarrow a$'' means that $x$ gets closer to the value $a$
 from two possible directions along the real number line (see
-Figure \ref{fig:mlim}(a)). In two dimensions, however, $(x,y)$ can approach a point $(a,b)$ along an infinite
+Figure \ref{fig:mlim}(a)). 
+In two dimensions, however, $(x,y)$ can approach a point $(a,b)$ along an infinite
 number of paths (see Figure \ref{fig:mlim}(b)).
 
 \begin{figure}[h]
@@ -143,28 +156,33 @@ number of paths (see Figure \ref{fig:mlim}(b)).
  \lim_{(x,y) \to (0,0)}~ \frac{xy}{x^2 + y^2} \text{~~~does not exist}
  \end{displaymath}
  Note that we can not simply substitute $(x,y) = (0,0)$ into the function, since doing so gives an indeterminate
- form $0/0$. To show that the limit does not exist, we will show that the function approaches different values as
+ form $0/0$. 
+ To show that the limit does not exist, we will show that the function approaches different values as
  $(x,y)$ approaches $(0,0)$ along different paths in $\Real{2}$.
- To see this, suppose that $(x,y) \rightarrow (0,0)$ along the positive $x$-axis, so that $y = 0$ along that path. Then
+ To see this, suppose that $(x,y) \rightarrow (0,0)$ along the positive $x$-axis, so that $y = 0$ along that path. 
+ Then
  \begin{displaymath}
   f(x,y) = \frac{xy}{x^2 + y^2} = \frac{x 0}{x^2 + 0^2} = 0
  \end{displaymath}
- along that path (since $x > 0$ in the denominator). But if
+ along that path (since $x > 0$ in the denominator). 
+ But if
  $(x,y) \rightarrow (0,0)$ along the straight line $y = x$ through the origin, for $x > 0$, then we see that
  \begin{displaymath}
   f(x,y) = \frac{xy}{x^2 + y^2} = \frac{x^2}{x^2 + x^2} = \frac{1}{2},
  \end{displaymath}
- which means that $f(x,y)$ approaches different values as $(x,y) \rightarrow (0,0)$ along different paths. Hence the
+ which means that $f(x,y)$ approaches different values as $(x,y) \rightarrow (0,0)$ along different paths. 
+ Hence the
  limit does not exist.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 Limits of real-valued multivariable functions obey the same algebraic rules as in the single-variable case, as shown
 in the following theorem, which we state without proof.
 \statethm{thm:mlimalg}{
  {Suppose that $\displaystyle\lim_{(x,y) \to (a,b)} f(x,y)$ and $\displaystyle\lim_{(x,y) \to (a,b)} g(x,y)$ both
- exist, and that $k$ is some scalar. Then:
+ exist, and that $k$ is some scalar. 
+ Then:
  \begin{enumerate}[(a)]
   \item $\displaystyle\lim_{(x,y) \to (a,b)} \lbrack f(x,y) \pm g(x,y) \rbrack =
    \biggl[ ~\displaystyle\lim_{(x,y) \to (a,b)} f(x,y) ~\biggr] \pm \biggl[ ~\displaystyle\lim_{(x,y) \to (a,b)} g(x,y)
@@ -185,16 +203,19 @@ in the following theorem, which we state without proof.
 
 Note that in part (e), it suffices to have $\abs{f(x,y) - L} \le g(x,y)$ for all $(x,y)$ ``sufficiently
 close'' to $(a,b)$ (but excluding $(a,b)$ itself).
-\newpage
+
 \begin{exmp}\label{exmp:discont}
  Show that
  \begin{displaymath}
   \lim_{(x,y) \to (0,0)}~ \frac{y^4}{x^2 + y^2} = 0.
  \end{displaymath}
  Since substituting $(x,y) = (0,0)$ into the function gives the indeterminate form $0/0$, we need an alternate
- method for evaluating this limit. We will use Theorem \ref{thm:mlimalg}(e). First, notice that
- $y^4 = \bigl( \sqrt{y^2} \bigr)^4$ and so $0 \le y^4 \le \bigl( \sqrt{x^2 + y^2} \bigr)^4$ for all $(x,y)$. But
- $\bigl( \sqrt{x^2 + y^2} \bigr)^4 = (x^2 + y^2)^2$. Thus, for all $(x,y) \ne (0,0)$ we have
+ method for evaluating this limit. 
+ We will use Theorem \ref{thm:mlimalg}(e). 
+ First, notice that
+ $y^4 = \bigl( \sqrt{y^2} \bigr)^4$ and so $0 \le y^4 \le \bigl( \sqrt{x^2 + y^2} \bigr)^4$ for all $(x,y)$. 
+ But $\bigl( \sqrt{x^2 + y^2} \bigr)^4 = (x^2 + y^2)^2$. 
+ Thus, for all $(x,y) \ne (0,0)$ we have
  \begin{displaymath}
   \left| \frac{y^4}{x^2 + y^2} \right| \le \frac{(x^2 + y^2)^2}{x^2 + y^2} = x^2 + y^2 \rightarrow 0 \text{~~as~~}
   (x,y) \rightarrow (0,0).
@@ -202,7 +223,7 @@ close'' to $(a,b)$ (but excluding $(a,b)$ itself).
  Therefore $\displaystyle\lim_{(x,y) \to (0,0)} \frac{y^4}{x^2 + y^2} = 0$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{4mm}
+\medskip
 
 Continuity can be defined similarly as in the single-variable case.
 
@@ -212,10 +233,11 @@ Continuity can be defined similarly as in the single-variable case.
  \textbf{continuous function} if it is continuous at every point in its domain $D$.}
 }
 
-Unless indicated otherwise, you can assume that all the functions we deal with are continuous. In fact, we can
+Unless indicated otherwise, you can assume that all the functions we deal with are continuous. 
+In fact, we can
 modify the function from Example \ref{exmp:discont} so that it is continuous on all of $\Real{2}$.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Define a function $f(x,y)$ on all of $\Real{2}$ as follows:
@@ -238,7 +260,7 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
  then $f(x,y)$ is continuous on all of $\Real{2}$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec2dot1}
 \probs{A}
@@ -287,9 +309,11 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Show that $f(x,y)= \frac{1}{2\pi\sigma^2}e^{-(x^2 + y^2 )/2\sigma^2}$, for $\sigma >0$, is constant on the circle
-  of radius $r > 0$ centered at the origin. This function is called a \emph{Gaussian blur}\index{Gaussian blur}, and is
+  of radius $r > 0$ centered at the origin. 
+  This function is called a \emph{Gaussian blur}\index{Gaussian blur}, and is
   used as a filter in image processing software to produce a ``blurred'' effect.
- \item Suppose that $f(x,y) \le f(y,x)$ for all $(x,y)$ in $\Real{2}$. Show that $f(x,y) = f(y,x)$ for all
+ \item Suppose that $f(x,y) \le f(y,x)$ for all $(x,y)$ in $\Real{2}$. 
+ Show that $f(x,y) = f(y,x)$ for all
   $(x,y)$ in $\Real{2}$.
  \item Use the substitution $r=\sqrt{x^2 + y^2}$ to show that
   \begin{displaymath}
@@ -299,19 +323,24 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Prove Theorem \ref{thm:mlimalg}(a) in the case of addition. (\emph{Hint: Use Definition \ref{defn:mlim}.})
+ \item Prove Theorem \ref{thm:mlimalg}(a) in the case of addition. 
+ (\emph{Hint: Use Definition \ref{defn:mlim}.})
  \item Prove Theorem \ref{thm:mlimalg}(b).
 \end{enumerate}
 \newpage
 %Begin Section 2.2
 \section{Partial Derivatives}
 Now that we have an idea of what functions of several variables are, and what a limit of such a function is, we can
-start to develop an idea of a derivative of a function of two or more variables. We will start with the notion of a
-\emph{partial derivative}.\index{partial derivative}\index{derivative!partial}\index{$\dfrac{\partial f}{\partial x}$}
+start to develop an idea of a derivative of a function of two or more variables. 
+We will start with the notion of a
+\emph{partial derivative}.
+\index{partial derivative}
+\index{derivative!partial}
+\index{$\dfrac{\partial f}{\partial x}$}
 
 \statedefn{defn:partial}{\index{$\partial$}
- {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$, and let $(a,b)$ be a point in $D$. Then the
-  \textbf{partial derivative of $\bm{f}$ at $\bm{(a,b)}$ with respect to $\bm{x}$}, denoted by
+ {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$, and let $(a,b)$ be a point in $D$. 
+ Then the \textbf{partial derivative of $\bm{f}$ at $\bm{(a,b)}$ with respect to $\bm{x}$}, denoted by
   $\dfrac{\partial f}{\partial x} (a,b)$, is defined as
   \begin{equation}\label{eqn:parx}
    \dfrac{\partial f}{\partial x} (a,b) = \lim_{h \to 0} \dfrac{f(a+h,b) - f(a,b)}{h}
@@ -322,23 +351,26 @@ start to develop an idea of a derivative of a function of two or more variables.
    \dfrac{\partial f}{\partial y} (a,b) = \lim_{h \to 0} \dfrac{f(a,b+h) - f(a,b)}{h} ~.
   \end{equation}
   Note: The symbol $\partial$ is pronounced ``del''.\footnotemark}
-}\footnotetext{It is not a Greek letter. The symbol was first used by the mathematicians A. Clairaut and L. Euler
+}\footnotetext{It is not a Greek letter. 
+The symbol was first used by the mathematicians A. Clairaut and L. Euler
 around 1740, to distinguish it from the letter $d$ used for the ``usual'' derivative.}
 
 Recall that the derivative of a function $f(x)$ can be interpreted as the rate of change of that function in the
 (positive) $x$ direction. 
 From the definitions above, we can see that the partial derivative of a function $f(x,y)$ with respect to $x$ or $y$ is the rate of change of $f(x,y)$ in the (positive) $x$ or $y$ direction,
-respectively. What this means is that the partial derivative of a function $f(x,y)$ with respect to $x$ can be
+respectively. 
+What this means is that the partial derivative of a function $f(x,y)$ with respect to $x$ can be
 calculated by treating the $y$ \emph{variable} as a \emph{constant}, and then simply differentiating $f(x,y)$ as if it
-were a function of $x$ alone, using the usual rules from single-variable calculus. Likewise, the partial derivative of
+were a function of $x$ alone, using the usual rules from single-variable calculus. 
+Likewise, the partial derivative of
 $f(x,y)$ with respect to $y$ is obtained by treating the $x$ variable as a constant and then differentiating $f(x,y)$
 as if it were a function of $y$ alone.
 
-\vspace{4mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find $\dfrac{\partial f}{\partial x} (x,y)$ and $\dfrac{\partial f}{\partial y} (x,y)$ for the function
- $f(x,y) = x^{2}y + y^3$.\vspace{1mm}
+ $f(x,y) = x^{2}y + y^3$.\smallskip
  \par\noindent\emph{Solution:} Treating $y$ as a constant and differentiating $f(x,y)$ with respect to $x$ gives
  \begin{displaymath}
   \dfrac{\partial f}{\partial x} (x,y) = 2xy
@@ -349,15 +381,15 @@ as if it were a function of $y$ alone.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+
 We will often simply write $\dfrac{\partial f}{\partial x}$ and $\dfrac{\partial f}{\partial y}$ instead of
 $\dfrac{\partial f}{\partial x} (x,y)$ and $\dfrac{\partial f}{\partial y} (x,y)$.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find $\dfrac{\partial f}{\partial x}$ and $\dfrac{\partial f}{\partial y}$ for the function
- $f(x,y) = \dfrac{\sin (xy^2)}{x^2 + 1}$.\vspace{1mm}
+ $f(x,y) = \dfrac{\sin (xy^2)}{x^2 + 1}$.\smallskip
  \par\noindent\emph{Solution:} Treating $y$ as a constant and differentiating $f(x,y)$ with respect to $x$ gives
  \begin{displaymath}
   \dfrac{\partial f}{\partial x} = \dfrac{(x^2 + 1)(y^2 \cos (xy^2)) - (2x)\,\sin (xy^2)}{(x^2 + 1)^2}
@@ -368,7 +400,7 @@ $\dfrac{\partial f}{\partial x} (x,y)$ and $\dfrac{\partial f}{\partial y} (x,y)
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 Since both $\dfrac{\partial f}{\partial x}$ and $\dfrac{\partial f}{\partial y}$ are themselves functions of $x$ and
 $y$, we can take \emph{their} partial derivatives with respect to $x$ and $y$. 
@@ -410,14 +442,14 @@ This yields the \emph{higher-order partial derivatives}:
  \vdots
 \end{gather*}
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find the partial derivatives $\dfrac{\partial f}{\partial x}$, $\dfrac{\partial f}{\partial y}$,
  $\dfrac{\partial^2 f}{\partial x^2}$,
  $\dfrac{\partial^2 f}{\partial y^2}$, $\dfrac{\partial^2 f}{\partial y \, \partial x}$ and
  $\dfrac{\partial^2 f}{\partial x \, \partial y}$ for the function
- $f(x,y) = e^{x^2 y} + xy^3$.\vspace{1mm}
+ $f(x,y) = e^{x^2 y} + xy^3$.\smallskip
  \par\noindent\emph{Solution:} Proceeding as before, we have
  \begin{alignat*}{2}
   \dfrac{\partial f}{\partial x} &= 2xy e^{x^2 y} + y^3,
@@ -441,13 +473,15 @@ This yields the \emph{higher-order partial derivatives}:
  \end{alignat*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 Higher-order partial derivatives that are taken with respect to different variables, such as
 $\frac{\partial^2 f}{\partial y \, \partial x}$ and $\frac{\partial^2 f}{\partial x \, \partial y}$, are called
 \textbf{mixed partial derivatives}.\index{mixed partial derivative}\index{derivative!mixed partial}
 Notice in the above example that $\frac{\partial^2 f}{\partial y \, \partial x} =
-\frac{\partial^2 f}{\partial x \, \partial y}$. It turns that this will usually be the case. Specifically,
+\frac{\partial^2 f}{\partial x \, \partial y}$. 
+It turns that this will usually be the case. 
+Specifically,
 whenever both $\frac{\partial^2 f}{\partial y \, \partial x}$ and $\frac{\partial^2 f}{\partial x \, \partial y}$ are
 continuous at a point $(a,b)$, then they are equal at that point.\footnote{See pp. 214--216
 in \cite{tm} for a proof.} All the functions we will deal with will have continuous partial derivatives of all
@@ -457,9 +491,11 @@ orders, so you can assume in the remainder of the text that
  \text{for all $(x,y)$ in the domain of $f$.}
 \end{displaymath}
 In other words, it doesn't matter
-in which order you take partial derivatives. This applies even to mixed partial derivatives of order $3$ or higher.
+in which order you take partial derivatives. 
+This applies even to mixed partial derivatives of order $3$ or higher.
 
-The notation for partial derivatives varies. All of the following are equivalent:
+The notation for partial derivatives varies. 
+All of the following are equivalent:
 \begin{gather*}
  \dfrac{\partial f}{\partial x}:~ \ssub{f}{x}(x,y) ~, \quad \ssub{f}{1}(x,y) ~, \quad \ssub{D}{x}(x,y) ~, \quad
   \ssub{D}{1}(x,y)~;
@@ -739,15 +775,15 @@ is normal to the plane $T$. Thus the equation of $T$ is
 \begin{equation}
  -\tfrac{\partial f}{\partial x}(a,b)\,(x-a) - \tfrac{\partial f}{\partial y}(a,b)\,(y-b)+z-f(a,b)=0 ~.
 \end{equation}
-Multiplying both sides by $-1$, we have the following result:\vspace{2mm}
+Multiplying both sides by $-1$, we have the following result:\smallskip
 \statecomment{
  The equation of the tangent plane to the surface $z=f(x,y)$ at the point $(a,b,f(a,b))$ is
  \begin{equation}\label{eqn:tanplane}
   \tfrac{\partial f}{\partial x}(a,b)\,(x-a) + \tfrac{\partial f}{\partial y}(a,b)\,(y-b)-z+f(a,b)=0
  \end{equation}}
-\newpage
+
 \begin{exmp}
- Find the equation of the tangent plane to the surface $z =  x^2 + y^2$ at the point $(1,2,5)$.\vspace{1mm}
+ Find the equation of the tangent plane to the surface $z =  x^2 + y^2$ at the point $(1,2,5)$.\smallskip
  \par\noindent \emph{Solution:} For the function $f(x,y) = x^2 + y^2$, we have
  $\tfrac{\partial f}{\partial x} = 2x$ and $\tfrac{\partial f}{\partial y} = 2y$, so the equation of the tangent plane
  at the point $(1,2,5)$ is
@@ -755,9 +791,9 @@ Multiplying both sides by $-1$, we have the following result:\vspace{2mm}
   2(1)(x-1)+2(2)(y-2)-z+5=0 \text{~,~or}\\
   2x+4y-z-5=0 ~.
  \end{gather*}
-\end{exmp}\vspace{-3mm}
+\end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 In a similar fashion, it can be shown that if a surface is defined implicitly by an equation of the form
 $F(x,y,z)=0$, then the tangent plane to the surface at a point $(a,b,c)$ is given by the equation
@@ -767,10 +803,10 @@ $F(x,y,z)=0$, then the tangent plane to the surface at a point $(a,b,c)$ is give
 \end{equation}
 Note that formula (\ref{eqn:tanplane}) is the special case of formula (\ref{eqn:imptanplane}) where
 $F(x,y,z) = f(x,y) - z$.
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Find the equation of the tangent plane to the surface $x^2 + y^2 + z^2 = 9$ at the point $(2,2,-1)$.\vspace{1mm}
+ Find the equation of the tangent plane to the surface $x^2 + y^2 + z^2 = 9$ at the point $(2,2,-1)$.\smallskip
  \par\noindent \emph{Solution:} For the function $F(x,y,z) = x^2 + y^2 + z^2 - 9$, we have
  $\tfrac{\partial F}{\partial x} = 2x$, $\tfrac{\partial F}{\partial y} = 2y$, and
  $\tfrac{\partial F}{\partial z} = 2z$, so the equation of the tangent plane at $(2,2,-1)$ is
@@ -778,7 +814,7 @@ $F(x,y,z) = f(x,y) - z$.
   2(2)(x-2)+2(2)(y-2)+2(-1)(z+1)=0 \text{~,~or}\\
   2x+2y-z-9=0 ~.
  \end{gather*}
-\end{exmp}\vspace{-9mm}
+\end{exmp}
 \startexercises\label{sec2dot3}
 \probs{A}
 \par\noindent For Exercises 1--6, find the equation of the tangent plane to the surface $z=f(x,y)$ at the point
@@ -852,7 +888,8 @@ directional derivative:\index{$\ssub{D}{\textbf{v}}f$}
   \end{equation}}
   for any vector $\textbf{v} = \vectwo{v}$ in $\Real{2}$
 }
-\begin{proofbar}\vspace{-3mm}\begin{proof}[Proof:]
+\begin{proofbar}
+\begin{proof}[Proof:]
  Note that if $\textbf{v} = \textbf{i} = (1,0)$ then the above formula reduces to
  $\ssub{D}{\textbf{v}}f(a,b) = \tfrac{\partial f}{\partial x}(a,b)$, which we know is true since
  $\ssub{D}{\textbf{i}}f = \tfrac{\partial f}{\partial x}$, as we noted earlier. Similarly, for
@@ -905,7 +942,7 @@ Then
    \ssub{D}{\textbf{v}}f(a,b) ~~ &= ~~ \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) +
     \ssub{v}{2}\frac{\partial f}{\partial y}(a,b)
  \end{align*}
- after reversing the order of summation.\vspace{-3mm}
+ after reversing the order of summation.
 \end{proof}\end{proofbar}
 
 Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\partial f}{\partial x}(a,b),
@@ -924,7 +961,7 @@ Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\parti
   in $\Real{3}$. The symbol $\nabla$ is pronounced ``del'' or ``nabla''.\footnotemark}
 }\footnotetext{Sometimes the notation grad($f$) is used instead of $\nabla f$.}
 
-\vspace{-4mm}
+
 \statecor{cor:dirderiv}{
  {$\ssub{D}{\textbf{v}}f = \Dotprod{\textbf{v}}{\nabla f}$}
 }
@@ -932,23 +969,24 @@ Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\parti
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find the directional derivative of $f(x,y) = xy^2 + x^3 y$ at the point $(1,2)$ in the direction of
- $\textbf{v} = \biggl( \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}} \biggr)$.\vspace{1mm}
+ $\textbf{v} = \biggl( \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}} \biggr)$.\smallskip
  \par\noindent\emph{Solution:} We see that $\nabla f = (y^2 + 3x^2 y, 2xy + x^3)$, so\index{$\nabla$}
  \begin{displaymath}
   \ssub{D}{\textbf{v}}f(1,2) ~=~ \Dotprod{\textbf{v}}{\nabla f(1,2)}
    ~=~ \Dotprod{\biggl( \tfrac{1}{\sqrt{2}},\tfrac{1}{\sqrt{2}} \biggr)}{(2^2 + 3(1)^2 (2),2(1)(2)+1^3)}
    ~=~ \tfrac{15}{\sqrt{2}}
  \end{displaymath}
-\end{exmp}\vspace{-1mm}
+\end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 A real-valued function $z=f(x,y)$ whose partial derivatives $\tfrac{\partial f}{\partial x}$ and
 $\frac{\partial f}{\partial y}$ exist and are continuous is called \emph{continuously differentiable}.
 Assume that $f(x,y)$ is such a function and that $\nabla f \ne \textbf{0}$. 
 Let $c$ be a real number in the range of
 $f$ and let \textbf{v} be a vector in $\Real{2}$ which is tangent to the
-level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).\vspace{-1mm}\index{continuously differentiable}
+level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).
+\index{continuously differentiable}
 \begin{figure}[h]
  \begin{center}
   \begin{tikzpicture}
@@ -969,11 +1007,11 @@ level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).\vspace{-1mm}\index{co
    \draw [black,line width=1.2pt,-latex] (1.77,1.77) -- (2.77,2.77);
    \node [right] at (2.77,2.77) {$\nabla f$};
    \node at (3.1,1.3) {$f(x,y) = c$};
-  \end{tikzpicture}\vspace{-4mm}
+  \end{tikzpicture}
  \end{center}
  \caption[]{}
  \label{fig:gradlevel}
-\end{figure}\vspace{-2mm}
+\end{figure}
 
 The value of $f(x,y)$ is constant along a level curve, so since \textbf{v} is a tangent vector to this curve, then
 the rate of change of $f$ in the direction of \textbf{v} is 0, i.e. $\ssub{D}{\textbf{v}}f = 0$. 
@@ -1000,11 +1038,11 @@ the direction of $-\nabla f$ (since $\theta = 180\Degrees$ in that case). We hav
  \end{enumerate}}
 }
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  In which direction does the function $f(x,y) = xy^2 + x^3 y$ increase the fastest from the point $(1,2)$?
- In which direction does it decrease the fastest?\vspace{1mm}
+ In which direction does it decrease the fastest?\smallskip
  \par\noindent\emph{Solution:} Since $\nabla f = (y^2 + 3x^2 y, 2xy + x^3)$, then
  $\nabla f(1,2) = (10,5) \ne \textbf{0}$. 
  A unit vector in that direction is $\textbf{v} =
@@ -1014,27 +1052,27 @@ the direction of $-\nabla f$ (since $\theta = 180\Degrees$ in that case). We hav
  the direction of $\biggl( \frac{-2}{\sqrt{5}}, \frac{-1}{\sqrt{5}} \biggr)$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 Though we proved Theorem \ref{thm:gradprop} for functions of two variables, a similar argument can be used to show
 that it also applies to functions of three or more variables. Likewise, the directional derivative in the
 three-dimensional case can also be defined by the formula $\ssub{D}{\textbf{v}}f =
 \Dotprod{\textbf{v}}{\nabla f}$.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  The temperature $T$ of a solid is given by the function 
  \[T(x,y,z) = e^{-x} + e^{-2y} + e^{4z},\] 
  where
  $x$, $y$, $z$ are space coordinates relative to the center of the solid. In which direction from the point $(1,1,1)$
- will the temperature decrease the fastest?\vspace{1mm}
+ will the temperature decrease the fastest?\smallskip
  \par\noindent\emph{Solution:} Since $\nabla f = (-e^{-x},-2e^{-2y},4e^{4z})$, then the temperature will decrease the
  fastest in the direction of
  $-\nabla f(1,1,1) = (e^{-1},2e^{-2},-4e^4 )$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\newpage
+
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec2dot4}
 \probs{A}
@@ -1115,41 +1153,44 @@ points where the function has a \emph{local maximum} or \emph{local minimum}. We
 variables; functions of three or more variables require methods using linear algebra.\index{extreme point}
 
 \statedefn{defn:localext}{\index{local maximum}\index{local minimum}\index{global maximum}\index{global minimum}
- {Let $f(x,y)$ be a real-valued function, and let $(a,b)$ be a point in the domain of $f$. We say that $f$ has a
-  \textbf{local maximum} at $(a,b)$ if $f(x,y) \le f(a,b)$ for all $(x,y)$ inside some disk of positive radius centered
-  at $(a,b)$, i.e. there is some sufficiently small $r > 0$ such that $f(x,y) \le f(a,b)$ for all $(x,y)$ for
-  which $(x-a)^2 + (y-b)^2 < r^2$.
+ {Let $f(x,y)$ be a real-valued function, and let $(x_0,y_0)$ be a point in the domain of $f$. We say that $f$ has a
+  \textbf{local maximum} at $(x_0,y_0)$ if $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ inside some disk of positive radius centered
+  at $(x_0,y_0)$, i.e. there is some sufficiently small $r > 0$ such that $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ for
+  which $(x-x_0)^2 + (y-y_0)^2 < r^2$.
   
-  Likewise, we say that $f$ has a \textbf{local minimum} at $(a,b)$ if $f(x,y) \ge f(a,b)$ for all $(x,y)$ inside some
-  disk of positive radius centered at $(a,b)$.
+  Likewise, we say that $f$ has a \textbf{local minimum} at $(x_0,y_0)$ if $f(x,y) \ge f(x_0,y_0)$ for all $(x,y)$ inside some
+  disk of positive radius centered at $(x_0,y_0)$.
   
-  If $f(x,y) \le f(a,b)$ for all $(x,y)$ in the domain of $f$, then $f$ has a \textbf{global maximum} at $(a,b)$. If
-  $f(x,y) \ge f(a,b)$ for all $(x,y)$ in the domain of $f$, then $f$ has a \textbf{global minimum} at $(a,b)$.}
+  If $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ in the domain of $f$, then $f$ has a \textbf{global maximum} at $(x_0,y_0)$. If
+  $f(x,y) \ge f(x_0,y_0)$ for all $(x,y)$ in the domain of $f$, then $f$ has a \textbf{global minimum} at $(x_0,y_0)$.}
 }
 
-Suppose that $(a,b)$ is a local maximum point for $f(x,y)$, and that the first-order partial derivatives of $f$
-exist at $(a,b)$. We know that $f(a,b)$ is the largest value of $f(x,y)$ as $(x,y)$
-goes in all directions from the point $(a,b)$, in some sufficiently small disk centered at $(a,b)$. In
-particular, $f(a,b)$ is the largest value of $f$ in the $x$ direction (around the point $(a,b)$), that is, the
+Suppose that $(x_0,y_0)$ is a local maximum point for $f(x,y)$, and that the first-order partial derivatives of $f$
+exist at $(x_0,y_0)$. 
+We know that $f(x_0,y_0)$ is the largest value of $f(x,y)$ as $(x,y)$
+goes in all directions from the point $(x_0,y_0)$, in some sufficiently small disk centered at $(x_0,y_0)$. 
+In particular, $f(x_0,y_0)$ is the largest value of $f$ in the $x$ direction (around the point $(x_0,y_0)$), that is, the
 single-variable function $g(x) = f(x,b)$ has a local maximum at $x=a$. So we know that $g\,'(a) = 0$. Since
-$g\,'(x) = \frac{\partial f}{\partial x}(x,b)$, then $\frac{\partial f}{\partial x}(a,b)=0$. Similarly, $f(a,b)$ is the
-largest value of $f$ near $(a,b)$ in the $y$ direction and so $\frac{\partial f}{\partial y}(a,b)=0$. We thus have the
+$g\,'(x) = \frac{\partial f}{\partial x}(x,b)$, then $\frac{\partial f}{\partial x}(x_0,y_0)=0$. 
+Similarly, $f(x_0,y_0)$ is the
+largest value of $f$ near $(x_0,y_0)$ in the $y$ direction and so $\frac{\partial f}{\partial y}(x_0,y_0)=0$. We thus have the
 following theorem:
 
 \statethm{thm:extnec}{
- {Let $f(x,y)$ be a real-valued function such that both $\frac{\partial f}{\partial x}(a,b)$ and
- $\frac{\partial f}{\partial y}(a,b)$ exist. Then a necessary condition for $f(x,y)$ to have a local maximum or minimum
- at $(a,b)$ is that $\nabla f (a,b) = \textbf{0}$.}
+ {Let $f(x,y)$ be a real-valued function such that both $\frac{\partial f}{\partial x}(x_0,y_0)$ and
+ $\frac{\partial f}{\partial y}(x_0,y_0)$ exist. 
+ Then a necessary condition for $f(x,y)$ to have a local maximum or minimum
+ at $(x_0,y_0)$ is that $\nabla f (x_0,y_0) = \textbf{0}$.}
 }
 Note: Theorem \ref{thm:extnec} can be extended to apply to functions of three or more variables.
 
-A point $(a,b)$ where $\nabla f (a,b) = \textbf{0}$ is called a \textbf{critical point} for the function $f(x,y)$.
+A point $(x_0,y_0)$ where $\nabla f (x_0,y_0) = \textbf{0}$ is called a \textbf{critical point} for the function $f(x,y)$.
 So given a function $f(x,y)$, to find the critical points of $f$ you have to solve the equations
 $\frac{\partial f}{\partial x}(x,y) = 0$ and $\frac{\partial f}{\partial y}(x,y) = 0$ simultaneously for $(x,y)$.
-Similar to the single-variable case, the \emph{necessary} condition that $\nabla f (a,b) = \textbf{0}$ is not always
+Similar to the single-variable case, the \emph{necessary} condition that $\nabla f (x_0,y_0) = \textbf{0}$ is not always
 \emph{sufficient} to guarantee that a critical point is a local maximum or minimum.\index{critical point}
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  The function $f(x,y) = xy$ has a critical point at $(0,0)$: $\frac{\partial f}{\partial x} = y = 0 \Rightarrow y=0$,
@@ -1157,62 +1198,104 @@ Similar to the single-variable case, the \emph{necessary} condition that $\nabla
  does not have a local maximum or minimum at $(0,0)$ since any disk around $(0,0)$ contains points $(x,y)$ where the
  values of $x$ and $y$ have the same sign (so that $f(x,y) = xy > 0 = f(0,0)$) and different signs (so that $f(x,y) =
  xy < 0 = f(0,0)$). In fact, along the path $y=x$ in $\Real{2}$, $f(x,y) = x^2$, which has a
-\newpage
+
 \noindent local minimum at $(0,0)$,
  while along the path $y=-x$ we have $f(x,y)=-x^2$, which has a local maximum at $(0,0)$. So $(0,0)$ is an example of a
  \emph{saddle point}, i.e. it is a local maximum in one direction and a local minimum in another direction. The graph
  of $f(x,y)$ is shown in Figure \ref{fig:xy}, which is a hyperbolic paraboloid.\index{paraboloid!hyperbolic}
-\end{exmp}\vspace{-16mm}
+\end{exmp}
 \begin{figure}[h]
  \begin{center}
   \input{fig251}
- \end{center}\vspace{-18mm}
+ \end{center}
  \caption[]{\quad $f(x,y) = xy$, saddle point at $(0,0)$.}
  \label{fig:xy}
 \end{figure}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
 
-The following theorem gives sufficient conditions for a critical point to be a local maximum or\index{$D$}
+\medskip
+
+From the course of single-variable calculus, you may remember \emph{second derivative test}.
+
+\statecomment{If $f'(x_0)=0$ and $f''(0)>0$ then the real-to-real function $f$ has a local minimum at $x_0$.}
+
+In order to explain the multi-variable analog of this test,
+let us introduce \emph{second directional derivative}. 
+Fix a vector $\textbf{v}\in\Real{2}$ and a smooth function of two variables $f(x,y)$.
+The directional derivative $h(x,y)=D_{\textbf{v}}f(x,y)$ is an other smooth function of two variables, so we can take its directional derivative again 
+$D_{\textbf{v}}h(x,y)$;
+it is called \emph{second directional derivative} and denoted as $D_{\textbf{v}}^2f(x,y)$.
+
+\statecomment{If $D_{\textbf{v}}f(x_0,y_0)=0$ and $D_{\textbf{v}}^2f(x_0,y_0)>0$ for any vector $\textbf{v}\ne\textbf{0}$ then the the smooth function $f(x,y)$ of two variables, has a local minimum at $(x_0,y_0)$.}
+
+In this form the second derivative test is not useful
+since it requires to check inequality $D_{\textbf{v}}^2f(x_0,y_0)>0$ for infinite number of vectors $\textbf{v}$. 
+Let us try to remove this weak point.
+
+Note that 
+if $\textbf{v}=(a,b)$ then 
+\begin{align*}
+D_{\textbf{v}}f(x_0,y_0)&=a\tfrac{\partial f}{\partial x}+b\tfrac{\partial f}{\partial y}.
+\intertext{and}
+D^2_{\textbf{v}}f(x_0,y_0)&=D_{\textbf{v}}(a\tfrac{\partial f}{\partial x}+b\tfrac{\partial f}{\partial y})
+\\
+&=a^2\tfrac{\partial^2 f}{\partial x^2}+ab\tfrac{\partial^2 f}{\partial x\partial y}+ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2}
+\\
+&=a^2\tfrac{\partial^2 f}{\partial x^2}+2ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2},
+\end{align*}
+the last equality holds since the function $f$ is smooth and therefore $\tfrac{\partial^2 f}{\partial x\partial y}=\tfrac{\partial^2 f}{\partial y\partial x}$
+
+
+Therefore the condition $D_{\textbf{v}}^2f(x_0,y_0)>0$ for any $\textbf{v}\ne\textbf{0}$
+means that 
+\[a^2\tfrac{\partial^2 f}{\partial x^2}+2ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2}>0\]
+for any pair of real numbers $(a,b)$ at least one of which is not zero.
+
+Analyzing the last inequality for all possible pairs $(a,b)$ leads to the following theorem which is true analog of second derivative test for smooth functions of two variables; it gives sufficient conditions for a critical point to be a local maximum or\index{$D$}
 minimum of a \emph{smooth function}\index{smooth function} (i.e. a function whose partial derivatives of all orders
-exist and are continuous), which we will not prove here.\footnote{See \cite[\S\,7.6]{tm}.}\index{Second Derivative Test}
+exist and are continuous).
+The theorem will not be proved here.\footnote{See \cite[\S\,7.6]{tm}.}\index{Second Derivative Test}
 
 \statethm{thm:extsuff}{
- {Let $f(x,y)$ be a smooth real-valued function, with a critical point at $(a,b)$ (i.e.
- $\nabla f(a,b) = \textbf{0}$). Define
+ {Let $f(x,y)$ be a smooth real-valued function, with a critical point at $(x_0,y_0)$ (i.e.
+ $\nabla f(x_0,y_0) = \textbf{0}$). Define
  \begin{displaymath}
-  D = \dfrac{\partial^2 f}{\partial x^2}(a,b) \, \dfrac{\partial^2 f}{\partial y^2}(a,b) -
- \biggl( \dfrac{\partial^2 f}{\partial y \, \partial x}(a,b) \biggr)^2
+  D = \dfrac{\partial^2 f}{\partial x^2}(x_0,y_0) \, \dfrac{\partial^2 f}{\partial y^2}(x_0,y_0) -
+ \biggl( \dfrac{\partial^2 f}{\partial y \, \partial x}(x_0,y_0) \biggr)^2
  \end{displaymath}
  Then
  \begin{enumerate}[(a)]
-  \item if $D > 0$ and $\tfrac{\partial^2 f}{\partial x^2}(a,b) > 0$, then $f$ has a local minimum at $(a,b)$
-  \item if $D > 0$ and $\tfrac{\partial^2 f}{\partial x^2}(a,b) < 0$, then $f$ has a local maximum at $(a,b)$
-  \item if $D < 0$, then $f$ has neither a local minimum nor a local maximum at $(a,b)$
+  \item if $D > 0$ and $\tfrac{\partial^2 f}{\partial x^2}(x_0,y_0) > 0$, then $f$ has a local minimum at $(x_0,y_0)$
+  \item if $D > 0$ and $\tfrac{\partial^2 f}{\partial x^2}(x_0,y_0) < 0$, then $f$ has a local maximum at $(x_0,y_0)$
+  \item if $D < 0$, then $f$ has neither a local minimum nor a local maximum at $(x_0,y_0)$
   \item if $D = 0$, then the test fails.
  \end{enumerate}}
 }
 
-If condition (c) holds, then $(a,b)$ is a \emph{saddle point}.\index{saddle point}
-Note that the assumption that $f(x,y)$ is smooth means that
+If condition (c) holds, then $(x_0,y_0)$ is a \emph{saddle point};\index{saddle point}
+that is, the second directional derivative 
+$D^2_\textbf{v}f(x_0,y_0)$ can be positive and negative for different vectors $\textbf{v}$.
+
+Recall that the assumption that $f(x,y)$ is smooth implies that $\frac{\partial^2 f}{\partial y \, \partial x} = \frac{\partial^2 f}{\partial x \, \partial y}$. Therefore
 \begin{displaymath}
  D =
  \begin{vmatrix}
-  \dfrac{\partial^2 f}{\partial x^2}(a,b) & \dfrac{\partial^2 f}{\partial y \, \partial x}(a,b)\vspace{2mm}\\
-  \dfrac{\partial^2 f}{\partial x \, \partial y}(a,b) & \dfrac{\partial^2 f}{\partial y^2}(a,b)
- \end{vmatrix}
-\end{displaymath}
-since $\frac{\partial^2 f}{\partial y \, \partial x} = \frac{\partial^2 f}{\partial x \, \partial y}$. Also, if $D > 0$
-then $\frac{\partial^2 f}{\partial x^2}(a,b) \, \frac{\partial^2 f}{\partial y^2}(a,b) = D +
-\biggl( \frac{\partial^2 f}{\partial y \, \partial x}(a,b) \biggr)^2 > 0$, and so
-$\frac{\partial^2 f}{\partial x^2}(a,b)$ and $\frac{\partial^2 f}{\partial y^2}(a,b)$ have the same sign. This means
-that in parts (a) and (b) of the theorem one can replace $\frac{\partial^2 f}{\partial x^2}(a,b)$ by
-$\frac{\partial^2 f}{\partial y^2}(a,b)$ if desired.
+  \dfrac{\partial^2 f}{\partial x^2}(x_0,y_0) & \dfrac{\partial^2 f}{\partial y \, \partial x}(x_0,y_0)\smallskip\\
+  \dfrac{\partial^2 f}{\partial x \, \partial y}(x_0,y_0) & \dfrac{\partial^2 f}{\partial y^2}(x_0,y_0)
+ \end{vmatrix}.
+\end{displaymath} 
+Also, if $D > 0$
+then $\frac{\partial^2 f}{\partial x^2}(x_0,y_0) \, \frac{\partial^2 f}{\partial y^2}(x_0,y_0) = D +
+\biggl( \frac{\partial^2 f}{\partial y \, \partial x}(x_0,y_0) \biggr)^2 > 0$, and so
+$\frac{\partial^2 f}{\partial x^2}(x_0,y_0)$ and $\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$ have the same sign. 
+This means
+that in parts (a) and (b) of the theorem one can replace $\frac{\partial^2 f}{\partial x^2}(x_0,y_0)$ by
+$\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$ if desired.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Find all local maxima and minima of $f(x,y) = x^2 + xy + y^2 - 3x$.\vspace{1mm}
+ Find all local maxima and minima of $f(x,y) = x^2 + xy + y^2 - 3x$.\smallskip
  \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = 2x + y -3 \quad \text{and} \quad \frac{\partial f}{\partial y} = x + 2y
@@ -1238,13 +1321,12 @@ $\frac{\partial^2 f}{\partial y^2}(a,b)$ if desired.
  \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Find all local maxima and minima of $f(x,y) = xy - x^3 - y^2$.\vspace{1mm}
+ Find all local maxima and minima of $f(x,y) = xy - x^3 - y^2$.\smallskip
  \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = y - 3x^2 \quad \text{and} \quad \frac{\partial f}{\partial y} = x - 2y
  \end{displaymath}
-\newpage
-\noindent then the critical points $(x,y)$ are the common solutions of the equations
+then the critical points $(x,y)$ are the common solutions of the equations
  \begin{align*}
   y - 3x^2 &= 0\\
   x - 2y &= 0
@@ -1277,7 +1359,7 @@ $\frac{\partial^2 f}{\partial y^2}(a,b)$ if desired.
  \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:globalmin}
- Find all local maxima and minima of $f(x,y) = (x-2)^4 + (x-2y)^2$.\vspace{1mm}
+ Find all local maxima and minima of $f(x,y) = (x-2)^4 + (x-2y)^2$.\smallskip
  \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = 4(x-2)^3 + 2(x-2y) \quad \text{and} \quad \frac{\partial f}{\partial y} = -4(x-2y)
@@ -1295,8 +1377,7 @@ $\frac{\partial^2 f}{\partial y^2}(a,b)$ if desired.
   \frac{\partial^2 f}{\partial x^2} = 12(x-2)^2 + 2 ~,\quad \frac{\partial^2 f}{\partial y^2} = 8 ~,\quad
   \dfrac{\partial^2 f}{\partial y \, \partial x} = -4
  \end{displaymath}
-\newpage
-\noindent So
+So
  \begin{displaymath}
   D ~=~ \dfrac{\partial^2 f}{\partial x^2}(2,1) \, \dfrac{\partial^2 f}{\partial y^2}(2,1) -
  \biggl( \dfrac{\partial^2 f}{\partial y \, \partial x}(2,1) \biggr)^2 ~=~ (2)(8) - (-4)^2 ~=~ 0
@@ -1308,7 +1389,7 @@ $\frac{\partial^2 f}{\partial y^2}(a,b)$ if desired.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Find all local maxima and minima of $f(x,y) = (x^2 + y^2 ) e^{-(x^2 + y^2 )}$.\vspace{1mm}
+ Find all local maxima and minima of $f(x,y) = (x^2 + y^2 ) e^{-(x^2 + y^2 )}$.\smallskip
  \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
  \begin{align*}
   \frac{\partial f}{\partial x} ~ &= ~ 2x(1 - (x^2 + y^2 )) e^{-(x^2 + y^2 )}\\[6pt]
@@ -1335,15 +1416,15 @@ $g(r) = r^2 e^{-r^2}$. Then $g\,'(r) = 2r(1-r^2 ) e^{-r^2}$, so it has a critica
 $g\,''(1) = -4 e^{-1} < 0$, so the Second Derivative Test from single-variable calculus says that $r=1$ is a local
 maximum. But $r=1$ corresponds to the unit circle $x^2 + y^2 = 1$. Thus, the points $(x,y)$ on the unit circle
 $x^2 + y^2 = 1$ are local maximum points for $f$.
-\newpage
-\begin{figure}[h]\vspace{-18mm}
+
+\begin{figure}[h]
  \begin{center}
   \input{fig252}
- \end{center}\vspace{-12mm}
+ \end{center}
  \caption[]{\quad $f(x,y) = (x^2 + y^2 ) e^{-(x^2 + y^2 )}$.}
  \label{fig:er}
 \end{figure}
-\end{exmp}\vspace{-8mm}
+\end{exmp}
 \startexercises\label{sec2dot5}
 \probs{A}
 \par\noindent For Exercises 1--10, find all local maxima and minima of the function $f(x,y)$.
@@ -1373,8 +1454,8 @@ $x^2 + y^2 = 1$ are local maximum points for $f$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \item For a rectangular solid of volume 1000 cubic meters, find the dimensions that will minimize the surface
  area. (\emph{Hint: Use the volume condition to write the surface area as a function of just two variables.})
- \item Prove that if $(a,b)$ is a local maximum or local minimum point for a smooth function
-  $f(x,y)$, then the tangent plane to the surface $z=f(x,y)$ at the point $(a,b,f(a,b))$ is parallel to the $xy$-plane.
+ \item Prove that if $(x_0,y_0)$ is a local maximum or local minimum point for a smooth function
+  $f(x,y)$, then the tangent plane to the surface $z=f(x,y)$ at the point $(x_0,y_0,f(x_0,y_0))$ is parallel to the $xy$-plane.
   (\emph{Hint: Use Theorem \ref{thm:extnec}.})
 \suspend{enumerate}
 \probs{C}
@@ -1383,7 +1464,7 @@ $x^2 + y^2 = 1$ are local maximum points for $f$.
 \end{enumerate}
 \newpage
 %Begin Section 2.6
-\section{Unconstrained Optimization: Numerical Methods}
+\section{Numerical Methods}
 The types of problems that we solved in the previous section were examples of \emph{unconstrained optimization}
 problems. That is, we tried to find local (and perhaps even global) maximum and minimum points of real-valued
 functions $f(x,y)$, where the points $(x,y)$ could be any points in the domain of $f$. 
@@ -1409,33 +1490,38 @@ Let $f(x,y)$ be a smooth real-valued function, and define
 \textbf{Newton's algorithm}: Pick an initial point $(\ssub{x}{0},\ssub{y}{0})$. For $n = 0, 1, 2, 3, \dots$,
 define:
 \begin{equation}\label{eqn:newton}
- \ssub{x}{n+1} ~=~ \ssub{x}{n} -
+\begin{aligned}
+ \ssub{x}{n+1} ~&=~ \ssub{x}{n} -
   \frac{
     \begin{vmatrix}
      \frac{\partial^2 f}{\partial y^2}(\ssub{x}{n},\ssub{y}{n}) &
-     \frac{\partial^2 f}{\partial x \, \partial y}(\ssub{x}{n},\ssub{y}{n})\vspace{1mm}\\
+     \frac{\partial^2 f}{\partial x \, \partial y}(\ssub{x}{n},\ssub{y}{n})\smallskip\\
      \frac{\partial f}{\partial y}(\ssub{x}{n},\ssub{y}{n}) &
      \frac{\partial f}{\partial x}(\ssub{x}{n},\ssub{y}{n})
-    \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})} ,\quad
- \ssub{y}{n+1} ~=~ \ssub{y}{n} -
+    \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})} ,
+    \\
+ \ssub{y}{n+1} ~&=~ \ssub{y}{n} -
   \frac{
     \begin{vmatrix}
      \frac{\partial^2 f}{\partial x^2}(\ssub{x}{n},\ssub{y}{n}) &
-     \frac{\partial^2 f}{\partial x \, \partial y}(\ssub{x}{n},\ssub{y}{n})\vspace{1mm}\\
+     \frac{\partial^2 f}{\partial x \, \partial y}(\ssub{x}{n},\ssub{y}{n})\smallskip\\
      \frac{\partial f}{\partial x}(\ssub{x}{n},\ssub{y}{n}) &
      \frac{\partial f}{\partial y}(\ssub{x}{n},\ssub{y}{n})
-    \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})}
+    \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})}.
+\end{aligned}
 \end{equation}
 Then the sequence of points $(\ssub{x}{n},\ssub{y}{n})_{n=1}^{\infty}$ typically converges to a critical point. 
 If there are several critical points, then you will have to try different initial points to find them.
 
 The choice of the formulas in (\ref{eqn:newton}) is motivated by the following fact, which can be checked by direct calculations.
 Assume that the partial derivatives $\tfrac{\partial^2 f}{\partial x^2}(x,y)$, $\tfrac{\partial^2 f}{\partial x\partial y}(x,y)$ and $\tfrac{\partial^2 f}{\partial y^2}(x,y)$ are constants;
-in other words, the function $f(x,y)$ can be expressed as a quadratic polynomial in $x$ and $y$, say $f(x,y)=a+bx+cy+lx^2+mxy+ny^2$.
+in other words, the function $f(x,y)$ can be expressed as a quadratic polynomial in $x$ and $y$, say 
+\[f(x,y)=a+bx+cy+lx^2+mxy+ny^2\]
+for some constants $a,b,c,l,m,n$.
 Then for any choice $(\ssub{x}{0},\ssub{y}{0})$ the formulas (\ref{eqn:newton}) returns a critical point $(\ssub{x}{1},\ssub{y}{1})$, which is unique in this case.
 
 \begin{exmp}
- Find all local maxima and minima of $f(x,y) = x^3 - xy - x + xy^3 - y^4$.\vspace{1mm}
+ Find all local maxima and minima of $f(x,y) = x^3 - xy - x + xy^3 - y^4$.\smallskip
  \par\noindent\emph{Solution:} First calculate the necessary partial derivatives:
  \begin{gather*}
   \frac{\partial f}{\partial x} = 3x^2 - y - 1 + y^3 ~, \qquad
@@ -1449,11 +1535,11 @@ Then for any choice $(\ssub{x}{0},\ssub{y}{0})$ the formulas (\ref{eqn:newton}) 
  
  We need to pick an initial point $(\ssub{x}{0},\ssub{y}{0})$ for our algorithm. Looking at the graph of
  $z = f(x,y)$ over a large region may help (see Figure \ref{fig:newtonbig} below), though it may be hard to tell
- where the critical points are.\vspace{-8mm}
+ where the critical points are.
 \begin{figure}[h]
  \begin{center}
   \input{fig261}
- \end{center}\vspace{-9mm}
+ \end{center}
  \caption[]{\quad $f(x,y) = x^3 - xy - x + xy^3 - y^4$ for $-20 \le x \le 20$ and $-20 \le y \le 20$.}
  \label{fig:newtonbig}
 \end{figure}
@@ -1519,7 +1605,7 @@ public class newton {
  }
 }
 \end{lstlisting}
-\newpage
+
 To use this program, you should first save the code in Listing \ref{java} in a plain text file called
 \texttt{newton.java}. You will need the Java Development Kit\footnote{Available for free at
 \texttt{http://www.oracle.com/technetwork/java/javase/downloads/}} to compile the code. In the directory where \texttt{newton.java} is
@@ -1557,7 +1643,7 @@ either by evaluating $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\par
 modifying our program to also print the values of the partial derivatives at the point. It turns out that
 both partial derivatives are indeed close enough to zero to be considered zero:
 \begin{gather*}
- \frac{\partial f}{\partial x}(0.4711356343449874,-0.39636433796318005) = 4.85722573273506 \times 10^{-17}\vspace{2mm}\\
+ \frac{\partial f}{\partial x}(0.4711356343449874,-0.39636433796318005) = 4.85722573273506 \times 10^{-17}\smallskip\\
  \frac{\partial f}{\partial y}(0.4711356343449874,-0.39636433796318005) = -8.326672684688674 \times 10^{-17}
 \end{gather*}
 We also have $D(0.4711356343449874,-0.39636433796318005) = -8.776075636032301 < 0$, so by
@@ -1609,7 +1695,7 @@ like near that point is shown in Figure \ref{fig:newtonmax}, which does suggest 
 \begin{figure}[h]
  \begin{center}
   \input{fig262}
- \end{center}\vspace{-9mm}
+ \end{center}
  \caption[]{\quad $f(x,y) = x^3 - xy - x + xy^3 - y^4$ for $-1 \le x \le 0$ and $0 \le y \le 1$.}
  \label{fig:newtonmax}
 \end{figure}
@@ -1625,7 +1711,7 @@ We can summarize our findings for the function $f(x,y) = x^3 - xy - x + xy^3 - y
 \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 The derivation of Newton's algorithm, and the proof that it converges (given a ``reasonable'' choice for the
 initial point) requires techniques beyond the scope of this text. See \cite{rr} for more
@@ -1647,7 +1733,7 @@ eventually (hopefully) you reach the point where $f$ has its smallest value. The
 method, and a multitude of variations on it that improve the rate of convergence, ease of calculation, etc. 
 For more discussion of this, and of nonlinear programming in general, see \cite{bss}.\index{steepest descent}
 \startexercises\label{sec2dot6}
-\probs{C}\vspace{1mm}
+\probs{C}\smallskip
 \begin{enumerate}[\bfseries 1.]
  \item Recall Example \ref{exmp:globalmin} from the previous section, where we showed that the point $(2,1)$ was a global minimum for the function $f(x,y) = (x-2)^4 + (x-2y)^2$. 
  Notice that our computer program can be modified fairly easily to use this function (just change the return values in the fx, fy, fxx, fyy and fxy
@@ -1668,7 +1754,7 @@ For more discussion of this, and of nonlinear programming in general, see \cite{
    \frac{
     \begin{vmatrix}
      \ssub{f}{1}(\ssub{x}{n},\ssub{y}{n}) &
-     \ssub{f}{2}(\ssub{x}{n},\ssub{y}{n})\vspace{1mm}\\
+     \ssub{f}{2}(\ssub{x}{n},\ssub{y}{n})\smallskip\\
      \frac{\partial \ssub{f}{1}}{\partial y}(\ssub{x}{n},\ssub{y}{n}) &
      \frac{\partial \ssub{f}{2}}{\partial y}(\ssub{x}{n},\ssub{y}{n})
     \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})} ~,\quad
@@ -1676,7 +1762,7 @@ For more discussion of this, and of nonlinear programming in general, see \cite{
    \frac{
     \begin{vmatrix}
      \ssub{f}{1}(\ssub{x}{n},\ssub{y}{n}) &
-     \ssub{f}{2}(\ssub{x}{n},\ssub{y}{n})\vspace{1mm}\\
+     \ssub{f}{2}(\ssub{x}{n},\ssub{y}{n})\smallskip\\
      \frac{\partial \ssub{f}{1}}{\partial x}(\ssub{x}{n},\ssub{y}{n}) &
      \frac{\partial \ssub{f}{2}}{\partial x}(\ssub{x}{n},\ssub{y}{n})
     \end{vmatrix}}{D(\ssub{x}{n},\ssub{y}{n})} ~~,~\text{where}\\[6pt]
@@ -1695,15 +1781,15 @@ For more discussion of this, and of nonlinear programming in general, see \cite{
 \end{enumerate}
 \newpage
 %Begin Section 2.7
-\section{Constrained Optimization: Lagrange Multipliers}
+\section{Lagrange Multipliers}
 In Sections 2.5 and 2.6 we were concerned with finding maxima and minima of functions without any constraints on
 the variables (other than being in the domain of the function). What would we do if there were constraints on the
 variables? The following example illustrates a simple case of this type of problem.\index{Lagrange multiplier}
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:consimple}
- For a rectangle whose perimeter is $20$ m, find the dimensions that will maximize the area.\vspace{1mm}
+ For a rectangle whose perimeter is $20$ m, find the dimensions that will maximize the area.\smallskip
  \par\noindent \emph{Solution:} The area $A$ of a rectangle with width $x$ and height $y$ is $A = xy$. The perimeter $P$
  of the rectangle is then given by the formula $P = 2x + 2y$. Since we are given that the perimeter $P = 20$, this
  problem can be stated as:
@@ -1723,7 +1809,7 @@ variables? The following example illustrates a simple case of this type of probl
  width and height both are $5$ m.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 Notice in the above example that the ease of the solution depended on being able to solve for one variable in terms of the other in the equation $2x+2y=20$. 
 But what if that were not possible (which is often the case)?
@@ -1763,21 +1849,29 @@ clear that there had to be a global maximum.
 
 So how can you tell when a point that satisfies the condition in Theorem \ref{thm:lagrange} really is a
 constrained maximum or minimum? The answer is that it depends on the constraint function $g(x,y)$, together with any
-implicit constraints. It can be shown\footnote{Again, see \cite{tm}.} that if the constraint equation $g(x,y)=c$ (plus
-any hidden constraints) describes a \emph{bounded} set $B$ in $\Real{2}$, then the constrained maximum or minimum of
-$f(x,y)$ will occur either at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$ or at a ``boundary''
-point of the set $B$.
+implicit constraints. 
+It can be shown\footnote{Again, see \cite{tm}.} that if the constraint equation $g(x,y)=c$  as above describes a \emph{bounded} set $B$ in $\Real{2}$, then the constrained maximum or minimum of
+$f(x,y)$ will occur at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$.
 
-In Example \ref{exmp:consimple} the constraint equation $2x+2y=20$ describes a line in $\Real{2}$, which by itself is
-not bounded. However, there are ``hidden'' constraints, due to the nature of the problem, namely $0\le x,y \le 10$,
-which cause that line to be restricted to a \emph{line segment} in $\Real{2}$ (including the endpoints of that line
-segment), which \emph{is} bounded.
+Even if the set described by equaiton $g(x,y)=c$ is not bounded, 
+the problem might contain some ``hidden constraints'' so that the minimum (or maximu) should be taken on a bounded  set.
 
-\vspace{3mm}
+Say in the Example \ref{exmp:consimple} the constraint equation $2x+2y=20$ describes a line in $\Real{2}$, which by itself is
+not bounded.
+However, there are ``hidden'' constraints, due to the nature of the problem, namely $0\le x,y \le 10$,
+which cause that line to be restricted to a \emph{line segment} in $\Real{2}$, which \emph{is} bounded;
+the the endpoints of that line
+segment form the ``boundary''.
+
+In a general case of that type the maximum or minimum of
+$f(x,y)$ will occur either at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$  or at a ``boundary''
+point of the set described by the hidden constraints.
+
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:rectlm}
  For a rectangle whose perimeter is $20$ m, use the Lagrange multiplier method to find the dimensions that will
- maximize the area.\vspace{1mm}
+ maximize the area.\smallskip
  \par\noindent \emph{Solution:} As we saw in Example \ref{exmp:consimple}, with $x$ and $y$ representing the width and
   height, respectively, of the rectangle, this problem can be stated as:
  \begin{align*}
@@ -1785,9 +1879,11 @@ segment), which \emph{is} bounded.
   \text{given}&: ~ g(x,y) = 2x + 2y = 20
  \end{align*}
  Then solving the equation $\nabla f(x,y) = \lambda \nabla g(x,y)$ for some $\lambda$ means solving the equations
-\newpage
-\noindent $\dfrac{\partial f}{\partial x} = \lambda \dfrac{\partial g}{\partial x}$ and
- $\dfrac{\partial f}{\partial y} = \lambda \dfrac{\partial g}{\partial y}$, namely:
+ \[\dfrac{\partial f}{\partial x} = \lambda \dfrac{\partial g}{\partial x}
+  \quad
+\text{and}
+\quad
+ \dfrac{\partial f}{\partial y} = \lambda \dfrac{\partial g}{\partial y},\] namely:
  \begin{align*}
   y ~&=~ 2\lambda ~,\\
   x ~&=~ 2\lambda
@@ -1803,11 +1899,12 @@ segment), which \emph{is} bounded.
  \end{displaymath}
  There must be a maximum area, since the minimum area is $0$ and $f(5,5) = 25 > 0$, so the point $(5,5)$ that we found
  (called a \emph{constrained critical point}) must be the constrained maximum.\\
- $\therefore ~$ The maximum area occurs for a rectangle whose width and height both are $5$ m.
+ $\therefore ~$ 
+ The maximum area occurs for a rectangle whose width and height both are $5$ m.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Find the points on the circle $x^2 + y^2 = 80$ which are closest to and farthest from the point $(1,2)$.\vspace{1mm}
+ Find the points on the circle $x^2 + y^2 = 80$ which are closest to and farthest from the point $(1,2)$.\smallskip
  \par\noindent \emph{Solution:} The distance $d$ from any point $(x,y)$ to the point $(1,2)$ is
  \begin{displaymath}
   d = \sqrt{(x-1)^2 + (y-2)^2} ~,
@@ -1855,11 +1952,11 @@ segment), which \emph{is} bounded.
  minimum.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
 The Lagrange multiplier method can be extended to functions of three variables.
 
-\vspace{3mm}
+\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  \begin{align*}
@@ -1883,11 +1980,11 @@ The Lagrange multiplier method can be extended to functions of three variables.
  $\biggl( \frac{-1}{\sqrt{2}},0,\frac{-1}{\sqrt{2}} \biggr)$ is the constrained minimum point.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-\vspace{3mm}
+\medskip
 
-So far we have not attached any significance to the value of the Lagrange multiplier $\lambda$. We needed
-$\lambda$ only to find the constrained critical points, but made no use of its value. It turns out that $\lambda$
-gives an approximation of the change in the value of the function $f(x,y)$ that we wish to maximize or minimize, when
+So far we have not attached any significance to the value of the Lagrange multiplier $\lambda$. 
+We needed $\lambda$ only to find the constrained critical points, but made no use of its value. 
+It turns out that $\lambda$ gives an approximation of the change in the value of the function $f(x,y)$ that we wish to maximize or minimize, when
 the constant $c$ in the constraint equation $g(x,y)=c$ is changed by $1$.
 
 For example, in Example \ref{exmp:rectlm} we showed that the constrained optimization problem
@@ -1895,26 +1992,53 @@ For example, in Example \ref{exmp:rectlm} we showed that the constrained optimiz
   \text{Maximize}&: ~ f(x,y) = xy\\
   \text{given}&: ~ g(x,y) = 2x + 2y = 20
 \end{align*}
-had the solution $(x,y) = (5,5)$, and that $\lambda = x/2 = y/2$. Thus, $\lambda = 2.5$. In a similar fashion we could
+had the solution $(x,y) = (5,5)$, and that $\lambda = x/2 = y/2$. 
+Thus, $\lambda = 2.5$. 
+In a similar fashion we could
 show that the constrained optimization problem
 \begin{align*}
   \text{Maximize}&: ~ f(x,y) = xy\\
   \text{given}&: ~ g(x,y) = 2x + 2y = 21
 \end{align*}
-has the solution $(x,y) = (5.25,5.25)$. So we see that the value of $f(x,y)$ at the constrained maximum increased from
-$f(5,5)=25$ to $f(5.25,5.25)=27.5625$, i.e. it increased by $2.5625$ when we increased the value of $c$ in the constraint
-equation $g(x,y)=c$ from $c=20$ to $c=21$. Notice that $\lambda = 2.5$ is close to $2.5625$, that is,
+has the solution $(x,y) = (5.25,5.25)$. 
+So we see that the value of $f(x,y)$ at the constrained maximum increased from
+$f(5,5)=25$ to $f(5.25,5.25)=27.5625$, 
+i.e. it increased by $2.5625$ when we increased the value of $c$ in the constraint equation $g(x,y)=c$ from $c=20$ to $c=21$. 
+Notice that $\lambda = 2.5$ is close to $2.5625$, that is,
 \begin{displaymath}
  \lambda ~\approx~ \Delta f ~=~ f(\text{new max. pt}) - f(\text{old max. pt}) ~.
 \end{displaymath}
 
 
-Finally, note that
+Note that
 solving the equation $\nabla f(x,y) = \lambda \nabla g(x,y)$ means having to solve a system of two (possibly
-nonlinear) equations in three unknowns, which as we have seen before, may not be possible to do. And the
-3-variable case can get even more complicated. All of this somewhat
-restricts the usefulness of Lagrange's method to relatively simple functions. Luckily there are many numerical methods
-for solving constrained optimization problems, though we will not discuss them here.\footnote{See \cite{bss}.}
+nonlinear) equations in three unknowns, which as we have seen before, may not be possible to do. 
+And the 3-variable case can get even more complicated. 
+All of this somewhat restricts the usefulness of Lagrange's method to relatively simple functions. 
+Luckily there are many numerical methods for solving constrained optimization problems, though we will not discuss them here.\footnote{See \cite{bss}.}
+
+The following thereom is a vesion of Lagrange multiplier method for two constrains.
+Note however that two constrains define a curve, 
+so if parametrized the problem reduce to single-variable calculus.
+
+\statethm{thm:lagrange}{
+ {Let $f(x,y,z)$, $g_1(x,y,z)$ and $g_2(x,y,z)$ be smooth functions, and suppose that $c_1$ and $c_2$ are scalar constants such
+ that $\nabla g_1(x,y,z)$ is not parallel to $\nabla g_2(x,y,z)$ for all $(x,y,z)$ that satisfy the equation $g_1(x,y,z) = c_1$ and $g_2(x,y,z) = c_2$. Then to solve the
+ constrained optimization problem
+ \begin{align*}
+  \text{Maximize (or minimize)}:& ~ f(x,y,z)\\
+  \text{given}:& ~ g_1(x,y,z) = c_1 ~,
+              \\&~g_2(x,y,z) = c_2 ~
+ \end{align*}
+ find the points $(x,y,z)$ that solve the equation 
+ \[\nabla f(x,y,z) = \lambda \nabla g_1(x,y,z)+\mu \nabla g_2(x,y,z)\] 
+ for some constants
+ $\lambda$ and $\mu$. 
+ If there is a constrained maximum or
+ minimum, then it must be such a point.}
+}
+
+
 
 \startexercises\label{sec2dot7}
 \probs{A}
