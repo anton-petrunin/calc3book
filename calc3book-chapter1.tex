@@ -742,6 +742,11 @@ the dot product by establishing a relationship between the dot product of two ve
   \cos \theta = \frac{\Dotprod{\textbf{v}}{\textbf{w}}}{\norm{\textbf{v}} \, \norm{\textbf{w}}} \label{eqn:dotprod}
  \end{equation}}
 }
+
+We will prove the theorem, assuming that the notion of angle as well as the Law of Cosines are known.
+In a more rigorous approach, one could define the angles between the vectors using the statement of the theorem above.
+
+
 \begin{proofbar}\begin{proof}[Proof:]
  We will prove the theorem for vectors in $\Real{3}$ (the proof for $\Real{2}$ is similar). Let
  $\textbf{v} = \vecthree{v}$ and $\textbf{w} = \vecthree{w}$. 
@@ -795,7 +800,12 @@ Since $\cos 90\Degrees = 0$, we have the following important corollary to Theore
  {Two nonzero vectors $\textbf{v}$ and $\textbf{w}$ are perpendicular if and only if $\Dotprod{\textbf{v}}{\textbf{w}} =
  0$.}
 }
+
 We will write $\textbf{v} \perp \textbf{w}$ to indicate that $\textbf{v}$ and $\textbf{w}$ are perpendicular.
+
+Since $\Dotprod{\textbf{0}}{\textbf{w}} =
+ 0$, it is convenient to assume that zero vector \textbf{0} is perpendicular to any other vector. 
+So we can write  $\textbf{0} \perp \textbf{w}$ despite that the angle between $\textbf{0}$ and $\textbf{w}$ is undefined.
 
 Since $\cos \theta > 0$ for $0\Degrees \le \theta < 90\Degrees$ and $\cos \theta < 0$ for\index{vector!perpendicular}
 $90\Degrees < \theta \le 180\Degrees$, we also have:

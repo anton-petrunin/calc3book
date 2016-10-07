@@ -1,14 +1,15 @@
 \chapter{Line and Surface Integrals}
 %Begin Section 4.1
 \section{Line Integrals}
-In single-variable calculus you learned how to integrate a real-valued function $f(x)$ over an interval $\ival{a}{b}$
-in $\Real{1}$. This integral (usually called a \emph{Riemann integral})\index{Riemann integral}
+In single-variable calculus you learned how to integrate a real-valued function $f(x)$ over an interval $\ival{a}{b}$ in $\Real{1}$. 
+This integral (usually called a \emph{Riemann integral})\index{Riemann integral}
 can be thought of as an integral over a \emph{path} in $\Real{1}$, since an interval
-(or collection of intervals) is really the only kind of ``path'' in $\Real{1}$. You may also recall that if $f(x)$
+(or collection of intervals) is really the only kind of ``path'' in $\Real{1}$. 
+You may also recall that if $f(x)$
 represented the force applied along the $x$-axis to an object at position $x$ in $\ival{a}{b}$, then the \emph{work}
 $W$ done in moving that object from position $x=a$ to $x=b$ was defined as the integral:
 \begin{displaymath}
-W ~=~ \int_a^b f(x)\,dx
+W ~=~ \int_a^b f(x)\,dx.
 \end{displaymath}
 
 In this section, we will see how to define the integral of a function (either real-valued or vector-valued) of
@@ -20,11 +21,11 @@ In physics, the intuitive idea of work is that\index{work}
 \begin{displaymath}
  \text{Work} ~=~ \text{Force}\,\times\,\text{Distance} ~.
 \end{displaymath}
-Suppose that we want to find the total amount $W$ of work done in moving an object along a curve $C$ in
-$\Real{2}$ with
-a smooth parametrization $x=x(t)$, $y=y(t)$, $a \le t \le b$, with a force $f(x,y)$ which varies with the position
-$(x,y)$ of the object and is applied in the direction of motion along $C$
-(see Figure \ref{fig:lineintdef} below).
+Assume you move a an object of unit weight along a curve $C$ in
+$\Real{2}$ 
+and want to find the work of the force which works against the friction.
+Suppose $f(x,y)$ is the coefficient of friction at the point $(x,y)$.
+In this case the force has magnitude $f(x,y)$ and it is applied in the direction of motion along $C$ (see Figure \ref{fig:lineintdef} below).
 
 \begin{figure}[h]
  \begin{center}
