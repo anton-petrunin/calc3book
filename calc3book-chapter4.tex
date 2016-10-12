@@ -429,7 +429,8 @@ direction of \textbf{T} (i.e. in the direction of $C$), which is a useful physic
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec4dot1}
 \probs{A}
-\par\noindent For Exercises 1--4, calculate $\int_C f(x,y)\,ds$ for the given function $f(x,y)$ and
+\par\noindent For Exercises 1--4, calculate 
+\[\int_C f(x,y)\,ds\] for the given function $f(x,y)$ and
 curve $C$.
 \begin{enumerate}[\bfseries 1.]
  \item $f(x,y)=xy$; $\quad C: x=\cos t$, $y=\sin t$, $0 \le t \le \pi/2$
@@ -440,7 +441,9 @@ curve $C$.
  \item Use a line integral to find the lateral surface area of the part of the cylinder\\$x^2 + y^2 = 4$ below
  the plane $x+2y+z=6$ and above the $xy$-plane.
 \suspend{enumerate}
-\par\noindent For Exercises 6--11, calculate $\int_C \Dotprod{\textbf{f}}{d\textbf{r}}$ for the given vector
+\par\noindent For Exercises 6--11, calculate 
+\[\int_C \Dotprod{\textbf{f}}{d\textbf{r}}\] 
+for the given vector
  field $\textbf{f}(x,y)$ and curve $C$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \item $\textbf{f}(x,y) = \textbf{i} - \textbf{j}$; $\quad C: x=3t$, $y=2t$, $0 \le t \le 1$
@@ -457,16 +460,19 @@ curve $C$.
  \item Verify that the value of the line integral in Example \ref{exmp:lineintcyl} is unchanged when using the
   parametrization of the circle $C$ given in formulas (\ref{eqn:lineintcylcwise}).
  \item Show that if $\textbf{f} \perp \textbf{r}\,'(t)$ at each point $\textbf{r}(t)$ along a smooth curve $C$, then
-  $\int_C \Dotprod{\textbf{f}}{d\textbf{r}} = 0$.
+  \[\int_C \Dotprod{\textbf{f}}{d\textbf{r}} = 0.\]
  \item Show that if $\textbf{f}$ points in the same direction as $\textbf{r}\,'(t)$ at each point $\textbf{r}(t)$ along
-  a smooth curve $C$, then $\int_C \Dotprod{\textbf{f}}{d\textbf{r}} = \int_C \norm{\textbf{f}}\,ds$.
+  a smooth curve $C$, then 
+  \[\int_C \Dotprod{\textbf{f}}{d\textbf{r}} = \int_C \norm{\textbf{f}}\,ds.\]
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Prove that $\int_C f(x,y)\,ds = \int_{-C} f(x,y)\,ds$. (\emph{Hint: Use formulas (\ref{eqn:reversec}).})
+ \item Prove that \[\int_C f(x,y)\,ds = \int_{-C} f(x,y)\,ds.\] 
+ (\emph{Hint: Use formulas (\ref{eqn:reversec}).})
  \item Let $C$ be a smooth curve with arc length $L$, and suppose that $\textbf{f}(x,y) = P(x,y)\,\textbf{i} +
   Q(x,y)\,\textbf{j}$ is a vector field such that $\norm{\textbf{f}(x,y)} \le M$ for all $(x,y)$ on $C$. Show
-  that\\$\Abs{\int_C \Dotprod{\textbf{f}}{d\textbf{r}}} \le ML$.
+  that
+  \[\Abs{\int_C \Dotprod{\textbf{f}}{d\textbf{r}}} \le ML.\]
   (\emph{Hint: Recall that $\Abs{\int_a^b g(x)\,dx} \le \int_a^b \abs{g(x)}\,dx$ for Riemann integrals.})
  \item Prove that the Riemann integral $\int_a^b f(x)\,dx$ is a special case of a line integral.
 \end{enumerate}
@@ -808,8 +814,8 @@ endpoints $A$ and $B$ are the same point, is the following important corollary:
  \item Let $\textbf{f}(x,y)=\frac{-y}{x^2 + y^2}\,\textbf{i} + \frac{x}{x^2 + y^2}\,\textbf{j}$ for all $(x,y)\ne(0,0)$,
   and $C:$ $x=\cos t$, $y=\sin t$, $0\le t\le 2\pi$.
   \begin{enumerate}[(a)]
-   \item Show that $\textbf{f} = \nabla F$, for $F(x,y) = \tan^{-1}(y/x)$.
-   \item Show that $\displaystyle\olineintvec{C}{f}{r} = 2\pi$. Does this contradict Corollary
+   \item Show that \[\textbf{f} = \nabla F,\] for $F(x,y) = \tan^{-1}(y/x)$.
+   \item Show that \[\olineintvec{C}{f}{r} = 2\pi.\] Does this contradict Corollary
     \ref{cor:lineintsuffpath}? Explain.
   \end{enumerate}
 \suspend{enumerate}
@@ -1140,7 +1146,8 @@ shown:\index{path independence}\medskip
    (in this case, the differential form $P\,dx + Q\,dy$ is exact)\index{exact differential form}
  \end{enumerate}}}
 %\startexercises
-\centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec4dot3}
+\centerline{\fbox{\textsf{\textbf{\large Exercises}}}}
+\label{sec4dot3}
 \probs{A}
 \par\noindent For Exercises 1--4, use Green's Theorem to evaluate the given line integral around the curve $C$, traversed
 counterclockwise.
@@ -1158,7 +1165,9 @@ counterclockwise.
   x^2 y \cos (xy)\,\textbf{j}$? If so, find one.
  \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = (8xy+3)\,\textbf{i} +
   4(x^2 + y)\,\textbf{j}$? If so, find one.
- \item Show that for any constants $a$, $b$ and any closed simple curve $C$, $\displaystyle\oint_C a\,dx + b\,dy = 0$.
+ \item Show that 
+ \[\displaystyle\oint_C a\,dx + b\,dy = 0\]
+ for any constants $a$, $b$ and any closed simple curve $C$.
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
@@ -1166,7 +1175,7 @@ counterclockwise.
  $\olineintvec{C}{f}{r} = 0$, where
  $C$ is the boundary of the annulus $R =\lbrace\,(x,y): 1/4 \le x^2 + y^2 \le 1\,\rbrace$ traversed so that $R$ is
  always on the left.
- \item Evaluate $\displaystyle\oint_C  e^x \,\sin y\,dx + (y^3 + e^x \,\cos y)\,dy$, where $C$ is the boundary of the
+ \item Evaluate \[\oint_C  e^x \,\sin y\,dx + (y^3 + e^x \,\cos y)\,dy,\] where $C$ is the boundary of the
   rectangle with vertices $(1,-1)$, $(1,1)$, $(-1,1)$ and $(-1,-1)$, traversed counterclockwise.
 \suspend{enumerate}
 \probs{C}
@@ -1176,7 +1185,7 @@ counterclockwise.
    A ~=~ -\oint_C y\,dx ~=~ \oint_C x\,dy ~=~ \frac{1}{2}\oint_C x\,dy - y\,dx ~,
   \end{displaymath}
   where $C$ is traversed so that $R$ is always on the left.
-  (\emph{Hint: Use Green's Theorem and the fact that $A = \iint\limits_{R} 1\,dA$}.)
+  (\emph{Hint: Use Green's Theorem and the fact that $A = \iint_{R} 1\,dA$}.)
 \end{enumerate}
 \newpage
 %Begin Section 4.4

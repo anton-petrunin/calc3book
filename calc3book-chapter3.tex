@@ -189,9 +189,10 @@ $f(x,y) \ge 0$ or not.
  \end{multicols}
  \begin{multicols}{2}
   \item $\displaystyle\int_0^2 \displaystyle\int_1^4 xy \,dx\,dy$
-  \item $\displaystyle\int_{-1}^1 \displaystyle\int_{-1}^2 1 \,dx\,dy$
+  \item $\displaystyle\int_{-1}^1\,\, \displaystyle\int_{-1}^2 1 \,dx\,dy$
  \end{multicols}
- \item Let $M$ be a constant. Show that $\int_c^d \int_a^b M\,dx\,dy = M(d-c)(b-a)$.
+ \item Let $M$ be a constant. 
+ Show that \[\int_c^d \int_a^b M\,dx\,dy = M(d-c)(b-a).\]
 \end{enumerate}
 \newpage
 %Begin Section 3.2
@@ -916,10 +917,12 @@ integration methods, see \cite{ptvf} et al.
 \probs{C}
 \begin{enumerate}[\bfseries 1.]
  \item Write a program that uses the Monte Carlo method to approximate the double integral
-  $\iint\limits_{R} e^{xy}\,dA$, where $R = \lbrack 0,1 \rbrack \times \lbrack 0,1 \rbrack$. Show the program output
+  \[\iint\limits_{R} e^{xy}\,dA,\] 
+  where $R = \lbrack 0,1 \rbrack \times \lbrack 0,1 \rbrack$. Show the program output
   for $N=10$, $100$, $1000$, $10000$, $100000$ and $1000000$ random points.
  \item Write a program that uses the Monte Carlo method to approximate the triple integral
-  $\iiint\limits_{S} e^{xyz}\,dV$, where $S= \lbrack 0,1 \rbrack \times \lbrack 0,1 \rbrack \times \lbrack 0,1 \rbrack$.
+  \[\iiint\limits_{S} e^{xyz}\,dV,\] 
+  where $S= \lbrack 0,1 \rbrack \times \lbrack 0,1 \rbrack \times \lbrack 0,1 \rbrack$.
   Show the program output for $N=10$, $100$, $1000$, $10000$, $100000$ and $1000000$ random points.
  \item Repeat Exercise 1 with the region $R = \lbrace (x,y): -1 \le x \le 1,~ 0 \le y \le x^2 \rbrace$.
  \item Repeat Exercise 2 with the solid $S = \lbrace (x,y,z): 0 \le x \le 1,~ 0 \le y \le 1,~
@@ -1856,7 +1859,8 @@ Exercise 4) to write a computer program to test this.
   \begin{displaymath}
    \rho ~=~ \frac{E(XY) - (EX)(EY)}{\sqrt{\text{Var}(X)\,\text{Var}(Y)}} ~,
   \end{displaymath}
-  where $E(XY) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}xy \,f(x,y)\,dx\,dy$. Find $\rho$ for
+  where \[E(XY) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}xy \,f(x,y)\,dx\,dy.\] 
+  Find $\rho$ for
   $X$ and $Y$ as in Example \ref{exmp:minmaxexpval}.\\(Note: The quantity $E(XY) - (EX)(EY)$ is called the
   \emph{covariance}\index{covariance} of $X$ and $Y$.)
  \item In Example \ref{exmp:quadprob} would the answer change if the interval $(0,100)$ is used instead of

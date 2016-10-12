@@ -12,7 +12,7 @@ latex calc3book.tex
 makeindex calc3book.nlo -s nomencl.ist -o calc3book.nls
 bibtex calc3book
 latex calc3book.tex
-latex calc3book.tex
+latex -src-specials -interaction=nonstopmode calc3book.tex
 dvips -Ppdf -G0 -z calc3book.dvi -o
 ps2pdf14 -dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true calc3book.ps
 #-dUseCIEColor=true -dPDFSETTINGS=/printer
