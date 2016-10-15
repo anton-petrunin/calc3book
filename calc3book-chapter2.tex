@@ -1,4 +1,5 @@
 \chapter{Functions of Several Variables}
+\label{chapter:mult-var-function}
 %Begin Section 2.1
 \section{Functions of Two or Three Variables}
 In Section 1.8 we discussed vector-valued functions of a single real variable. We will now examine real-valued functions of a point (or vector) in $\Real{2}$ or $\Real{3}$. 
@@ -1823,49 +1824,78 @@ solving \emph{constrained optimization} problems:
 The equation $g(x,y) = c$ is called the \emph{constraint equation}, and we say that $x$ and $y$ are \emph{constrained}
 by $g(x,y) = c$. Points $(x,y)$ which are maxima or minima of $f(x,y)$ with the condition that they satisfy
 the constraint equation $g(x,y)=c$ are called \emph{constrained maximum} or \emph{constrained minimum} points,
-respectively. Similar definitions hold for functions of three variables.\index{constrained critical point}
+respectively. 
+Similar definitions hold for functions of three variables.\index{constrained critical point}
 
 The Lagrange multiplier method for solving such problems can now be stated:
 
 \statethm{thm:lagrange}{
  {Let $f(x,y)$ and $g(x,y)$ be smooth functions, and suppose that $c$ is a scalar constant such
- that $\nabla g(x,y) \ne \textbf{0}$ for all $(x,y)$ that satisfy the equation $g(x,y) = c$. Then to solve the
+ that $\nabla g(x,y) \ne \textbf{0}$ for all $(x,y)$ that satisfy the equation $g(x,y) = c$. 
+ Then to solve the
  constrained optimization problem
  \begin{align*}
   \text{Maximize (or minimize)}&: ~ f(x,y)\\
   \text{given}&: ~ g(x,y) = c ~,
  \end{align*}
  find the points $(x,y)$ that solve the equation $\nabla f(x,y) = \lambda \nabla g(x,y)$ for some constant
- $\lambda$ (the number $\lambda$ is called the \emph{Lagrange multiplier}). If there is a constrained maximum or
- minimum, then it must be such a point.}
+ $\lambda$. The number $\lambda$ is called the \emph{Lagrange multiplier} and the point $(x,y)$ is called \emph{critical point} of $f(x,y)$ constrained by $g(x,y) = c$.
+ 
+ If there is a constrained maximum or minimum, then it must be such a critical point of $f(x,y)$ constrained by $g(x,y) = c$.}
 }
 
-A rigorous proof of the above theorem requires use of the Implicit Function Theorem, which is beyond the scope of this
-text.\footnote{See \cite[\S\,6.8]{tm} for more detail.} Note that the theorem only gives a \emph{necessary} condition
-for a point to be a constrained maximum or minimum. Whether a point $(x,y)$ that satisfies
-$\nabla f(x,y) = \lambda \nabla g(x,y)$ for some $\lambda$ actually \emph{is} a constrained maximum or minimum can
-\emph{sometimes} be determined by the nature of the problem itself. For instance, in Example \ref{exmp:consimple} it was
-clear that there had to be a global maximum.
+Recall that $\nabla g(x,y)$ is perpendicular to tangent line of the curve $g(x,y) = c$ at the point $(x,y)$.
+Therefore condition $\nabla f(x,y) = \lambda \nabla g(x,y)$ simply means that $\nabla f(x,y)$ is perpendicular to tangent line of the curve $g(x,y) = c$ at the point $(x,y)$.
+It should be intuitively clear that if $\nabla f(x,y)$ is not perpendicular to the tangent line then slight movement along the curve $g(x,y) = c$ can increase and decrease the value $f(x,y)$;
+in particular, $(x,y)$ is neither minimum nor maximum point.
+A rigorous proof however requires use of the Implicit Function Theorem, which is beyond the scope of this
+text.\footnote{See \cite[\S\,6.8]{tm} for more detail.} 
 
-So how can you tell when a point that satisfies the condition in Theorem \ref{thm:lagrange} really is a
-constrained maximum or minimum? The answer is that it depends on the constraint function $g(x,y)$, together with any
-implicit constraints. 
-It can be shown\footnote{Again, see \cite{tm}.} that if the constraint equation $g(x,y)=c$  as above describes a \emph{bounded} set $B$ in $\Real{2}$, then the constrained maximum or minimum of
-$f(x,y)$ will occur at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$.
+Note that the theorem only gives a \emph{necessary} condition
+for a point to be a constrained maximum or minimum.
+That is, if that minimum or maximum is achieved at some point 
+then this point must be critical,
+but the theorem says nothing about existence of minimum and maximum points.  
 
-Even if the set described by equaiton $g(x,y)=c$ is not bounded, 
-the problem might contain some ``hidden constraints'' so that the minimum (or maximu) should be taken on a bounded  set.
+Let us discuss two important cases when existence of minima and maxima is guaranteed; both of them follow from so called \emph{Extreme value theorem} which is also beyond the scope of this
+text.
 
-Say in the Example \ref{exmp:consimple} the constraint equation $2x+2y=20$ describes a line in $\Real{2}$, which by itself is
+Recall that a set is called \index{bounded set}\emph{bounded} if it completely lies in a ball of sufficiently large radius.
+It can be shown\footnote{Again, see \cite{tm}.} that if the constraint equation $g(x,y)=c$  as above describes a bounded set in $\Real{2}$, then the constrained maximum and minimum of
+$f(x,y)$ will occur at some points.
+Therefore by theorem above it has to be one of the critical points $(x,y)$ 
+It remains to find all the critical points $(x,y)$
+and compare their values $f(x,y)$;
+the maximum of these values is the global maximum of $f(x,y)$ with the constraint $g(x,y)=c$;
+analogously, the minimal value if the global minimum.
+
+If the set described by equation $g(x,y)=c$ is not bounded,
+but the set $f(x,y)\le d$ is bounded for any $d$ 
+then the constrained minimum (but maybe not maximum) of
+$f(x,y)$ will occur at some points.
+Again, to find the minimum 
+we can find all the values $f(x,y)$
+ at the critical points $(x,y)$;
+ the minimal value is the global minimum of $f(x,y)$ with the constraint $g(x,y)=c$.
+
+Sometimes the answer depend on the hidden constants. 
+For example, consider the function $f(x,y)=x+y$ and
+the constraint $xy=1$.  
+It has two extremal points $(1,1)$ with the Lagrange multiplier $1$ and the point $(-1,-1)$ with the Lagrange multiplier $-1$.
+Non of these points is global maximum, nor minimum.
+On the other hand, it might happen that by the nature of the problem, $x$ and $y$ have to be positive (it is called implicit constraints) 
+then only one point $(1,1)$ satisfies  is the constraint global minimum point.
+
+In a general case of that type the maximum or minimum of
+$f(x,y)$ will occur either at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$  or at a ``boundary''
+point of the set described by the hidden constraints.
+
+Similar thing happens in the Example \ref{exmp:consimple} the constraint equation $2x+2y=20$ describes a line in $\Real{2}$, which by itself is
 not bounded.
 However, there are ``hidden'' constraints, due to the nature of the problem, namely $0\le x,y \le 10$,
 which cause that line to be restricted to a \emph{line segment} in $\Real{2}$, which \emph{is} bounded;
 the the endpoints of that line
 segment form the ``boundary''.
-
-In a general case of that type the maximum or minimum of
-$f(x,y)$ will occur either at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$  or at a ``boundary''
-point of the set described by the hidden constraints.
 
 \medskip
 \hrule width \textwidth height 0.5pt
@@ -1878,17 +1908,29 @@ point of the set described by the hidden constraints.
   \text{Maximize}&: ~ f(x,y) = xy\\
   \text{given}&: ~ g(x,y) = 2x + 2y = 20
  \end{align*}
- Then solving the equation $\nabla f(x,y) = \lambda \nabla g(x,y)$ for some $\lambda$ means solving the equations
- \[\dfrac{\partial f}{\partial x} = \lambda \dfrac{\partial g}{\partial x}
-  \quad
-\text{and}
-\quad
- \dfrac{\partial f}{\partial y} = \lambda \dfrac{\partial g}{\partial y},\] namely:
- \begin{align*}
-  y ~&=~ 2\lambda ~,\\
-  x ~&=~ 2\lambda
+Then solving the system of scalar and vector equations 
+\begin{align*}
+g(x,y) & = 20,
+\\
+\nabla f(x,y) &= \lambda \nabla g(x,y)
+\end{align*}
+for some $\lambda$ means solving the system of three scalar equations
+\begin{align*}
+g(x,y) & = 20,
+\\
+ \dfrac{\partial f}{\partial x} &= \lambda \dfrac{\partial g}{\partial x},
+ \\
+ \dfrac{\partial f}{\partial y} &= \lambda \dfrac{\partial g}{\partial y},
+\end{align*}
+ namely:
+\begin{align*}
+2x + 2y &= 20,
+\\
+y &= 2\lambda,
+\\
+x &= 2\lambda.
  \end{align*}
- The general idea is to solve for $\lambda$ in both equations, then set those expressions equal (since they both equal
+ The general idea is to solve for $\lambda$ in the last two equations, then set those expressions equal (since they both equal
  $\lambda$) to solve for $x$ and $y$. Doing this we get
  \begin{displaymath}
   \frac{y}{2} ~=~ \lambda ~=~ \frac{x}{2} \quad \Rightarrow \quad x = y ~,
@@ -1963,51 +2005,36 @@ The Lagrange multiplier method can be extended to functions of three variables.
   \text{Maximize (and minimize)}&: ~ f(x,y,z) = x+z\\
   \text{given}&: ~ g(x,y,z) = x^2 + y^2 + z^2 = 1
  \end{align*}
- \par\noindent \emph{Solution:} Solve the equation $\nabla f(x,y,z) = \lambda \nabla g(x,y,z)$:
+ \par\noindent \emph{Solution:} Solve the system of equations $ g(x,y,z) = 1$, $\nabla f(x,y,z) = \lambda \nabla g(x,y,z)$:
  \begin{align*}
-  1 ~&=~ 2\lambda x\\
-  0 ~&=~ 2\lambda y\\
-  1 ~&=~ 2\lambda z
+ x^2 + y^2 + z^2 &= 1\\
+  1 &= 2\lambda x,\\
+  0 &= 2\lambda y,\\
+  1 &= 2\lambda z,
  \end{align*}
- The first equation implies $\lambda \ne 0$ (otherwise we would have $1=0$), so we can divide by $\lambda$ in the
- second equation to get $y=0$ and we can divide by $\lambda$ in the first and third equations to get
- $x=\frac{1}{2\lambda}=z$. Substituting these expressions into the constraint equation $g(x,y,z) = x^2 + y^2 + z^2 = 1$
- yields the constrained critical points $\biggl( \frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}} \biggr)$ and
- $\biggl( \frac{-1}{\sqrt{2}},0,\frac{-1}{\sqrt{2}} \biggr)$. Since $f\biggl( \frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}}
- \biggr) > f\biggl( \frac{-1}{\sqrt{2}},0,\frac{-1}{\sqrt{2}} \biggr)$, and since the constraint equation
+ The second equation implies $\lambda \ne 0$ (otherwise we would have $1=0$), 
+ so we can divide by $\lambda$ in the
+ third equation to get $y=0$ 
+ and we can divide by $\lambda$ in the first and last equations to get
+ $x=\frac{1}{2\lambda}=z$. 
+ Substituting these expressions into the constraint equation $x^2 + y^2 + z^2 = 1$
+ yields the constrained critical points 
+ \[( \tfrac{1}{\sqrt{2}},0,\tfrac{1}{\sqrt{2}} )
+  \quad
+  \text{and}
+  \quad
+  ( \tfrac{-1}{\sqrt{2}},0,\tfrac{-1}{\sqrt{2}} ).
+ \]
+ Since 
+ \[f(\tfrac{1}{\sqrt{2}},0,\tfrac{1}{\sqrt{2}}) 
+ >
+ f(\tfrac{-1}{\sqrt{2}},0,\tfrac{-1}{\sqrt{2}}),\] and since the constraint equation
  $x^2 + y^2 + z^2 = 1$ describes a sphere (which is bounded) in $\Real{3}$, then
  $\biggl( \frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}} \biggr)$ is the constrained maximum point and
  $\biggl( \frac{-1}{\sqrt{2}},0,\frac{-1}{\sqrt{2}} \biggr)$ is the constrained minimum point.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \medskip
-
-So far we have not attached any significance to the value of the Lagrange multiplier $\lambda$. 
-We needed $\lambda$ only to find the constrained critical points, but made no use of its value. 
-It turns out that $\lambda$ gives an approximation of the change in the value of the function $f(x,y)$ that we wish to maximize or minimize, when
-the constant $c$ in the constraint equation $g(x,y)=c$ is changed by $1$.
-
-For example, in Example \ref{exmp:rectlm} we showed that the constrained optimization problem
-\begin{align*}
-  \text{Maximize}&: ~ f(x,y) = xy\\
-  \text{given}&: ~ g(x,y) = 2x + 2y = 20
-\end{align*}
-had the solution $(x,y) = (5,5)$, and that $\lambda = x/2 = y/2$. 
-Thus, $\lambda = 2.5$. 
-In a similar fashion we could
-show that the constrained optimization problem
-\begin{align*}
-  \text{Maximize}&: ~ f(x,y) = xy\\
-  \text{given}&: ~ g(x,y) = 2x + 2y = 21
-\end{align*}
-has the solution $(x,y) = (5.25,5.25)$. 
-So we see that the value of $f(x,y)$ at the constrained maximum increased from
-$f(5,5)=25$ to $f(5.25,5.25)=27.5625$, 
-i.e. it increased by $2.5625$ when we increased the value of $c$ in the constraint equation $g(x,y)=c$ from $c=20$ to $c=21$. 
-Notice that $\lambda = 2.5$ is close to $2.5625$, that is,
-\begin{displaymath}
- \lambda ~\approx~ \Delta f ~=~ f(\text{new max. pt}) - f(\text{old max. pt}) ~.
-\end{displaymath}
 
 
 Note that
@@ -2017,34 +2044,12 @@ And the 3-variable case can get even more complicated.
 All of this somewhat restricts the usefulness of Lagrange's method to relatively simple functions. 
 Luckily there are many numerical methods for solving constrained optimization problems, though we will not discuss them here.\footnote{See \cite{bss}.}
 
-The following thereom is a vesion of Lagrange multiplier method for two constrains.
-Note however that two constrains define a curve, 
-so if parametrized the problem reduce to single-variable calculus.
-
-\statethm{thm:lagrange}{
- {Let $f(x,y,z)$, $g_1(x,y,z)$ and $g_2(x,y,z)$ be smooth functions, and suppose that $c_1$ and $c_2$ are scalar constants such
- that $\nabla g_1(x,y,z)$ is not parallel to $\nabla g_2(x,y,z)$ for all $(x,y,z)$ that satisfy the equation $g_1(x,y,z) = c_1$ and $g_2(x,y,z) = c_2$. Then to solve the
- constrained optimization problem
- \begin{align*}
-  \text{Maximize (or minimize)}:& ~ f(x,y,z)\\
-  \text{given}:& ~ g_1(x,y,z) = c_1 ~,
-              \\&~g_2(x,y,z) = c_2 ~
- \end{align*}
- find the points $(x,y,z)$ that solve the equation 
- \[\nabla f(x,y,z) = \lambda \nabla g_1(x,y,z)+\mu \nabla g_2(x,y,z)\] 
- for some constants
- $\lambda$ and $\mu$. 
- If there is a constrained maximum or
- minimum, then it must be such a point.}
-}
-
-
-
 \startexercises\label{sec2dot7}
 \probs{A}
 \begin{enumerate}[\bfseries 1.]
  \item Find the constrained maxima and minima of $f(x,y) = 2x+y$ given that $x^2 + y^2 =4$.
  \item Find the constrained maxima and minima of $f(x,y) = xy$ given that $x^2 + 3y^2 =6$.
+ \item Find the constrained minima of $f(x,y) = x^2 + 3y^2$ given that $xy =1$ and show that there is no constrained maxima.
  \item Find the points on the circle $x^2 + y^2 = 100$ which are closest to and farthest from the point $(2,3)$.
 \suspend{enumerate}
 \probs{B}
@@ -2055,4 +2060,14 @@ so if parametrized the problem reduce to single-variable calculus.
   \begin{displaymath}
    \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 ~.
   \end{displaymath}
+  \suspend{enumerate}
+\probs{C}
+\resume{enumerate}[{[\bfseries 1.]}]
+\item Let $(x_0,y_0)$ is a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)\le c$.
+Assume $\nabla g(x,y)\ne \textbf{0}$ if $g(x,y)= c$.
+Show that  
+$\nabla f(x_0,y_0)=\lambda \nabla g(x_0,y_0)$
+for some $\lambda$. 
+Moreover, if $g(x_0,y_0)<c$ then $\lambda=0$.
+
 \end{enumerate}
