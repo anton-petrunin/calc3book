@@ -1150,7 +1150,8 @@ real-valued functions, let $c$ be a constant, and let \textbf{v} be a unit vecto
 %Begin Section 2.5
 \section{Maxima and Minima}
 The gradient can be used to find \emph{extreme points} of real-valued functions of several variables, that is,
-points where the function has a \emph{local maximum} or \emph{local minimum}. We will consider only functions of two
+points where the function has a \emph{local maximum} or \emph{local minimum}. 
+We will consider only functions of two
 variables; functions of three or more variables require methods using linear algebra.\index{extreme point}
 
 \statedefn{defn:localext}{\index{local maximum}\index{local minimum}\index{global maximum}\index{global minimum}
@@ -1869,22 +1870,37 @@ and compare their values $f(x,y)$;
 the maximum of these values is the global maximum of $f(x,y)$ with the constraint $g(x,y)=c$;
 analogously, the minimal value if the global minimum.
 
-If the set described by equation $g(x,y)=c$ is not bounded,
-but the set $f(x,y)\le d$ is bounded for any $d$ 
+If the set described by system $g(x,y)=c$,  $f(x,y)\le d$ is not empty and bounded for some $d$
 then the constrained minimum (but maybe not maximum) of
 $f(x,y)$ will occur at some points.
 Again, to find the minimum 
 we can find all the values $f(x,y)$
  at the critical points $(x,y)$;
  the minimal value is the global minimum of $f(x,y)$ with the constraint $g(x,y)=c$.
+ 
+Analogously, if the set described by system $g(x,y)=c$,  $f(x,y)\ge d$ is not empty and bounded for some $d$
+then the constrained maximum (but maybe not minimum) of
+$f(x,y)$ with the constraint $g(x,y)=c$ will occur at some points.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/xy-1(1)}
+\lbl[b]{56,16,-45;$x+y=2$}
+\lbl[b]{61,51,-45;$x+y=6$}
+\lbl[b]{26,6,-45;$x+y=-2$}
+\lbl[b]{50,38,-10;$xy=1$}
+\end{lpic}
+\end{center}
 
 Sometimes the answer depend on the hidden constants. 
 For example, consider the function $f(x,y)=x+y$ and
 the constraint $xy=1$.  
-It has two extremal points $(1,1)$ with the Lagrange multiplier $1$ and the point $(-1,-1)$ with the Lagrange multiplier $-1$.
-Non of these points is global maximum, nor minimum.
+The equation $\nabla f=\lambda \nabla g$ from Theorem~\ref{thm:lagrange} takes form \[(1,1)=\lambda(y,x).\]
+Since $yx=1$, we have two critical points: 
+$(1,1)$ with the multiplier $1$ 
+and $(-1,-1)$ with the multiplier $-1$.
+Non of these points is maximum, nor minimum, in fact $f$ can positive and negative values with arbitrary large absolute value.
 On the other hand, it might happen that by the nature of the problem, $x$ and $y$ have to be positive (it is called implicit constraints) 
-then only one point $(1,1)$ satisfies  is the constraint global minimum point.
+then only one point $(1,1)$ satisfies is the constrained minimum point and the minimum is $2$.
 
 In a general case of that type the maximum or minimum of
 $f(x,y)$ will occur either at a point $(x,y)$ satisfying $\nabla f(x,y) = \lambda \nabla g(x,y)$  or at a ``boundary''
@@ -2063,11 +2079,11 @@ Luckily there are many numerical methods for solving constrained optimization pr
   \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
-\item Let $(x_0,y_0)$ is a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)\le c$.
-Assume $\nabla g(x,y)\ne \textbf{0}$ if $g(x,y)= c$.
+\item Let $(x_0,y_0)$ be a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)\le c$.
+Assume $g(x_0,y_0)=c$ and $\nabla g(x_0,y_0)\ne \textbf{0}$.
 Show that  
 $\nabla f(x_0,y_0)=\lambda \nabla g(x_0,y_0)$
-for some $\lambda$. 
-Moreover, if $g(x_0,y_0)<c$ then $\lambda=0$.
+for some $\lambda\le 0$. 
+(\emph{Hint: Note that $(x_0,y_0)$ is also a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)=c$.})
 
 \end{enumerate}
