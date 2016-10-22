@@ -265,10 +265,10 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec2dot1}
 \probs{A}
-\par\noindent For Exercises 1--6, state the domain and range of the given function.
+\par\noindent For Exercises \ref{ex:range-domain:start}--\ref{ex:range-domain:end}, state the domain and range of the given function.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
-  \item $f(x,y) = x^2 + y^2 - 1; \phantom{\dfrac{1}{x^2}}$
+  \item\label{ex:range-domain:start} $f(x,y) = x^2 + y^2 - 1; \phantom{\dfrac{1}{x^2}}$
   \item $f(x,y) = \dfrac{1}{x^2 + y^2}$;
  \end{multicols}
  \begin{multicols}{2}
@@ -277,13 +277,13 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
  \end{multicols}
  \begin{multicols}{2}
   \item $f(x,y,z) = \sin (xyz)$;
-  \item $f(x,y,z) = \sqrt{(x-1)(yz-1)}$.
+  \item\label{ex:range-domain:end} $f(x,y,z) = \sqrt{(x-1)(yz-1)}$.
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 7--18, evaluate the given limit.
+\par\noindent For Exercises \ref{ex:lim:start}--\ref{ex:lim:end}, evaluate the given limit.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $\displaystyle\lim_{(x,y) \to (0,0)}~ \cos (xy)$;
+  \item\label{ex:lim:start} $\displaystyle\lim_{(x,y) \to (0,0)}~ \cos (xy)$;
   \item $\displaystyle\lim_{(x,y) \to (0,0)}~ e^{xy}$;
  \end{multicols}
  \begin{multicols}{2}
@@ -304,7 +304,7 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
  \end{multicols}
  \begin{multicols}{2}
   \item $\displaystyle\lim_{(x,y) \to (0,0)}~ \dfrac{x}{y}$;
-  \item $\displaystyle\lim_{(x,y) \to (0,0)}~ \cos \left( \frac{1}{xy} \right)$.
+  \item\label{ex:lim:end} $\displaystyle\lim_{(x,y) \to (0,0)}~ \cos \left( \frac{1}{xy} \right)$.
  \end{multicols}
 \suspend{enumerate}
 \probs{B}
@@ -521,10 +521,10 @@ All of the following are equivalent:
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec2dot2}
 \probs{A}
-\par\noindent For Exercises 1--16, find $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$.
+\par\noindent For Exercises \ref{ex:par-der:start}--\ref{ex:par-der:end}, find $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
-  \item $f(x,y) = x^2 + y^2$;
+  \item\label{ex:par-der:start} $f(x,y) = x^2 + y^2$;
   \item $f(x,y) = \cos(x+y)$;
  \end{multicols}
  \begin{multicols}{2}
@@ -553,14 +553,14 @@ All of the following are equivalent:
  \end{multicols}
  \begin{multicols}{2}
   \item $f(x,y) = \sin(xy)$;
-  \item $f(x,y) = \tan(x+y)$.
+  \item\label{ex:par-der:end} $f(x,y) = \tan(x+y)$.
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 17--26, find $\frac{\partial^2 f}{\partial x^2}$, $\frac{\partial^2 f}{\partial y^2}$
+\par\noindent For Exercises \ref{ex:2par-der:start}--\ref{ex:2par-der:end}, find $\frac{\partial^2 f}{\partial x^2}$, $\frac{\partial^2 f}{\partial y^2}$
 and $\frac{\partial^2 f}{\partial y \, \partial x}$ (use Exercises 1--8, 14, 15).
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $f(x,y) = x^2 + y^2$;
+  \item\label{ex:2par-der:start} $f(x,y) = x^2 + y^2$;
   \item $f(x,y) = \cos(x+y)$;
  \end{multicols}
  \begin{multicols}{2}
@@ -577,7 +577,7 @@ and $\frac{\partial^2 f}{\partial y \, \partial x}$ (use Exercises 1--8, 14, 15)
  \end{multicols}
  \begin{multicols}{2}
   \item $f(x,y) = \ln (xy)$;
-  \item $f(x,y) = \sin(xy)$.
+  \item\label{ex:2par-der:end} $f(x,y) = \sin(xy)$.
  \end{multicols}
 \suspend{enumerate}
 \probs{B}
@@ -818,11 +818,11 @@ $F(x,y,z) = f(x,y) - z$.
 \end{exmp}
 \startexercises\label{sec2dot3}
 \probs{A}
-\par\noindent For Exercises 1--6, find the equation of the tangent plane to the surface $z=f(x,y)$ at the point
+\par\noindent For Exercises \ref{ex:tan-plane-graph:start}--\ref{ex:tan-plane-graph:end}, find the equation of the tangent plane to the surface $z=f(x,y)$ at the point
 $P$.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
-  \item $f(x,y) = x^2 + y^3$, $P=(1,1,2)$;
+  \item\label{ex:tan-plane-graph:start} $f(x,y) = x^2 + y^3$, $P=(1,1,2)$;
   \item $f(x,y) = xy$, $P=(1,-1,-1)$;
  \end{multicols}
  \begin{multicols}{2}
@@ -831,18 +831,18 @@ $P$.
  \end{multicols}
  \begin{multicols}{2}
   \item $f(x,y) = x+2y$, $P=(2,1,4)$;
-  \item $f(x,y) = \sqrt{x^2 + y^2}$, $P=(3,4,5)$.
+  \item\label{ex:tan-plane-graph:end} $f(x,y) = \sqrt{x^2 + y^2}$, $P=(3,4,5)$.
  \end{multicols}
 \suspend{enumerate}
-\par\noindent For Exercises 7--10, find the equation of the tangent plane to the given surface at the point $P$.
+\par\noindent For Exercises \ref{ex:tan-plane:start}--\ref{ex:tan-plane:end}, find the equation of the tangent plane to the given surface at the point $P$.
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
-  \item $\frac{x^2}{4} + \frac{y^2}{9}  + \frac{z^2}{16} = 1$, $P=\left(1,2,\frac{2\sqrt{11}}{3}\right)$;
+  \item\label{ex:tan-plane:start} $\frac{x^2}{4} + \frac{y^2}{9}  + \frac{z^2}{16} = 1$, $P=\left(1,2,\frac{2\sqrt{11}}{3}\right)$;
   \item $x^2 + y^2 +z^2 = 9$, $P=(0,0,3)$;
  \end{multicols}
  \begin{multicols}{2}
   \item $x^2 + y^2 - z^2 = 0$, $P=(3,4,5)$;
-  \item $x^2 + y^2 = 4$, $P=(\sqrt{3},1,0)$.
+  \item\label{ex:tan-plane:end} $x^2 + y^2 = 4$, $P=(\sqrt{3},1,0)$.
  \end{multicols}
 \end{enumerate}
 \newpage
@@ -1862,25 +1862,38 @@ Let us discuss two important cases when existence of minima and maxima is guaran
 text.
 
 Recall that a set is called \index{bounded set}\emph{bounded} if it completely lies in a ball of sufficiently large radius.
-It can be shown\footnote{Again, see \cite{tm}.} that if the constraint equation $g(x,y)=c$  as above describes a bounded set in $\Real{2}$, then the constrained maximum and minimum of
-$f(x,y)$ will occur at some points.
-Therefore by theorem above it has to be one of the critical points $(x,y)$ 
+The following condition guarantees existence of maximum and minimum, see \cite{tm} for the proof.
+
+\smallskip
+
+\statecomment{If the constraint equation $g(x,y)=c$  as above describes a bounded set in $\Real{2}$, then the constrained maximum and minimum of $f(x,y)$ will occur at some points.}
+
+\smallskip
+
+\noindent If the condition holds then by theorem above the maximum and minimum points have to be one of the critical.
 It remains to find all the critical points $(x,y)$
 and compare their values $f(x,y)$;
 the maximum of these values is the global maximum of $f(x,y)$ with the constraint $g(x,y)=c$;
 analogously, the minimal value if the global minimum.
 
-If the set described by system $g(x,y)=c$,  $f(x,y)\le d$ is not empty and bounded for some $d$
-then the constrained minimum (but maybe not maximum) of
-$f(x,y)$ will occur at some points.
-Again, to find the minimum 
+Let us formulate a more general condition which guarantees existance of minimum, but not maximum.
+
+\smallskip
+
+\statecomment{If the set described by system $g(x,y)=c$,  $f(x,y)\le d$ is not empty and bounded for some $d$ then the constrained minimum of $f(x,y)$ will occur at some points.}
+
+\smallskip
+
+\noindent Again, to find the minimum 
 we can find all the values $f(x,y)$
  at the critical points $(x,y)$;
  the minimal value is the global minimum of $f(x,y)$ with the constraint $g(x,y)=c$.
  
-Analogously, if the set described by system $g(x,y)=c$,  $f(x,y)\ge d$ is not empty and bounded for some $d$
-then the constrained maximum (but maybe not minimum) of
-$f(x,y)$ with the constraint $g(x,y)=c$ will occur at some points.
+Here is an analogous condition for maximum.
+
+\smallskip
+
+\statecomment{If the set described by system $g(x,y)=c$,  $f(x,y)\ge d$ is not empty and bounded for some $d$ then the constrained maximum  of $f(x,y)$ will occur at some points.}
 
 \begin{center}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/xy-1(1)}
@@ -2084,6 +2097,6 @@ Assume $g(x_0,y_0)=c$ and $\nabla g(x_0,y_0)\ne \textbf{0}$.
 Show that  
 $\nabla f(x_0,y_0)=\lambda \nabla g(x_0,y_0)$
 for some $\lambda\le 0$. 
-(\emph{Hint: Note that $(x_0,y_0)$ is also a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)=c$.})
+(\emph{Hint: Note that $(x_0,y_0)$ is also a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)=c$ and the points $(x_0,y_0)-t\nabla g(x_0,y_0)$ satisfy the constraint inequality for small positive $t$.})
 
 \end{enumerate}

@@ -534,10 +534,10 @@ integrals.
 \end{exmp}
 \startexercises\label{sec3dot2}
 \probs{A}
-\par\noindent For Exercises 1--6, evaluate the given double integral.
+\par\noindent For Exercises \ref{ex:iint-start}--\ref{ex:iint-end}, evaluate the given double integral.
 \begin{enumerate}[\bfseries 1.]
  \begin{multicols}{2}
-  \item $\displaystyle\int_0^1 \displaystyle\int_{\sqrt{x}}^1 24x^2 y \,dy\,dx$
+  \item\label{ex:iint-start} $\displaystyle\int_0^1 \displaystyle\int_{\sqrt{x}}^1 24x^2 y \,dy\,dx$
   \item $\displaystyle\int_0^{\pi} \displaystyle\int_0^y \sin x \,dx\,dy$
  \end{multicols}
  \begin{multicols}{2}
@@ -550,8 +550,16 @@ integrals.
  \end{multicols}
  \begin{multicols}{2}
   \item $\displaystyle\int_0^2 \displaystyle\int_0^y 1 \,dx\,dy$
-  \item $\displaystyle\int_0^1 \displaystyle\int_0^{x^2} 2 \,dy\,dx$
+  \item\label{ex:iint-end} $\displaystyle\int_0^1 \displaystyle\int_0^{x^2} 2 \,dy\,dx$
  \end{multicols}
+ \suspend{enumerate}
+For Exercises \ref{ex:iint-R-start}--\ref{ex:iint-R-end} evaluate 
+ \[\iint\limits_{R} f(x,y)\,dA,\]
+ where
+\resume{enumerate}[{[\bfseries 1.]}]
+\item\label{ex:iint-R-start}  $f(x,y)=xy$ and $R$ is the intersection of the unit disc $x^2+y^2\le 1$ and the positive quadrant.
+\item\label{ex:iint-R-end}  $f(x,y)=x^2+y$ and $R$ is the triangle with vertices $(0,0)$, $(2,0)$ and $(0,1)$.
+ 
  \item Find the volume $V$ of the solid bounded by the three coordinate planes and the plane $x+y+z=1$.
  \item Find the volume $V$ of the solid bounded by the three coordinate planes and the plane $3x+2y+5z=6$.
 \suspend{enumerate}
@@ -999,8 +1007,9 @@ implicitly using when doing integration by substitution. This formula turns out 
 formula which can be used to evaluate multiple integrals. We will state the formulas for double and triple integrals
 involving real-valued functions of two and three variables, respectively.
 We will assume that all the functions involved are continuously differentiable and that the regions and solids involved
-all have ``reasonable'' boundaries. The proof of the following theorem is beyond the scope of the
-text.\footnote{See \cite[\S\,15.32 and \S\,15.62]{tm} for all the details.}
+all have ``reasonable'' boundaries. 
+The proof of the following theorem is beyond the scope of the text.%
+\footnote{See \cite[\S\,15.32 and \S\,15.62]{tm} for all the details.}
 
 \statethm{thm:changevarint}{\index{change of variable}
  {\textbf{Change of Variables Formula for Multiple Integrals}\\
