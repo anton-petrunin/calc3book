@@ -844,7 +844,17 @@ $P$.
   \item $x^2 + y^2 - z^2 = 0$, $P=(3,4,5)$;
   \item\label{ex:tan-plane:end} $x^2 + y^2 = 4$, $P=(\sqrt{3},1,0)$.
  \end{multicols}
+\suspend{enumerate}
+\probs{B}
+\resume{enumerate}[{[\bfseries 1.]}]
+\item Find the angles between the curve 
+$\mathbf{f}(t)=(t,t^2,t^3)$
+and the surface 
+$x^6+y^3+z^2=3$
+at their intersections.
 \end{enumerate}
+
+
 \newpage
 %Begin Section 2.4
 \section{Directional Derivatives and the Gradient}
@@ -946,8 +956,26 @@ Then
  after reversing the order of summation.
 \end{proof}\end{proofbar}
 
+Along the same lines one can prove the following generalization of the chain rule.
+
+\statethm{thm:multichain}{
+ {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$ such that the partial derivatives
+ $\tfrac{\partial f}{\partial x}$ and $\tfrac{\partial f}{\partial y}$ exist and are continuous in $D$
+ and $\mathbf{h}(t)=(\ssub{h}{1}(t),\ssub{h}{2}(t))$ be a smooth function with values in $D$. 
+ Then
+  \begin{equation}\label{eqn:multi-chain}
+  \begin{aligned}
+  f(\mathbf{h}(t))'&=\ssub{D}{\textbf{h}'(t)}f(\textbf{h}(t))
+  \\
+   &= \ssub{h'}{1}(t)\frac{\partial f}{\partial x}(\ssub{h}{1}(t),\ssub{h}{2}(t)) +
+    \ssub{h'}{2}(t)\frac{\partial f}{\partial y}(\ssub{h}{1}(t),\ssub{h}{2}(t)).
+  \end{aligned}
+  \end{equation}}
+}
+
 Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\partial f}{\partial x}(a,b),
-\frac{\partial f}{\partial y}(a,b)\biggr)}$. The second vector has a special name:
+\frac{\partial f}{\partial y}(a,b)\biggr)}$. 
+The second vector has a special name:
 
 \statedefn{defn:grad}{\index{gradient}
  {For a real-valued function $f(x,y)$, the \textbf{gradient} of $f$, denoted by $\nabla f$, is the vector
@@ -1143,9 +1171,20 @@ real-valued functions, let $c$ be a constant, and let \textbf{v} be a unit vecto
   \item $\ssub{D}{\textbf{v}}(fg) = f\,\ssub{D}{\textbf{v}}g ~+~ g\,\ssub{D}{\textbf{v}}f$.
  \end{multicols}
  \item The function $r(x,y) = \sqrt{x^2 + y^2}$ is the length of the position vector
-  $\textbf{r}=x\,\textbf{i} + y\,\textbf{j}$ for each point $(x,y)$ in $\Real{2}$. Show that
-  $\nabla r = \dfrac{1}{r}\,\textbf{r}~$ when $(x,y) \ne (0,0)$, and that $\nabla (r^2 ) = 2\,\textbf{r}$.
+  $\textbf{r}=x\,\textbf{i} + y\,\textbf{j}$ for each point $(x,y)$ in $\Real{2}$. 
+  Show that $\nabla r = \tfrac{1}{r}\,\textbf{r}~$ when $(x,y) \ne (0,0)$, and that $\nabla (r^2 ) = 2\,\textbf{r}$.
+\suspend{enumerate}
+\probs{C}
+\resume{enumerate}[{[\bfseries 1.]}]
+\item Let $g(x)$ and $f(x,y)$ be smooth function such that
+\[f(x,g(x))=0.\]
+Show that 
+\[\tfrac{\partial f}{\partial x}(x,g(x))+
+g'(x)\tfrac{\partial f}{\partial y}(x,g(x))=0.\]
+(\emph{Hint: Apply Theorem~\ref{thm:multichain} for the curve $\mathbf{h}(t)=(t,g(t))$.})
+
 \end{enumerate}
+
 \newpage
 %Begin Section 2.5
 \section{Maxima and Minima}
