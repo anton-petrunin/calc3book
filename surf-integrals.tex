@@ -238,41 +238,41 @@ as the \emph{line integral of $f(x,y)$ along $C$ with respect to $y$}.
 
 In the derivation of the formula for a line integral, we used the idea of work as force multiplied by distance.
 However, we know that force is actually a \emph{vector}. So it would be helpful to develop a vector form for a
-line integral. For this, suppose that we have a function $\textbf{f}(x,y)$ defined on $\Real{2}$ by
+line integral. For this, suppose that we have a function $\mathbf{f}(x,y)$ defined on $\Real{2}$ by
 \begin{displaymath}
- \textbf{f}(x,y) ~=~ P(x,y)\,\textbf{i} ~+~ Q(x,y)\,\textbf{j}
+ \mathbf{f}(x,y) ~=~ P(x,y)\,\mathbf{i} ~+~ Q(x,y)\,\mathbf{j}
 \end{displaymath}
-for some continuous real-valued functions $P(x,y)$ and $Q(x,y)$ on $\Real{2}$. Such a function \textbf{f} is called a
+for some continuous real-valued functions $P(x,y)$ and $Q(x,y)$ on $\Real{2}$. Such a function $\mathbf{f}$ is called a
 \textbf{vector field} on $\Real{2}$. It is defined at \emph{points} in $\Real{2}$, and its values are
 \emph{vectors} in $\Real{2}$. For a curve $C$ with a smooth parametrization $x=x(t)$, $y=y(t)$, $a \le t \le b$,
 let\index{vector field}
 \begin{displaymath}
- \textbf{r}(t) ~=~ x(t)\,\textbf{i} ~+~ y(t)\,\textbf{j}
+ \mathbf{r}(t) ~=~ x(t)\,\mathbf{i} ~+~ y(t)\,\mathbf{j}
 \end{displaymath}
 be the position vector for a point $(x(t),y(t))$ on $C$. Then\index{position vector}
-$\textbf{r}\,'(t) = x\,'(t)\,\textbf{i} + y\,'(t)\,\textbf{j}$ and so
+$\mathbf{r}'(t) = x'(t)\,\mathbf{i} + y\,'(t)\,\mathbf{j}$ and so
 \begin{align*}
  \int_C P(x,y)\,dx ~+~ \int_C Q(x,y)\,dy ~&=~ \int_a^b P(x(t),y(t)) \,x\,'(t)\,dt ~+~ \int_a^b Q(x(t),y(t)) \,y\,'(t)\,dt\\
   &=~ \int_a^b (P(x(t),y(t)) \,x\,'(t) + Q(x(t),y(t)) \,y\,'(t))\,dt\\
-  &=~ \int_a^b \Dotprod{\textbf{f}(x(t),y(t))}{\textbf{r}\,'(t)}\,dt
+  &=~ \int_a^b \Dotprod{\mathbf{f}(x(t),y(t))}{\mathbf{r}'(t)}\,dt
 \end{align*}
-by definition of $\textbf{f}(x,y)$. Notice that the function $\Dotprod{\textbf{f}(x(t),y(t))}{\textbf{r}\,'(t)}$
+by definition of $\mathbf{f}(x,y)$. Notice that the function $\Dotprod{\mathbf{f}(x(t),y(t))}{\mathbf{r}\,'(t)}$
 is a \emph{real-valued} function on $\ival{a}{b}$, so the last integral on the right looks somewhat similar to our
 earlier definition of a line integral. This leads us to the following definition:\index{line
 integral}\index{$\int_C$}
 
 \statedefn{defn:lineintvec2}{
- For a vector field $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ and a curve $C$ with a smooth
+ For a vector field $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ and a curve $C$ with a smooth
  parametrization $x=x(t)$, $y=y(t)$, $a \le t \le b$, the \textbf{line integral of f along} $C$ is
  \begin{align}
-  \int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~&=~ \int_C P(x,y)\,dx ~+~ \int_C Q(x,y)\,dy\\
-   &=~ \int_a^b \Dotprod{\textbf{f}(x(t),y(t))}{\textbf{r}\,'(t)}\,dt ~,
+  \int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~&=~ \int_C P(x,y)\,dx ~+~ \int_C Q(x,y)\,dy\\
+   &=~ \int_a^b \Dotprod{\mathbf{f}(x(t),y(t))}{\mathbf{r}\,'(t)}\,dt ~,
  \end{align}
- where $\textbf{r}(t) = x(t)\,\textbf{i} + y(t)\,\textbf{j}$ is the position vector for points on $C$.
+ where $\mathbf{r}(t) = x(t)\,\mathbf{i} + y(t)\,\mathbf{j}$ is the position vector for points on $C$.
 }
-We use the notation $d\textbf{r} = \textbf{r}\,'(t)\,dt = dx\,\textbf{i} + dy\,\textbf{j}$\index{$d\textbf{r}$} to
+We use the notation $d\mathbf{r} = \mathbf{r}\,'(t)\,dt = dx\,\mathbf{i} + dy\,\mathbf{j}$\index{$d\mathbf{r}$} to
 denote the \textbf{differential}\index{differential}
-of the vector-valued function \textbf{r}. The line integral in Definition \ref{defn:lineintvec2} is
+of the vector-valued function $\mathbf{r}$. The line integral in Definition \ref{defn:lineintvec2} is
 often called a \emph{line integral of a vector field} to distinguish it from the line integral in
 Definition \ref{defn:lineintscalar2} which is called a \emph{line integral of a scalar field}. For
 convenience we will often write
@@ -285,30 +285,30 @@ real-valued function $F(x,y)$, the \textbf{differential} of $F$ is $dF = \frac{\
 \frac{\partial F}{\partial y}\,dy$. A differential form $P(x,y)\,dx + Q(x,y)\,dy$ is called \textbf{exact}\index{exact
 differential form} if it equals $dF$ for some function $F(x,y)$.
 
-Recall that if the points on a curve $C$ have position vector $\textbf{r}(t) = x(t)\,\textbf{i} + y(t)\,\textbf{j}$,
-then $\textbf{r}\,'(t)$ is a tangent vector to $C$ at the point $(x(t),y(t))$ in the direction of increasing $t$
-(which we call the \emph{direction of $C$}). Since $C$ is a smooth curve, then $\textbf{r}\,'(t) \ne \textbf{0}$ on
+Recall that if the points on a curve $C$ have position vector $\mathbf{r}(t) = x(t)\,\mathbf{i} + y(t)\,\mathbf{j}$,
+then $\mathbf{r}\,'(t)$ is a tangent vector to $C$ at the point $(x(t),y(t))$ in the direction of increasing $t$
+(which we call the \emph{direction of $C$}). Since $C$ is a smooth curve, then $\mathbf{r}\,'(t) \ne \mathbf{0}$ on
 $\ival{a}{b}$ and hence
 \begin{displaymath}
- \textbf{T}(t) ~=~ \frac{\textbf{r}\,'(t)}{\Norm{\textbf{r}\,'(t)}}
+ \mathbf{T}(t) ~=~ \frac{\mathbf{r}\,'(t)}{\Norm{\mathbf{r}\,'(t)}}
 \end{displaymath}
 is the unit tangent vector to $C$ at $(x(t),y(t))$. Putting Definitions \ref{defn:lineintscalar2} and
 \ref{defn:lineintvec2} together we get the following theorem:
 
 \statethm{thm:lineinttangent}{
- For a vector field $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ and a curve $C$ with a smooth
- parametrization $x=x(t)$, $y=y(t)$, $a \le t \le b$ and position vector $\textbf{r}(t) = x(t)\,\textbf{i} +
- y(t)\,\textbf{j}$,
+ For a vector field $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ and a curve $C$ with a smooth
+ parametrization $x=x(t)$, $y=y(t)$, $a \le t \le b$ and position vector $\mathbf{r}(t) = x(t)\,\mathbf{i} +
+ y(t)\,\mathbf{j}$,
  \begin{equation}\label{eqn:lineintform2}
-  \int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~=~ \int_C \Dotprod{\textbf{f}}{\textbf{T}}\,ds ~,
+  \int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~=~ \int_C \Dotprod{\mathbf{f}}{\mathbf{T}}\,ds ~,
  \end{equation}
- where $\textbf{T}(t) = \frac{\textbf{r}\,'(t)}{\norm{\textbf{r}\,'(t)}}$ is the unit tangent vector to $C$ at
+ where $\mathbf{T}(t) = \frac{\mathbf{r}\,'(t)}{\norm{\mathbf{r}\,'(t)}}$ is the unit tangent vector to $C$ at
  $(x(t),y(t))$.
 }
-If the vector field $\textbf{f}(x,y)$ represents the force moving an object along a curve $C$, then the work
+If the vector field $\mathbf{f}(x,y)$ represents the force moving an object along a curve $C$, then the work
 $W$ done by this force is
 \begin{equation}\label{eqn:work}
- W ~=~ \int_C \Dotprod{\textbf{f}}{\textbf{T}}\,ds ~=~ \int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~.
+ W ~=~ \int_C \Dotprod{\mathbf{f}}{\mathbf{T}}\,ds ~=~ \int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~.
 \end{equation}
 
 \medskip
@@ -357,8 +357,8 @@ $W$ done by this force is
  \end{align*}
 
 \picskip{0}
- So in both cases, if the vector field $\textbf{f}(x,y) = ( x^2 + y^2 )\,\textbf{i} +
- 2xy\,\textbf{j}$ represents the force moving an object from $(0,0)$ to $(1,2)$ along the given curve $C$, then the
+ So in both cases, if the vector field $\mathbf{f}(x,y) = ( x^2 + y^2 )\,\mathbf{i} +
+ 2xy\,\mathbf{j}$ represents the force moving an object from $(0,0)$ to $(1,2)$ along the given curve $C$, then the
  work done is $\frac{13}{3}$. This may lead you to think that work (and more generally, the line integral of a vector
  field) is independent of the path taken. However, as we will see in the next section, this is not always the
  case.
@@ -373,11 +373,11 @@ is\index{piecewise smooth curve}
 \end{displaymath}
 is the union of smooth curves $\ssub{C}{1},\ldots ,\ssub{C}{n}$, then we can define
 \begin{displaymath}
- \int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~=~ \int_{\ssub{C}{1}} \Dotprod{\textbf{f}}{d\ssub{\textbf{r}}{1}} ~+~
-  \int_{\ssub{C}{2}} \Dotprod{\textbf{f}}{d\ssub{\textbf{r}}{2}} ~+ \ldots +~
-  \int_{\ssub{C}{n}} \Dotprod{\textbf{f}}{d\ssub{\textbf{r}}{n}}
+ \int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~=~ \int_{\ssub{C}{1}} \Dotprod{\mathbf{f}}{d\ssub{\mathbf{r}}{1}} ~+~
+  \int_{\ssub{C}{2}} \Dotprod{\mathbf{f}}{d\ssub{\mathbf{r}}{2}} ~+ \ldots +~
+  \int_{\ssub{C}{n}} \Dotprod{\mathbf{f}}{d\ssub{\mathbf{r}}{n}}
 \end{displaymath}
-where each $\ssub{\textbf{r}}{i}$ is the position vector of the curve $\ssub{C}{i}$.
+where each $\ssub{\mathbf{r}}{i}$ is the position vector of the curve $\ssub{C}{i}$.
 
 \medskip
 \hrule width \textwidth height 0.5pt
@@ -420,11 +420,11 @@ where each $\ssub{\textbf{r}}{i}$ is the position vector of the curve $\ssub{C}{
 \medskip
 
 Line integral notation varies quite a bit. For example, in physics it is common to see the notation
-$\int_a^b \Dotprod{\textbf{f}}{d\textbf{l}}$, where it is understood that the limits of integration $a$ and $b$ are for
-the underlying parameter $t$ of the curve, and the letter \textbf{l} signifies length. Also, the formulation
-$\int_C \Dotprod{\textbf{f}}{\textbf{T}}\,ds$ from Theorem \ref{thm:lineinttangent} is often preferred in physics since
-it emphasizes the idea of integrating the tangential component $\Dotprod{\textbf{f}}{\textbf{T}}$ of \textbf{f} in the
-direction of \textbf{T} (i.e. in the direction of $C$), which is a useful physical interpretation of line integrals.
+$\int_a^b \Dotprod{\mathbf{f}}{d\mathbf{l}}$, where it is understood that the limits of integration $a$ and $b$ are for
+the underlying parameter $t$ of the curve, and the letter $\mathbf{l}$ signifies length. Also, the formulation
+$\int_C \Dotprod{\mathbf{f}}{\mathbf{T}}\,ds$ from Theorem \ref{thm:lineinttangent} is often preferred in physics since
+it emphasizes the idea of integrating the tangential component $\Dotprod{\mathbf{f}}{\mathbf{T}}$ of $\mathbf{f}$ in the
+direction of $\mathbf{T}$ (i.e. in the direction of $C$), which is a useful physical interpretation of line integrals.
 \hrule width \textwidth height 0.5pt
 \medskip
 %\startexercises
@@ -443,37 +443,37 @@ curve $C$.
  the plane $x+2y+z=6$ and above the $xy$-plane.
 \suspend{enumerate}
 \par\noindent For Exercises 6--11, calculate 
-\[\int_C \Dotprod{\textbf{f}}{d\textbf{r}}\] 
+\[\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}\] 
 for the given vector
- field $\textbf{f}(x,y)$ and curve $C$.
+ field $\mathbf{f}(x,y)$ and curve $C$.
 \resume{enumerate}[{[\bfseries 1.]}]
- \item $\textbf{f}(x,y) = \textbf{i} - \textbf{j}$; $\quad C: x=3t$, $y=2t$, $0 \le t \le 1$
- \item $\textbf{f}(x,y) = y\,\textbf{i} - x\,\textbf{j}$; $\quad C: x=\cos t$, $y=\sin t$, $0 \le t \le 2\pi$
- \item $\textbf{f}(x,y) = x\,\textbf{i} + y\,\textbf{j}$; $\quad C: x=\cos t$, $ y=\sin t$, $0 \le t \le 2\pi$
- \item $\textbf{f}(x,y) = (x^2 - y)\,\textbf{i} + (x-y^2 )\,\textbf{j}$; $\quad C: x=\cos t$, $y=\sin t$,
+ \item $\mathbf{f}(x,y) = \mathbf{i} - \mathbf{j}$; $\quad C: x=3t$, $y=2t$, $0 \le t \le 1$
+ \item $\mathbf{f}(x,y) = y\,\mathbf{i} - x\,\mathbf{j}$; $\quad C: x=\cos t$, $y=\sin t$, $0 \le t \le 2\pi$
+ \item $\mathbf{f}(x,y) = x\,\mathbf{i} + y\,\mathbf{j}$; $\quad C: x=\cos t$, $ y=\sin t$, $0 \le t \le 2\pi$
+ \item $\mathbf{f}(x,y) = (x^2 - y)\,\mathbf{i} + (x-y^2 )\,\mathbf{j}$; $\quad C: x=\cos t$, $y=\sin t$,
   $0 \le t \le 2\pi$
- \item $\textbf{f}(x,y) = xy^2 \,\textbf{i} + xy^3 \,\textbf{j}$; $\quad C:$ the polygonal path from $(0,0)$ to $(1,0)$
+ \item $\mathbf{f}(x,y) = xy^2 \,\mathbf{i} + xy^3 \,\mathbf{j}$; $\quad C:$ the polygonal path from $(0,0)$ to $(1,0)$
  to $(0,1)$ to $(0,0)$
- \item $\textbf{f}(x,y) =(x^2 + y^2 )\,\textbf{i}$; $\quad C: x=2+\cos t$, $y=\sin t$, $0 \le t \le 2\pi$
+ \item $\mathbf{f}(x,y) =(x^2 + y^2 )\,\mathbf{i}$; $\quad C: x=2+\cos t$, $y=\sin t$, $0 \le t \le 2\pi$
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Verify that the value of the line integral in Example \ref{exmp:lineintcyl} is unchanged when using the
   parametrization of the circle $C$ given in formulas (\ref{eqn:lineintcylcwise}).
- \item Show that if $\textbf{f} \perp \textbf{r}\,'(t)$ at each point $\textbf{r}(t)$ along a smooth curve $C$, then
-  \[\int_C \Dotprod{\textbf{f}}{d\textbf{r}} = 0.\]
- \item Show that if $\textbf{f}$ points in the same direction as $\textbf{r}\,'(t)$ at each point $\textbf{r}(t)$ along
+ \item Show that if $\mathbf{f} \perp \mathbf{r}\,'(t)$ at each point $\mathbf{r}(t)$ along a smooth curve $C$, then
+  \[\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} = 0.\]
+ \item Show that if $\mathbf{f}$ points in the same direction as $\mathbf{r}\,'(t)$ at each point $\mathbf{r}(t)$ along
   a smooth curve $C$, then 
-  \[\int_C \Dotprod{\textbf{f}}{d\textbf{r}} = \int_C \norm{\textbf{f}}\,ds.\]
+  \[\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} = \int_C \norm{\mathbf{f}}\,ds.\]
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Prove that \[\int_C f(x,y)\,ds = \int_{-C} f(x,y)\,ds.\] 
  (\emph{Hint: Use formulas (\ref{eqn:reversec}).})
- \item Let $C$ be a smooth curve with arc length $L$, and suppose that $\textbf{f}(x,y) = P(x,y)\,\textbf{i} +
-  Q(x,y)\,\textbf{j}$ is a vector field such that $\norm{\textbf{f}(x,y)} \le M$ for all $(x,y)$ on $C$. Show
+ \item Let $C$ be a smooth curve with arc length $L$, and suppose that $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} +
+  Q(x,y)\,\mathbf{j}$ is a vector field such that $\norm{\mathbf{f}(x,y)} \le M$ for all $(x,y)$ on $C$. Show
   that
-  \[\Abs{\int_C \Dotprod{\textbf{f}}{d\textbf{r}}} \le ML.\]
+  \[\Abs{\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}} \le ML.\]
   (\emph{Hint: Recall that $\Abs{\int_a^b g(x)\,dx} \le \int_a^b \abs{g(x)}\,dx$ for Riemann integrals.})
  \item Prove that the Riemann integral $\int_a^b f(x)\,dx$ is a special case of a line integral.
 \end{enumerate}
@@ -485,11 +485,11 @@ direction in which the integral is taken along a curve does not change the value
 \begin{equation}
  \int_C f(x,y)\,ds = \int_{-C} f(x,y)\,ds
 \end{equation}
-For line integrals of vector fields, however, the value does change. To see this, let $\textbf{f}(x,y) =
-P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ be a vector field, with $P$ and $Q$ continuously differentiable
+For line integrals of vector fields, however, the value does change. To see this, let $\mathbf{f}(x,y) =
+P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ be a vector field, with $P$ and $Q$ continuously differentiable
 functions. Let $C$ be a smooth curve parametrized by $x=x(t)$, $y=y(t)$, $a \le t \le b$, with position vector
-$\textbf{r}(t) = x(t)\,\textbf{i} + y(t)\,\textbf{j}$ (we will usually abbreviate this by saying that
-$C: \textbf{r}(t) = x(t)\,\textbf{i} + y(t)\,\textbf{j}$ is a smooth curve). We know that the curve $-C$ traversed in
+$\mathbf{r}(t) = x(t)\,\mathbf{i} + y(t)\,\mathbf{j}$ (we will usually abbreviate this by saying that
+$C: \mathbf{r}(t) = x(t)\,\mathbf{i} + y(t)\,\mathbf{j}$ is a smooth curve). We know that the curve $-C$ traversed in
 the opposite direction is parametrized by $x=x(a+b-t)$, $y=y(a+b-t)$, $a \le t \le b$. Then
 \begin{align*}
  \int_{-C} P(x,y)\,dx ~&=~ \int_a^b P(x(a+b-t),y(a+b-t))\,\frac{d}{dt}(x(a+b-t))\,dt\\
@@ -505,13 +505,13 @@ since we are just using a different letter ($u$) for the line integral along $C$
 \end{displaymath}
 and hence
 \begin{align}
- \int_{-C} \Dotprod{\textbf{f}}{d\textbf{r}} ~&=~ \int_{-C} P(x,y)\,dx + \int_{-C} Q(x,y)\,dy\notag\\
+ \int_{-C} \Dotprod{\mathbf{f}}{d\mathbf{r}} ~&=~ \int_{-C} P(x,y)\,dx + \int_{-C} Q(x,y)\,dy\notag\\
   &=~ -\int_C P(x,y)\,dx + -\int_C Q(x,y)\,dy\notag\\
   &=~ -\left( \int_C P(x,y)\,dx + \int_C Q(x,y)\,dy \right)\notag\\
-  \int_{-C} \Dotprod{\textbf{f}}{d\textbf{r}} ~&=~ -\int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~.
+  \int_{-C} \Dotprod{\mathbf{f}}{d\mathbf{r}} ~&=~ -\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~.
 \end{align}
 
-The above formula can be interpreted in terms of the work done by a force $\textbf{f}(x,y)$ (treated as a vector) moving
+The above formula can be interpreted in terms of the work done by a force $\mathbf{f}(x,y)$ (treated as a vector) moving
 an object along a curve $C$: the total work performed moving the object along $C$ from its initial point to its terminal
 point, and then back to the initial point moving backwards along the same path, is zero. This is because when force is
 considered as a vector, direction is accounted for.
@@ -529,10 +529,10 @@ integral of a vector field is unchanged as long as the direction of the curve $C
 parametrization is chosen:
 
 \statethm{thm:lineintreparam}{
- {Let $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ be a vector field, and let $C$ be a smooth
+ {Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ be a vector field, and let $C$ be a smooth
  curve parametrized by $x=x(t)$, $y=y(t)$, $a \le t \le b$. Suppose that $t=\alpha(u)$ for $c \le u \le d$, such that
  $a=\alpha(c)$, $b=\alpha(d)$, and $\alpha\,'(u) > 0$ on the open interval $(c,d)$ (i.e. $\alpha(u)$ is strictly
- increasing on $\ival{c}{d}$). Then $\int_C \Dotprod{\textbf{f}}{d\textbf{r}}$ has the same value for the
+ increasing on $\ival{c}{d}$). Then $\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}$ has the same value for the
  parametrizations $x=x(t)$, $y=y(t)$, $a \le t \le b$ and $x=\tilde{x}(u)=x(\alpha(u))$, $y=\tilde{y}(u)=y(\alpha(u))$,
  $c \le u \le d$.}
 }
@@ -552,7 +552,7 @@ parametrization is chosen:
    &=~ \int_c^d P(\tilde{x}(u),\tilde{y}(u))\,\tilde{x}\,'(u)\,du ~,
  \end{align*}
  which shows that $\int_C P(x,y)\,dx$ has the same value for both parametrizations. A similar argument shows that
- $\int_C Q(x,y)\,dy$ has the same value for both parametrizations, and hence $\int_C \Dotprod{\textbf{f}}{d\textbf{r}}$
+ $\int_C Q(x,y)\,dy$ has the same value for both parametrizations, and hence $\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}$
  has the same value.
  
 \end{proof}\end{proofbar}
@@ -619,7 +619,7 @@ $x=x(t)$, $y=y(t)$, $a \le t \le b$, we have $(x(a),y(a)) = (x(b),y(b))$.\index{
 A \textbf{simple closed curve} is a closed curve which does not intersect itself. Note that any closed curve can be
 regarded as a union of simple closed curves (think of the loops in a figure eight). We use the special notation
 \begin{displaymath}
- \oint_C f(x,y)\,ds \quad\text{and}\quad \oint_C \Dotprod{\textbf{f}}{d\textbf{r}}
+ \oint_C f(x,y)\,ds \quad\text{and}\quad \oint_C \Dotprod{\mathbf{f}}{d\mathbf{r}}
 \end{displaymath}
 to denote line integrals of scalar and vector fields, respectively, along closed curves.\index{simple closed
 curve}\index{$\oint_C$} In some older texts you may see the notation $\;\displaystyle\counterint\;$ or
@@ -686,26 +686,19 @@ What it mostly does is give an idea of the
 way in which line integrals behave, and how seemingly unrelated line integrals can be related (in this case, a
 specific line integral between two points and \emph{all} line integrals around closed curves).
 
-For a more practical method for determining path independence, we first need a version of the Chain Rule for
-multivariable functions:\index{Chain Rule}
-
-\statethm{thm:chainrule2}{
- {(\textbf{Chain Rule})
- If $z=f(x,y)$ is a continuously differentiable function of $x$ and $y$, and both $x=x(t)$ and $y=y(t)$ are
- differentiable functions of $t$, then $z$ is a differentiable function of $t$, and
+Recall that if $z=f(x,y)$ is a continuously differentiable function of $x$ and $y$, and both $x=x(t)$ and $y=y(t)$ are
+ differentiable functions of $t$, then 
  \begin{equation}\label{eqn:chainrule2}
-  \frac{dz}{dt} ~=~ \frac{\partial z}{\partial x}\,\frac{dx}{dt} ~+~ \frac{\partial z}{\partial y}\,\frac{dy}{dt}
+  \frac{dz}{dt} ~=~ \frac{\partial z}{\partial x}\,\frac{dx}{dt} ~+~ \frac{\partial z}{\partial y}\,\frac{dy}{dt}.
  \end{equation}
- at all points where the derivatives on the right are defined.}
-}
-The proof is virtually identical to the proof of Theorem \ref{thm:dirderiv} from Section 2.4 (which uses the Mean
-Value Theorem), so we omit it.\footnote{See \cite[\S\,6.5]{tm}.} We will now use this Chain Rule to prove the
+This is multivariable version of the Chain Rule, see Theorem \ref{thm:multichain} and Corollary \ref{cor:dirderiv}.
+We will now use this version of Chain Rule to prove the
 following \emph{sufficient} condition for path independence of line integrals:
 
 \statethm{thm:lineintsuffpath}{
- {Let $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ be a vector field in some region $R$, with $P$
+ {Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ be a vector field in some region $R$, with $P$
  and $Q$ continuously differentiable functions on $R$. Let $C$ be a smooth curve in $R$ parametrized by $x=x(t)$,
- $y=y(t)$, $a \le t \le b$. Suppose that there is a real-valued function $F(x,y)$ such that $\nabla F = \textbf{f}$ on
+ $y=y(t)$, $a \le t \le b$. Suppose that there is a real-valued function $F(x,y)$ such that $\nabla F = \mathbf{f}$ on
  $R$. Then
  \begin{equation}\label{eqn:lineintsuffpath}
   \lineintvec{C}{f}{r} ~=~ F(B) ~-~ F(A) ~,
@@ -718,9 +711,9 @@ following \emph{sufficient} condition for path independence of line integrals:
  \begin{align*}
   \lineintvec{C}{f}{r} ~&=~ \int_a^b \left( P(x(t),y(t))\,x\,'(t) + Q(x(t),y(t))\,y\,'(t) \right)\,dt\\
    &=~ \int_a^b \left( \frac{\partial F}{\partial x}\,\frac{dx}{dt} + \frac{\partial F}{\partial y}\,\frac{dy}{dt}
-   \right)\,dt ~~\text{(since $\nabla F = \textbf{f} ~\Rightarrow~ \frac{\partial F}{\partial x} = P$ and
+   \right)\,dt ~~\text{(since $\nabla F = \mathbf{f} ~\Rightarrow~ \frac{\partial F}{\partial x} = P$ and
    $\frac{\partial F}{\partial y} = Q$)}\\
-   &=~ \int_a^b F\,'(x(t),y(t))\,dt ~~\text{(by the Chain Rule in Theorem \ref{thm:chainrule2})}\\
+   &=~ \int_a^b F(x(t),y(t))'\,dt ~~\text{(by the Chain Rule in Theorem \ref{thm:multichain})}\\
    &=~ F(x(t),y(t)) \,\Big|_a^b ~=~ F(B) ~-~ F(A)
  \end{align*}
  by the Fundamental Theorem of Calculus.
@@ -728,8 +721,8 @@ following \emph{sufficient} condition for path independence of line integrals:
 \end{proof}\end{proofbar}
 
 Theorem \ref{thm:lineintsuffpath} can be thought of as the line integral version of the Fundamental Theorem of
-Calculus. A real-valued function $F(x,y)$ such that $\nabla F(x,y) = \textbf{f}(x,y)$ is called a \textbf{potential}
-for \textbf{f}. A \textbf{conservative} vector field is one which has a potential.\index{potential}
+Calculus. A real-valued function $F(x,y)$ such that $\nabla F(x,y) = \mathbf{f}(x,y)$ is called a \textbf{potential} for $\mathbf{f}$. 
+A \textbf{conservative} vector field is one which has a potential.\index{potential}
 
 \medskip
 \hrule width \textwidth height 0.5pt
@@ -746,13 +739,13 @@ for \textbf{f}. A \textbf{conservative} vector field is one which has a potentia
  some function $g(y)$. So $\frac{\partial F}{\partial y} = 2xy + g\,'(y)$
  satisfies the condition $\frac{\partial F}{\partial y} = 2xy$ if $g\,'(y)=0$, i.e. $g(y)=K$, where $K$ is a
  constant. Since any choice for $K$ will do (why?), we pick $K=0$. Thus, a potential $F(x,y)$ for 
- $\textbf{f}(x,y) = ( x^2 + y^2 )\,\textbf{i} + 2xy\,\textbf{j}$ exists, namely
+ $\mathbf{f}(x,y) = ( x^2 + y^2 )\,\mathbf{i} + 2xy\,\mathbf{j}$ exists, namely
  \begin{displaymath}
   F(x,y) ~=~ \frac{1}{3}x^3 + xy^2 ~.
  \end{displaymath}
  Hence the line integral $\int_C (x^2 + y^2 )\,dx + 2xy\,dy$ is path independent.\index{conservative field}
  
- \par\noindent Note that we can also verify that the value of the line integral of \textbf{f} along any curve $C$ going
+ \par\noindent Note that we can also verify that the value of the line integral of $\mathbf{f}$ along any curve $C$ going
  from $(0,0)$ to $(1,2)$ will always be $\frac{13}{3}$, since by Theorem \ref{thm:lineintsuffpath}
  \begin{displaymath}
   \lineintvec{C}{f}{r} ~=~ F(1,2) ~-~ F(0,0) ~=~ \frac{1}{3}(1)^3 + (1)(2)^2 - (0+0) ~=~ \frac{1}{3} + 4 ~=~ \frac{13}{3} ~.
@@ -765,8 +758,8 @@ A consequence of Theorem \ref{thm:lineintsuffpath} in the special case where $C$
 endpoints $A$ and $B$ are the same point, is the following important corollary:
 
 \statecor{cor:lineintsuffpath}{
- {If a vector field $\textbf{f}$ has a potential in a region $R$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
- for any closed curve $C$ in $R$ (i.e. $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\textbf{r}} = 0$ for any real-valued
+ {If a vector field $\mathbf{f}$ has a potential in a region $R$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
+ for any closed curve $C$ in $R$ (i.e. $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\mathbf{r}} = 0$ for any real-valued
  function $F(x,y)$).}
 }
 
@@ -775,13 +768,13 @@ endpoints $A$ and $B$ are the same point, is the following important corollary:
 \begin{exmp}
  Evaluate $\displaystyle\oint_C x\,dx + y\,dy$ for $C:$ $x=2\cos t$, $y=3\sin t$,
  $0\le t\le 2\pi$.\smallskip
- \par\noindent \emph{Solution:} The vector field $\textbf{f}(x,y) = x\,\textbf{i} + y\,\textbf{j}$ has a
+ \par\noindent \emph{Solution:} The vector field $\mathbf{f}(x,y) = x\,\mathbf{i} + y\,\mathbf{j}$ has a
  potential $F(x,y)$:
  \begin{align*}
   \frac{\partial F}{\partial x} = x ~&\Rightarrow~ F(x,y) ~=~ \frac{1}{2}x^2 + g(y) ~,\text{so}\\
   \frac{\partial F}{\partial y} = y ~&\Rightarrow~ g\,'(y) = y ~\Rightarrow~ g(y) ~=~ \frac{1}{2}y^2 + K
  \end{align*}
- for any constant $K$, so $F(x,y) = \dfrac{1}{2}x^2 + \dfrac{1}{2}y^2$ is a potential for $\textbf{f}(x,y)$. Thus,
+ for any constant $K$, so $F(x,y) = \dfrac{1}{2}x^2 + \dfrac{1}{2}y^2$ is a potential for $\mathbf{f}(x,y)$. Thus,
  \begin{displaymath}
   \displaystyle\oint_C x\,dx + y\,dy ~=~ \displaystyle\olineintvec{C}{f}{r} ~=~ 0
  \end{displaymath}
@@ -793,37 +786,37 @@ endpoints $A$ and $B$ are the same point, is the following important corollary:
 \begin{enumerate}[\bfseries 1.]
  \item Evaluate $\displaystyle\oint_C (x^2 + y^2 )\,dx + 2xy\,dy$ for $C:$ $x=\cos t$, $y=\sin t$, $0\le t\le 2\pi$.
  \item Evaluate $\displaystyle\int_C (x^2 + y^2 )\,dx + 2xy\,dy$ for $C:$ $x=\cos t$, $y=\sin t$, $0\le t\le \pi$.
- \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = y\,\textbf{i} - x\,\textbf{j}$? If so, find one.
- \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = x\,\textbf{i} - y\,\textbf{j}$? If so, find one.
- \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = xy^2\,\textbf{i} + x^3 y\,\textbf{j}$? If so, find
+ \item Is there a potential $F(x,y)$ for $\mathbf{f}(x,y) = y\,\mathbf{i} - x\,\mathbf{j}$? If so, find one.
+ \item Is there a potential $F(x,y)$ for $\mathbf{f}(x,y) = x\,\mathbf{i} - y\,\mathbf{j}$? If so, find one.
+ \item Is there a potential $F(x,y)$ for $\mathbf{f}(x,y) = xy^2\,\mathbf{i} + x^3 y\,\mathbf{j}$? If so, find
   one.
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Let $\textbf{f}(x,y)$ and $\textbf{g}(x,y)$ be vector fields, let $a$ and $b$ be constants, and let $C$ be
+ \item Let $\mathbf{f}(x,y)$ and $\mathbf{g}(x,y)$ be vector fields, let $a$ and $b$ be constants, and let $C$ be
   a curve in $\Real{2}$. Show that
   \begin{displaymath}
-   \int_{C}\Dotprod{(a\,\textbf{f} \pm b\,\textbf{g})}{d\textbf{r}} ~=~ a \int_{C}\Dotprod{\textbf{f}}{d\textbf{r}} ~\pm~
-   b \int_{C}\Dotprod{\textbf{g}}{d\textbf{r}} ~.
+   \int_{C}\Dotprod{(a\,\mathbf{f} \pm b\,\mathbf{g})}{d\mathbf{r}} ~=~ a \int_{C}\Dotprod{\mathbf{f}}{d\mathbf{r}} ~\pm~
+   b \int_{C}\Dotprod{\mathbf{g}}{d\mathbf{r}} ~.
   \end{displaymath}
  \item Let $C$ be a curve whose arc length is $L$. Show that $\int_C 1\,ds = L$.
  \item Let $f(x,y)$ and $g(x,y)$ be continuously differentiable real-valued functions in a region $R$. Show that
   \begin{displaymath}
-   \oint_{C}\Dotprod{f\,\nabla g}{d\textbf{r}} ~=~ -\oint_{C}\Dotprod{g\,\nabla f}{d\textbf{r}}
+   \oint_{C}\Dotprod{f\,\nabla g}{d\mathbf{r}} ~=~ -\oint_{C}\Dotprod{g\,\nabla f}{d\mathbf{r}}
   \end{displaymath}
   for any closed curve $C$ in $R$. (\emph{Hint: Use Exercise 21 in Section 2.4.})
- \item Let $\textbf{f}(x,y)=\frac{-y}{x^2 + y^2}\,\textbf{i} + \frac{x}{x^2 + y^2}\,\textbf{j}$ for all $(x,y)\ne(0,0)$,
+ \item Let $\mathbf{f}(x,y)=\frac{-y}{x^2 + y^2}\,\mathbf{i} + \frac{x}{x^2 + y^2}\,\mathbf{j}$ for all $(x,y)\ne(0,0)$,
   and $C:$ $x=\cos t$, $y=\sin t$, $0\le t\le 2\pi$.
   \begin{enumerate}[(a)]
-   \item Show that \[\textbf{f} = \nabla F,\] for $F(x,y) = \tan^{-1}(y/x)$.
+   \item Show that \[\mathbf{f} = \nabla F,\] for $F(x,y) = \tan^{-1}(y/x)$.
    \item Show that \[\olineintvec{C}{f}{r} = 2\pi.\] Does this contradict Corollary
     \ref{cor:lineintsuffpath}? Explain.
   \end{enumerate}
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Let $g(x)$ and $h(y)$ be differentiable functions, and let $\textbf{f}(x,y)=h(y)\,\textbf{i} + g(x)\,\textbf{j}$.
-  Can \textbf{f} have a potential $F(x,y)$? If so, find it. You may assume that $F$ would be smooth. (\emph{Hint:
+ \item Let $g(x)$ and $h(y)$ be differentiable functions, and let $\mathbf{f}(x,y)=h(y)\,\mathbf{i} + g(x)\,\mathbf{j}$.
+  Can $\mathbf{f}$ have a potential $F(x,y)$? If so, find it. You may assume that $F$ would be smooth. (\emph{Hint:
   Consider the mixed partial derivatives of $F$.})
 \end{enumerate}
 \newpage
@@ -831,7 +824,7 @@ endpoints $A$ and $B$ are the same point, is the following important corollary:
 \section{Green's Theorem}
 We will now see a way of evaluating the line integral of a \emph{smooth} vector field
 around a simple closed curve. 
-A vector field $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ is \textbf{smooth} if its
+A vector field $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ is \textbf{smooth} if its
 component functions $P(x,y)$ and $Q(x,y)$ are smooth.\index{vector field!smooth}
 We will use
 \emph{Green's Theorem} (sometimes called \emph{Green's Theorem in the plane}) to relate the \emph{line} integral around
@@ -840,7 +833,7 @@ a closed curve with a \emph{double} integral over the region inside the curve:\i
 \statethm{thm:green}{
  {(\textbf{Green's Theorem})
   Let $R$ be a region in $\Real{2}$ whose boundary is a simple closed curve $C$ which is piecewise smooth.
-  Let $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ be a smooth vector field defined on both
+  Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ be a smooth vector field defined on both
   $R$ and $C$. Then
   \begin{equation}\label{eqn:green}
    \olineintvec{C}{f}{r} ~=~ \iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)
@@ -971,12 +964,12 @@ some of the difficulties involved when the boundary curve is ``complicated''.}
  \picskip{0}
  We actually already knew that the answer was zero. Recall from Example
  \ref{exmp:lineintexmpclosed} in Section 4.2 that the vector field
- $\textbf{f}(x,y) = ( x^2 + y^2 )\,\textbf{i} + 2xy\,\textbf{j}$ has a potential function
+ $\mathbf{f}(x,y) = ( x^2 + y^2 )\,\mathbf{i} + 2xy\,\mathbf{j}$ has a potential function
  $F(x,y)=\frac{1}{3}x^3 + xy^2$, and so $\olineintvec{C}{f}{r} = 0$ by Corollary \ref{cor:lineintsuffpath}.
  \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:greenhole}
- Let $\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$, where
+ Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$, where
  \begin{displaymath}
   P(x,y) = \frac{-y}{x^2 + y^2} \quad\text{and}\quad Q(x,y) = \frac{x}{x^2 + y^2} ~,
  \end{displaymath}
@@ -1097,7 +1090,7 @@ is the union of the regions $\ssub{R}{1}$ and $\ssub{R}{2}$, which are divided b
 lines. Those slits are part of the boundary of both $\ssub{R}{1}$ and $\ssub{R}{2}$, and we traverse then in the manner
 indicated by the arrows. Notice that along each slit
 the boundary of $\ssub{R}{1}$ is traversed in the opposite direction as that of $\ssub{R}{2}$, which means that the
-line integrals of \textbf{f} along those slits cancel each other out.
+line integrals of $\mathbf{f}$ along those slits cancel each other out.
 Since $\ssub{R}{1}$ and $\ssub{R}{2}$ do not have holes in them, then Green's Theorem holds in each subregion, so that
 \begin{displaymath}
  \olineintvec{\substack{\text{bdy}\\\text{of}~\ssub{R}{1}}}{f}{r} ~=~ \iint\limits_{\ssub{R}{1}}
@@ -1122,7 +1115,7 @@ which shows that Green's Theorem holds in the region $R$. A similar argument sho
 region with two holes shown in Figure \ref{fig:multconn}(b).
 
 We know from Corollary \ref{cor:lineintsuffpath} that when a smooth vector field
-$\textbf{f}(x,y) = P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ on a region $R$ (whose boundary is a piecewise smooth,
+$\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ on a region $R$ (whose boundary is a piecewise smooth,
 simple closed curve $C$) has a potential in $R$, then $\olineintvec{C}{f}{r} = 0$. And if the potential
 $F(x,y)$ is smooth in $R$, then
 $\frac{\partial F}{\partial x} = P$ and $\frac{\partial F}{\partial y} = Q$, and so we know that
@@ -1140,7 +1133,7 @@ shown:\index{path independence}\medskip
 \statecomment{
  {The following statements are equivalent for a simply connected region $R$ in $\Real{2}$:
   \begin{enumerate}[(a)]
-  \item $\textbf{f}(x,y) ~=~ P(x,y)\,\textbf{i} + Q(x,y)\,\textbf{j}$ has a smooth potential $F(x,y)$ in $R$
+  \item $\mathbf{f}(x,y) ~=~ P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ has a smooth potential $F(x,y)$ in $R$
   \item $\displaystyle{\lineintvec{C}{f}{r}}$ is independent of the path for any curve $C$ in $R$
   \item $\displaystyle{\olineintvec{C}{f}{r}} ~=~ 0$ for every simple closed curve $C$ in $R$
   \item $\dfrac{\partial P}{\partial y} = \dfrac{\partial Q}{\partial x}$ in $R$\quad
@@ -1160,19 +1153,19 @@ counterclockwise.
  \item $\displaystyle\oint_C 2y\,dx - 3x\,dy$; $C$ is the circle $x^2 + y^2 = 1$
  \item $\displaystyle\oint_C (e^{x^2} + y^2 )\,dx + (e^{y^2} + x^2 )\,dy$; $C$ is the boundary of the triangle with
   vertices $(0,0)$, $(4,0)$ and $(0,4)$
- \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = (y^2 + 3x^2 )\,\textbf{i} + 2xy\,\textbf{j}$?
+ \item Is there a potential $F(x,y)$ for $\mathbf{f}(x,y) = (y^2 + 3x^2 )\,\mathbf{i} + 2xy\,\mathbf{j}$?
   If so, find one.
- \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = (x^3 \cos (xy) + 2x \sin (xy))\,\textbf{i} +
-  x^2 y \cos (xy)\,\textbf{j}$? If so, find one.
- \item Is there a potential $F(x,y)$ for $\textbf{f}(x,y) = (8xy+3)\,\textbf{i} +
-  4(x^2 + y)\,\textbf{j}$? If so, find one.
+ \item Is there a potential $F(x,y)$ for $\mathbf{f}(x,y) = (x^3 \cos (xy) + 2x \sin (xy))\,\mathbf{i} +
+  x^2 y \cos (xy)\,\mathbf{j}$? If so, find one.
+ \item Is there a potential $F(x,y)$ for $\mathbf{f}(x,y) = (8xy+3)\,\mathbf{i} +
+  4(x^2 + y)\,\mathbf{j}$? If so, find one.
  \item Show that 
  \[\displaystyle\oint_C a\,dx + b\,dy = 0\]
  for any constants $a$, $b$ and any closed simple curve $C$.
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item For the vector field \textbf{f} as in Example \ref{exmp:greenhole}, show directly that
+ \item For the vector field $\mathbf{f}$ as in Example \ref{exmp:greenhole}, show directly that
  $\olineintvec{C}{f}{r} = 0$, where
  $C$ is the boundary of the annulus $R =\lbrace\,(x,y): 1/4 \le x^2 + y^2 \le 1\,\rbrace$ traversed so that $R$ is
  always on the left.
@@ -1181,13 +1174,29 @@ counterclockwise.
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item For a region $R$ bounded by a simple closed curve $C$, show that the area $A$ of $R$ is
+ \item\label{ex:green-area} For a region $R$ bounded by a simple closed curve $C$, show that the area $A$ of $R$ is
   \begin{displaymath}
    A ~=~ -\oint_C y\,dx ~=~ \oint_C x\,dy ~=~ \frac{1}{2}\oint_C x\,dy - y\,dx ~,
   \end{displaymath}
   where $C$ is traversed so that $R$ is always on the left.
   (\emph{Hint: Use Green's Theorem and the fact that $A = \iint_{R} 1\,dA$}.)
+\suspend{enumerate}
+Use Exercise~\ref{ex:green-area} to find the area bounded by curve.
+\resume{enumerate}[{[\bfseries 1.]}]
+
+\item The curve $(\sin t,\sin(2 t))$ for $0\le t\le \pi$ 
+
+
+\item The deltoid curve $(2\cos t+\cos 2t,2\sin t-\sin 2t)$ for $0\le t\le 2\pi$. 
+(The deltoid curve is shown on the diagram; you can assume without proof that it has no self-intesections.)
 \end{enumerate}
+
+\begin{center}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/deltoid(1)}
+%\lbl[rt]{22.5,15.5;$P$}
+\end{lpic}
+\end{center}
+
 \newpage
 %Begin Section 4.4
 \section{Surface Integrals and the Divergence Theorem}
@@ -1196,7 +1205,7 @@ In Section 4.1 we learned how to integrate along a curve. We will now learn how 
 Recall from Section 1.8 how we identified points $(x,y,z)$ on a curve $C$ in $\Real{3}$,
 parametrized by $x=x(t)$, $y=y(t)$, $z=z(t)$, $a \le t \le b$, with the terminal points of the position vector
 \begin{displaymath}
- \textbf{r}(t) = x(t) \textbf{i} + y(t) \textbf{j} + z(t) \textbf{k} ~~\text{for $t$ in $\ival{a}{b}$.}
+ \mathbf{r}(t) = x(t) \mathbf{i} + y(t) \mathbf{j} + z(t) \mathbf{k} ~~\text{for $t$ in $\ival{a}{b}$.}
 \end{displaymath}
 
 The idea behind a parametrization of a curve is that it ``transforms'' a subset of $\Real{1}$ (normally an interval
@@ -1228,7 +1237,7 @@ $\ival{a}{b}$) into a curve in $\Real{2}$ or $\Real{3}$ (see Figure \ref{fig:cur
    \node [below] at (7.1,2.1) {\small $(x(a),y(a),z(a))$};
    \node [above right] at (8.9,2.05) {\small $(x(t),y(t),z(t))$};
    \node [above] at (11.35,0.6) {\small $(x(b),y(b),z(b))$};
-   \node [below right] at (7.5,1.2) {\small $\textbf{r}(t)$};
+   \node [below right] at (7.5,1.2) {\small $\mathbf{r}(t)$};
    \node [left] at (9.4,1.4) {\small $C$};
    \fill (6.75,2.1) circle (2pt);
    \fill (8.9,2.05) circle (2pt);
@@ -1281,7 +1290,7 @@ $\Real{2}$ (see Figure \ref{fig:surfparam}).
    \node [below] at (10.3,3.6) {\small $\Sigma$};
    \fill (9,3.05) circle (2pt);
    \draw [black,line width=1.2pt,-latex] (8,1) -- (8.975,3);
-   \node [below right] at (8.43,1.95) {\small $\textbf{r}(u,v)$};
+   \node [below right] at (8.43,1.95) {\small $\mathbf{r}(u,v)$};
    \draw [line width=1.5pt,-latex]  (4.5,2.7) to[out=30,in=150] (6.5,2.7);
    \node [below] at (5.5,2.7) {\small $x=x(u,v)$};
    \node [below] at (5.5,2.3) {\small $y=y(u,v)$};
@@ -1294,18 +1303,18 @@ $\Real{2}$ (see Figure \ref{fig:surfparam}).
 
 In this case, the position vector of a point on the surface $\Sigma$ is given by the vector-valued function
 \begin{displaymath}
- \textbf{r}(u,v) ~=~ x(u,v) \textbf{i} ~+~ y(u,v) \textbf{j} ~+~ z(u,v) \textbf{k} ~~\text{for $(u,v)$ in $R$.}
+ \mathbf{r}(u,v) ~=~ x(u,v) \mathbf{i} ~+~ y(u,v) \mathbf{j} ~+~ z(u,v) \mathbf{k} ~~\text{for $(u,v)$ in $R$.}
 \end{displaymath}
 
-Since $\textbf{r}(u,v)$ is a function of two variables, define the partial derivatives
-$\frac{\partial \textbf{r}}{\partial u}$ and $\frac{\partial \textbf{r}}{\partial v}$ for $(u,v)$ in $R$ by
+Since $\mathbf{r}(u,v)$ is a function of two variables, define the partial derivatives
+$\frac{\partial \mathbf{r}}{\partial u}$ and $\frac{\partial \mathbf{r}}{\partial v}$ for $(u,v)$ in $R$ by
 \begin{align*}
- \frac{\partial \textbf{r}}{\partial u}(u,v) ~&=~
- \frac{\partial x}{\partial u}(u,v) \textbf{i} ~+~ \frac{\partial y}{\partial u}(u,v) \textbf{j} ~+~
- \frac{\partial z}{\partial u}(u,v) \textbf{k} ~,~~\text{and}\smallskip\\
- \frac{\partial \textbf{r}}{\partial v}(u,v) ~&=~
- \frac{\partial x}{\partial v}(u,v) \textbf{i} ~+~ \frac{\partial y}{\partial v}(u,v) \textbf{j} ~+~
- \frac{\partial z}{\partial v}(u,v) \textbf{k} ~.
+ \frac{\partial \mathbf{r}}{\partial u}(u,v) ~&=~
+ \frac{\partial x}{\partial u}(u,v) \mathbf{i} ~+~ \frac{\partial y}{\partial u}(u,v) \mathbf{j} ~+~
+ \frac{\partial z}{\partial u}(u,v) \mathbf{k} ~,~~\text{and}\smallskip\\
+ \frac{\partial \mathbf{r}}{\partial v}(u,v) ~&=~
+ \frac{\partial x}{\partial v}(u,v) \mathbf{i} ~+~ \frac{\partial y}{\partial v}(u,v) \mathbf{j} ~+~
+ \frac{\partial z}{\partial v}(u,v) \mathbf{k} ~.
 \end{align*}
 
 The parametrization of $\Sigma$ can be thought of as ``transforming'' a region in $\Real{2}$ (in the $uv$-plane) into
@@ -1314,9 +1323,9 @@ on the idea of ``patching'' the region $R$ onto $\Sigma$ in the grid-like manner
 
 In fact, those gridlines in $R$ lead us to how we will define a surface integral over $\Sigma$. Along the
 vertical gridlines in $R$, the variable $u$ is constant. So those lines get mapped to curves on $\Sigma$, and the
-variable $u$ is constant along the position vector $\textbf{r}(u,v)$. Thus, the tangent vector to those curves at a
-point $(u,v)$ is $\frac{\partial \textbf{r}}{\partial v}$. Similarly, the horizontal gridlines in $R$ get mapped to
-curves on $\Sigma$ whose tangent vectors are $\frac{\partial \textbf{r}}{\partial u}$.
+variable $u$ is constant along the position vector $\mathbf{r}(u,v)$. Thus, the tangent vector to those curves at a
+point $(u,v)$ is $\frac{\partial \mathbf{r}}{\partial v}$. Similarly, the horizontal gridlines in $R$ get mapped to
+curves on $\Sigma$ whose tangent vectors are $\frac{\partial \mathbf{r}}{\partial u}$.
 
 Now take a point $(u,v)$ in $R$ as, say,
 the lower left corner of one of the rectangular grid sections in $R$, as shown in Figure \ref{fig:surfparam}. Suppose
@@ -1325,37 +1334,37 @@ rectangle are $(u,v)$, $(u+\Delta u,v)$, $(u+\Delta u,v+\Delta v)$ and $(u,v+\De
 So the area of that
 rectangle is $A = \Delta u\,\Delta v$. Then that rectangle gets mapped by the parametrization onto some section of the
 surface $\Sigma$ which, for $\Delta u$ and $\Delta v$ small enough, will have a surface area (call it $d\sigma$) that
-is very close to the area of the parallelogram which has adjacent sides $\textbf{r}(u+\Delta u,v) - \textbf{r}(u,v)$
+is very close to the area of the parallelogram which has adjacent sides $\mathbf{r}(u+\Delta u,v) - \mathbf{r}(u,v)$
 (corresponding to the line segment from $(u,v)$ to $(u+\Delta u,v)$ in $R$) and
-$\textbf{r}(u,v+\Delta v) - \textbf{r}(u,v)$ (corresponding to the line segment from $(u,v)$ to $(u,v+\Delta v)$ in
+$\mathbf{r}(u,v+\Delta v) - \mathbf{r}(u,v)$ (corresponding to the line segment from $(u,v)$ to $(u,v+\Delta v)$ in
 $R$). But by combining our usual notion of a partial derivative (see Definition \ref{defn:partial} in
 Section 2.2) with that of the derivative of a vector-valued function (see Definition \ref{defn:veccont} in
 Section 1.8) applied to a function of two variables, we have
 \begin{align*}
- \frac{\partial \textbf{r}}{\partial u} ~&\approx~ \frac{\textbf{r}(u+\Delta u,v) - \textbf{r}(u,v)}{\Delta u}
+ \frac{\partial \mathbf{r}}{\partial u} ~&\approx~ \frac{\mathbf{r}(u+\Delta u,v) - \mathbf{r}(u,v)}{\Delta u}
  ~,~~\text{and}\smallskip\\
- \frac{\partial \textbf{r}}{\partial v} ~&\approx~ \frac{\textbf{r}(u,v+\Delta v) - \textbf{r}(u,v)}{\Delta v} ~,
+ \frac{\partial \mathbf{r}}{\partial v} ~&\approx~ \frac{\mathbf{r}(u,v+\Delta v) - \mathbf{r}(u,v)}{\Delta v} ~,
 \end{align*}
 and so the surface area element $d\sigma$ is approximately
 \begin{displaymath}
- \Norm{\Crossprod{(\textbf{r}(u+\Delta u,v) - \textbf{r}(u,v))}{(\textbf{r}(u,v+\Delta v) - \textbf{r}(u,v))}} \approx
- \NORM{\Crossprod{(\Delta u \frac{\partial \textbf{r}}{\partial u})}{(\Delta v\frac{\partial \textbf{r}}{\partial v})}}
- = \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}}\,
+ \Norm{\Crossprod{(\mathbf{r}(u+\Delta u,v) - \mathbf{r}(u,v))}{(\mathbf{r}(u,v+\Delta v) - \mathbf{r}(u,v))}} \approx
+ \NORM{\Crossprod{(\Delta u \frac{\partial \mathbf{r}}{\partial u})}{(\Delta v\frac{\partial \mathbf{r}}{\partial v})}}
+ = \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}}\,
  \Delta u \, \Delta v
 \end{displaymath}
 by Theorem \ref{thm:crossarea} in Section 1.4.
 Thus, the total surface area $S$ of $\Sigma$ is approximately the sum of all the quantities
-$\Norm{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}}\,\Delta u\,\Delta v$,
+$\Norm{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}}\,\Delta u\,\Delta v$,
 summed over the rectangles in $R$. Taking the limit of that sum as the diagonal of the largest rectangle goes to $0$
 gives
 \begin{equation}
- S ~=~ \iint\limits_{R}\,\NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}}
+ S ~=~ \iint\limits_{R}\,\NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}}
  \,du\,dv ~.
 \end{equation}
 We will write the double integral on the right using the special notation
 \begin{equation}
  \iint\limits_{\Sigma} d\sigma ~=~
- \iint\limits_{R}\,\NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}}
+ \iint\limits_{R}\,\NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}}
  \,du\,dv ~.
 \end{equation}
 This is a special case of a \emph{surface integral} over the surface $\Sigma$, where the surface area element
@@ -1364,12 +1373,13 @@ in $\Real{3}$, we have the following:
 
 \statedefn{defn:surfintreal}{
  {Let $\Sigma$ be a surface in $\Real{3}$ parametrized by $x=x(u,v)$, $y=y(u,v)$,\\$z=z(u,v)$, for $(u,v)$ in some
-  region $R$ in $\Real{2}$. Let $\textbf{r}(u,v) = x(u,v) \textbf{i} + y(u,v) \textbf{j} + z(u,v) \textbf{k}$ be the
+  region $R$ in $\Real{2}$. 
+  Let $\mathbf{r}(u,v) = x(u,v) \mathbf{i} + y(u,v) \mathbf{j} + z(u,v) \mathbf{k}$ be the
   position vector for any point on $\Sigma$, and let $f(x,y,z)$ be a real-valued function defined on some subset
   of $\Real{3}$ that contains $\Sigma$. The \textbf{surface integral} of $f(x,y,z)$ over $\Sigma$ is
   \begin{equation}\label{eqn:surfintreal}
    \iint\limits_{\Sigma} f(x,y,z)\,d\sigma ~=~ \iint\limits_{R} f(x(u,v),y(u,v),z(u,v))\,
-   \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}}\,du\,dv ~.
+   \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}}\,du\,dv ~.
   \end{equation}
   In particular, the surface area $S$ of $\Sigma$ is\index{integral!surface}\index{surface integral}
   \begin{equation}
@@ -1422,30 +1432,30 @@ Figure \ref{fig:torus}(b)). Thus, the torus can be parametrized as:
 \end{displaymath}
 So for the position vector
 \begin{align*}
- \textbf{r}(u,v) ~&=~ x(u,v) \textbf{i} ~+~ y(u,v) \textbf{j} ~+~ z(u,v) \textbf{k}\\
- &=~ (b+a\cos u)\cos v \,\textbf{i} ~+~ (b+a\cos u)\sin v \,\textbf{j} ~+~ a\sin u \,\textbf{k}
+ \mathbf{r}(u,v) ~&=~ x(u,v) \mathbf{i} ~+~ y(u,v) \mathbf{j} ~+~ z(u,v) \mathbf{k}\\
+ &=~ (b+a\cos u)\cos v \,\mathbf{i} ~+~ (b+a\cos u)\sin v \,\mathbf{j} ~+~ a\sin u \,\mathbf{k}
 \end{align*}
 we see that
 \begin{align*}
- \frac{\partial \textbf{r}}{\partial u} ~&=~
-  -a\sin u\,\cos v \,\textbf{i} ~-~ a\sin u\,\sin v \,\textbf{j} ~+~ a\cos u \,\textbf{k}\\[6pt]
- \frac{\partial \textbf{r}}{\partial v} ~&=~
-  -(b+a\cos u)\sin v \,\textbf{i} ~+~ (b+a\cos u)\cos v \,\textbf{j} ~+~ 0 \textbf{k} ~,
+ \frac{\partial \mathbf{r}}{\partial u} ~&=~
+  -a\sin u\,\cos v \,\mathbf{i} ~-~ a\sin u\,\sin v \,\mathbf{j} ~+~ a\cos u \,\mathbf{k}\\[6pt]
+ \frac{\partial \mathbf{r}}{\partial v} ~&=~
+  -(b+a\cos u)\sin v \,\mathbf{i} ~+~ (b+a\cos u)\cos v \,\mathbf{j} ~+~ 0 \mathbf{k} ~,
 \end{align*}
 and so computing the cross product gives
 \begin{displaymath}
- \Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}} ~=~
-  -a(b+a\cos u)\cos v\,\cos u \,\textbf{i} ~-~ a(b+a\cos u)\sin v\,\cos u\,\textbf{j} ~-~ a(b+a\cos u)\sin u \,\textbf{k} ~,
+ \Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}} ~=~
+  -a(b+a\cos u)\cos v\,\cos u \,\mathbf{i} ~-~ a(b+a\cos u)\sin v\,\cos u\,\mathbf{j} ~-~ a(b+a\cos u)\sin u \,\mathbf{k} ~,
 \end{displaymath}
 which has magnitude
 \begin{displaymath}
- \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}} ~=~ a(b+a\cos u) ~.
+ \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}} ~=~ a(b+a\cos u) ~.
 \end{displaymath}
 Thus, the surface area of $T$ is
 \begin{align*}
  S ~&=~ \iint\limits_{\Sigma} 1\,d\sigma\\[6pt]
-  &=~ \int_0^{2\pi} \int_0^{2\pi}\,\NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial
-  \textbf{r}}{\partial v}}}\,du\,dv\\[6pt]
+  &=~ \int_0^{2\pi} \int_0^{2\pi}\,\NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial
+  \mathbf{r}}{\partial v}}}\,du\,dv\\[6pt]
   &=~ \int_0^{2\pi} \int_0^{2\pi} a(b+a\cos u)\,du\,dv\\[6pt]
   &=~ \int_0^{2\pi} \left( abu + a^2 \sin u \,\Big|_{u=0}^{u=2\pi}\,\right)\,dv\\[6pt]
   &=~ \int_0^{2\pi} 2\pi ab\,dv\\
@@ -1455,16 +1465,16 @@ Thus, the surface area of $T$ is
 \hrule width \textwidth height 0.5pt
 \medskip
 
-Since $\frac{\partial \textbf{r}}{\partial u}$ and $\frac{\partial \textbf{r}}{\partial v}$ are tangent to the surface
+Since $\frac{\partial \mathbf{r}}{\partial u}$ and $\frac{\partial \mathbf{r}}{\partial v}$ are tangent to the surface
 $\Sigma$ (i.e. lie in the tangent plane to $\Sigma$ at each point on $\Sigma$), then their cross product
-$\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}$ is perpendicular to the
+$\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}$ is perpendicular to the
 tangent plane to the surface at each point of $\Sigma$. Thus,
 
 \begin{displaymath}
- \iint\limits_{\Sigma} f(x,y,z)\,d\sigma = \iint\limits_{R} f(x(u,v),y(u,v),z(u,v))\,\norm{\textbf{n}}\,d\sigma ~,
+ \iint\limits_{\Sigma} f(x,y,z)\,d\sigma = \iint\limits_{R} f(x(u,v),y(u,v),z(u,v))\,\norm{\mathbf{n}}\,d\sigma ~,
 \end{displaymath}
-where $\textbf{n} = \Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}$.
-We say that \textbf{n} is a \textbf{normal vector} to $\Sigma$.\index{vector!normal}
+where $\mathbf{n} = \Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}$.
+We say that $\mathbf{n}$ is a \textbf{normal vector} to $\Sigma$.\index{vector!normal}
 
 \piccaption[]{}\parpic[r]{\begin{tikzpicture}
  \usetikzlibrary{arrows}
@@ -1494,14 +1504,14 @@ With this idea in mind, we make the following definition of a surface integral o
 \emph{vector field} over a surface:\index{outward normal}
 
 \statedefn{defn:surfintvec}{
- {Let $\Sigma$ be a surface in $\Real{3}$ and let $\textbf{f}(x,y,z) = \ssub{f}{1}(x,y,z) \textbf{i} +
-  \ssub{f}{2}(x,y,z) \textbf{j} + \ssub{f}{3}(x,y,z) \textbf{k}$ be a vector field defined on some subset
-  of $\Real{3}$ that contains $\Sigma$. The \textbf{surface integral} of \textbf{f} over $\Sigma$ is
+ {Let $\Sigma$ be a surface in $\Real{3}$ and let $\mathbf{f}(x,y,z) = \ssub{f}{1}(x,y,z) \mathbf{i} +
+  \ssub{f}{2}(x,y,z) \mathbf{j} + \ssub{f}{3}(x,y,z) \mathbf{k}$ be a vector field defined on some subset
+  of $\Real{3}$ that contains $\Sigma$. The \textbf{surface integral} of $\mathbf{f}$ over $\Sigma$ is
   \begin{equation}\label{eqn:surfintvec}
-   \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}} ~=~
-   \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{\textbf{n}}\,d\sigma ~,
+   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~=~
+   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{\mathbf{n}}\,d\sigma ~,
   \end{equation}
-  where, at any point on $\Sigma$, \textbf{n} is the outward unit normal vector to $\Sigma$.}
+  where, at any point on $\Sigma$, $\mathbf{n}$ is the outward unit normal vector to $\Sigma$.}
 }
 
 Note in the above definition that the dot product inside the integral on the right is a
@@ -1510,9 +1520,9 @@ real-valued function, and hence we can use Definition \ref{defn:surfintreal} to 
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:surfintex}
- Evaluate the surface integral $\iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}$, where
- $\textbf{f}(x,y,z) = yz\textbf{i} + xz\textbf{j} + xy\textbf{k}$ and $\Sigma$ is the part of the plane $x+y+z=1$
- with $x \ge 0$, $y \ge 0$, and $z \ge 0$, with the outward unit normal $\textbf{n}$ pointing in the positive $z$
+ Evaluate the surface integral $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$, where
+ $\mathbf{f}(x,y,z) = yz\mathbf{i} + xz\mathbf{j} + xy\mathbf{k}$ and $\Sigma$ is the part of the plane $x+y+z=1$
+ with $x \ge 0$, $y \ge 0$, and $z \ge 0$, with the outward unit normal $\mathbf{n}$ pointing in the positive $z$
  direction (see Figure 4.4.5).\smallskip
  \piccaption[]{}\parpic[r]{\begin{tikzpicture}
   \usetikzlibrary{arrows}
@@ -1532,10 +1542,10 @@ real-valued function, and hence we can use Definition \ref{defn:surfintreal} to 
   \draw [dashed] (0,0,0.7) -- (0.7,0,0.7);
   \fill (0.48,0.48) circle (2pt);
   \draw [line width=1.2pt,-latex] (0.48,0.48) -- (1.1,1.1);
-  \node [above right] at (1.02,1.02) {\small $\textbf{n}$};
+  \node [above right] at (1.02,1.02) {\small $\mathbf{n}$};
  \end{tikzpicture}}
- \par\noindent \emph{Solution:} Since the vector $\textbf{v} = (1,1,1)$ is normal to the plane $x+y+z=1$ (why?), then
- dividing \textbf{v} by its length yields the outward unit normal vector $\textbf{n} = \left( \frac{1}{\sqrt{3}},
+ \par\noindent \emph{Solution:} Since the vector $\mathbf{v} = (1,1,1)$ is normal to the plane $x+y+z=1$ (why?), then
+ dividing $\mathbf{v}$ by its length yields the outward unit normal vector $\mathbf{n} = \left( \frac{1}{\sqrt{3}},
  \frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}} \right)$. We now need to parametrize $\Sigma$. As we can see from Figure 4.4.5,
  projecting $\Sigma$ onto the $xy$-plane yields a triangular region
  $R= \lbrace\,(x,y): 0 \le x \le 1,~ 0 \le y \le 1-x\,\rbrace$. Thus, using $(u,v)$ instead of $(x,y)$, we see that
@@ -1544,26 +1554,26 @@ real-valued function, and hence we can use Definition \ref{defn:surfintreal} to 
  \end{displaymath}
  is a parametrization of $\Sigma$ over $R$ (since $z=1-(x+y)$ on $\Sigma$). So on $\Sigma$,
  \begin{align*}
-  \Dotprod{\textbf{f}}{\textbf{n}} ~&=~
+  \Dotprod{\mathbf{f}}{\mathbf{n}} ~&=~
    \Dotprod{(yz,xz,xy)}{\left( \frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}} \right)}
    ~=~ \frac{1}{\sqrt{3}}(yz+xz+xy)\\[8pt]
    &=~ \frac{1}{\sqrt{3}}((x+y)z+xy)
    ~=~ \frac{1}{\sqrt{3}}((u+v)(1-(u+v))+uv)\\[8pt]
    &=~ \frac{1}{\sqrt{3}}((u+v)- (u+v)^2 + uv)
  \end{align*}
- for $(u,v)$ in $R$, and for $\textbf{r}(u,v)=x(u,v)\textbf{i} + y(u,v)\textbf{j} + z(u,v)\textbf{k} = u\textbf{i} +
- v\textbf{j} + (1-(u+v))\textbf{k}$ we have
+ for $(u,v)$ in $R$, and for $\mathbf{r}(u,v)=x(u,v)\mathbf{i} + y(u,v)\mathbf{j} + z(u,v)\mathbf{k} = u\mathbf{i} +
+ v\mathbf{j} + (1-(u+v))\mathbf{k}$ we have
  \begin{displaymath}
-  \Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}} ~=~
+  \Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}} ~=~
    \Crossprod{(1,0,-1)}{(0,1,-1)} ~=~ (1,1,1) \quad\Rightarrow\quad
-   \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}} = \sqrt{3}~.
+   \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}} = \sqrt{3}~.
  \end{displaymath}
  Thus, integrating over $R$ using vertical slices (e.g. as indicated by the dashed line in Figure 4.4.5) gives
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}} ~&=~
-   \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{\textbf{n}}\,d\sigma\\[6pt]
-   &=~ \iint\limits_{R} (\Dotprod{\textbf{f}(x(u,v),y(u,v),z(u,v))}{\textbf{n}})\,
-    \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial u}}{\frac{\partial \textbf{r}}{\partial v}}}\,dv\,du\\[6pt]
+  \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~&=~
+   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{\mathbf{n}}\,d\sigma\\[6pt]
+   &=~ \iint\limits_{R} (\Dotprod{\mathbf{f}(x(u,v),y(u,v),z(u,v))}{\mathbf{n}})\,
+    \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}}\,dv\,du\\[6pt]
    &=~ \int_0^1 \int_0^{1-u} \frac{1}{\sqrt{3}}((u+v)- (u+v)^2 + uv) \sqrt{3}\,dv\,du\\[8pt]
    &=~ \int_0^1 \left( \frac{(u+v)^2}{2} - \frac{(u+v)^3}{3} + \frac{uv^2}{2}\,\Bigg|_{v=0}^{v=1-u} \right)\,du\\[8pt]
    &=~ \int_0^1 \left( \frac{1}{6} + \frac{u}{2} - \frac{3u^2}{2} + \frac{5u^3}{6} \right)\,du\\[8pt]
@@ -1580,19 +1590,19 @@ spheres, cubes, and ellipsoids are closed surfaces, but planes and paraboloids a
 
 \statethm{thm:divergence}{
  {(\textbf{Divergence Theorem})\,\index{Divergence Theorem}
-  Let $\Sigma$ be a closed surface in $\Real{3}$ which bounds a solid $S$, and let $\textbf{f}(x,y,z) =
- \ssub{f}{1}(x,y,z) \textbf{i} +
-  \ssub{f}{2}(x,y,z) \textbf{j} + \ssub{f}{3}(x,y,z) \textbf{k}$ be a vector field defined on some subset
+  Let $\Sigma$ be a closed surface in $\Real{3}$ which bounds a solid $S$, and let $\mathbf{f}(x,y,z) =
+ \ssub{f}{1}(x,y,z) \mathbf{i} +
+  \ssub{f}{2}(x,y,z) \mathbf{j} + \ssub{f}{3}(x,y,z) \mathbf{k}$ be a vector field defined on some subset
   of $\Real{3}$ that contains $\Sigma$. Then
   \begin{equation}\label{eqn:divergence}
-   \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}} ~=~ \iiint\limits_{S} \text{div}~\textbf{f} ~dV ~,
+   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~=~ \iiint\limits_{S} \text{div}~\mathbf{f} ~dV ~,
   \end{equation}
   where
   \begin{equation}\label{eqn:div}
-   \text{div}~\textbf{f} ~=~ \frac{\partial \ssub{f}{1}}{\partial x} + \frac{\partial \ssub{f}{2}}{\partial y} +
+   \text{div}~\mathbf{f} ~=~ \frac{\partial \ssub{f}{1}}{\partial x} + \frac{\partial \ssub{f}{2}}{\partial y} +
    \frac{\partial \ssub{f}{3}}{\partial z}\index{divergence}
   \end{equation}
-  is called the \textbf{divergence} of \textbf{f}.}
+  is called the \textbf{divergence} of $\mathbf{f}$.}
 }
 
 The proof of the Divergence Theorem is very similar to the proof of Green's Theorem, i.e. it is first proved for
@@ -1603,12 +1613,12 @@ laterally by one or more surfaces. The proof can then be extended to more genera
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Evaluate $\iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}$, where $\textbf{f}(x,y,z) = x\textbf{i} +
-  y\textbf{j} + z\textbf{k}$ and $\Sigma$ is the unit sphere $x^2 + y^2 + z^2 = 1$.\smallskip
- \par\noindent \emph{Solution:} We see that $\text{div}~\textbf{f} = 1+1+1=3$, so
+ Evaluate $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$, where $\mathbf{f}(x,y,z) = x\mathbf{i} +
+  y\mathbf{j} + z\mathbf{k}$ and $\Sigma$ is the unit sphere $x^2 + y^2 + z^2 = 1$.\smallskip
+ \par\noindent \emph{Solution:} We see that $\text{div}~\mathbf{f} = 1+1+1=3$, so
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}} ~&=~
-  \iiint\limits_{S} \text{div}~\textbf{f} ~dV
+  \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~&=~
+  \iiint\limits_{S} \text{div}~\mathbf{f} ~dV
   ~=~ \iiint\limits_{S} 3 ~dV\\
   &=~ 3 \iiint\limits_{S} 1 ~dV
   ~=~ 3\,\text{vol}(S) ~=~ 3\cdot \frac{4\pi (1)^3}{3} ~=~ 4\pi ~.
@@ -1617,20 +1627,21 @@ laterally by one or more surfaces. The proof can then be extended to more genera
 \hrule width \textwidth height 0.5pt
 \medskip
 
-In physical applications, the surface integral $\iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}$ is often
-referred to as the \textbf{flux} of \textbf{f} through the surface $\Sigma$. For example, if \textbf{f}
+In physical applications, the surface integral $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$ is often
+referred to as the \textbf{flux} of $\mathbf{f}$ through the surface $\Sigma$. For example, if $\mathbf{f}$
 represents the velocity field of a fluid, then the flux
 is the net quantity of fluid to flow through the surface $\Sigma$ per unit time.\index{flux} A
 positive flux means there is a net flow \emph{out} of the surface (i.e. in the direction of the outward
-unit normal vector \textbf{n}), while a negative flux indicates a net flow inward (in the direction of
-$-\textbf{n}$).
+unit normal vector $\mathbf{n}$), while a negative flux indicates a net flow inward (in the direction of
+$-\mathbf{n}$).
 
-The term divergence comes from interpreting div \textbf{f} as a measure of how much a vector field ``diverges''
-from a point. This is best seen by using another definition of div \textbf{f} which is
+The term divergence comes from interpreting $\text{div}~\mathbf{f}$ as a measure of how much a vector field ``diverges''
+from a point. 
+This is best seen by using another definition of div $\mathbf{f}$ which is
 equivalent\footnote{See \cite{sch}, p. 36--39, for an intuitive discussion of this.} to the definition given by
 formula (\ref{eqn:div}). Namely, for a point $(x,y,z)$ in $\Real{3}$,
 \begin{equation}\label{eqn:divalt}
- \text{div}~\textbf{f}(x,y,z) ~=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}} ~,
+ \text{div}~\mathbf{f}(x,y,z) ~=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~,
 \end{equation}
 where $V$ is the volume enclosed by a closed surface $\Sigma$ around the point $(x,y,z)$. In the limit, $V \to 0$ means
 that we take smaller and smaller closed surfaces around $(x,y,z)$, which means that the volumes they enclose are going
@@ -1642,13 +1653,13 @@ often called \emph{solenoidal}\index{solenoidal} fields.
 The following theorem is a simple consequence of formula (\ref{eqn:divalt}).
 
 \statethm{thm:divzero}{
- {If the flux of a vector field \textbf{f} is zero through every closed surface containing a given point,
-  then $\text{div}~\textbf{f} = 0$ at that point.}
+ {If the flux of a vector field $\mathbf{f}$ is zero through every closed surface containing a given point,
+  then $\text{div}~\mathbf{f} = 0$ at that point.}
 }
 \begin{proofbar}\begin{proof}[Proof:]
  By formula (\ref{eqn:divalt}), at the given point $(x,y,z)$ we have 
  \begin{align*}
-  \text{div}~\textbf{f}(x,y,z) ~&=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}
+  \text{div}~\mathbf{f}(x,y,z) ~&=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}
    ~~~\text{for closed surfaces $\Sigma$ containing $(x,y,z)$, so}\\
     &=~ \lim_{V \to 0} \frac{1}{V} \,\, (0) ~~~\text{by our assumption that the flux through each $\Sigma$ is
     zero, so}\\[6pt]
@@ -1659,7 +1670,7 @@ The following theorem is a simple consequence of formula (\ref{eqn:divalt}).
 
 Lastly, we note that sometimes the notation
 \begin{displaymath}
- \oiint\limits_{\Sigma} f(x,y,z)\,d\sigma \quad\text{and}\quad \oiint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}
+ \oiint\limits_{\Sigma} f(x,y,z)\,d\sigma \quad\text{and}\quad \oiint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}
 \end{displaymath}
 is used to denote surface integrals of scalar and vector fields, respectively, over closed
 surfaces.\index{$\oiint\limits_{\Sigma}$} Especially in physics texts, it is common to see simply
@@ -1668,14 +1679,14 @@ $\oint\limits_{\Sigma}$ instead of $\oiint\limits_{\Sigma}$.
 \startexercises\label{sec4dot4}
 \probs{A}
 \par\noindent For Exercises 1--4, use the Divergence Theorem to evaluate the surface integral
-$\iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}$ of the given vector field $\textbf{f}(x,y,z)$ over the
+$\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$ of the given vector field $\mathbf{f}(x,y,z)$ over the
 surface $\Sigma$.
 \begin{enumerate}[\bfseries 1.]
- \item $\textbf{f}(x,y,z) = x\textbf{i} + 2y\textbf{j} + 3z\textbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 9$
- \item $\textbf{f}(x,y,z) = x\textbf{i} + y\textbf{j} + z\textbf{k}$, $\Sigma:$ boundary of the solid cube
+ \item $\mathbf{f}(x,y,z) = x\mathbf{i} + 2y\mathbf{j} + 3z\mathbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 9$
+ \item $\mathbf{f}(x,y,z) = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$, $\Sigma:$ boundary of the solid cube
   $S = \lbrace\, (x,y,z): 0 \le x,y,z \le 1 \,\rbrace$
- \item $\textbf{f}(x,y,z) = x^3\textbf{i} + y^3\textbf{j} + z^3\textbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 1$
- \item $\textbf{f}(x,y,z) = 2\textbf{i} + 3\textbf{j} + 5\textbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 1$
+ \item $\mathbf{f}(x,y,z) = x^3\mathbf{i} + y^3\mathbf{j} + z^3\mathbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 1$
+ \item $\mathbf{f}(x,y,z) = 2\mathbf{i} + 3\mathbf{j} + 5\mathbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 1$
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
@@ -1683,9 +1694,9 @@ surface $\Sigma$.
  \item Evaluate the surface integral from Exercise 2 \emph{without} using the Divergence Theorem, i.e. using only
   Definition \ref{defn:surfintreal}, as in Example \ref{exmp:surfintex}. Note that there will be a different
   outward unit normal vector to each of the six faces of the cube.
- \item Evaluate the surface integral $\iint\limits_{\Sigma} \Dotprod{\textbf{f}}{d\bm{\sigma}}$, where
-  $\textbf{f}(x,y,z) = x^2 \textbf{i} + xy\textbf{j} + z\textbf{k}$ and $\Sigma$ is the part of the plane $6x+3y+2z=6$
-  with $x \ge 0$, $y \ge 0$, and $z \ge 0$, with the outward unit normal $\textbf{n}$ pointing in the positive $z$
+ \item Evaluate the surface integral $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$, where
+  $\mathbf{f}(x,y,z) = x^2 \mathbf{i} + xy\mathbf{j} + z\mathbf{k}$ and $\Sigma$ is the part of the plane $6x+3y+2z=6$
+  with $x \ge 0$, $y \ge 0$, and $z \ge 0$, with the outward unit normal $\mathbf{n}$ pointing in the positive $z$
   direction.
  \item Use a surface integral to show that the surface area of a sphere of radius $r$ is $4\pi r^2$. (\emph{Hint: Use
   spherical coordinates to parametrize the sphere.})
@@ -1749,17 +1760,17 @@ Vector fields in $\Real{3}$ are defined in a similar fashion to those in $\Real{
 define the line integral of a vector field along a curve in $\Real{3}$.
 
 \statedefn{defn:lineintvec3}{
- For a vector field $\textbf{f}(x,y,z) = P(x,y,z)\,\textbf{i} + Q(x,y,z)\,\textbf{j} + R(x,y,z)\,\textbf{k}$ and
+ For a vector field $\mathbf{f}(x,y,z) = P(x,y,z)\,\mathbf{i} + Q(x,y,z)\,\mathbf{j} + R(x,y,z)\,\mathbf{k}$ and
  a curve $C$ in $\Real{3}$ with a smooth parametrization $x=x(t)$, $y=y(t)$, $z=z(t)$, $a \le t \le b$, the \textbf{line
  integral of f along} $C$ is
  \begin{align}
-  \int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~&=~ \int_C P(x,y,z)\,dx ~+~ \int_C Q(x,y,z)\,dy ~+~ \int_C R(x,y,z)\,dz\\
-   &=~ \int_a^b \Dotprod{\textbf{f}(x(t),y(t),z(t))}{\textbf{r}\,'(t)}\,dt ~,
+  \int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~&=~ \int_C P(x,y,z)\,dx ~+~ \int_C Q(x,y,z)\,dy ~+~ \int_C R(x,y,z)\,dz\\
+   &=~ \int_a^b \Dotprod{\mathbf{f}(x(t),y(t),z(t))}{\mathbf{r}\,'(t)}\,dt ~,
  \end{align}
- where $\textbf{r}(t)= x(t)\,\textbf{i} + y(t)\,\textbf{j} + z(t)\,\textbf{k}$ is the position vector for points on $C$.
+ where $\mathbf{r}(t)= x(t)\,\mathbf{i} + y(t)\,\mathbf{j} + z(t)\,\mathbf{k}$ is the position vector for points on $C$.
 }
 
-Similar to the two-variable case, if $\textbf{f}(x,y,z)$ represents the force applied to an object at a point $(x,y,z)$
+Similar to the two-variable case, if $\mathbf{f}(x,y,z)$ represents the force applied to an object at a point $(x,y,z)$
 then the line integral $\lineintvec{C}{f}{r}$ represents the work done by that force in moving the object along the
 curve $C$ in $\Real{3}$.\index{work}
 
@@ -1767,13 +1778,13 @@ Some of the most important results we will need for line integrals in $\Real{3}$
 proofs are similar to their two-variable equivalents).
 
 \statethm{thm:lineinttangent3}{
- For a vector field $\textbf{f}(x,y,z) = P(x,y,z)\,\textbf{i} + Q(x,y,z)\,\textbf{j} + R(x,y,z)\,\textbf{k}$ and
+ For a vector field $\mathbf{f}(x,y,z) = P(x,y,z)\,\mathbf{i} + Q(x,y,z)\,\mathbf{j} + R(x,y,z)\,\mathbf{k}$ and
  a curve $C$ with a smooth parametrization $x=x(t)$, $y=y(t)$, $z=z(t)$, $a \le t \le b$ and position vector
- $\textbf{r}(t) = x(t)\,\textbf{i} + y(t)\,\textbf{j} + z(t)\,\textbf{k}$,
+ $\mathbf{r}(t) = x(t)\,\mathbf{i} + y(t)\,\mathbf{j} + z(t)\,\mathbf{k}$,
  \begin{equation}\label{eqn:lineintform3}
-  \int_C \Dotprod{\textbf{f}}{d\textbf{r}} ~=~ \int_C \Dotprod{\textbf{f}}{\textbf{T}}\,ds ~,
+  \int_C \Dotprod{\mathbf{f}}{d\mathbf{r}} ~=~ \int_C \Dotprod{\mathbf{f}}{\mathbf{T}}\,ds ~,
  \end{equation}
- where $\textbf{T}(t) = \frac{\textbf{r}\,'(t)}{\norm{\textbf{r}\,'(t)}}$ is the unit tangent vector to $C$ at
+ where $\mathbf{T}(t) = \frac{\mathbf{r}\,'(t)}{\norm{\mathbf{r}\,'(t)}}$ is the unit tangent vector to $C$ at
  $(x(t),y(t),z(t))$.
 }
 
@@ -1801,10 +1812,10 @@ proofs are similar to their two-variable equivalents).
 }\footnotetext{See \cite[\S\,6.5]{tm} for a proof.}
 
 \statethm{thm:lineintsuffpath3}{
- {Let $\textbf{f}(x,y,z) = P(x,y,z)\,\textbf{i} + Q(x,y,z)\,\textbf{j} + R(x,y,z)\,\textbf{k}$ be a vector field
+ {Let $\mathbf{f}(x,y,z) = P(x,y,z)\,\mathbf{i} + Q(x,y,z)\,\mathbf{j} + R(x,y,z)\,\mathbf{k}$ be a vector field
  in some solid $S$, with $P$, $Q$ and $R$ continuously differentiable functions on $S$. Let $C$ be a smooth curve in $S$
  parametrized by $x=x(t)$, $y=y(t)$, $z=z(t)$, $a \le t \le b$. Suppose that there is a real-valued function $F(x,y,z)$
- such that $\nabla F = \textbf{f}$ on $S$. Then
+ such that $\nabla F = \mathbf{f}$ on $S$. Then
  \begin{equation}\label{eqn:lineintsuffpath3}
   \lineintvec{C}{f}{r} ~=~ F(B) ~-~ F(A) ~,
  \end{equation}
@@ -1812,8 +1823,8 @@ proofs are similar to their two-variable equivalents).
 }
 
 \statecor{cor:lineintsuffpath3}{
- {If a vector field $\textbf{f}$ has a potential in a solid $S$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
- for any closed curve $C$ in $S$ (i.e. $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\textbf{r}} = 0$ for any real-valued
+ {If a vector field $\mathbf{f}$ has a potential in a solid $S$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
+ for any closed curve $C$ in $S$ (i.e. $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\mathbf{r}} = 0$ for any real-valued
  function $F(x,y,z)$).}
 }
 
@@ -1848,10 +1859,10 @@ proofs are similar to their two-variable equivalents).
 \end{exmp}\smallskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Let $\textbf{f}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} + 2z\,\textbf{k}$ be a vector field in $\Real{3}$.
+ Let $\mathbf{f}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} + 2z\,\mathbf{k}$ be a vector field in $\Real{3}$.
  Using the same curve $C$ from Example \ref{exmp:conhelix}, evaluate $\lineintvec{C}{f}{r}$.\smallskip
  \par\noindent \emph{Solution:} Note that $F(x,y,z)=\frac{x^2}{2}+\frac{y^2}{2}+z^2$ is a potential for
- $\textbf{f}(x,y,z)$ (i.e. $\nabla F = \textbf{f}$). So by Theorem \ref{thm:lineintsuffpath3} we know that
+ $\mathbf{f}(x,y,z)$ (i.e. $\nabla F = \mathbf{f}$). So by Theorem \ref{thm:lineintsuffpath3} we know that
  \begin{align*}
   \lineintvec{C}{f}{r} ~&=~ F(B) ~-~ F(A) ~~,~\text{where $A=(x(0),y(0),z(0))$ and $B=(x(8\pi),y(8\pi),z(8\pi))$, so}\\
    &=~ F(8\pi\sin 8\pi,8\pi\cos 8\pi,8\pi) ~-~ F(0\sin 0,0\cos 0,0)\\
@@ -1865,9 +1876,9 @@ proofs are similar to their two-variable equivalents).
 
 We will now discuss a generalization of Green's Theorem in $\Real{2}$ to \emph{orientable} surfaces in $\Real{3}$,
 called \emph{Stokes' Theorem}.\index{Stokes' Theorem}\index{orientable}\index{surface!orientable} A surface $\Sigma$ in
-$\Real{3}$ is \textbf{orientable} if there is a continuous vector field \textbf{N} in $\Real{3}$ such that
-\textbf{N} is nonzero and normal to $\Sigma$ (i.e. perpendicular to the tangent plane) at each point of $\Sigma$. We say
-that such an \textbf{N} is a \emph{normal vector field}.\index{normal vector field}\index{vector
+$\Real{3}$ is \textbf{orientable} if there is a continuous vector field $\mathbf{N}$ in $\Real{3}$ such that
+$\mathbf{N}$ is nonzero and normal to $\Sigma$ (i.e. perpendicular to the tangent plane) at each point of $\Sigma$. We say
+that such an $\mathbf{N}$ is a \emph{normal vector field}.\index{normal vector field}\index{vector
 field!normal}
 
 \piccaption[]{}\parpic[r]{\begin{tikzpicture}
@@ -1885,14 +1896,14 @@ field!normal}
  \draw [dashed,line width=0.2pt] (1.5,0) arc (0:180:1.5 and 0.4);
  \fill (0.98,0.98) circle (2pt);
  \draw [line width=1.2pt,-latex] (0.98,0.98) -- (1.5,1.5);
- \node [right] at (1.5,1.5) {\small $\textbf{N}$};
+ \node [right] at (1.5,1.5) {\small $\mathbf{N}$};
  \draw [dashed,line width=1.2pt,-latex] (0.98,0.98) -- (0.46,0.46);
- \node [above] at (0.4,0.58) {\small $-\textbf{N}$};
+ \node [above] at (0.4,0.58) {\small $-\mathbf{N}$};
 \end{tikzpicture}}
 For example, the unit sphere $x^2 + y^2 + z^2 = 1$ is orientable, since the continuous vector field
-$\textbf{N}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} + z\,\textbf{k}$ is nonzero and normal to the sphere at each point.
-In fact, $-\textbf{N}(x,y,z)$ is another normal vector field (see Figure 4.5.2). We see in this case that
-$\textbf{N}(x,y,z)$ is what we have called an outward normal vector, and $-\textbf{N}(x,y,z)$ is an \emph{inward} normal
+$\mathbf{N}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}$ is nonzero and normal to the sphere at each point.
+In fact, $-\mathbf{N}(x,y,z)$ is another normal vector field (see Figure 4.5.2). We see in this case that
+$\mathbf{N}(x,y,z)$ is what we have called an outward normal vector, and $-\mathbf{N}(x,y,z)$ is an \emph{inward} normal
 vector. These ``outward'' and ``inward'' normal vector fields on the sphere correspond to an ``outer'' and
 ``inner'' side, respectively, of the sphere.
 That is, we say that the sphere is a \emph{two-sided} surface.\index{surface!two-sided}
@@ -1945,27 +1956,27 @@ normal vector field along the strip, there is a discontinuity at your starting p
 point) since your vertical direction takes two different values there. The M\"{o}bius strip has only \emph{one side},
 and hence is nonorientable.\footnote{For further discussion of orientability, see \cite[\S\,IV.7]{one}.}
 
-For an orientable surface $\Sigma$ which has a boundary curve $C$, pick a unit normal vector \textbf{n}
-such that if you walked along $C$ with your head pointing in the direction of \textbf{n}, then the surface would be on
-your left. We say in this situation that \textbf{n} is a \emph{positive unit normal vector}\index{vector!positive unit
-normal} and that $C$ is traversed \emph{\textbf{n}-positively}\index{n-positive@\textbf{n}-positive direction}. We can
+For an orientable surface $\Sigma$ which has a boundary curve $C$, pick a unit normal vector $\mathbf{n}$
+such that if you walked along $C$ with your head pointing in the direction of $\mathbf{n}$, then the surface would be on
+your left. We say in this situation that $\mathbf{n}$ is a \emph{positive unit normal vector}\index{vector!positive unit
+normal} and that $C$ is traversed \emph{$\mathbf{n}$-positively}\index{n-positive@$\mathbf{n}$-positive direction}. We can
 now state Stokes' Theorem:
 
 \statethm{thm:stokes}{
  {(\textbf{Stokes' Theorem})\,\index{Stokes' Theorem}
   Let $\Sigma$ be an orientable surface in $\Real{3}$ whose boundary is a simple closed curve $C$, and let
-  $\textbf{f}(x,y,z) = P(x,y,z) \textbf{i} + Q(x,y,z) \textbf{j} + R(x,y,z) \textbf{k}$ be a smooth vector field
+  $\mathbf{f}(x,y,z) = P(x,y,z) \mathbf{i} + Q(x,y,z) \mathbf{j} + R(x,y,z) \mathbf{k}$ be a smooth vector field
   defined on some subset of $\Real{3}$ that contains $\Sigma$. Then
   \begin{equation}\label{eqn:stokes}
-   \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,d\sigma ~,
+   \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~,
   \end{equation}
   where
   \begin{equation}\label{eqn:curl}
-   \text{curl}~\textbf{f} ~=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \textbf{i} ~+~
-    \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \textbf{j} ~+~
-    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \textbf{k} ~,\index{curl}
+   \text{curl}~\mathbf{f} ~=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} ~+~
+    \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \mathbf{j} ~+~
+    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k} ~,\index{curl}
   \end{equation}
-  \textbf{n} is a positive unit normal vector over $\Sigma$, and $C$ is traversed \textbf{n}-positively.}
+  $\mathbf{n}$ is a positive unit normal vector over $\Sigma$, and $C$ is traversed $\mathbf{n}$-positively.}
 }
 
 \begin{proofbar}
@@ -1989,7 +2000,7 @@ now state Stokes' Theorem:
   \fill (2.3,-0.85) circle (1pt);
   \fill (2.3,1.7) circle (1.2pt);
   \draw [line width=1.2,-latex] (2.3,1.7) -- (2.7,2.3);
-  \node [right] at (2.7,2.3) {\small $\textbf{n}$};
+  \node [right] at (2.7,2.3) {\small $\mathbf{n}$};
   \node [above] at (2.5,-0.83) {\small $(x,y)$};
   \node at (1.8,-0.6) {\small $D$};
   \node [below] at (2,-1.1) {\small $C_D$};
@@ -2008,8 +2019,7 @@ now state Stokes' Theorem:
  \begin{displaymath}
   C:~ x=x(t)~,~ y=y(t)~,~ z=z(x(t),y(t))~,~a \le t \le b ~,
  \end{displaymath}
- since the curve $C$ is part of the surface $z=z(x,y)$. Now, by the Chain Rule (Theorem \ref{thm:chainrule2} in
- Section 4.2), for $z=z(x(t),y(t))$ as a function of $t$, we know that
+ since the curve $C$ is part of the surface $z=z(x,y)$. Now, by the Chain Rule (Theorem \ref{thm:multichain}), for $z=z(x(t),y(t))$ as a function of $t$, we know that
  \begin{displaymath}
   z\,'(t) ~=~ \frac{\partial z}{\partial x}\,x\,'(t) ~+~ \frac{\partial z}{\partial y}\,y\,'(t) ~,
  \end{displaymath}
@@ -2087,31 +2097,31 @@ now state Stokes' Theorem:
  after factoring out a $-1$ from the terms in the first two products in equation (\ref{eqn:stokeslong}).
  
  \picskip{0}
- Now, recall from Section 2.3 (see p.76) that the vector $\textbf{N} = -\frac{\partial z}{\partial x}\,\textbf{i} -
- \frac{\partial z}{\partial y}\,\textbf{j} + \textbf{k}$ is normal to the tangent plane to the surface $z=z(x,y)$ at
+ Now, recall from Section 2.3 (see p.76) that the vector $\mathbf{N} = -\frac{\partial z}{\partial x}\,\mathbf{i} -
+ \frac{\partial z}{\partial y}\,\mathbf{j} + \mathbf{k}$ is normal to the tangent plane to the surface $z=z(x,y)$ at
  each point of $\Sigma$. Thus,
  \begin{displaymath}
-  \textbf{n} ~=~ \frac{\textbf{N}}{\Norm{\textbf{N}}} ~=~
-   \frac{-\frac{\partial z}{\partial x}\,\textbf{i} - \frac{\partial z}{\partial y}\,\textbf{j} +
-   \textbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
+  \mathbf{n} ~=~ \frac{\mathbf{N}}{\Norm{\mathbf{N}}} ~=~
+   \frac{-\frac{\partial z}{\partial x}\,\mathbf{i} - \frac{\partial z}{\partial y}\,\mathbf{j} +
+   \mathbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
    \left( \tfrac{\partial z}{\partial y} \right)^2}}
  \end{displaymath}
  is in fact a positive unit normal vector to $\Sigma$ (see Figure 4.5.4). Hence, using the parametrization
- $\textbf{r}(x,y) = x\,\textbf{i} + y\,\textbf{j} + z(x,y)\,\textbf{k}$, for $(x,y)$ in $D$, of the surface $\Sigma$,
- we have $\frac{\partial \textbf{r}}{\partial x} = \textbf{i} + \frac{\partial z}{\partial x}\,\textbf{k}$ and
- $\frac{\partial \textbf{r}}{\partial y} = \textbf{j} + \frac{\partial z}{\partial y}\,\textbf{k}$, and so
- $\Norm{\Crossprod{\frac{\partial \textbf{r}}{\partial x}}{\frac{\partial \textbf{r}}{\partial y}}} =
+ $\mathbf{r}(x,y) = x\,\mathbf{i} + y\,\mathbf{j} + z(x,y)\,\mathbf{k}$, for $(x,y)$ in $D$, of the surface $\Sigma$,
+ we have $\frac{\partial \mathbf{r}}{\partial x} = \mathbf{i} + \frac{\partial z}{\partial x}\,\mathbf{k}$ and
+ $\frac{\partial \mathbf{r}}{\partial y} = \mathbf{j} + \frac{\partial z}{\partial y}\,\mathbf{k}$, and so
+ $\Norm{\Crossprod{\frac{\partial \mathbf{r}}{\partial x}}{\frac{\partial \mathbf{r}}{\partial y}}} =
    \sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 + \left( \tfrac{\partial z}{\partial y} \right)^2}$.
- So we see that using formula (\ref{eqn:curl}) for $\text{curl}~{\textbf{f}}$, we have
+ So we see that using formula (\ref{eqn:curl}) for $\text{curl}~{\mathbf{f}}$, we have
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}})}{\textbf{n}}\,d\sigma ~&=~
-   \iint\limits_{D} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,
-   \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial x}}{\frac{\partial \textbf{r}}{\partial y}}}\,dA\\
+  \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}})}{\mathbf{n}}\,d\sigma ~&=~
+   \iint\limits_{D} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,
+   \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial x}}{\frac{\partial \mathbf{r}}{\partial y}}}\,dA\\
    &=~ \iint\limits_{D} \Dotprod{\left( \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right)
-    \textbf{i} + \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \textbf{j} +
-    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \textbf{k}
-    \right)}{\left( -\frac{\partial z}{\partial x}\textbf{i} - \frac{\partial z}{\partial y}\textbf{j} +
-    \textbf{k} \right)} dA\\
+    \mathbf{i} + \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \mathbf{j} +
+    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k}
+    \right)}{\left( -\frac{\partial z}{\partial x}\mathbf{i} - \frac{\partial z}{\partial y}\mathbf{j} +
+    \mathbf{k} \right)} dA\\
    &=~ \iint\limits_{D} \left(
     -\left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \frac{\partial z}{\partial x}
     -\left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \frac{\partial z}{\partial y}
@@ -2121,10 +2131,11 @@ now state Stokes' Theorem:
  
 \end{proof}\end{proofbar}
 
-Note: The condition in Stokes' Theorem that the surface $\Sigma$ have a (continuously varying) positive unit normal
-vector \textbf{n} and a boundary curve $C$ traversed \textbf{n}-positively can be expressed more precisely as follows:
-if $\textbf{r}(t)$ is the position vector for $C$ and $\textbf{T}(t) = \textbf{r}\,'(t)/\norm{\textbf{r}\,'(t)}$
-is the unit tangent vector to $C$, then the vectors \textbf{T}, \textbf{n}, $\Crossprod{\textbf{T}}{\textbf{n}}$ form a
+Note: 
+The condition in Stokes' Theorem that the surface $\Sigma$ have a (continuously varying) positive unit normal
+vector $\mathbf{n}$ and a boundary curve $C$ traversed $\mathbf{n}$-positively can be expressed more precisely as follows:
+if $\mathbf{r}(t)$ is the position vector for $C$ and $\mathbf{T}(t) = \mathbf{r}\,'(t)/\norm{\mathbf{r}\,'(t)}$
+is the unit tangent vector to $C$, then the vectors $\mathbf{T}$, $\mathbf{n}$, $\Crossprod{\mathbf{T}}{\mathbf{n}}$ form a
 right-handed system.
 
 Also, it should be noted that Stokes' Theorem holds even when the boundary curve $C$ is piecewise smooth.
@@ -2133,7 +2144,7 @@ Also, it should be noted that Stokes' Theorem holds even when the boundary curve
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:stokesparab}
- Verify Stokes' Theorem for $\textbf{f}(x,y,z) = z\,\textbf{i} + x\,\textbf{j} + y\,\textbf{k}$ when $\Sigma$ is the
+ Verify Stokes' Theorem for $\mathbf{f}(x,y,z) = z\,\mathbf{i} + x\,\mathbf{j} + y\,\mathbf{k}$ when $\Sigma$ is the
  paraboloid $z=x^2 + y^2$ such that $z \le 1$ (see Figure 4.5.5).
  \smallskip
  \piccaption[]{\quad $z=x^2 + y^2$}\parpic[r]{\begin{tikzpicture}
@@ -2161,7 +2172,7 @@ Also, it should be noted that Stokes' Theorem holds even when the boundary curve
   \pgfputat{\pgfpointxyz{0.2}{3.9}{0}}{\pgfbox[center,center]{\small $z$}};
   \pgfputat{\pgfpointxyz{0.2}{0}{1.8}}{\pgfbox[center,center]{\small $x$}};
   \pgfputat{\pgfpointxyz{0.05}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
-  \node [right] at (0.7,3.15) {\small $\textbf{n}$};
+  \node [right] at (0.7,3.15) {\small $\mathbf{n}$};
   \node [right] at (1.5,3.7) {\small $C$};
   \node at (-1.3,0.7) {\small $\Sigma$};
   \node [above left] at (0,3) {\small $1$};
@@ -2169,25 +2180,25 @@ Also, it should be noted that Stokes' Theorem holds even when the boundary curve
  }
  \par\noindent\emph{Solution:} The positive unit normal vector to the surface\\$z=z(x,y)=x^2 + y^2$ is
  \begin{displaymath}
-  \textbf{n} ~=~
-   \frac{-\frac{\partial z}{\partial x}\,\textbf{i} - \frac{\partial z}{\partial y}\,\textbf{j} +
-   \textbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
+  \mathbf{n} ~=~
+   \frac{-\frac{\partial z}{\partial x}\,\mathbf{i} - \frac{\partial z}{\partial y}\,\mathbf{j} +
+   \mathbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
    \left( \tfrac{\partial z}{\partial y} \right)^2}} ~=~
-   \frac{-2x\,\textbf{i} - 2y\,\textbf{j} + \textbf{k}}{\sqrt{1 + 4x^2 + 4y^2}} ~,
+   \frac{-2x\,\mathbf{i} - 2y\,\mathbf{j} + \mathbf{k}}{\sqrt{1 + 4x^2 + 4y^2}} ~,
  \end{displaymath}
- and $\text{curl}~\textbf{f}= (1-0)\,\textbf{i}+(1-0)\,\textbf{j}+(1-0)\,\textbf{k} = \textbf{i}+\textbf{j}+\textbf{k}$,
+ and $\text{curl}~\mathbf{f}= (1-0)\,\mathbf{i}+(1-0)\,\mathbf{j}+(1-0)\,\mathbf{k} = \mathbf{i}+\mathbf{j}+\mathbf{k}$,
  so
  \begin{displaymath}
-  \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}} ~=~ (-2x-2y+1)/\sqrt{1 + 4x^2 + 4y^2} ~.
+  \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}} ~=~ (-2x-2y+1)/\sqrt{1 + 4x^2 + 4y^2} ~.
  \end{displaymath}
  
  \par\noindent
- Since $\Sigma$ can be parametrized as $\textbf{r}(x,y) = x\,\textbf{i}+y\,\textbf{j}+(x^2 + y^2 )\,\textbf{k}$ for
+ Since $\Sigma$ can be parametrized as $\mathbf{r}(x,y) = x\,\mathbf{i}+y\,\mathbf{j}+(x^2 + y^2 )\,\mathbf{k}$ for
  $(x,y)$ in the region $D = \lbrace \, (x,y):\,x^2 + y^2 \le 1 \,\rbrace$, then
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,d\sigma ~&=~
-   \iint\limits_{D} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,
-   \NORM{\Crossprod{\frac{\partial \textbf{r}}{\partial x}}{\frac{\partial \textbf{r}}{\partial y}}}\,dA\\
+  \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~&=~
+   \iint\limits_{D} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,
+   \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial x}}{\frac{\partial \mathbf{r}}{\partial y}}}\,dA\\
    &=~ \iint\limits_{D} \frac{-2x-2y+1}{\sqrt{1 + 4x^2 + 4y^2}}\,\sqrt{1 + 4x^2 + 4y^2}\,dA\\
    &=~ \iint\limits_{D} (-2x-2y+1)\,dA ~,~\text{so switching to polar coordinates gives}\\
    &=~ \int_0^{2\pi} \int_0^1 (-2r\cos \theta - 2r\sin \theta + 1)r\,dr\,d\theta\\
@@ -2209,7 +2220,7 @@ Also, it should be noted that Stokes' Theorem holds even when the boundary curve
    &=~ \cos t + \frac{t}{2} + \frac{\sin 2t}{4}\,\Big|_0^{2\pi} ~=~ \pi ~.
  \end{align*}
  So we see that 
- \[\olineintvec{C}{f}{r}=\iint_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}
+ \[\olineintvec{C}{f}{r}=\iint_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}
  \,d\sigma,\] as predicted by Stokes' Theorem.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
@@ -2223,7 +2234,7 @@ always be the case.
 \begin{exmp}
  Let $\Sigma$ be the elliptic paraboloid $z=\frac{x^2}{4}+\frac{y^2}{9}$ for $z \le 1$, and let $C$ be its boundary
  curve.
- Calculate $\olineintvec{C}{f}{r}$ for $\textbf{f}(x,y,z)=(9xz+2y)\textbf{i}+(2x+y^2 )\textbf{j}+(-2y^2 +2z)\textbf{k}$,
+ Calculate $\olineintvec{C}{f}{r}$ for $\mathbf{f}(x,y,z)=(9xz+2y)\mathbf{i}+(2x+y^2 )\mathbf{j}+(-2y^2 +2z)\mathbf{k}$,
  where $C$ is traversed counterclockwise.\smallskip
  \par\noindent\emph{Solution:} The surface is similar to the one in Example \ref{exmp:stokesparab}, except now the
  boundary curve $C$ is the ellipse $\frac{x^2}{4}+\frac{y^2}{9}=1$ laying in the plane $z=1$. 
@@ -2231,48 +2242,48 @@ always be the case.
  As in Example \ref{exmp:stokesparab}, at each
  point $(x,y,z(x,y))$ on the surface $z=z(x,y)=\frac{x^2}{4}+\frac{y^2}{9}$ the vector
  \begin{displaymath}
-  \textbf{n} ~=~
-   \frac{-\frac{\partial z}{\partial x}\,\textbf{i} - \frac{\partial z}{\partial y}\,\textbf{j} +
-   \textbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
+  \mathbf{n} ~=~
+   \frac{-\frac{\partial z}{\partial x}\,\mathbf{i} - \frac{\partial z}{\partial y}\,\mathbf{j} +
+   \mathbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
    \left( \tfrac{\partial z}{\partial y} \right)^2}} ~=~
-   \frac{-\tfrac{x}{2}\,\textbf{i} - \tfrac{2y}{9}\,\textbf{j} + \textbf{k}}{\sqrt{1 +\tfrac{x^2}{4}+
+   \frac{-\tfrac{x}{2}\,\mathbf{i} - \tfrac{2y}{9}\,\mathbf{j} + \mathbf{k}}{\sqrt{1 +\tfrac{x^2}{4}+
     \tfrac{4y^2}{9}}} ~,
  \end{displaymath}
- is a positive unit normal vector to $\Sigma$. And calculating the curl of \textbf{f} gives
+ is a positive unit normal vector to $\Sigma$. And calculating the curl of $\mathbf{f}$ gives
  \begin{displaymath}
-  \text{curl}~\textbf{f} ~=~ (-4y-0)\textbf{i} ~+~ (9x-0)\textbf{j} ~+~ (2-2)\textbf{k} ~=~ -4y\,\textbf{i} ~+~ 9x\,\textbf{j} ~+~
-   0\,\textbf{k}~,
+  \text{curl}~\mathbf{f} ~=~ (-4y-0)\mathbf{i} ~+~ (9x-0)\mathbf{j} ~+~ (2-2)\mathbf{k} ~=~ -4y\,\mathbf{i} ~+~ 9x\,\mathbf{j} ~+~
+   0\,\mathbf{k}~,
  \end{displaymath}
  so
  \begin{displaymath}
-  \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}} ~=~ \frac{(-4y)(-\tfrac{x}{2})+(9x)(-\tfrac{2y}{9})+
+  \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}} ~=~ \frac{(-4y)(-\tfrac{x}{2})+(9x)(-\tfrac{2y}{9})+
    (0)(1)}{\sqrt{1 +\tfrac{x^2}{4}+\tfrac{4y^2}{9}}} ~=~ \frac{2xy-2xy+0}{\sqrt{1 +\tfrac{x^2}{4}+\tfrac{4y^2}{9}}} ~=~ 0~,
  \end{displaymath}
  and so by Stokes' Theorem
  \begin{displaymath}
-  \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,d\sigma ~=~
+  \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~=~
    \iint\limits_{\Sigma} 0\,d\sigma ~=~ 0 ~.
  \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \smallskip
 In physical applications, for a simple closed curve $C$ the line integral $\olineintvec{C}{f}{r}$
-is often called the \textbf{circulation}\index{circulation} of \textbf{f} around $C$. For example, if \textbf{E}
+is often called the \textbf{circulation}\index{circulation} of $\mathbf{f}$ around $C$. For example, if $\mathbf{E}$
 represents the electrostatic field due to a point charge, then
-it turns out\footnote{See Ch. 2 in \cite{rmc}.} that $\text{curl}~\textbf{E} = \textbf{0}$, which means that the
+it turns out\footnote{See Ch. 2 in \cite{rmc}.} that $\text{curl}~\mathbf{E} = \mathbf{0}$, which means that the
 circulation $\olineintvec{C}{E}{r}=0$ by Stokes' Theorem. Vector fields which have zero curl are often called
 \emph{irrotational}\index{irrotational} fields.
 
 In fact, the term curl was created by the 19\textsuperscript{th} century Scottish physicist James Clerk Maxwell in his
 study of electromagnetism, where it is used extensively. In physics, the curl is interpreted as a measure of
-\emph{circulation density}. This is best seen by using another definition of curl \textbf{f} which is
+\emph{circulation density}. This is best seen by using another definition of curl $\mathbf{f}$ which is
 equivalent\footnote{See \cite{sch}, p. 78--81, for the derivation.} to the definition given by
 formula (\ref{eqn:curl}). Namely, for a point $(x,y,z)$ in $\Real{3}$,
 \begin{equation}\label{eqn:curlalt}
- \Dotprod{\textbf{n}}{(\text{curl}~\textbf{f}\,)}(x,y,z) ~=~ \lim_{S \to 0} \frac{1}{S} \olineintvec{C}{f}{r} ~,
+ \Dotprod{\mathbf{n}}{(\text{curl}~\mathbf{f}\,)}(x,y,z) ~=~ \lim_{S \to 0} \frac{1}{S} \olineintvec{C}{f}{r} ~,
 \end{equation}
 where $S$ is the surface area of a surface $\Sigma$ containing the point $(x,y,z)$ and with a simple closed boundary
-curve $C$ and positive unit normal vector \textbf{n} at $(x,y,z)$. In the limit, think of the curve $C$ shrinking to
+curve $C$ and positive unit normal vector $\mathbf{n}$ at $(x,y,z)$. In the limit, think of the curve $C$ shrinking to
 the point $(x,y,z)$, which causes $\Sigma$, the surface it bounds, to have smaller and smaller surface area. That ratio
 of circulation to surface area in the limit is what makes the curl a rough measure of circulation density (i.e.
 circulation per unit area).
@@ -2303,28 +2314,29 @@ circulation per unit area).
  \draw (-1,3.5) -- (-1,3.8);
  \draw (-1,2.5) -- (-1,2.2);
  \draw [-latex] (-1,3) ++(165:0.8) arc (165:105:0.8);
- \node [right] at (2.25,2.77) {$\textbf{f}$};
+ \node [right] at (2.25,2.77) {$\mathbf{f}$};
 \end{tikzpicture}}
 An idea of how the curl of a vector field is related to rotation is shown in Figure 4.5.6. Suppose we have a
-vector field $\textbf{f}(x,y,z)$ which is always parallel to the $xy$-plane at each point $(x,y,z)$ and that
-the vectors grow larger the further the point $(x,y,z)$ is from the $y$-axis. For example, $\textbf{f}(x,y,z) =
-(1+x^2 )\,\textbf{j}$. Think of the vector field as representing the flow of water, and imagine dropping
-two wheels with paddles into that water flow, as in Figure 4.5.6. Since the flow is stronger (i.e. the
-magnitude of \textbf{f} is larger) as you move away from the $y$-axis, then such a wheel would rotate counterclockwise
+vector field $\mathbf{f}(x,y,z)$ which is always parallel to the $xy$-plane at each point $(x,y,z)$ and that
+the vectors grow larger the further the point $(x,y,z)$ is from the $y$-axis. For example, $\mathbf{f}(x,y,z) =
+(1+x^2 )\,\mathbf{j}$. Think of the vector field as representing the flow of water, and imagine dropping
+two wheels with paddles into that water flow, as in Figure 4.5.6. 
+Since the flow is stronger (i.e. the
+magnitude of $\mathbf{f}$ is larger) as you move away from the $y$-axis, then such a wheel would rotate counterclockwise
 if it were dropped to the
 right of the $y$-axis, and it would rotate clockwise if it were dropped to the left of the $y$-axis. In both cases the
-curl would be nonzero ($\text{curl}~\textbf{f}(x,y,z) = 2x\,\textbf{k}$ in our example) and would obey the right-hand
-rule, that is, $\text{curl}~\textbf{f}(x,y,z)$ points in the direction of your thumb as you cup your right hand in the
+curl would be nonzero ($\text{curl}~\mathbf{f}(x,y,z) = 2x\,\mathbf{k}$ in our example) and would obey the right-hand
+rule, that is, $\text{curl}~\mathbf{f}(x,y,z)$ points in the direction of your thumb as you cup your right hand in the
 direction of the rotation of the wheel. So the curl points outward (in the positive $z$-direction) if $x > 0$ and points
 inward (in the negative $z$-direction) if $x < 0$. Notice that if all the vectors had the same direction \emph{and} the
 same magnitude, then the wheels would not rotate and hence there would be no curl (which is why such fields are
 called irrotational, meaning no rotation).
 
 Finally, by Stokes' Theorem, we know that if $C$ is a simple closed curve in some solid region $S$ in $\Real{3}$ and if
-$\textbf{f}(x,y,z)$ is a smooth vector field such that $\text{curl}~\textbf{f} = \textbf{0}$ in $S$, then
+$\mathbf{f}(x,y,z)$ is a smooth vector field such that $\text{curl}~\mathbf{f} = \mathbf{0}$ in $S$, then
 \begin{displaymath}
- \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,d\sigma ~=~
-   \iint\limits_{\Sigma} \Dotprod{\textbf{0}}{\textbf{n}}\,d\sigma ~=~ \iint\limits_{\Sigma} 0\,d\sigma ~=~ 0 ~,
+ \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~=~
+   \iint\limits_{\Sigma} \Dotprod{\mathbf{0}}{\mathbf{n}}\,d\sigma ~=~ \iint\limits_{\Sigma} 0\,d\sigma ~=~ 0 ~,
 \end{displaymath}
 where $\Sigma$ is any orientable surface inside $S$ whose boundary is $C$ (such a surface is sometimes called a
 \emph{capping surface} for $C$\index{capping surface}).
@@ -2336,14 +2348,14 @@ independence}\index{exact differential form}
 \statecomment{
  {The following statements are equivalent for a simply connected solid region $S$ in $\Real{3}$:
   \begin{enumerate}[(a)]
-  \item $\textbf{f}(x,y,z) = P(x,y,z)\,\textbf{i} + Q(x,y,z)\,\textbf{j} + R(x,y,z)\,\textbf{k}$ has a smooth potential
+  \item $\mathbf{f}(x,y,z) = P(x,y,z)\,\mathbf{i} + Q(x,y,z)\,\mathbf{j} + R(x,y,z)\,\mathbf{k}$ has a smooth potential
    $F(x,y,z)$ in $S$
   \item $\displaystyle{\lineintvec{C}{f}{r}}$ is independent of the path for any curve $C$ in $S$
   \item $\displaystyle{\olineintvec{C}{f}{r}} = 0$ for every simple closed curve $C$ in $S$
   \item $\dfrac{\partial R}{\partial y} = \dfrac{\partial Q}{\partial z}$,
    $\dfrac{\partial P}{\partial z} = \dfrac{\partial R}{\partial x}$, and
-   $\dfrac{\partial Q}{\partial x} = \dfrac{\partial P}{\partial y}$ in $S$ (i.e. $\text{curl}~\textbf{f} =
-   \textbf{0}$ in $S$)
+   $\dfrac{\partial Q}{\partial x} = \dfrac{\partial P}{\partial y}$ in $S$ (i.e. $\text{curl}~\mathbf{f} =
+   \mathbf{0}$ in $S$)
  \end{enumerate}}}\medskip
 
 \par\noindent Part (d) is also a way of saying that the differential form $P\,dx + Q\,dy + R\,dz$ is exact.
@@ -2351,10 +2363,10 @@ independence}\index{exact differential form}
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Determine if the vector field $\textbf{f}(x,y,z) = xyz\,\textbf{i} + xz\,\textbf{j} + xy\,\textbf{k}$ has a
+ Determine if the vector field $\mathbf{f}(x,y,z) = xyz\,\mathbf{i} + xz\,\mathbf{j} + xy\,\mathbf{k}$ has a
  potential in $\Real{3}$.\smallskip
  \par\noindent\emph{Solution:} Since $\Real{3}$ is simply connected, we just need to check whether $\text{curl}~
- \textbf{f} = \textbf{0}$ throughout $\Real{3}$, that is,
+ \mathbf{f} = \mathbf{0}$ throughout $\Real{3}$, that is,
  \begin{displaymath}
   \frac{\partial R}{\partial y} = \frac{\partial Q}{\partial z}~,\quad
   \frac{\partial P}{\partial z} = \frac{\partial R}{\partial x}~,\quad\text{and}\quad
@@ -2365,7 +2377,7 @@ independence}\index{exact differential form}
   \frac{\partial P}{\partial z} = xy ~,~ \frac{\partial R}{\partial x} = y \quad\Rightarrow\quad
   \frac{\partial P}{\partial z} \ne \frac{\partial R}{\partial x} ~~\text{for some $(x,y,z)$ in $\Real{3}$.}
  \end{displaymath}
- Thus, $\textbf{f}(x,y,z)$ does not have a potential in $\Real{3}$.
+ Thus, $\mathbf{f}(x,y,z)$ does not have a potential in $\Real{3}$.
 \end{exmp}
 \startexercises\label{sec4dot5}
 \probs{A}
@@ -2376,53 +2388,53 @@ curve $C$.
  \item $f(x,y,z)=\dfrac{x}{y} + y + 2yz$; $\quad C: x=t^2$, $y=t$, $z=1$, $1 \le t \le 2$
  \item $f(x,y,z)=z^2$; $\quad C: x=t\sin t$, $y=t\cos t$, $z=\frac{2\sqrt{2}}{3}t^{3/2}$, $0 \le t \le 1$
 \suspend{enumerate}
-\par\noindent For Exercises 4--9, calculate $\int_C \Dotprod{\textbf{f}}{d\textbf{r}}$ for the given vector
- field $\textbf{f}(x,y,z)$ and curve $C$.
+\par\noindent For Exercises 4--9, calculate $\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}$ for the given vector
+ field $\mathbf{f}(x,y,z)$ and curve $C$.
 \resume{enumerate}[{[\bfseries 1.]}]
- \item $\textbf{f}(x,y,z) = \textbf{i} - \textbf{j} + \textbf{k}$; $\quad C: x=3t$, $y=2t$, $z=t$, $0 \le t \le 1$
- \item $\textbf{f}(x,y,z) = y\,\textbf{i} - x\,\textbf{j} + z\,\textbf{k}$; $\quad C: x=\cos t$, $y=\sin t$, $z=t$,
+ \item $\mathbf{f}(x,y,z) = \mathbf{i} - \mathbf{j} + \mathbf{k}$; $\quad C: x=3t$, $y=2t$, $z=t$, $0 \le t \le 1$
+ \item $\mathbf{f}(x,y,z) = y\,\mathbf{i} - x\,\mathbf{j} + z\,\mathbf{k}$; $\quad C: x=\cos t$, $y=\sin t$, $z=t$,
   $0 \le t \le 2\pi$
- \item $\textbf{f}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} + z\,\textbf{k}$; $\quad C: x=\cos t$, $y=\sin t$, $z=2$,
+ \item $\mathbf{f}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}$; $\quad C: x=\cos t$, $y=\sin t$, $z=2$,
   $0 \le t \le 2\pi$
- \item $\textbf{f}(x,y,z) = (y-2z)\,\textbf{i} + xy\,\textbf{j} + (2xz+y)\,\textbf{k}$; $\quad C: x=t$, $y=2t$,
+ \item $\mathbf{f}(x,y,z) = (y-2z)\,\mathbf{i} + xy\,\mathbf{j} + (2xz+y)\,\mathbf{k}$; $\quad C: x=t$, $y=2t$,
   $z = t^2 - 1$, $0 \le t \le 1$
- \item $\textbf{f}(x,y,z) = yz\,\textbf{i} + xz\,\textbf{j} + xy\,\textbf{k}$; $\quad C:$ the polygonal path from
+ \item $\mathbf{f}(x,y,z) = yz\,\mathbf{i} + xz\,\mathbf{j} + xy\,\mathbf{k}$; $\quad C:$ the polygonal path from
   $(0,0,0)$ to $(1,0,0)$ to $(1,2,0)$
- \item $\textbf{f}(x,y,z) = xy\,\textbf{i} + (z-x)\,\textbf{j} + 2yz\,\textbf{k}$; $\quad C:$ the polygonal path from
+ \item $\mathbf{f}(x,y,z) = xy\,\mathbf{i} + (z-x)\,\mathbf{j} + 2yz\,\mathbf{k}$; $\quad C:$ the polygonal path from
   $(0,0,0)$ to $(1,0,0)$ to $(1,2,0)$ to $(1,2,-2)$
 \suspend{enumerate}
-\par\noindent For Exercises 10--13, state whether or not the vector field $\textbf{f}(x,y,z)$ has a potential in
+\par\noindent For Exercises 10--13, state whether or not the vector field $\mathbf{f}(x,y,z)$ has a potential in
 $\Real{3}$ (you do not need to find the potential itself).
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
- \item $\textbf{f}(x,y,z) = y\,\textbf{i} - x\,\textbf{j} + z\,\textbf{k}$
- \item $\textbf{f}(x,y,z) = a\,\textbf{i} + b\,\textbf{j} + c\,\textbf{k}$ ($a$, $b$, $c$ constant)
+ \item $\mathbf{f}(x,y,z) = y\,\mathbf{i} - x\,\mathbf{j} + z\,\mathbf{k}$
+ \item $\mathbf{f}(x,y,z) = a\,\mathbf{i} + b\,\mathbf{j} + c\,\mathbf{k}$ ($a$, $b$, $c$ constant)
  \end{multicols}
  \begin{multicols}{2}
- \item $\textbf{f}(x,y,z) = (x+y)\,\textbf{i} + x\,\textbf{j} + z^2 \,\textbf{k}$
- \item $\textbf{f}(x,y,z) = xy\,\textbf{i} - (x-yz^2 )\,\textbf{j} + y^2 z\,\textbf{k}$
+ \item $\mathbf{f}(x,y,z) = (x+y)\,\mathbf{i} + x\,\mathbf{j} + z^2 \,\mathbf{k}$
+ \item $\mathbf{f}(x,y,z) = xy\,\mathbf{i} - (x-yz^2 )\,\mathbf{j} + y^2 z\,\mathbf{k}$
  \end{multicols}
 \suspend{enumerate}
 \probs{B}
-\par\noindent For Exercises 14--15, verify Stokes' Theorem for the given vector field $\textbf{f}(x,y,z)$ and
+\par\noindent For Exercises 14--15, verify Stokes' Theorem for the given vector field $\mathbf{f}(x,y,z)$ and
 surface $\Sigma$.
 \resume{enumerate}[{[\bfseries 1.]}]
- \item $\textbf{f}(x,y,z) = 2y\,\textbf{i} - x\,\textbf{j} + z\,\textbf{k}$; $\quad \Sigma: x^2 + y^2 + z^2 = 1$,
+ \item $\mathbf{f}(x,y,z) = 2y\,\mathbf{i} - x\,\mathbf{j} + z\,\mathbf{k}$; $\quad \Sigma: x^2 + y^2 + z^2 = 1$,
   $z \ge 0$
- \item $\textbf{f}(x,y,z) = xy\,\textbf{i} + xz\,\textbf{j} + yz\,\textbf{k}$; $\quad \Sigma: z=x^2 + y^2$, $z \le 1$
+ \item $\mathbf{f}(x,y,z) = xy\,\mathbf{i} + xz\,\mathbf{j} + yz\,\mathbf{k}$; $\quad \Sigma: z=x^2 + y^2$, $z \le 1$
  \item Construct a M\"{o}bius strip from a piece of paper, then draw a line down its center (like the dotted line in
  Figure \ref{fig:mobius}(b)). Cut the M\"{o}bius strip along that center line completely around the strip. How many
  surfaces does this result in? How would you describe them? Are they orientable?
  \item Use Gnuplot (see Appendix C) to plot the M\"{o}bius strip parametrized as:
   \begin{displaymath}
-   \textbf{r}(u,v) ~=~ \cos u \,(1+v\cos \tfrac{u}{2})\,\textbf{i} + \sin u \,(1+v\cos \tfrac{u}{2})\,\textbf{j} +
-    v\sin \tfrac{u}{2}\,\textbf{k} ~,~~ 0 \le u \le 2\pi ~,~~ -\tfrac{1}{2} \le v \le \tfrac{1}{2}
+   \mathbf{r}(u,v) ~=~ \cos u \,(1+v\cos \tfrac{u}{2})\,\mathbf{i} + \sin u \,(1+v\cos \tfrac{u}{2})\,\mathbf{j} +
+    v\sin \tfrac{u}{2}\,\mathbf{k} ~,~~ 0 \le u \le 2\pi ~,~~ -\tfrac{1}{2} \le v \le \tfrac{1}{2}
   \end{displaymath}
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Let $\Sigma$ be a closed surface and $\textbf{f}(x,y,z)$ a smooth vector field. Show that\\
-  $\iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\textbf{f}}\,)}{\textbf{n}}\,d\sigma = 0$. (\emph{Hint: Split $\Sigma$
+ \item Let $\Sigma$ be a closed surface and $\mathbf{f}(x,y,z)$ a smooth vector field. Show that\\
+  $\iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma = 0$. (\emph{Hint: Split $\Sigma$
   in half.})
  \item Show that Green's Theorem is a special case of Stokes' Theorem.
 \end{enumerate}
@@ -2438,8 +2450,8 @@ $\Real{3}$, that is, its value at a point $(x,y,z)$ is the vector
 \begin{displaymath}
  \nabla f(x,y,z) ~=~ \left( \frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}
   \right) ~=~
- \frac{\partial f}{\partial x}\,\textbf{i} ~+~ \frac{\partial f}{\partial y}\,\textbf{j} ~+~
- \frac{\partial f}{\partial z}\,\textbf{k}
+ \frac{\partial f}{\partial x}\,\mathbf{i} ~+~ \frac{\partial f}{\partial y}\,\mathbf{j} ~+~
+ \frac{\partial f}{\partial z}\,\mathbf{k}
 \end{displaymath}
 in $\Real{3}$, where each of the partial derivatives is evaluated at the point $(x,y,z)$. So in this way, you can think
 of the \emph{symbol} $\nabla$ as being ``applied'' to a real-valued function $f$ to produce a vector $\nabla f$.
@@ -2447,8 +2459,8 @@ of the \emph{symbol} $\nabla$ as being ``applied'' to a real-valued function $f$
 It turns out that the divergence and curl can also be expressed in terms of the symbol $\nabla$. This is done by
 thinking of $\nabla$ as a \emph{vector} in $\Real{3}$, namely\index{$\nabla$}
 \begin{equation}\label{eqn:del}
- \nabla ~=~ \frac{\partial}{\partial x}\,\textbf{i} ~+~ \frac{\partial}{\partial y}\,\textbf{j} ~+~
-   \frac{\partial}{\partial z}\,\textbf{k} ~.
+ \nabla ~=~ \frac{\partial}{\partial x}\,\mathbf{i} ~+~ \frac{\partial}{\partial y}\,\mathbf{j} ~+~
+   \frac{\partial}{\partial z}\,\mathbf{k} ~.
 \end{equation}
 Here, the symbols $\frac{\partial}{\partial x}$, $ \frac{\partial}{\partial y}$ and $\frac{\partial}{\partial z}$ are to
 be thought of as ``partial derivative operators'' that will get ``applied'' to a real-valued function, say $f(x,y,z)$,
@@ -2468,48 +2480,48 @@ real-valued function $f(x,y,z)$ is normally thought of as \emph{multiplying} the
 \end{displaymath}
 For this reason, $\nabla$ is often referred to as the ``del operator'', since it ``operates'' on functions.
  
-For example, it is often convenient to write the divergence $\text{div}~\textbf{f}$ as $\Dotprod{\nabla}{\textbf{f}}$,
-since for a vector field $\textbf{f}(x,y,z) =
-\ssub{f}{1}(x,y,z)\textbf{i} + \ssub{f}{2}(x,y,z) \textbf{j} + \ssub{f}{3}(x,y,z) \textbf{k}$, the dot product of
-\textbf{f} with $\nabla$ (thought of as a vector) makes sense:\index{divergence}
+For example, it is often convenient to write the divergence $\text{div}~\mathbf{f}$ as $\Dotprod{\nabla}{\mathbf{f}}$,
+since for a vector field $\mathbf{f}(x,y,z) =
+\ssub{f}{1}(x,y,z)\mathbf{i} + \ssub{f}{2}(x,y,z) \mathbf{j} + \ssub{f}{3}(x,y,z) \mathbf{k}$, the dot product of
+$\mathbf{f}$ with $\nabla$ (thought of as a vector) makes sense:\index{divergence}
 \begin{align*}
- \Dotprod{\nabla}{\textbf{f}} ~&=~ \Dotprod{ \left( \frac{\partial}{\partial x}\,\textbf{i} ~+~
-  \frac{\partial}{\partial y}\,\textbf{j} ~+~ \frac{\partial}{\partial z}\,\textbf{k} \right) }{\left( \ssub{f}{1}(x,y,z)
-  \textbf{i} ~+~ \ssub{f}{2}(x,y,z) \textbf{j} ~+~ \ssub{f}{3}(x,y,z) \textbf{k} \right) }\\
+ \Dotprod{\nabla}{\mathbf{f}} ~&=~ \Dotprod{ \left( \frac{\partial}{\partial x}\,\mathbf{i} ~+~
+  \frac{\partial}{\partial y}\,\mathbf{j} ~+~ \frac{\partial}{\partial z}\,\mathbf{k} \right) }{\left( \ssub{f}{1}(x,y,z)
+  \mathbf{i} ~+~ \ssub{f}{2}(x,y,z) \mathbf{j} ~+~ \ssub{f}{3}(x,y,z) \mathbf{k} \right) }\\
    &=~ \left( \frac{\partial}{\partial x} \right) (\ssub{f}{1}) ~+~
     \left( \frac{\partial}{\partial y} \right) (\ssub{f}{2}) ~+~
     \left( \frac{\partial}{\partial z} \right) (\ssub{f}{3})\\
    &=~ \frac{\partial \ssub{f}{1}}{\partial x} ~+~ \frac{\partial \ssub{f}{2}}{\partial y} ~+~
   \frac{\partial \ssub{f}{3}}{\partial z}\\
-   &=~ \text{div}~\textbf{f}
+   &=~ \text{div}~\mathbf{f}
 \end{align*}
 
-We can also write $\text{curl}~\textbf{f}$ in terms of $\nabla$, namely as $\Crossprod{\nabla}{\textbf{f}}$, since
-for a vector field $\textbf{f}(x,y,z) = P(x,y,z)\textbf{i} + Q(x,y,z)\textbf{j} + R(x,y,z)\textbf{k}$, we have:
+We can also write $\text{curl}~\mathbf{f}$ in terms of $\nabla$, namely as $\Crossprod{\nabla}{\mathbf{f}}$, since
+for a vector field $\mathbf{f}(x,y,z) = P(x,y,z)\mathbf{i} + Q(x,y,z)\mathbf{j} + R(x,y,z)\mathbf{k}$, we have:
 \begin{align*}
- \Crossprod{\nabla}{\textbf{f}} ~&=~
+ \Crossprod{\nabla}{\mathbf{f}} ~&=~
  \begin{vmatrix}
-  \textbf{i} & \textbf{j} & \textbf{k} \smallskip\\ \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} &
+  \mathbf{i} & \mathbf{j} & \mathbf{k} \smallskip\\ \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} &
    \dfrac{\partial}{\partial z} \smallskip\\
   P(x,y,z) & Q(x,y,z) & R(x,y,z)
  \end{vmatrix}\\
- &=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \textbf{i} ~-~
-    \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) \textbf{j} ~+~
-    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \textbf{k}\\
- &=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \textbf{i} ~+~
-    \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \textbf{j} ~+~
-    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \textbf{k}\\
- &=~ \text{curl}~\textbf{f}
+ &=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} ~-~
+    \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) \mathbf{j} ~+~
+    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k}\\
+ &=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} ~+~
+    \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \mathbf{j} ~+~
+    \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k}\\
+ &=~ \text{curl}~\mathbf{f}
 \end{align*}
 
-For a real-valued function $f(x,y,z)$, the gradient $\nabla f(x,y,z) =\frac{\partial f}{\partial x}\,\textbf{i} +
-\frac{\partial f}{\partial y}\,\textbf{j} + \frac{\partial f}{\partial z}\,\textbf{k}$ is a vector field, so we
+For a real-valued function $f(x,y,z)$, the gradient $\nabla f(x,y,z) =\frac{\partial f}{\partial x}\,\mathbf{i} +
+\frac{\partial f}{\partial y}\,\mathbf{j} + \frac{\partial f}{\partial z}\,\mathbf{k}$ is a vector field, so we
 can take its divergence:\index{curl}
 \begin{align*}
  \text{div}~\nabla f ~&=~ \Dotprod{\nabla}{\nabla f}\\
-  &=~ \Dotprod{ \left( \frac{\partial}{\partial x}\,\textbf{i} ~+~ \frac{\partial}{\partial y}\,\textbf{j} ~+~
-  \frac{\partial}{\partial z}\,\textbf{k} \right) }{\left( \frac{\partial f}{\partial x}\,\textbf{i} ~+~
-  \frac{\partial f}{\partial y}\,\textbf{j} ~+~ \frac{\partial f}{\partial z}\,\textbf{k} \right) }\\
+  &=~ \Dotprod{ \left( \frac{\partial}{\partial x}\,\mathbf{i} ~+~ \frac{\partial}{\partial y}\,\mathbf{j} ~+~
+  \frac{\partial}{\partial z}\,\mathbf{k} \right) }{\left( \frac{\partial f}{\partial x}\,\mathbf{i} ~+~
+  \frac{\partial f}{\partial y}\,\mathbf{j} ~+~ \frac{\partial f}{\partial z}\,\mathbf{k} \right) }\\
   &=~ \frac{\partial}{\partial x}\left( \frac{\partial f}{\partial x} \right) ~+~
    \frac{\partial}{\partial y}\left( \frac{\partial f}{\partial y} \right) ~+~
    \frac{\partial}{\partial z}\left( \frac{\partial f}{\partial z} \right)\\
@@ -2528,96 +2540,96 @@ Note that this is a real-valued function, to which we will give a special name:
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:laplposition}
- Let $\textbf{r}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} + z\,\textbf{k}$ be the position vector field on
- $\Real{3}$. Then $\norm{\textbf{r}(x,y,z)}^2 = \Dotprod{\textbf{r}}{\textbf{r}} = x^2 + y^2 + z^2$ is a real-valued
+ Let $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}$ be the position vector field on
+ $\Real{3}$. Then $\norm{\mathbf{r}(x,y,z)}^2 = \Dotprod{\mathbf{r}}{\mathbf{r}} = x^2 + y^2 + z^2$ is a real-valued
  function. Find
  \begin{enumerate}[(a)]
-  \item the gradient of $\norm{\textbf{r}}^2$
-  \item the divergence of $\textbf{r}$
-  \item the curl of $\textbf{r}$
-  \item the Laplacian of $\norm{\textbf{r}}^2$
+  \item the gradient of $\norm{\mathbf{r}}^2$
+  \item the divergence of $\mathbf{r}$
+  \item the curl of $\mathbf{r}$
+  \item the Laplacian of $\norm{\mathbf{r}}^2$
  \end{enumerate}
 
- \par\noindent \emph{Solution:} (a) $\nabla \norm{\textbf{r}}^2 = 2x\,\textbf{i} + 2y\,\textbf{j} + 2z\,\textbf{k}
-  = 2\,\textbf{r}$\smallskip
- \par\noindent (b) $\Dotprod{\nabla}{\textbf{r}} = \frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(y) +
+ \par\noindent \emph{Solution:} (a) $\nabla \norm{\mathbf{r}}^2 = 2x\,\mathbf{i} + 2y\,\mathbf{j} + 2z\,\mathbf{k}
+  = 2\,\mathbf{r}$\smallskip
+ \par\noindent (b) $\Dotprod{\nabla}{\mathbf{r}} = \frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(y) +
   \frac{\partial}{\partial z}(z) = 1+1+1=3$\smallskip
  \par\noindent (c)
  \begin{displaymath}
-  \Crossprod{\nabla}{\textbf{r}} ~=~ \begin{vmatrix}
-  \textbf{i} & \textbf{j} & \textbf{k} \smallskip\\ \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} &
+  \Crossprod{\nabla}{\mathbf{r}} ~=~ \begin{vmatrix}
+  \mathbf{i} & \mathbf{j} & \mathbf{k} \smallskip\\ \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} &
    \dfrac{\partial}{\partial z} \\
   x & y & z
- \end{vmatrix} ~=~ (0-0)\,\textbf{i} ~-~ (0-0)\,\textbf{j} ~+~ (0-0)\,\textbf{k} ~=~ \textbf{0}
+ \end{vmatrix} ~=~ (0-0)\,\mathbf{i} ~-~ (0-0)\,\mathbf{j} ~+~ (0-0)\,\mathbf{k} ~=~ \mathbf{0}
  \end{displaymath}
- \par\noindent (d) $\Delta \norm{\textbf{r}}^2 = \frac{\partial^2}{\partial x^2}(x^2 + y^2 + z^2 ) +
+ \par\noindent (d) $\Delta \norm{\mathbf{r}}^2 = \frac{\partial^2}{\partial x^2}(x^2 + y^2 + z^2 ) +
   \frac{\partial^2}{\partial y^2}(x^2 + y^2 + z^2 ) + \frac{\partial^2}{\partial z^2}(x^2 + y^2 + z^2 ) =
   2+2+2=6$\smallskip\\
-  Note that we could have calculated $\Delta \norm{\textbf{r}}^2$ another way, using the $\nabla$ notation along with
+  Note that we could have calculated $\Delta \norm{\mathbf{r}}^2$ another way, using the $\nabla$ notation along with
   parts (a) and (b):
   \begin{displaymath}
-   \Delta \norm{\textbf{r}}^2 ~=~ \Dotprod{\nabla}{\nabla \norm{\textbf{r}}^2} ~=~ \Dotprod{\nabla}{2\,\textbf{r}} ~=~
-   2\,\Dotprod{\nabla}{\textbf{r}} ~=~ 2(3) ~=~ 6
+   \Delta \norm{\mathbf{r}}^2 ~=~ \Dotprod{\nabla}{\nabla \norm{\mathbf{r}}^2} ~=~ \Dotprod{\nabla}{2\,\mathbf{r}} ~=~
+   2\,\Dotprod{\nabla}{\mathbf{r}} ~=~ 2(3) ~=~ 6
   \end{displaymath}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \medskip
 
-Notice that in Example \ref{exmp:laplposition} if we take the curl of the gradient of $\norm{\textbf{r}}^2$ we get
+Notice that in Example \ref{exmp:laplposition} if we take the curl of the gradient of $\norm{\mathbf{r}}^2$ we get
 \begin{displaymath}
- \Crossprod{\nabla}{( \nabla \norm{\textbf{r}}^2 )} ~=~ \Crossprod{\nabla}{2\,\textbf{r}} ~=~
- 2\,\Crossprod{\nabla}{\textbf{r}} ~=~ 2\,\textbf{0} ~=~ \textbf{0} ~.
+ \Crossprod{\nabla}{( \nabla \norm{\mathbf{r}}^2 )} ~=~ \Crossprod{\nabla}{2\,\mathbf{r}} ~=~
+ 2\,\Crossprod{\nabla}{\mathbf{r}} ~=~ 2\,\mathbf{0} ~=~ \mathbf{0} ~.
 \end{displaymath}
 The following theorem shows that this will be the case in general:
 
 \statethm{thm:curlgrad0}{
- {For any smooth real-valued function $f(x,y,z)$, $\Crossprod{\nabla}{(\nabla f)} = \textbf{0}$.
+ {For any smooth real-valued function $f(x,y,z)$, $\Crossprod{\nabla}{(\nabla f)} = \mathbf{0}$.
  }
 }
 \begin{proofbar}\begin{proof}[Proof:]
  We see by the smoothness of $f$ that
  \begin{align*}
   \Crossprod{\nabla}{(\nabla f)} ~&=~ \begin{vmatrix}
-   \textbf{i} & \textbf{j} & \textbf{k} \smallskip\\ \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} &
+   \mathbf{i} & \mathbf{j} & \mathbf{k} \smallskip\\ \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} &
     \dfrac{\partial}{\partial z} \smallskip\\
    \dfrac{\partial f}{\partial x} & \dfrac{\partial f}{\partial y} & \dfrac{\partial f}{\partial z}
    \end{vmatrix}\\
-  &=~ \left( \frac{\partial^2 f}{\partial y\,\partial z}-\frac{\partial^2 f}{\partial z\,\partial y} \right) \,\textbf{i}
-   ~-~ \left( \frac{\partial^2 f}{\partial x\,\partial z}-\frac{\partial^2 f}{\partial z\,\partial x} \right) \,\textbf{j}
-   ~+~ \left( \frac{\partial^2 f}{\partial x\,\partial y}-\frac{\partial^2 f}{\partial y\,\partial x} \right) \,\textbf{k}
-  ~=~ \textbf{0} ~,
+  &=~ \left( \frac{\partial^2 f}{\partial y\,\partial z}-\frac{\partial^2 f}{\partial z\,\partial y} \right) \,\mathbf{i}
+   ~-~ \left( \frac{\partial^2 f}{\partial x\,\partial z}-\frac{\partial^2 f}{\partial z\,\partial x} \right) \,\mathbf{j}
+   ~+~ \left( \frac{\partial^2 f}{\partial x\,\partial y}-\frac{\partial^2 f}{\partial y\,\partial x} \right) \,\mathbf{k}
+  ~=~ \mathbf{0} ~,
  \end{align*}
  since the mixed partial derivatives in each component are equal.
 \end{proof}\end{proofbar}
 
 \statecor{cor:curlgrad0}{
- {If a vector field $\textbf{f}(x,y,z)$ has a potential, then $\text{curl}~\textbf{f} = \textbf{0}$.
+ {If a vector field $\mathbf{f}(x,y,z)$ has a potential, then $\text{curl}~\mathbf{f} = \mathbf{0}$.
  }
 }
 
 Another way of stating Theorem \ref{thm:curlgrad0} is that gradients are irrotational. Also,
-notice that in Example \ref{exmp:laplposition} if we take the divergence of the curl of $\textbf{r}$ we trivially get
+notice that in Example \ref{exmp:laplposition} if we take the divergence of the curl of $\mathbf{r}$ we trivially get
 \begin{displaymath}
- \Dotprod{\nabla}{(\Crossprod{\nabla}{\textbf{r}})} ~=~ \Dotprod{\nabla}{\textbf{0}} ~=~ 0 ~.
+ \Dotprod{\nabla}{(\Crossprod{\nabla}{\mathbf{r}})} ~=~ \Dotprod{\nabla}{\mathbf{0}} ~=~ 0 ~.
 \end{displaymath}
 The following theorem shows that this will be the case in general:
 
 \statethm{thm:divcurl0}{
- {For any smooth vector field $\textbf{f}(x,y,z)$, $\Dotprod{\nabla}{(\Crossprod{\nabla}{\textbf{f}})} = 0$.
+ {For any smooth vector field $\mathbf{f}(x,y,z)$, $\Dotprod{\nabla}{(\Crossprod{\nabla}{\mathbf{f}})} = 0$.
  }
 }
 The proof is straightforward and left as an exercise for the reader.
 
 \statecor{cor:divcurl0}{
- {The flux of the curl of a smooth vector field $\textbf{f}(x,y,z)$ through any closed surface is zero.
+ {The flux of the curl of a smooth vector field $\mathbf{f}(x,y,z)$ through any closed surface is zero.
  }
 }
 \begin{proofbar}\begin{proof}[Proof:]
- Let $\Sigma$ be a closed surface which bounds a solid $S$. The flux of $\Crossprod{\nabla}{\textbf{f}}$
+ Let $\Sigma$ be a closed surface which bounds a solid $S$. The flux of $\Crossprod{\nabla}{\mathbf{f}}$
  through $\Sigma$ is
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{(\Crossprod{\nabla}{\textbf{f}}\,)}{d\bm{\sigma}} ~&=~
-   \iiint\limits_{S} \Dotprod{\nabla}{(\Crossprod{\nabla}{\textbf{f}}\,)} ~dV\quad\text{(by the Divergence Theorem)}\\
+  \iint\limits_{\Sigma} \Dotprod{(\Crossprod{\nabla}{\mathbf{f}}\,)}{d\bm{\sigma}} ~&=~
+   \iiint\limits_{S} \Dotprod{\nabla}{(\Crossprod{\nabla}{\mathbf{f}}\,)} ~dV\quad\text{(by the Divergence Theorem)}\\
    &=~ \iiint\limits_{S} 0 ~dV \quad\text{(by Theorem \ref{thm:divcurl0})}\\
    &=~ 0 ~.\hfill\qedhere
  \end{align*}
@@ -2633,35 +2645,35 @@ For instance, to prove Theorem \ref{thm:curlgrad0}, assume that $f(x,y,z)$ is a 
 $\Real{3}$. Let $C$ be a simple closed curve in $\Real{3}$ and let $\Sigma$ be any capping surface for $C$ (i.e.
 $\Sigma$ is orientable and its boundary is $C$). Since $\nabla f$ is a vector field, then
 \begin{align*}
- \iint\limits_{\Sigma} \Dotprod{\left( \Crossprod{\nabla}{(\nabla f)} \right) }{\textbf{n}}\,d\sigma ~&=~
-  \oint_{C}\Dotprod{\nabla f}{d\textbf{r}} \quad\text{by Stokes' Theorem, so}\\
+ \iint\limits_{\Sigma} \Dotprod{\left( \Crossprod{\nabla}{(\nabla f)} \right) }{\mathbf{n}}\,d\sigma ~&=~
+  \oint_{C}\Dotprod{\nabla f}{d\mathbf{r}} \quad\text{by Stokes' Theorem, so}\\
  &=~ 0 \quad\text{by Corollary \ref{cor:lineintsuffpath3}.}
 \end{align*}
-Since the choice of $\Sigma$ was arbitrary, then we must have $\Dotprod{(\Crossprod{\nabla}{(\nabla f)})}{\textbf{n}}
-= 0$ throughout $\Real{3}$, where \textbf{n} is any unit vector. Using \textbf{i}, \textbf{j} and \textbf{k} in place of
-\textbf{n}, we see that we must have $\Crossprod{\nabla}{(\nabla f)} = \textbf{0}$ in $\Real{3}$, which completes the
+Since the choice of $\Sigma$ was arbitrary, then we must have $\Dotprod{(\Crossprod{\nabla}{(\nabla f)})}{\mathbf{n}}
+= 0$ throughout $\Real{3}$, where $\mathbf{n}$ is any unit vector. 
+Using $\mathbf{i}$, $\mathbf{j}$ and $\mathbf{k}$ in place of $\mathbf{n}$, we see that we must have $\Crossprod{\nabla}{(\nabla f)} = \mathbf{0}$ in $\Real{3}$, which completes the
 proof.
 
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  A system of electric charges has a \emph{charge density} $\rho (x,y,z)$ and produces an electrostatic field
- $\textbf{E}(x,y,z)$ at points $(x,y,z)$ in space. \emph{Gauss' Law} states that
+ $\mathbf{E}(x,y,z)$ at points $(x,y,z)$ in space. \emph{Gauss' Law} states that
  \begin{displaymath}
-  \iint\limits_{\Sigma} \Dotprod{\textbf{E}}{d\bm{\sigma}} ~=~ 4\pi\,\iiint\limits_{S} \rho ~dV
+  \iint\limits_{\Sigma} \Dotprod{\mathbf{E}}{d\bm{\sigma}} ~=~ 4\pi\,\iiint\limits_{S} \rho ~dV
  \end{displaymath}
  for any closed surface $\Sigma$ which encloses the charges, with $S$ being the solid region enclosed by $\Sigma$.
- Show that $\Dotprod{\nabla}{\textbf{E}} = 4\pi\rho$. This is one of \emph{Maxwell's Equations}.\footnote{In Gaussian
+ Show that $\Dotprod{\nabla}{\mathbf{E}} = 4\pi\rho$. This is one of \emph{Maxwell's Equations}.\footnote{In Gaussian
  (or CGS) units.}\smallskip
  \par\noindent\emph{Solution:} By the Divergence Theorem and Gauss' Law, we have
  \begin{align*}
-  \iiint\limits_{S} \Dotprod{\nabla}{\textbf{E}} ~dV ~&=~ \iint\limits_{\Sigma} \Dotprod{\textbf{E}}{d\bm{\sigma}}\\
+  \iiint\limits_{S} \Dotprod{\nabla}{\mathbf{E}} ~dV ~&=~ \iint\limits_{\Sigma} \Dotprod{\mathbf{E}}{d\bm{\sigma}}\\
    &=~ 4\pi\,\iiint\limits_{S} \rho ~dV.
    \intertext{Combining the integrals gives}
-   \iiint\limits_{S} ( \Dotprod{\nabla}{\textbf{E}} - 4\pi\rho ) ~dV ~&=~ 0 ~. 
+   \iiint\limits_{S} ( \Dotprod{\nabla}{\mathbf{E}} - 4\pi\rho ) ~dV ~&=~ 0 ~. 
 \end{align*}
 Since $\Sigma$ and hence $S$ was arbitrary, 
-we get $\Dotprod{\nabla}{\textbf{E}} ~=~ 4\pi\rho$.
+we get $\Dotprod{\nabla}{\mathbf{E}} ~=~ 4\pi\rho$.
 
 \end{exmp}
 \hrule width \textwidth height 0.5pt
@@ -2672,94 +2684,95 @@ gradient, divergence, curl and Laplacian. We will present the formulas for these
 coordinates.
 
 Recall from Section 1.7 that a point $(x,y,z)$ can be represented in cylindrical coordinates $(r, \theta , z)$, where
-$x=r\cos \theta$, $y=r\sin \theta$, $z=z$. At each point $(r, \theta , z)$, let $\textbf{e}_{r}$, $\textbf{e}_{\theta}$,
-$\textbf{e}_{z}$ be unit vectors in the direction of increasing $r$, $\theta$, $z$, respectively (see Figure
-\ref{fig:oncyl}). Then $\textbf{e}_{r}$, $\textbf{e}_{\theta}$, $\textbf{e}_{z}$ form an orthonormal set of vectors.
-Note, by the right-hand rule, that $\Crossprod{\textbf{e}_{z}}{\textbf{e}_{r}}=\textbf{e}_{\theta}$.
+$x=r\cos \theta$, $y=r\sin \theta$, $z=z$. At each point $(r, \theta , z)$, let $\mathbf{e}_{r}$, $\mathbf{e}_{\theta}$,
+$\mathbf{e}_{z}$ be unit vectors in the direction of increasing $r$, $\theta$, $z$, respectively (see Figure
+\ref{fig:oncyl}). 
+Then $\mathbf{e}_{r}$, $\mathbf{e}_{\theta}$, $\mathbf{e}_{z}$ form an orthonormal set of vectors.
+Note, by the right-hand rule, that $\Crossprod{\mathbf{e}_{z}}{\mathbf{e}_{r}}=\mathbf{e}_{\theta}$.
 \begin{figure}[h]
 \begin{minipage}[t]{7.5cm}
  \begin{center}
   \includegraphics{fig4.6.1.0}
  \end{center}
- \caption[]{\\Orthonormal vectors $\textbf{e}_{r}$, $\textbf{e}_{\theta}$, $\textbf{e}_{z}$\\in cylindrical coordinates}
+ \caption[]{\\Orthonormal vectors $\mathbf{e}_{r}$, $\mathbf{e}_{\theta}$, $\mathbf{e}_{z}$\\in cylindrical coordinates}
  \label{fig:oncyl}
 \end{minipage}
 \begin{minipage}[t]{7.5cm}
  \begin{center}
   \includegraphics{fig4.6.2.0}
  \end{center}
- \caption[]{\\Orthonormal vectors $\textbf{e}_{\rho}$, $\textbf{e}_{\theta}$,
-  $\textbf{e}_{\phi}$\\in spherical coordinates}
+ \caption[]{\\Orthonormal vectors $\mathbf{e}_{\rho}$, $\mathbf{e}_{\theta}$,
+  $\mathbf{e}_{\phi}$\\in spherical coordinates}
  \label{fig:onsph}
 \end{minipage}
 \end{figure}
 
 Similarly, a point $(x,y,z)$ can be represented in spherical coordinates $(\rho, \theta , \phi)$, where
 $x=\rho\sin \phi \cos \theta$, $y=\rho\sin \phi \sin \theta$, $z=\rho\cos \phi$. At each point $(\rho, \theta , \phi)$,
-let $\textbf{e}_{\rho}$, $\textbf{e}_{\theta}$, $\textbf{e}_{\phi}$ be unit vectors in the direction of increasing
-$\rho$, $\theta$, $\phi$, respectively (see Figure \ref{fig:onsph}). Then the vectors $\textbf{e}_{\rho}$,
-$\textbf{e}_{\theta}$, $\textbf{e}_{\phi}$ are orthonormal.\index{$\textbf{e}_{r}$, $\textbf{e}_{\theta}$,
-$\textbf{e}_{z}$, $\textbf{e}_{\rho}$, $\textbf{e}_{\phi}$} By the right-hand rule, we see that
-$\Crossprod{\textbf{e}_{\theta}}{\textbf{e}_{\rho}}=\textbf{e}_{\phi}$.
+let $\mathbf{e}_{\rho}$, $\mathbf{e}_{\theta}$, $\mathbf{e}_{\phi}$ be unit vectors in the direction of increasing
+$\rho$, $\theta$, $\phi$, respectively (see Figure \ref{fig:onsph}). Then the vectors $\mathbf{e}_{\rho}$,
+$\mathbf{e}_{\theta}$, $\mathbf{e}_{\phi}$ are orthonormal.\index{$\mathbf{e}_{r}$, $\mathbf{e}_{\theta}$,
+$\mathbf{e}_{z}$, $\mathbf{e}_{\rho}$, $\mathbf{e}_{\phi}$} By the right-hand rule, we see that
+$\Crossprod{\mathbf{e}_{\theta}}{\mathbf{e}_{\rho}}=\mathbf{e}_{\phi}$.
 
 We can now summarize the expressions for the gradient, divergence, curl and Laplacian in Cartesian, cylindrical and
 spherical coordinates in the following tables:
 
 
 \statecomment{
- {\textbf{Cartesian} $(x,y,z)$: Scalar function $F$; Vector field $\textbf{f} = \ssub{f}{1}\,\textbf{i} +
- \ssub{f}{2}\,\textbf{j} + \ssub{f}{3}\,\textbf{k}$
+ {\textbf{Cartesian} $(x,y,z)$: Scalar function $F$; Vector field $\mathbf{f} = \ssub{f}{1}\,\mathbf{i} +
+ \ssub{f}{2}\,\mathbf{j} + \ssub{f}{3}\,\mathbf{k}$
  \begin{alignat*}{2}
-  \text{gradient} &: & \nabla F ~&=~ \frac{\partial F}{\partial x}\,\textbf{i} ~+~ \frac{\partial F}{\partial y}\,\textbf{j}
-   ~+~ \frac{\partial F}{\partial z}\,\textbf{k}\\
-  \text{divergence} &: & \Dotprod{\nabla}{\textbf{f}} ~&=~ \frac{\partial \ssub{f}{1}}{\partial x} ~+~
+  \text{gradient} &: & \nabla F ~&=~ \frac{\partial F}{\partial x}\,\mathbf{i} ~+~ \frac{\partial F}{\partial y}\,\mathbf{j}
+   ~+~ \frac{\partial F}{\partial z}\,\mathbf{k}\\
+  \text{divergence} &: & \Dotprod{\nabla}{\mathbf{f}} ~&=~ \frac{\partial \ssub{f}{1}}{\partial x} ~+~
    \frac{\partial \ssub{f}{2}}{\partial y} ~+~ \frac{\partial \ssub{f}{3}}{\partial z}\\
-  \text{curl} &: ~ & \Crossprod{\nabla}{\textbf{f}} ~&=~
-   \left( \frac{\partial \ssub{f}{3}}{\partial y} - \frac{\partial \ssub{f}{2}}{\partial z} \right) \textbf{i} ~+~
-   \left( \frac{\partial \ssub{f}{1}}{\partial z} - \frac{\partial \ssub{f}{3}}{\partial x} \right) \textbf{j} ~+~
-   \left( \frac{\partial \ssub{f}{2}}{\partial x} - \frac{\partial \ssub{f}{1}}{\partial y} \right) \textbf{k}\\
+  \text{curl} &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
+   \left( \frac{\partial \ssub{f}{3}}{\partial y} - \frac{\partial \ssub{f}{2}}{\partial z} \right) \mathbf{i} ~+~
+   \left( \frac{\partial \ssub{f}{1}}{\partial z} - \frac{\partial \ssub{f}{3}}{\partial x} \right) \mathbf{j} ~+~
+   \left( \frac{\partial \ssub{f}{2}}{\partial x} - \frac{\partial \ssub{f}{1}}{\partial y} \right) \mathbf{k}\\
   \text{Laplacian} &: & \Delta\,F ~&=~ \frac{\partial^2 F}{\partial x^2} ~+~
    \frac{\partial^2 F}{\partial y^2} ~+~ \frac{\partial^2 F}{\partial z^2}
  \end{alignat*}}}
 
 \medskip
 \statecomment{
- {\textbf{Cylindrical} $(r,\theta ,z)$: Scalar function $F$; Vector field $\textbf{f} =
- f_{r}\,\textbf{e}_{r} + f_{\theta}\,\textbf{e}_{\theta} + f_{z}\,\textbf{e}_{z}$
+ {\textbf{Cylindrical} $(r,\theta ,z)$: Scalar function $F$; Vector field $\mathbf{f} =
+ f_{r}\,\mathbf{e}_{r} + f_{\theta}\,\mathbf{e}_{\theta} + f_{z}\,\mathbf{e}_{z}$
  \begin{alignat*}{2}
-  \text{gradient} &: & \nabla F ~&=~ \frac{\partial F}{\partial r}\,\textbf{e}_{r} ~+~
-   \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\textbf{e}_{\theta} ~+ ~\frac{\partial F}{\partial z}\,\textbf{e}_{z}\\
-  \text{divergence} &: & \Dotprod{\nabla}{\textbf{f}} ~&=~ \frac{1}{r}\,\frac{\partial}{\partial r}(rf_{r}) ~+~
+  \text{gradient} &: & \nabla F ~&=~ \frac{\partial F}{\partial r}\,\mathbf{e}_{r} ~+~
+   \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta} ~+ ~\frac{\partial F}{\partial z}\,\mathbf{e}_{z}\\
+  \text{divergence} &: & \Dotprod{\nabla}{\mathbf{f}} ~&=~ \frac{1}{r}\,\frac{\partial}{\partial r}(rf_{r}) ~+~
    \frac{1}{r}\,\frac{\partial f_{\theta}}{\partial \theta} ~+~ \frac{\partial f_{z}}{\partial z}\\
-  \text{curl} &: ~ & \Crossprod{\nabla}{\textbf{f}} ~&=~
+  \text{curl} &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
    \left( \frac{1}{r}\,\frac{\partial f_{z}}{\partial \theta} - \frac{\partial f_{\theta}}{\partial z} \right)
-   \textbf{e}_{r} ~+~
-   \left( \frac{\partial f_{r}}{\partial z} - \frac{\partial f_{z}}{\partial r} \right) \textbf{e}_{\theta} ~+~
+   \mathbf{e}_{r} ~+~
+   \left( \frac{\partial f_{r}}{\partial z} - \frac{\partial f_{z}}{\partial r} \right) \mathbf{e}_{\theta} ~+~
    \frac{1}{r} \left( \frac{\partial}{\partial r}(rf_{\theta}) - \frac{\partial f_{r}}{\partial \theta}
-   \right) \textbf{e}_{z}\\
+   \right) \mathbf{e}_{z}\\
   \text{Laplacian} &: & \Delta\,F ~&=~ \frac{1}{r}\,\frac{\partial}{\partial r} \left( r\frac{\partial F}{\partial r}
    \right) ~+~ \frac{1}{r^2}\frac{\partial^2 F}{\partial \theta^2} ~+~ \frac{\partial^2 F}{\partial z^2}
  \end{alignat*}}}
 
 \medskip
 \statecomment{
- {\textbf{Spherical} $(\rho,\theta ,\phi)$: Scalar function $F$; Vector field $\textbf{f} =
- f_{\rho}\,\textbf{e}_{\rho} + f_{\theta}\,\textbf{e}_{\theta} + f_{\phi}\,\textbf{e}_{\phi}$
+ {\textbf{Spherical} $(\rho,\theta ,\phi)$: Scalar function $F$; Vector field $\mathbf{f} =
+ f_{\rho}\,\mathbf{e}_{\rho} + f_{\theta}\,\mathbf{e}_{\theta} + f_{\phi}\,\mathbf{e}_{\phi}$
  \begin{alignat*}{2}
-  \text{gradient} &: & \nabla F ~&=~ \frac{\partial F}{\partial \rho}\,\textbf{e}_{\rho} ~+~
-   \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\textbf{e}_{\theta} ~+~
-   \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\textbf{e}_{\phi}\\
-  \text{divergence} &: & \Dotprod{\nabla}{\textbf{f}} ~&=~ \frac{1}{\rho^2}\,\frac{\partial}{\partial \rho}(\rho^2
+  \text{gradient} &: & \nabla F ~&=~ \frac{\partial F}{\partial \rho}\,\mathbf{e}_{\rho} ~+~
+   \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta} ~+~
+   \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\mathbf{e}_{\phi}\\
+  \text{divergence} &: & \Dotprod{\nabla}{\mathbf{f}} ~&=~ \frac{1}{\rho^2}\,\frac{\partial}{\partial \rho}(\rho^2
    f_{\rho}) ~+~ \frac{1}{\rho \sin \phi}\,\frac{\partial f_{\theta}}{\partial \theta} ~+~
    \frac{1}{\rho \sin \phi}\,\frac{\partial}{\partial \phi}(\sin \phi \,f_{\theta})\\
-  \text{curl} &: ~ & \Crossprod{\nabla}{\textbf{f}} ~&=~
+  \text{curl} &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
    \frac{1}{\rho \sin \phi} \left( \frac{\partial}{\partial \phi}(\sin \phi\,f_{\theta}) -
-    \frac{\partial f_{\phi}}{\partial \theta} \right) \textbf{e}_{\rho} ~+~
+    \frac{\partial f_{\phi}}{\partial \theta} \right) \mathbf{e}_{\rho} ~+~
    \frac{1}{\rho} \left( \frac{\partial}{\partial \rho}(\rho f_{\phi}) - \frac{\partial f_{\rho}}{\partial \phi}
-    \right) \textbf{e}_{\theta}\\
+    \right) \mathbf{e}_{\theta}\\
     &\mathrel{\phantom{:}} ~ & &\mathrel{\phantom{=}} {} +~
     \left( \frac{1}{\rho \sin \phi}\,\frac{\partial f_{\rho}}{\partial \theta} -
-    \frac{1}{\rho}\,\frac{\partial}{\partial \rho}(\rho f_{\theta}) \right) \textbf{e}_{\phi}\\
+    \frac{1}{\rho}\,\frac{\partial}{\partial \rho}(\rho f_{\theta}) \right) \mathbf{e}_{\phi}\\
   \text{Laplacian} &: & \Delta\,F ~&=~ \frac{1}{\rho^2}\,\frac{\partial}{\partial \rho} \left( \rho^2 \,
    \frac{\partial F}{\partial \rho} \right) ~+~ \frac{1}{\rho^2 \sin^2 \phi}\,\frac{\partial^2 F}{\partial \theta^2} ~+~
    \frac{1}{\rho^2 \sin \phi}\,\frac{\partial}{\partial \phi} \left( \sin \phi \,\frac{\partial F}{\partial \phi}
@@ -2777,92 +2790,94 @@ coordinates.\index{gradient}\index{divergence}\index{curl}\index{Laplacian}
 \par\noindent\textbf{Goal}: Show that the gradient of a real-valued function $F(\rho,\theta,\phi)$ in spherical
 coordinates is:
 \begin{displaymath}
- \nabla F ~=~ \frac{\partial F}{\partial \rho}\,\textbf{e}_{\rho} ~+~
-  \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\textbf{e}_{\theta} ~+~
-  \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\textbf{e}_{\phi}
+ \nabla F ~=~ \frac{\partial F}{\partial \rho}\,\mathbf{e}_{\rho} ~+~
+  \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta} ~+~
+  \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\mathbf{e}_{\phi}
 \end{displaymath}
 
 \par\noindent\textbf{Idea}: In the Cartesian gradient formula $\nabla F(x,y,z) =
-\frac{\partial F}{\partial x}\,\textbf{i} + \frac{\partial F}{\partial y}\,\textbf{j} +
-\frac{\partial F}{\partial z}\,\textbf{k}$, put the Cartesian basis vectors \textbf{i}, \textbf{j}, \textbf{k} in terms
-of the spherical coordinate basis vectors $\textbf{e}_{\rho}$, $\textbf{e}_{\theta}$, $\textbf{e}_{\phi}$ and functions
+\frac{\partial F}{\partial x}\,\mathbf{i} + \frac{\partial F}{\partial y}\,\mathbf{j} +
+\frac{\partial F}{\partial z}\,\mathbf{k}$, put the Cartesian basis vectors $\mathbf{i}$, $\mathbf{j}$, $\mathbf{k}$ in terms
+of the spherical coordinate basis vectors $\mathbf{e}_{\rho}$, $\mathbf{e}_{\theta}$, $\mathbf{e}_{\phi}$ and functions
 of $\rho$, $\theta$ and $\phi$. Then put the partial derivatives $\frac{\partial F}{\partial x}$,
 $\frac{\partial F}{\partial y}$, $\frac{\partial F}{\partial z}$ in terms of $\frac{\partial F}{\partial \rho}$,
 $\frac{\partial F}{\partial \theta}$, $\frac{\partial F}{\partial \phi}$ and functions of $\rho$, $\theta$ and $\phi$.\\
 
-\par\noindent\textbf{Step 1}: Get formulas for $\textbf{e}_{\rho}$, $\textbf{e}_{\theta}$, $\textbf{e}_{\phi}$ in terms
-of \textbf{i}, \textbf{j}, \textbf{k}.
+\par\noindent\textbf{Step 1}: Get formulas for $\mathbf{e}_{\rho}$, $\mathbf{e}_{\theta}$, $\mathbf{e}_{\phi}$ in terms
+of $\mathbf{i}$, $\mathbf{j}$, $\mathbf{k}$.
 
-We can see from Figure \ref{fig:onsph} that the unit vector $\textbf{e}_{\rho}$ in the $\rho$ direction at
-a general point $(\rho,\theta,\phi)$ is $\textbf{e}_{\rho} = \frac{\textbf{r}}{\norm{\textbf{r}}}$, where 
-$\textbf{r} = x\,\textbf{i} + y\,\textbf{j} + z\,\textbf{k}$ is the position vector of the point in Cartesian
+We can see from Figure \ref{fig:onsph} that the unit vector $\mathbf{e}_{\rho}$ in the $\rho$ direction at
+a general point $(\rho,\theta,\phi)$ is $\mathbf{e}_{\rho} = \frac{\mathbf{r}}{\norm{\mathbf{r}}}$, where 
+$\mathbf{r} = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}$ is the position vector of the point in Cartesian
 coordinates. Thus,
 \begin{displaymath}
- \textbf{e}_{\rho} ~=~ \frac{\textbf{r}}{\norm{\textbf{r}}}
-  ~=~ \frac{x\,\textbf{i} + y\,\textbf{j} + z\,\textbf{k}}{\sqrt{x^2 + y^2 + z^2}} ~,
+ \mathbf{e}_{\rho} ~=~ \frac{\mathbf{r}}{\norm{\mathbf{r}}}
+  ~=~ \frac{x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}}{\sqrt{x^2 + y^2 + z^2}} ~,
 \end{displaymath}
 so using $x=\rho\sin \phi \cos \theta$, $y=\rho\sin \phi \sin \theta$, $z=\rho\cos \phi$, and
 $\rho = \sqrt{x^2 + y^2 + z^2}$, we get:
 \begin{displaymath}
- \fbox{$\textbf{e}_{\rho} ~=~ \sin\phi\,\cos\theta\,\textbf{i} ~+~ \sin\phi\,\sin\theta\,\textbf{j} ~+~ \cos\phi\,\textbf{k}$}
+ \fbox{$\mathbf{e}_{\rho} ~=~ \sin\phi\,\cos\theta\,\mathbf{i} ~+~ \sin\phi\,\sin\theta\,\mathbf{j} ~+~ \cos\phi\,\mathbf{k}$}
 \end{displaymath}
 
-Now, since the angle $\theta$ is measured in the $xy$-plane, then the unit vector $\textbf{e}_{\theta}$ in the $\theta$
-direction must be parallel to the $xy$-plane. That is, $\textbf{e}_{\theta}$ is of the form $a\,\textbf{i} +
-b\,\textbf{j} + 0\,\textbf{k}$. To figure out what $a$ and $b$ are, note that since $\textbf{e}_{\theta} \perp
-\textbf{e}_{\rho}$, then in particular $\textbf{e}_{\theta} \perp \textbf{e}_{\rho}$ when $\textbf{e}_{\rho}$ is in the
+Now, since the angle $\theta$ is measured in the $xy$-plane, then the unit vector $\mathbf{e}_{\theta}$ in the $\theta$
+direction must be parallel to the $xy$-plane. That is, $\mathbf{e}_{\theta}$ is of the form $a\,\mathbf{i} +
+b\,\mathbf{j} + 0\,\mathbf{k}$. To figure out what $a$ and $b$ are, note that since $\mathbf{e}_{\theta} \perp
+\mathbf{e}_{\rho}$, then in particular $\mathbf{e}_{\theta} \perp \mathbf{e}_{\rho}$ when $\mathbf{e}_{\rho}$ is in the
 $xy$-plane. That occurs when the angle $\phi$ is $\pi/2$. Putting $\phi = \pi/2$ into the formula for
-$\textbf{e}_{\rho}$ gives $\textbf{e}_{\rho} = \cos\theta\,\textbf{i} + \sin\theta\,\textbf{j} + 0\,\textbf{k}$, and
-we see that a vector perpendicular to that is $-\sin\theta\,\textbf{i} + \cos\theta\,\textbf{j} + 0\,\textbf{k}$. Since
-this vector is also a unit vector and points in the (positive) $\theta$ direction, it must be $\textbf{e}_{\theta}$:
+$\mathbf{e}_{\rho}$ gives $\mathbf{e}_{\rho} = \cos\theta\,\mathbf{i} + \sin\theta\,\mathbf{j} + 0\,\mathbf{k}$, and
+we see that a vector perpendicular to that is $-\sin\theta\,\mathbf{i} + \cos\theta\,\mathbf{j} + 0\,\mathbf{k}$. Since
+this vector is also a unit vector and points in the (positive) $\theta$ direction, it must be $\mathbf{e}_{\theta}$:
 \begin{displaymath}
- \fbox{$\textbf{e}_{\theta} ~=~ -\sin\theta\,\textbf{i} ~+~ \cos\theta\,\textbf{j} ~+~ 0\,\textbf{k}$}
+ \fbox{$\mathbf{e}_{\theta} ~=~ -\sin\theta\,\mathbf{i} ~+~ \cos\theta\,\mathbf{j} ~+~ 0\,\mathbf{k}$}
 \end{displaymath}
 
-Lastly, since $\textbf{e}_{\phi}=\Crossprod{\textbf{e}_{\theta}}{\textbf{e}_{\rho}}$, we get:
+Lastly, since $\mathbf{e}_{\phi}=\Crossprod{\mathbf{e}_{\theta}}{\mathbf{e}_{\rho}}$, we get:
 \begin{displaymath}
- \fbox{$\textbf{e}_{\phi} ~=~ \cos\phi\,\cos\theta\,\textbf{i} ~+~ \cos\phi\,\sin\theta\,\textbf{j} ~-~ \sin\phi\,\textbf{k}$}
+ \fbox{$\mathbf{e}_{\phi} ~=~ \cos\phi\,\cos\theta\,\mathbf{i} ~+~ \cos\phi\,\sin\theta\,\mathbf{j} ~-~ \sin\phi\,\mathbf{k}$}
 \end{displaymath}
 
-\par\noindent\textbf{Step 2}: Use the three formulas from Step 1 to solve for \textbf{i}, \textbf{j}, \textbf{k} in
-terms of $\textbf{e}_{\rho}$, $\textbf{e}_{\theta}$, $\textbf{e}_{\phi}$.
+\par\noindent\textbf{Step 2}: Use the three formulas from Step 1 to solve for $\mathbf{i}$, $\mathbf{j}$, $\mathbf{k}$ in
+terms of $\mathbf{e}_{\rho}$, $\mathbf{e}_{\theta}$, $\mathbf{e}_{\phi}$.
 
 This comes down to solving a system of three equations in three unknowns. There are many ways of doing this, but we will
-do it by combining the formulas for $\textbf{e}_{\rho}$ and $\textbf{e}_{\phi}$ to eliminate \textbf{k}, which will give
-us an equation involving just \textbf{i} and \textbf{j}. This, with the formula for $\textbf{e}_{\theta}$, will then
-leave us with a system of two equations in two unknowns (\textbf{i} and \textbf{j}), which we will use to solve
-first for \textbf{j} then for \textbf{i}. Lastly, we will solve for \textbf{k}.
+do it by combining the formulas for $\mathbf{e}_{\rho}$ and $\mathbf{e}_{\phi}$ to eliminate $\mathbf{k}$, which will give
+us an equation involving just $\mathbf{i}$ and $\mathbf{j}$. 
+This, with the formula for $\mathbf{e}_{\theta}$, will then
+leave us with a system of two equations in two unknowns ($\mathbf{i}$ and $\mathbf{j}$), which we will use to solve
+first for $\mathbf{j}$ then for $\mathbf{i}$. 
+Lastly, we will solve for $\mathbf{k}$.
 
 First, note that
 \begin{displaymath}
- \sin\phi\,\textbf{e}_{\rho} ~+~ \cos\phi\,\textbf{e}_{\phi} ~=~ \cos\theta\,\textbf{i} ~+~ \sin\theta\,\textbf{j}
+ \sin\phi\,\mathbf{e}_{\rho} ~+~ \cos\phi\,\mathbf{e}_{\phi} ~=~ \cos\theta\,\mathbf{i} ~+~ \sin\theta\,\mathbf{j}
 \end{displaymath}
 
 \noindent so that
 \begin{displaymath}
- \sin\theta\,(\sin\phi\,\textbf{e}_{\rho} ~+~ \cos\phi\,\textbf{e}_{\phi}) ~+~ \cos\theta\,\textbf{e}_{\theta} ~=~
-  (\sin^2 \theta + \cos^2 \theta)\textbf{j} ~=~ \textbf{j} ~,
+ \sin\theta\,(\sin\phi\,\mathbf{e}_{\rho} ~+~ \cos\phi\,\mathbf{e}_{\phi}) ~+~ \cos\theta\,\mathbf{e}_{\theta} ~=~
+  (\sin^2 \theta + \cos^2 \theta)\mathbf{j} ~=~ \mathbf{j} ~,
 \end{displaymath}
 and so:
 \begin{displaymath}
- \fbox{$\textbf{j} ~=~ \sin\phi\,\sin\theta\,\textbf{e}_{\rho} ~+~ \cos\theta\,\textbf{e}_{\theta} ~+~
-  \cos\phi\,\sin\theta\,\textbf{e}_{\phi}$}
+ \fbox{$\mathbf{j} ~=~ \sin\phi\,\sin\theta\,\mathbf{e}_{\rho} ~+~ \cos\theta\,\mathbf{e}_{\theta} ~+~
+  \cos\phi\,\sin\theta\,\mathbf{e}_{\phi}$}
 \end{displaymath}
 
 Likewise, we see that
 \begin{displaymath}
- \cos\theta\,(\sin\phi\,\textbf{e}_{\rho} ~+~ \cos\phi\,\textbf{e}_{\phi}) ~-~ \sin\theta\,\textbf{e}_{\theta} ~=~
-  (\cos^2 \theta + \sin^2 \theta)\textbf{i} ~=~ \textbf{i} ~,
+ \cos\theta\,(\sin\phi\,\mathbf{e}_{\rho} ~+~ \cos\phi\,\mathbf{e}_{\phi}) ~-~ \sin\theta\,\mathbf{e}_{\theta} ~=~
+  (\cos^2 \theta + \sin^2 \theta)\mathbf{i} ~=~ \mathbf{i} ~,
 \end{displaymath}
 and so:
 \begin{displaymath}
- \fbox{$\textbf{i} ~=~ \sin\phi\,\cos\theta\,\textbf{e}_{\rho} ~-~ \sin\theta\,\textbf{e}_{\theta} ~+~
-  \cos\phi\,\cos\theta\,\textbf{e}_{\phi}$}
+ \fbox{$\mathbf{i} ~=~ \sin\phi\,\cos\theta\,\mathbf{e}_{\rho} ~-~ \sin\theta\,\mathbf{e}_{\theta} ~+~
+  \cos\phi\,\cos\theta\,\mathbf{e}_{\phi}$}
 \end{displaymath}
 
 Lastly, we see that:
 \begin{displaymath}
- \fbox{$\textbf{k} ~=~ \cos\phi\,\textbf{e}_{\rho} ~-~ \sin\phi\,\textbf{e}_{\phi}$}
+ \fbox{$\mathbf{k} ~=~ \cos\phi\,\mathbf{e}_{\rho} ~-~ \sin\phi\,\mathbf{e}_{\phi}$}
 \end{displaymath}
 
 \par\noindent\textbf{Step 3}: Get formulas for $\frac{\partial F}{\partial \rho}$, $\frac{\partial F}{\partial \theta}$,
@@ -2908,49 +2923,50 @@ Step 2, we get:
   \sin\phi\,\frac{\partial F}{\partial \phi} \right)
 \end{empheq}
 
-\par\noindent\textbf{Step 5}: Substitute the formulas for \textbf{i}, \textbf{j}, \textbf{k} from Step 2 and the
+\par\noindent\textbf{Step 5}: 
+Substitute the formulas for $\mathbf{i}$, $\mathbf{j}$, $\mathbf{k}$ from Step 2 and the
 formulas for $\frac{\partial F}{\partial x}$, $\frac{\partial F}{\partial y}$, $\frac{\partial F}{\partial z}$ from
-Step 4 into the Cartesian gradient formula $\nabla F(x,y,z) = \frac{\partial F}{\partial x}\,\textbf{i} +
-\frac{\partial F}{\partial y}\,\textbf{j} + \frac{\partial F}{\partial z}\,\textbf{k}$.
+Step 4 into the Cartesian gradient formula $\nabla F(x,y,z) = \frac{\partial F}{\partial x}\,\mathbf{i} +
+\frac{\partial F}{\partial y}\,\mathbf{j} + \frac{\partial F}{\partial z}\,\mathbf{k}$.
 
 Doing this last step is perhaps the most tedious, since it involves simplifying $3 \times 3 + 3 \times 3 + 2 \times
 2 = 22$ terms! Namely,
 \begin{align*}
  \nabla F ~&=~ \frac{1}{\rho\sin\phi}\left( \rho\sin^2\phi\,\cos\theta\,
   \frac{\partial F}{\partial \rho} - \sin\theta\,\frac{\partial F}{\partial \theta} + \sin\phi\,\cos\phi\,\cos\theta\,
-  \frac{\partial F}{\partial \phi} \right) (\sin\phi\,\cos\theta\,\textbf{e}_{\rho} - \sin\theta\,\textbf{e}_{\theta}\\
-  &\mathrel{\phantom{=}} {} + \cos\phi\,\cos\theta\,\textbf{e}_{\phi})\\
+  \frac{\partial F}{\partial \phi} \right) (\sin\phi\,\cos\theta\,\mathbf{e}_{\rho} - \sin\theta\,\mathbf{e}_{\theta}\\
+  &\mathrel{\phantom{=}} {} + \cos\phi\,\cos\theta\,\mathbf{e}_{\phi})\\
   &+~ \frac{1}{\rho\sin\phi}\left( \rho\sin^2\phi\,\sin\theta\,
   \frac{\partial F}{\partial \rho} + \cos\theta\,\frac{\partial F}{\partial \theta} + \sin\phi\,\cos\phi\,\sin\theta\,
-  \frac{\partial F}{\partial \phi} \right) (\sin\phi\,\sin\theta\,\textbf{e}_{\rho} + \cos\theta\,\textbf{e}_{\theta}\\
-  &\mathrel{\phantom{=}} {} + \cos\phi\,\sin\theta\,\textbf{e}_{\phi})\\
+  \frac{\partial F}{\partial \phi} \right) (\sin\phi\,\sin\theta\,\mathbf{e}_{\rho} + \cos\theta\,\mathbf{e}_{\theta}\\
+  &\mathrel{\phantom{=}} {} + \cos\phi\,\sin\theta\,\mathbf{e}_{\phi})\\
   &+~ \frac{1}{\rho}\left( \rho\cos\phi\,\frac{\partial F}{\partial \rho} -
-  \sin\phi\,\frac{\partial F}{\partial \phi} \right) (\cos\phi\,\textbf{e}_{\rho} - \sin\phi\,\textbf{e}_{\phi}) ~,
+  \sin\phi\,\frac{\partial F}{\partial \phi} \right) (\cos\phi\,\mathbf{e}_{\rho} - \sin\phi\,\mathbf{e}_{\phi}) ~,
 \end{align*}
-which we see has $8$ terms involving $\textbf{e}_{\rho}$, $6$ terms involving $\textbf{e}_{\theta}$, and
-$8$ terms involving $\textbf{e}_{\phi}$. But the algebra is straightforward and yields the desired result:
+which we see has $8$ terms involving $\mathbf{e}_{\rho}$, $6$ terms involving $\mathbf{e}_{\theta}$, and
+$8$ terms involving $\mathbf{e}_{\phi}$. But the algebra is straightforward and yields the desired result:
 \begin{displaymath}
- \nabla F ~=~ \frac{\partial F}{\partial \rho}\,\textbf{e}_{\rho} ~+~
-  \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\textbf{e}_{\theta} ~+~
-  \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\textbf{e}_{\phi} \quad\checkmark
+ \nabla F ~=~ \frac{\partial F}{\partial \rho}\,\mathbf{e}_{\rho} ~+~
+  \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta} ~+~
+  \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\mathbf{e}_{\phi} \quad\checkmark
 \end{displaymath}
 
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- In Example \ref{exmp:laplposition} we showed that $\nabla \norm{\textbf{r}}^2 = 2\,\textbf{r}$ and
- $\Delta \norm{\textbf{r}}^2 = 6$, where $\textbf{r}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} + z\,\textbf{k}$ in
+ In Example \ref{exmp:laplposition} we showed that $\nabla \norm{\mathbf{r}}^2 = 2\,\mathbf{r}$ and
+ $\Delta \norm{\mathbf{r}}^2 = 6$, where $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}$ in
  Cartesian coordinates. Verify that we get the same answers if we switch to spherical coordinates.\smallskip
- \par\noindent \emph{Solution:} Since $\norm{\textbf{r}}^2 = x^2 + y^2 + z^2 = \rho^2$ in spherical
+ \par\noindent \emph{Solution:} Since $\norm{\mathbf{r}}^2 = x^2 + y^2 + z^2 = \rho^2$ in spherical
  coordinates, let $F(\rho,\theta,\phi) = \rho^2$ (so that $F(\rho,\theta,\phi) =
- \norm{\textbf{r}}^2$). The gradient of $F$ in spherical coordinates is
+ \norm{\mathbf{r}}^2$). The gradient of $F$ in spherical coordinates is
  \begin{align*}
-  \nabla F ~&=~ \frac{\partial F}{\partial \rho}\,\textbf{e}_{\rho} ~+~
-   \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\textbf{e}_{\theta} ~+~
-   \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\textbf{e}_{\phi}\\
-   &=~ 2\rho\,\textbf{e}_{\rho} ~+~ \frac{1}{\rho \sin \phi}\,(0)\,\textbf{e}_{\theta} ~+~
-    \frac{1}{\rho}\,(0)\,\textbf{e}_{\phi}\\
-   &=~ 2\rho\,\textbf{e}_{\rho} ~=~ 2\rho\,\frac{\textbf{r}}{\norm{\textbf{r}}} ~,~\text{as we showed earlier, so}\\
-   &=~ 2\rho\,\frac{\textbf{r}}{\rho} ~=~ 2\,\textbf{r} ~,~\text{as expected. And the Laplacian is}\\
+  \nabla F ~&=~ \frac{\partial F}{\partial \rho}\,\mathbf{e}_{\rho} ~+~
+   \frac{1}{\rho \sin \phi}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta} ~+~
+   \frac{1}{\rho}\,\frac{\partial F}{\partial \phi}\,\mathbf{e}_{\phi}\\
+   &=~ 2\rho\,\mathbf{e}_{\rho} ~+~ \frac{1}{\rho \sin \phi}\,(0)\,\mathbf{e}_{\theta} ~+~
+    \frac{1}{\rho}\,(0)\,\mathbf{e}_{\phi}\\
+   &=~ 2\rho\,\mathbf{e}_{\rho} ~=~ 2\rho\,\frac{\mathbf{r}}{\norm{\mathbf{r}}} ~,~\text{as we showed earlier, so}\\
+   &=~ 2\rho\,\frac{\mathbf{r}}{\rho} ~=~ 2\,\mathbf{r} ~,~\text{as expected. And the Laplacian is}\\
   \Delta\,F ~&=~ \frac{1}{\rho^2}\,\frac{\partial}{\partial \rho} \left( \rho^2 \,
    \frac{\partial F}{\partial \rho} \right) ~+~ \frac{1}{\rho^2 \sin^2 \phi}\,\frac{\partial^2 F}{\partial \theta^2} ~+~
    \frac{1}{\rho^2 \sin \phi}\,\frac{\partial}{\partial \phi} \left( \sin \phi \,\frac{\partial F}{\partial \phi}
@@ -2981,36 +2997,36 @@ $8$ terms involving $\textbf{e}_{\phi}$. But the algebra is straightforward and 
  \item Find the Laplacian of the function in Exercise 3 in spherical coordinates.
  \item Find the Laplacian of the function in Exercise 6 in spherical coordinates.
  \item Let $f(x,y,z) = \dfrac{z}{x^2 + y^2}$ in Cartesian coordinates. Find $\nabla f$ in cylindrical coordinates.
- \item For $\textbf{f}(r,\theta,z) = r\,\textbf{e}_{r} + z\,\sin\theta\,\textbf{e}_{\theta} + rz\,\textbf{e}_{z}$ in
-  cylindrical coordinates, find $\text{div}~\textbf{f}$ and $\text{curl}~\textbf{f}$.
- \item For $\textbf{f}(\rho,\theta,\phi) = \textbf{e}_{\rho} + \rho\,\cos\theta\,\textbf{e}_{\theta} +
-  \rho\,\textbf{e}_{\phi}$ in spherical coordinates, find $\text{div}~\textbf{f}$ and $\text{curl}~\textbf{f}$.
+ \item For $\mathbf{f}(r,\theta,z) = r\,\mathbf{e}_{r} + z\,\sin\theta\,\mathbf{e}_{\theta} + rz\,\mathbf{e}_{z}$ in
+  cylindrical coordinates, find $\text{div}~\mathbf{f}$ and $\text{curl}~\mathbf{f}$.
+ \item For $\mathbf{f}(\rho,\theta,\phi) = \mathbf{e}_{\rho} + \rho\,\cos\theta\,\mathbf{e}_{\theta} +
+  \rho\,\mathbf{e}_{\phi}$ in spherical coordinates, find $\text{div}~\mathbf{f}$ and $\text{curl}~\mathbf{f}$.
 \suspend{enumerate}
 \probs{B}
-\par\noindent For Exercises 12--23, prove the given formula ($r = \norm{\textbf{r}}$ is the length of the position
-vector field $\textbf{r}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} +z\,\textbf{k}$).
+\par\noindent For Exercises 12--23, prove the given formula ($r = \norm{\mathbf{r}}$ is the length of the position
+vector field $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} +z\,\mathbf{k}$).
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{4}
-  \item $\nabla\,(1/r) = -\textbf{r}/r^3$
+  \item $\nabla\,(1/r) = -\mathbf{r}/r^3$
   \item $\Delta\,(1/r) = 0$
-  \item $\Dotprod{\nabla}{(\textbf{r}/r^3 )} = 0$
-  \item $\nabla\,(\ln r) = \textbf{r}/r^2$
+  \item $\Dotprod{\nabla}{(\mathbf{r}/r^3 )} = 0$
+  \item $\nabla\,(\ln r) = \mathbf{r}/r^2$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(\textbf{F} + \textbf{G}) ~=~ \text{div}~\textbf{F} ~+~ \text{div}~\textbf{G}$
-  \item $\text{curl}\,(\textbf{F} + \textbf{G}) ~=~ \text{curl}~\textbf{F} ~+~ \text{curl}~\textbf{G}$
+  \item $\text{div}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{div}~\mathbf{F} ~+~ \text{div}~\mathbf{G}$
+  \item $\text{curl}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{curl}~\mathbf{F} ~+~ \text{curl}~\mathbf{G}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(f\,\textbf{F}) ~=~ f\,\text{div}~\textbf{F} ~+~ \Dotprod{\textbf{F}}{\nabla f}$
-  \item $\text{div}\,(\Crossprod{\textbf{F}}{\textbf{G}}) ~=~ \Dotprod{\textbf{G}}{\text{curl}~\textbf{F}} ~-~
-   \Dotprod{\textbf{F}}{\text{curl}~\textbf{G}}$
+  \item $\text{div}\,(f\,\mathbf{F}) ~=~ f\,\text{div}~\mathbf{F} ~+~ \Dotprod{\mathbf{F}}{\nabla f}$
+  \item $\text{div}\,(\Crossprod{\mathbf{F}}{\mathbf{G}}) ~=~ \Dotprod{\mathbf{G}}{\text{curl}~\mathbf{F}} ~-~
+   \Dotprod{\mathbf{F}}{\text{curl}~\mathbf{G}}$
  \end{multicols}
  \begin{multicols}{2}
   \item $\text{div}\,(\Crossprod{\nabla f}{\nabla g}) ~=~ 0$
-  \item $\text{curl}\,(f\,\textbf{F}) ~=~ f\,\text{curl}~\textbf{F} ~+~ \Crossprod{(\nabla f\,)}{\textbf{F}}$
+  \item $\text{curl}\,(f\,\mathbf{F}) ~=~ f\,\text{curl}~\mathbf{F} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{F}}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{curl}\,(\text{curl}~\textbf{F}) ~=~ \nabla (\text{div}~\textbf{F}) ~-~ \Delta\,\textbf{F}$
+  \item $\text{curl}\,(\text{curl}~\mathbf{F}) ~=~ \nabla (\text{div}~\mathbf{F}) ~-~ \Delta\,\mathbf{F}$
   \item $\Delta\,(fg) ~=~ f\,\Delta\,g ~+~ g\,\Delta\,f ~+~2(\Dotprod{\nabla f}{\nabla g})$
  \end{multicols}
 \suspend{enumerate}
@@ -3018,9 +3034,9 @@ vector field $\textbf{r}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} +z\,\textbf{k}$)
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Prove Theorem \ref{thm:divcurl0}.
  \item Derive the gradient formula in cylindrical coordinates: $\nabla F =
-  \frac{\partial F}{\partial r}\,\textbf{e}_{r} +
-  \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\textbf{e}_{\theta}+\frac{\partial F}{\partial z}\,\textbf{e}_{z}$
- \item Use $\textbf{f} = u\,\nabla v$ in the Divergence Theorem to prove:
+  \frac{\partial F}{\partial r}\,\mathbf{e}_{r} +
+  \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta}+\frac{\partial F}{\partial z}\,\mathbf{e}_{z}$
+ \item Use $\mathbf{f} = u\,\nabla v$ in the Divergence Theorem to prove:
   \begin{enumerate}[(a)]
    \item \emph{Green's first identity:}\index{Green's identities}
     \[\iiint_{S} (u\,\Delta\,v ~+~ \Dotprod{(\nabla u)}{(\nabla v)})\,dV =
@@ -3031,8 +3047,8 @@ vector field $\textbf{r}(x,y,z) = x\,\textbf{i} + y\,\textbf{j} +z\,\textbf{k}$)
   \end{enumerate}
  \item Suppose that $\Delta\,u = 0$ (i.e. $u$ is \emph{harmonic}) over $\Real{3}$.\index{harmonic} Define the
   \emph{normal derivative}\index{normal derivative} $\frac{\partial u}{\partial n}$ of $u$ over a closed surface
-  $\Sigma$ with outward unit normal vector \textbf{n} by $\frac{\partial u}{\partial n} = \ssub{D}{\textbf{n}}u =
-  \Dotprod{\textbf{n}}{\nabla u}$. 
+  $\Sigma$ with outward unit normal vector $\mathbf{n}$ by $\frac{\partial u}{\partial n} = \ssub{D}{\mathbf{n}}u =
+  \Dotprod{\mathbf{n}}{\nabla u}$. 
   Show that 
   \[\iint_{\Sigma} \frac{\partial u}{\partial n} \,d\sigma = 0.\]
   (\emph{Hint: Use Green's second identity.})

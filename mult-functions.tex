@@ -736,10 +736,10 @@ equation for $T$ is
 \begin{equation}
  A(x-a)+B(y-b)+C(z-f(a,b))=0
 \end{equation}
-where $\textbf{n}=(A,B,C)$ is a normal vector to the plane $T$. Since $T$ contains the lines $\ssub{L}{x}$ and
-$\ssub{L}{y}$, then all we need are vectors $\ssub{\textbf{v}}{x}$ and $\ssub{\textbf{v}}{y}$ that are parallel to
+where $\mathbf{n}=(A,B,C)$ is a normal vector to the plane $T$. Since $T$ contains the lines $\ssub{L}{x}$ and
+$\ssub{L}{y}$, then all we need are vectors $\ssub{\mathbf{v}}{x}$ and $\ssub{\mathbf{v}}{y}$ that are parallel to
 $\ssub{L}{x}$ and
-$\ssub{L}{y}$, respectively, and then let $\textbf{n}=\Crossprod{\ssub{\textbf{v}}{x}}{\ssub{\textbf{v}}{y}}$.
+$\ssub{L}{y}$, respectively, and then let $\mathbf{n}=\Crossprod{\ssub{\mathbf{v}}{x}}{\ssub{\mathbf{v}}{y}}$.
 
 \piccaption[]{}\parpic[r]{\begin{tikzpicture}
    \usetikzlibrary{arrows}
@@ -749,28 +749,28 @@ $\ssub{L}{y}$, respectively, and then let $\textbf{n}=\Crossprod{\ssub{\textbf{v
    \pgfputat{\pgfpointxyz{0.2}{2.4}{0}}{\pgfbox[center,center]{\small $z$}}
    \pgfputat{\pgfpointxyz{-0.2}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}}
    \draw [black,line width=1.2,-latex] (0,0) -- (1,1.6);
-   \node at (0.8,2) {\small $\ssub{\textbf{v}}{x}=(1,0,\frac{\partial f}{\partial x}(a,b))$};
+   \node at (0.8,2) {\small $\ssub{\mathbf{v}}{x}=(1,0,\frac{\partial f}{\partial x}(a,b))$};
    \node [right] at (1,0.8) {\small $\frac{\partial f}{\partial x}(a,b)$};
    \node [below] at (1,0) {\small $1$};
    \draw [dashed] (1,0) -- (1,1.6);
   \end{tikzpicture}}
 \par\noindent Since the slope of
 $\ssub{L}{x}$ is $\frac{\partial f}{\partial x}(a,b)$, then the vector
-$\ssub{\textbf{v}}{x}=(1,0,\frac{\partial f}{\partial x}(a,b))$ is parallel to $\ssub{L}{x}$ (since
-$\ssub{\textbf{v}}{x}$ lies in the
+$\ssub{\mathbf{v}}{x}=(1,0,\frac{\partial f}{\partial x}(a,b))$ is parallel to $\ssub{L}{x}$ (since
+$\ssub{\mathbf{v}}{x}$ lies in the
 $xz$-plane and lies in a line with slope $\frac{\frac{\partial f}{\partial x}(a,b)}{1}=
 \frac{\partial f}{\partial x}(a,b)$. See Figure 2.3.3).
-Similarly, the vector\\$\ssub{\textbf{v}}{y}=(0,1,\frac{\partial f}{\partial y}(a,b))$ is parallel to $\ssub{L}{y}$.
+Similarly, the vector\\$\ssub{\mathbf{v}}{y}=(0,1,\frac{\partial f}{\partial y}(a,b))$ is parallel to $\ssub{L}{y}$.
 Hence, the vector
 \begin{displaymath}
- \textbf{n} = \Crossprod{\ssub{\textbf{v}}{x}}{\ssub{\textbf{v}}{y}} =
+ \mathbf{n} = \Crossprod{\ssub{\mathbf{v}}{x}}{\ssub{\mathbf{v}}{y}} =
   \left|
   \begin{array}{rrr}
-   \textbf{i} & \textbf{j} & \textbf{k}\\
+   \mathbf{i} & \mathbf{j} & \mathbf{k}\\
    1 & 0 & \tfrac{\partial f}{\partial x}(a,b)\\
    0 & 1 & \tfrac{\partial f}{\partial y}(a,b)
   \end{array}\right|
-  = -\tfrac{\partial f}{\partial x}(a,b)\,\textbf{i} - \tfrac{\partial f}{\partial y}(a,b)\,\textbf{j} + \textbf{k}
+  = -\tfrac{\partial f}{\partial x}(a,b)\,\mathbf{i} - \tfrac{\partial f}{\partial y}(a,b)\,\mathbf{j} + \mathbf{k}
 \end{displaymath}
 is normal to the plane $T$. Thus the equation of $T$ is
 \begin{equation}
@@ -865,48 +865,48 @@ directions, respectively. What about other directions? It turns out that we can 
 
 \statedefn{defn:dirderiv}{\index{directional derivative}\index{derivative!directional}
  {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$, and let $(a,b)$ be a point in $D$. Let
-  \textbf{v} be a vector in $\Real{2}$. Then the
+  $\mathbf{v}$ be a vector in $\Real{2}$. Then the
   \textbf{directional derivative of $\bm{f}$ at $\bm{(a,b)}$ in the direction of v}, denoted by
-  $\ssub{D}{\textbf{v}}f(a,b)$, is defined as
+  $\ssub{D}{\mathbf{v}}f(a,b)$, is defined as
   \begin{equation}\label{eqn:dirderiv}
-   \ssub{D}{\textbf{v}}f(a,b) = \lim_{h \to 0} \dfrac{f((a,b) + h\textbf{v}) - f(a,b)}{h}.
+   \ssub{D}{\mathbf{v}}f(a,b) = \lim_{h \to 0} \dfrac{f((a,b) + h\mathbf{v}) - f(a,b)}{h}.
   \end{equation}}
 }
 
 Notice in the definition that we seem to be treating the point $(a,b)$ as a vector, since we are adding the
-vector $h\textbf{v}$ to it. But this is just the usual idea of identifying vectors with their terminal points, which
-the reader should be used to by now. If we were to write the vector \textbf{v} as $\textbf{v} = \vectwo{v}$, then
+vector $h\mathbf{v}$ to it. But this is just the usual idea of identifying vectors with their terminal points, which
+the reader should be used to by now. If we were to write the vector $\mathbf{v}$ as $\mathbf{v} = \vectwo{v}$, then
 \begin{equation}\label{eqn:dirderivpt}
- \ssub{D}{\textbf{v}}f(a,b) = \lim_{h \to 0} \dfrac{f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a,b)}{h} ~.
+ \ssub{D}{\mathbf{v}}f(a,b) = \lim_{h \to 0} \dfrac{f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a,b)}{h} ~.
 \end{equation}
 From this we can immediately recognize that the partial derivatives $\tfrac{\partial f}{\partial x}$ and
-$\tfrac{\partial f}{\partial y}$ are special cases of the directional derivative with $\textbf{v} = \textbf{i} = (1,0)$
-and $\textbf{v} = \textbf{j} = (0,1)$, respectively. 
-That is, $\tfrac{\partial f}{\partial x} = \ssub{D}{\textbf{i}}f$
-and $\tfrac{\partial f}{\partial y} = \ssub{D}{\textbf{j}}f$. 
+$\tfrac{\partial f}{\partial y}$ are special cases of the directional derivative with $\mathbf{v} = \mathbf{i} = (1,0)$
+and $\mathbf{v} = \mathbf{j} = (0,1)$, respectively. 
+That is, $\tfrac{\partial f}{\partial x} = \ssub{D}{\mathbf{i}}f$
+and $\tfrac{\partial f}{\partial y} = \ssub{D}{\mathbf{j}}f$. 
 
 If $f(x,y)$ has continuous partial derivatives $\tfrac{\partial f}{\partial x}$ and
 $\tfrac{\partial f}{\partial y}$ (which will always be the case in this text), then there is a simple formula for the
-directional derivative:\index{$\ssub{D}{\textbf{v}}f$}
+directional derivative:\index{$\ssub{D}{\mathbf{v}}f$}
 
 \statethm{thm:dirderiv}{
  {Let $f(x,y)$ be a real-valued function with domain $D$ in $\Real{2}$ such that the partial derivatives
  $\tfrac{\partial f}{\partial x}$ and $\tfrac{\partial f}{\partial y}$ exist and are continuous in $D$. Let $(a,b)$ be
  a point in $D$. Then
   \begin{equation}\label{eqn:dirderivfor}
-   \ssub{D}{\textbf{v}}f(a,b) = \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) +
+   \ssub{D}{\mathbf{v}}f(a,b) = \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) +
     \ssub{v}{2}\frac{\partial f}{\partial y}(a,b) ~.
   \end{equation}}
-  for any vector $\textbf{v} = \vectwo{v}$ in $\Real{2}$
+  for any vector $\mathbf{v} = \vectwo{v}$ in $\Real{2}$
 }
 \begin{proofbar}
 \begin{proof}[Proof:]
- Note that if $\textbf{v} = \textbf{i} = (1,0)$ then the above formula reduces to
- $\ssub{D}{\textbf{v}}f(a,b) = \tfrac{\partial f}{\partial x}(a,b)$, which we know is true since
- $\ssub{D}{\textbf{i}}f = \tfrac{\partial f}{\partial x}$, as we noted earlier. Similarly, for
- $\textbf{v} = \textbf{j} = (0,1)$ the formula reduces to $\ssub{D}{\textbf{v}}f(a,b) =
- \tfrac{\partial f}{\partial y}(a,b)$, which is true since $\ssub{D}{\textbf{j}}f = \tfrac{\partial f}{\partial y}$.
- Fix such a vector $\textbf{v} = \vectwo{v}$ and fix a number $h \ne 0$.
+ Note that if $\mathbf{v} = \mathbf{i} = (1,0)$ then the above formula reduces to
+ $\ssub{D}{\mathbf{v}}f(a,b) = \tfrac{\partial f}{\partial x}(a,b)$, which we know is true since
+ $\ssub{D}{\mathbf{i}}f = \tfrac{\partial f}{\partial x}$, as we noted earlier. Similarly, for
+ $\mathbf{v} = \mathbf{j} = (0,1)$ the formula reduces to $\ssub{D}{\mathbf{v}}f(a,b) =
+ \tfrac{\partial f}{\partial y}(a,b)$, which is true since $\ssub{D}{\mathbf{j}}f = \tfrac{\partial f}{\partial y}$.
+ Fix such a vector $\mathbf{v} = \vectwo{v}$ and fix a number $h \ne 0$.
 Then
  \begin{equation}\label{eqn:dirderivdiff}
   f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a,b) = f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b) +
@@ -944,13 +944,13 @@ Then
  \end{align*}
  so by formula (\ref{eqn:dirderivpt}) we have
  \begin{align*}
-  \ssub{D}{\textbf{v}}f(a,b) ~~ &= ~~ \lim_{h \to 0} \dfrac{f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a,b)}{h}\\[8pt]
+  \ssub{D}{\mathbf{v}}f(a,b) ~~ &= ~~ \lim_{h \to 0} \dfrac{f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a,b)}{h}\\[8pt]
    &= ~~ \lim_{h \to 0} \left[ \ssub{v}{2}\frac{\partial f}{\partial y}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) +
     \ssub{v}{1} \frac{\partial f}{\partial x}(a+\beta h\ssub{v}{1},b) \right]\\[8pt]
    &= ~~ \ssub{v}{2}\frac{\partial f}{\partial y}(a,b) +
     \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) \text{~~~by the continuity of $\frac{\partial f}{\partial x}$ and
      $\frac{\partial f}{\partial y}$, so}\\[8pt]
-   \ssub{D}{\textbf{v}}f(a,b) ~~ &= ~~ \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) +
+   \ssub{D}{\mathbf{v}}f(a,b) ~~ &= ~~ \ssub{v}{1}\frac{\partial f}{\partial x}(a,b) +
     \ssub{v}{2}\frac{\partial f}{\partial y}(a,b)
  \end{align*}
  after reversing the order of summation.
@@ -965,7 +965,7 @@ Along the same lines one can prove the following generalization of the chain rul
  Then
   \begin{equation}\label{eqn:multi-chain}
   \begin{aligned}
-  f(\mathbf{h}(t))'&=\ssub{D}{\textbf{h}'(t)}f(\textbf{h}(t))
+  f(\mathbf{h}(t))'&=\ssub{D}{\mathbf{h}'(t)}f(\mathbf{h}(t))
   \\
    &= \ssub{h'}{1}(t)\frac{\partial f}{\partial x}(\ssub{h}{1}(t),\ssub{h}{2}(t)) +
     \ssub{h'}{2}(t)\frac{\partial f}{\partial y}(\ssub{h}{1}(t),\ssub{h}{2}(t)).
@@ -973,7 +973,7 @@ Along the same lines one can prove the following generalization of the chain rul
   \end{equation}}
 }
 
-Note that $\ssub{D}{\textbf{v}}f(a,b) = \Dotprod{\textbf{v}}{\biggl(\frac{\partial f}{\partial x}(a,b),
+Note that $\ssub{D}{\mathbf{v}}f(a,b) = \Dotprod{\mathbf{v}}{\biggl(\frac{\partial f}{\partial x}(a,b),
 \frac{\partial f}{\partial y}(a,b)\biggr)}$. 
 The second vector has a special name:
 
@@ -992,16 +992,22 @@ The second vector has a special name:
 
 
 \statecor{cor:dirderiv}{
- {$\ssub{D}{\textbf{v}}f = \Dotprod{\textbf{v}}{\nabla f}$}
+{In the assumptions of the theorems \ref{thm:dirderiv} and \ref{thm:multichain} we have
+\begin{enumerate}[(a)]
+\item $\ssub{D}{\mathbf{v}}f = \Dotprod{\mathbf{v}}{\nabla f}$; 
+\item $f(\mathbf{h}(t))'= \Dotprod{\mathbf{h}'(t)}{\nabla f}$
+\end{enumerate}
 }
+}
+\index{Chain Rule}
 
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find the directional derivative of $f(x,y) = xy^2 + x^3 y$ at the point $(1,2)$ in the direction of
- $\textbf{v} = \biggl( \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}} \biggr)$.\smallskip
+ $\mathbf{v} = \biggl( \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}} \biggr)$.\smallskip
  \par\noindent\emph{Solution:} We see that $\nabla f = (y^2 + 3x^2 y, 2xy + x^3)$, so\index{$\nabla$}
  \begin{displaymath}
-  \ssub{D}{\textbf{v}}f(1,2) ~=~ \Dotprod{\textbf{v}}{\nabla f(1,2)}
+  \ssub{D}{\mathbf{v}}f(1,2) ~=~ \Dotprod{\mathbf{v}}{\nabla f(1,2)}
    ~=~ \Dotprod{\biggl( \tfrac{1}{\sqrt{2}},\tfrac{1}{\sqrt{2}} \biggr)}{(2^2 + 3(1)^2 (2),2(1)(2)+1^3)}
    ~=~ \tfrac{15}{\sqrt{2}}
  \end{displaymath}
@@ -1011,9 +1017,9 @@ The second vector has a special name:
 
 A real-valued function $z=f(x,y)$ whose partial derivatives $\tfrac{\partial f}{\partial x}$ and
 $\frac{\partial f}{\partial y}$ exist and are continuous is called \emph{continuously differentiable}.
-Assume that $f(x,y)$ is such a function and that $\nabla f \ne \textbf{0}$. 
+Assume that $f(x,y)$ is such a function and that $\nabla f \ne \mathbf{0}$. 
 Let $c$ be a real number in the range of
-$f$ and let \textbf{v} be a vector in $\Real{2}$ which is tangent to the
+$f$ and let $\mathbf{v}$ be a vector in $\Real{2}$ which is tangent to the
 level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).
 \index{continuously differentiable}
 \begin{figure}[h]
@@ -1032,7 +1038,7 @@ level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).
    \draw (0,0) circle (2.5);
    \fill (1.77,1.77) circle (1.2pt);
    \draw [black,line width=1.2pt,-latex] (1.77,1.77) -- (1,2.54);
-   \node [above] at (1,2.54) {\textbf{v}};
+   \node [above] at (1,2.54) {$\mathbf{v}$};
    \draw [black,line width=1.2pt,-latex] (1.77,1.77) -- (2.77,2.77);
    \node [right] at (2.77,2.77) {$\nabla f$};
    \node at (3.1,1.3) {$f(x,y) = c$};
@@ -1042,24 +1048,24 @@ level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).
  \label{fig:gradlevel}
 \end{figure}
 
-The value of $f(x,y)$ is constant along a level curve, so since \textbf{v} is a tangent vector to this curve, then
-the rate of change of $f$ in the direction of \textbf{v} is 0, i.e. $\ssub{D}{\textbf{v}}f = 0$. 
+The value of $f(x,y)$ is constant along a level curve, so since $\mathbf{v}$ is a tangent vector to this curve, then
+the rate of change of $f$ in the direction of $\mathbf{v}$ is 0, i.e. $\ssub{D}{\mathbf{v}}f = 0$. 
 But we know that
-$\ssub{D}{\textbf{v}}f = \Dotprod{\textbf{v}}{\nabla f}$.
+$\ssub{D}{\mathbf{v}}f = \Dotprod{\mathbf{v}}{\nabla f}$.
 In other words, $\nabla f
-\perp \textbf{v}$, which means that $\nabla f$ is \emph{normal} to the level curve.\index{normal to a curve}
+\perp \mathbf{v}$, which means that $\nabla f$ is \emph{normal} to the level curve.\index{normal to a curve}
 
-In general, for any unit vector \textbf{v} in $\Real{2}$, we have 
-$\ssub{D}{\textbf{v}}f = \norm{\nabla f}\,\cos \theta$, where $\theta$ is the angle between \textbf{v} and $\nabla f$.
+In general, for any unit vector $\mathbf{v}$ in $\Real{2}$, we have 
+$\ssub{D}{\mathbf{v}}f = \norm{\nabla f}\,\cos \theta$, where $\theta$ is the angle between $\mathbf{v}$ and $\nabla f$.
 At a fixed point $(x,y)$ the length $\norm{\nabla f}$ is fixed,
-and the value of $\ssub{D}{\textbf{v}}f$ then varies as $\theta$ varies. The largest value
-that $\ssub{D}{\textbf{v}}f$ can take is when $\cos \theta = 1$ ($\theta = 0\Degrees$), while the smallest value occurs
+and the value of $\ssub{D}{\mathbf{v}}f$ then varies as $\theta$ varies. The largest value
+that $\ssub{D}{\mathbf{v}}f$ can take is when $\cos \theta = 1$ ($\theta = 0\Degrees$), while the smallest value occurs
 when $\cos \theta = -1$ ($\theta = 180\Degrees$). In other words, the value of the function $f$ increases the fastest
 in the direction of $\nabla f$ (since $\theta = 0\Degrees$ in that case), and the value of $f$ decreases the fastest in
 the direction of $-\nabla f$ (since $\theta = 180\Degrees$ in that case). We have thus proved the following theorem:
 
 \statethm{thm:gradprop}{
- {Let $f(x,y)$ be a continuously differentiable real-valued function, with $\nabla f \ne \textbf{0}$. Then:
+ {Let $f(x,y)$ be a continuously differentiable real-valued function, with $\nabla f \ne \mathbf{0}$. Then:
  \begin{enumerate}[(a)]
   \item The gradient $\nabla f$ is normal to any level curve $f(x,y)=c$.
   \item The value of $f(x,y)$ increases the fastest in the direction of $\nabla f$.
@@ -1073,8 +1079,8 @@ the direction of $-\nabla f$ (since $\theta = 180\Degrees$ in that case). We hav
  In which direction does the function $f(x,y) = xy^2 + x^3 y$ increase the fastest from the point $(1,2)$?
  In which direction does it decrease the fastest?\smallskip
  \par\noindent\emph{Solution:} Since $\nabla f = (y^2 + 3x^2 y, 2xy + x^3)$, then
- $\nabla f(1,2) = (10,5) \ne \textbf{0}$. 
- A unit vector in that direction is $\textbf{v} =
+ $\nabla f(1,2) = (10,5) \ne \mathbf{0}$. 
+ A unit vector in that direction is $\mathbf{v} =
  \frac{\nabla f}{\norm{\nabla f}} = \biggl( \frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}} \biggr)$. 
  Thus, $f$ increases the
  fastest in the direction of $\biggl( \frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}} \biggr)$ and decreases the fastest in
@@ -1085,8 +1091,8 @@ the direction of $-\nabla f$ (since $\theta = 180\Degrees$ in that case). We hav
 
 Though we proved Theorem \ref{thm:gradprop} for functions of two variables, a similar argument can be used to show
 that it also applies to functions of three or more variables. Likewise, the directional derivative in the
-three-dimensional case can also be defined by the formula $\ssub{D}{\textbf{v}}f =
-\Dotprod{\textbf{v}}{\nabla f}$.
+three-dimensional case can also be defined by the formula $\ssub{D}{\mathbf{v}}f =
+\Dotprod{\mathbf{v}}{\nabla f}$.
 
 \medskip
 \hrule width \textwidth height 0.5pt
@@ -1129,7 +1135,7 @@ three-dimensional case can also be defined by the formula $\ssub{D}{\textbf{v}}f
  \end{multicols}
  \suspend{enumerate}
  \par\noindent For Exercises 11--14, find the directional derivative of $f$ at the point $P$ in the direction of
- $\textbf{v} = \biggl( \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}} \biggr)$.
+ $\mathbf{v} = \biggl( \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}} \biggr)$.
  \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $f(x,y) = x^2 + y^2 - 1$, $P=(1,1); \phantom{\dfrac{1}{x^2}}$
@@ -1141,7 +1147,7 @@ three-dimensional case can also be defined by the formula $\ssub{D}{\textbf{v}}f
  \end{multicols}
  \suspend{enumerate}
  \par\noindent For Exercises 15--16, find the directional derivative of $f$ at the point $P$ in the direction of
- $\textbf{v} = \biggl( \frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}} \biggr)$.
+ $\mathbf{v} = \biggl( \frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}} \biggr)$.
  \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $f(x,y,z) = \sin (xyz)$, $P=(1,1,1)$;
@@ -1152,7 +1158,7 @@ three-dimensional case can also be defined by the formula $\ssub{D}{\textbf{v}}f
  \suspend{enumerate}
 \probs{B}
 \par\noindent For Exercises 19--26, let $f(x,y)$ and $g(x,y)$ be continuously differentiable
-real-valued functions, let $c$ be a constant, and let \textbf{v} be a unit vector in $\Real{2}$. Show that:
+real-valued functions, let $c$ be a constant, and let $\mathbf{v}$ be a unit vector in $\Real{2}$. Show that:
 \resume{enumerate}[{[\bfseries 1.]}]
  \begin{multicols}{2}
   \item $\nabla (cf) = c\,\nabla f$;
@@ -1163,16 +1169,16 @@ real-valued functions, let $c$ be a constant, and let \textbf{v} be a unit vecto
   \item $\nabla (f/g) = \dfrac{g\,\nabla f - f\,\nabla g}{g^2} ~$ if $g(x,y) \ne 0$;
  \end{multicols}
  \begin{multicols}{2}
-  \item $\ssub{D}{-\textbf{v}}f = -\ssub{D}{\textbf{v}}f$;
-  \item $\ssub{D}{\textbf{v}}(cf) = c\,\ssub{D}{\textbf{v}}f$;
+  \item $\ssub{D}{-\mathbf{v}}f = -\ssub{D}{\mathbf{v}}f$;
+  \item $\ssub{D}{\mathbf{v}}(cf) = c\,\ssub{D}{\mathbf{v}}f$;
  \end{multicols}
  \begin{multicols}{2}
-  \item $\ssub{D}{\textbf{v}}(f+g) = \ssub{D}{\textbf{v}}f ~+~ \ssub{D}{\textbf{v}}g$;
-  \item $\ssub{D}{\textbf{v}}(fg) = f\,\ssub{D}{\textbf{v}}g ~+~ g\,\ssub{D}{\textbf{v}}f$.
+  \item $\ssub{D}{\mathbf{v}}(f+g) = \ssub{D}{\mathbf{v}}f ~+~ \ssub{D}{\mathbf{v}}g$;
+  \item $\ssub{D}{\mathbf{v}}(fg) = f\,\ssub{D}{\mathbf{v}}g ~+~ g\,\ssub{D}{\mathbf{v}}f$.
  \end{multicols}
  \item The function $r(x,y) = \sqrt{x^2 + y^2}$ is the length of the position vector
-  $\textbf{r}=x\,\textbf{i} + y\,\textbf{j}$ for each point $(x,y)$ in $\Real{2}$. 
-  Show that $\nabla r = \tfrac{1}{r}\,\textbf{r}~$ when $(x,y) \ne (0,0)$, and that $\nabla (r^2 ) = 2\,\textbf{r}$.
+  $\mathbf{r}=x\,\mathbf{i} + y\,\mathbf{j}$ for each point $(x,y)$ in $\Real{2}$. 
+  Show that $\nabla r = \tfrac{1}{r}\,\mathbf{r}$ when $(x,y) \ne (0,0)$, and that $\nabla (r^2 ) = 2\,\mathbf{r}$.
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
@@ -1221,14 +1227,14 @@ following theorem:
  {Let $f(x,y)$ be a real-valued function such that both $\frac{\partial f}{\partial x}(x_0,y_0)$ and
  $\frac{\partial f}{\partial y}(x_0,y_0)$ exist. 
  Then a necessary condition for $f(x,y)$ to have a local maximum or minimum
- at $(x_0,y_0)$ is that $\nabla f (x_0,y_0) = \textbf{0}$.}
+ at $(x_0,y_0)$ is that $\nabla f (x_0,y_0) = \mathbf{0}$.}
 }
 Note: Theorem \ref{thm:extnec} can be extended to apply to functions of three or more variables.
 
-A point $(x_0,y_0)$ where $\nabla f (x_0,y_0) = \textbf{0}$ is called a \textbf{critical point} for the function $f(x,y)$.
+A point $(x_0,y_0)$ where $\nabla f (x_0,y_0) = \mathbf{0}$ is called a \textbf{critical point} for the function $f(x,y)$.
 So given a function $f(x,y)$, to find the critical points of $f$ you have to solve the equations
 $\frac{\partial f}{\partial x}(x,y) = 0$ and $\frac{\partial f}{\partial y}(x,y) = 0$ simultaneously for $(x,y)$.
-Similar to the single-variable case, the \emph{necessary} condition that $\nabla f (x_0,y_0) = \textbf{0}$ is not always
+Similar to the single-variable case, the \emph{necessary} condition that $\nabla f (x_0,y_0) = \mathbf{0}$ is not always
 \emph{sufficient} to guarantee that a critical point is a local maximum or minimum.\index{critical point}
 
 \medskip
@@ -1262,23 +1268,23 @@ From the course of single-variable calculus, you may remember \emph{second deriv
 
 In order to explain the multi-variable analog of this test,
 let us introduce \emph{second directional derivative}. 
-Fix a vector $\textbf{v}\in\Real{2}$ and a smooth function of two variables $f(x,y)$.
-The directional derivative $h(x,y)=D_{\textbf{v}}f(x,y)$ is an other smooth function of two variables, so we can take its directional derivative again 
-$D_{\textbf{v}}h(x,y)$;
-it is called \emph{second directional derivative} and denoted as $D_{\textbf{v}}^2f(x,y)$.
+Fix a vector $\mathbf{v}\in\Real{2}$ and a smooth function of two variables $f(x,y)$.
+The directional derivative $h(x,y)=D_{\mathbf{v}}f(x,y)$ is an other smooth function of two variables, so we can take its directional derivative again 
+$D_{\mathbf{v}}h(x,y)$;
+it is called \emph{second directional derivative} and denoted as $D_{\mathbf{v}}^2f(x,y)$.
 
-\statecomment{If $D_{\textbf{v}}f(x_0,y_0)=0$ and $D_{\textbf{v}}^2f(x_0,y_0)>0$ for any vector $\textbf{v}\ne\textbf{0}$ then the the smooth function $f(x,y)$ of two variables, has a local minimum at $(x_0,y_0)$.}
+\statecomment{If $D_{\mathbf{v}}f(x_0,y_0)=0$ and $D_{\mathbf{v}}^2f(x_0,y_0)>0$ for any vector $\mathbf{v}\ne\mathbf{0}$ then the the smooth function $f(x,y)$ of two variables, has a local minimum at $(x_0,y_0)$.}
 
 In this form the second derivative test is not useful
-since it requires to check inequality $D_{\textbf{v}}^2f(x_0,y_0)>0$ for infinite number of vectors $\textbf{v}$. 
+since it requires to check inequality $D_{\mathbf{v}}^2f(x_0,y_0)>0$ for infinite number of vectors $\mathbf{v}$. 
 Let us try to remove this weak point.
 
 Note that 
-if $\textbf{v}=(a,b)$ then 
+if $\mathbf{v}=(a,b)$ then 
 \begin{align*}
-D_{\textbf{v}}f(x_0,y_0)&=a\tfrac{\partial f}{\partial x}+b\tfrac{\partial f}{\partial y}.
+D_{\mathbf{v}}f(x_0,y_0)&=a\tfrac{\partial f}{\partial x}+b\tfrac{\partial f}{\partial y}.
 \intertext{and}
-D^2_{\textbf{v}}f(x_0,y_0)&=D_{\textbf{v}}(a\tfrac{\partial f}{\partial x}+b\tfrac{\partial f}{\partial y})
+D^2_{\mathbf{v}}f(x_0,y_0)&=D_{\mathbf{v}}(a\tfrac{\partial f}{\partial x}+b\tfrac{\partial f}{\partial y})
 \\
 &=a^2\tfrac{\partial^2 f}{\partial x^2}+ab\tfrac{\partial^2 f}{\partial x\partial y}+ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2}
 \\
@@ -1287,7 +1293,7 @@ D^2_{\textbf{v}}f(x_0,y_0)&=D_{\textbf{v}}(a\tfrac{\partial f}{\partial x}+b\tfr
 the last equality holds since the function $f$ is smooth and therefore $\tfrac{\partial^2 f}{\partial x\partial y}=\tfrac{\partial^2 f}{\partial y\partial x}$
 
 
-Therefore the condition $D_{\textbf{v}}^2f(x_0,y_0)>0$ for any $\textbf{v}\ne\textbf{0}$
+Therefore the condition $D_{\mathbf{v}}^2f(x_0,y_0)>0$ for any $\mathbf{v}\ne\mathbf{0}$
 means that 
 \[a^2\tfrac{\partial^2 f}{\partial x^2}+2ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2}>0\]
 for any pair of real numbers $(a,b)$ at least one of which is not zero.
@@ -1299,7 +1305,7 @@ The theorem will not be proved here.\footnote{See \cite[\S\,7.6]{tm}.}\index{Sec
 
 \statethm{thm:extsuff}{
  {Let $f(x,y)$ be a smooth real-valued function, with a critical point at $(x_0,y_0)$ (i.e.
- $\nabla f(x_0,y_0) = \textbf{0}$). Define
+ $\nabla f(x_0,y_0) = \mathbf{0}$). Define
  \begin{displaymath}
   D = \dfrac{\partial^2 f}{\partial x^2}(x_0,y_0) \, \dfrac{\partial^2 f}{\partial y^2}(x_0,y_0) -
  \biggl( \dfrac{\partial^2 f}{\partial y \, \partial x}(x_0,y_0) \biggr)^2
@@ -1315,7 +1321,7 @@ The theorem will not be proved here.\footnote{See \cite[\S\,7.6]{tm}.}\index{Sec
 
 If condition (c) holds, then $(x_0,y_0)$ is a \emph{saddle point};\index{saddle point}
 that is, the second directional derivative 
-$D^2_\textbf{v}f(x_0,y_0)$ can be positive and negative for different vectors $\textbf{v}$.
+$D^2_\mathbf{v}f(x_0,y_0)$ can be positive and negative for different vectors $\mathbf{v}$.
 
 Recall that the assumption that $f(x,y)$ is smooth implies that $\frac{\partial^2 f}{\partial y \, \partial x} = \frac{\partial^2 f}{\partial x \, \partial y}$. Therefore
 \begin{displaymath}
@@ -1337,7 +1343,7 @@ $\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$ if desired.
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = x^2 + xy + y^2 - 3x$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
+ \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = 2x + y -3 \quad \text{and} \quad \frac{\partial f}{\partial y} = x + 2y
  \end{displaymath}
@@ -1363,7 +1369,7 @@ $\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$ if desired.
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = xy - x^3 - y^2$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
+ \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = y - 3x^2 \quad \text{and} \quad \frac{\partial f}{\partial y} = x - 2y
  \end{displaymath}
@@ -1401,7 +1407,7 @@ then the critical points $(x,y)$ are the common solutions of the equations
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:globalmin}
  Find all local maxima and minima of $f(x,y) = (x-2)^4 + (x-2y)^2$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
+ \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = 4(x-2)^3 + 2(x-2y) \quad \text{and} \quad \frac{\partial f}{\partial y} = -4(x-2y)
  \end{displaymath}
@@ -1431,7 +1437,7 @@ So
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = (x^2 + y^2 ) e^{-(x^2 + y^2 )}$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \textbf{0}$. Since
+ \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
  \begin{align*}
   \frac{\partial f}{\partial x} ~ &= ~ 2x(1 - (x^2 + y^2 )) e^{-(x^2 + y^2 )}\\[6pt]
   \frac{\partial f}{\partial y} ~ &= ~ 2y(1 - (x^2 + y^2 )) e^{-(x^2 + y^2 )}
@@ -1510,7 +1516,7 @@ The types of problems that we solved in the previous section were examples of \e
 problems. That is, we tried to find local (and perhaps even global) maximum and minimum points of real-valued
 functions $f(x,y)$, where the points $(x,y)$ could be any points in the domain of $f$. 
 The method we used required us to find the critical points of $f$, which meant having to solve the equation
-$\nabla f = \textbf{0}$, which in general is a system of two equations in two unknowns ($x$ and $y$). 
+$\nabla f = \mathbf{0}$, which in general is a system of two equations in two unknowns ($x$ and $y$). 
 While this was relatively simple for the examples we did, in general this will not be the case. 
 It might be impossible to solve these equations 
 by elementary means.\footnote{This is also a problem
@@ -1571,7 +1577,7 @@ Then for any choice $(\ssub{x}{0},\ssub{y}{0})$ the formulas (\ref{eqn:newton}) 
   \frac{\partial^2 f}{\partial y^2} = 6xy - 12y^2 ~, \qquad
   \frac{\partial^2 f}{\partial y \, \partial x} = -1 + 3y^2
  \end{gather*}
- Notice that solving $\nabla f = \textbf{0}$ would involve solving two third-degree polynomial equations in $x$ and
+ Notice that solving $\nabla f = \mathbf{0}$ would involve solving two third-degree polynomial equations in $x$ and
  $y$, which in this case can not be done easily.
  
  We need to pick an initial point $(\ssub{x}{0},\ssub{y}{0})$ for our algorithm. Looking at the graph of
@@ -1679,7 +1685,7 @@ n = 100: (0.4711356343449874,-0.39636433796318005)
 
 As you can see, we appear to have converged fairly quickly (after only 8 iterations) to what appears to be an actual
 critical point (up to Java's level of precision), namely the point
-$(0.4711356343449874,-0.39636433796318005)$. It is easy to confirm that $\nabla f = \textbf{0}$ at this point,
+$(0.4711356343449874,-0.39636433796318005)$. It is easy to confirm that $\nabla f = \mathbf{0}$ at this point,
 either by evaluating $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ at the point ourselves or by
 modifying our program to also print the values of the partial derivatives at the point. It turns out that
 both partial derivatives are indeed close enough to zero to be considered zero:
@@ -1871,7 +1877,7 @@ The Lagrange multiplier method for solving such problems can now be stated:
 
 \statethm{thm:lagrange}{
  {Let $f(x,y)$ and $g(x,y)$ be smooth functions, and suppose that $c$ is a scalar constant such
- that $\nabla g(x,y) \ne \textbf{0}$ for all $(x,y)$ that satisfy the equation $g(x,y) = c$. 
+ that $\nabla g(x,y) \ne \mathbf{0}$ for all $(x,y)$ that satisfy the equation $g(x,y) = c$. 
  Then to solve the
  constrained optimization problem
  \begin{align*}
@@ -2132,7 +2138,7 @@ Luckily there are many numerical methods for solving constrained optimization pr
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
 \item Let $(x_0,y_0)$ be a minimum point of smooth function $f(x,y)$ with the constraint $g(x,y)\le c$.
-Assume $g(x_0,y_0)=c$ and $\nabla g(x_0,y_0)\ne \textbf{0}$.
+Assume $g(x_0,y_0)=c$ and $\nabla g(x_0,y_0)\ne \mathbf{0}$.
 Show that  
 $\nabla f(x_0,y_0)=\lambda \nabla g(x_0,y_0)$
 for some $\lambda\le 0$. 

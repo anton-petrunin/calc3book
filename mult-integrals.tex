@@ -279,9 +279,54 @@ then $\iint\limits_{R} f(x,y)\,dA$ is the volume under the surface $z=f(x,y)$ ov
 
 \medskip
 \hrule width \textwidth height 0.5pt
+\begin{exmp}\label{exmp:doube-iterated}
+Assume the region $R$ is defined by the inequalities $x^2\le y$ and $y^2\le x$.
+Rewrite double integral 
+ \[\iint\limits_{R} f(x,y)\,dA,\]
+as an iterated integral.
+\end{exmp}
+
+\smallskip
+ 
+\par\noindent \emph{Solution:} Let us try to write the iterated integral as in (\ref{eqn:doubleinthoriz}).
+
+First we need to find the projection of $R$ to $y$-axis.
+In other words, we need to find all $y$ such that $(x,y)$ belongs to $R$ for some $y$.
+The later holds if $y^4\ge y$ or equivalently if $y\in[0,1]$; in other words $c=0$ and $d=1$.
+
+{
+
+\begin{wrapfigure}{r}{19 mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/region-2d(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Now for fixed $y$, such that $0\le y\le 1$
+we need to find all values $x$ such that $(x,y)$ belongs to $R$.
+The later holds if $y^2\le x\ge \sqrt y$. In other words, $h_1(y)=y^2$ and $h_2(y)=\sqrt y$.
+That is, 
+\[\iint\limits_{R} f(x,y)\,dA
+=
+\int_0^1\left[
+\int_{y^2}^{\sqrt{y}}f(x,y)\,dx\right]\,dy.\]
+
+}
+
+Note that the region $R$ does not change if you switch $x$ and $y$.
+Therefore the same integral could be written as 
+\[\iint\limits_{R} f(x,y)\,dA
+=
+\int_0^1\,
+\left[\int_{x^2}^{\sqrt{x}}f(x,y)\,dy\right]\,dx.\]
+
+
+\medskip
+\hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:volplanenr}
- Find the volume $V$ under the plane $z=8x+6y$ over the region $R = \lbrace (x,y): 0 \le x \le 1,~ 0 \le y \le 2x^2
- \rbrace$.\smallskip
+ Find the volume $V$ under the plane $z=8x+6y$ over the plane region 
+ $R$ defined by the inequalities $ 0 \le x \le 1$ and  $0 \le y \le 2x^2
+ \rbrace$.
+ \smallskip
  \piccaption[]{}\parpic[r]{\begin{tikzpicture}
    \usetikzlibrary{arrows}
    \draw [black!60,line width=0.3pt,-latex] (-0.5,0) -- (2,0);
@@ -587,6 +632,14 @@ For Exercises \ref{ex:iint-R-start}--\ref{ex:iint-R-end} evaluate
   as in Figure 3.2.6, is $\frac{abc}{6}$. (\emph{Hint: Mimic Example \ref{exmp:tetra}, and recall from Section 1.5 how
   three noncollinear points determine a plane.})
  \item Show how Exercise 12 can be used to solve Exercise 10.
+\suspend{enumerate}
+\probs{B}\\
+For Exercises \ref{ex:iint-dom-start}--\ref{ex:iint-dom-end} rewrite double integral 
+ \[\iint\limits_{R} f(x,y)\,dA,\]
+ as an iterated integral. (\emph{Hint: try to visualize the region.})
+\resume{enumerate}[{[\bfseries 1.]}]
+\item\label{ex:iint-dom-start} If the region $R$ is defined by the inequalities $2y^2\le x\le 1+y^2$.
+\item\label{ex:iint-dom-end} If the region $R$ is defined by the inequalities $x\le 2y\le 4x\le 1$.
 \end{enumerate}
 \newpage
 %Begin Section 3.3
@@ -719,8 +772,14 @@ just like in equation (\ref{eqn:vsolid}). See Exercise 10 for an example.
   \item $\displaystyle\int_1^2 \,\,\displaystyle\int_2^4\,\, \displaystyle\int_0^3 1 \,dx\,dy\,dz$
   \item $\displaystyle\int_0^1\,\, \displaystyle\int_0^{1-x}\,\, \displaystyle\int_0^{1-x-y} 1 \,dz\,dy\,dx$
  \end{multicols}
- \item Let $M$ be a constant. Show that \[\int_{\ssub{z}{1}}^{\ssub{z}{2}} \int_{\ssub{y}{1}}^{\ssub{y}{2}}
-  \int_{\ssub{x}{1}}^{\ssub{x}{2}} M\,dx\,dy\,dz = M(\ssub{z}{2} - \ssub{z}{1})(\ssub{y}{2} - \ssub{y}{1})
+ \item Let $M$ be a constant. 
+ Show that 
+ \[\int_{\ssub{z}{1}}^{\ssub{z}{2}}
+ \,\int_{\ssub{y}{1}}^{\ssub{y}{2}}
+ \,\int_{\ssub{x}{1}}^{\ssub{x}{2}} 
+ M\,dx\,dy\,dz 
+ = 
+ M(\ssub{z}{2} - \ssub{z}{1})(\ssub{y}{2} - \ssub{y}{1})
   (\ssub{x}{2} - \ssub{x}{1}).\]
 \suspend{enumerate}
 \probs{B}
@@ -1003,7 +1062,9 @@ $g\,'(u) \ne 0$ on the interval $(c,d)$, so that $a=g(c)$ and $b=g(d)$, then $c=
  \int_a^b f(x)\,dx ~=~ \int_{g^{-1}(a)}^{g^{-1}(b)} f(g(u))\,g\,'(u)\,du ~.
 \end{equation}
 This is called the \emph{change of variable} formula for integrals of single-variable functions, and it is what you were
-implicitly using when doing integration by substitution. This formula turns out to be a special case of a more general
+implicitly using when doing integration by substitution.
+
+This formula turns out to be a special case of a more general
 formula which can be used to evaluate multiple integrals. We will state the formulas for double and triple integrals
 involving real-valued functions of two and three variables, respectively.
 We will assume that all the functions involved are continuously differentiable and that the regions and solids involved
@@ -1128,6 +1189,8 @@ used.\index{$\dfrac{\partial (x,y,z)}{\partial (u,v,w)}$}
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
+
+\medskip
 
 The change of variables formula can be used to evaluate double integrals in polar coordinates. Letting
 \begin{displaymath}
@@ -1303,23 +1366,19 @@ take the following forms:
  \item Evaluate $\iint\limits_{R} \sin \left( \frac{x+y}{2} \right)\,\cos \left( \frac{x-y}{2} \right)\,dA$, where $R$
   is the triangle with vertices $(0,0)$, $(2,0)$ and $(1,1)$. (\emph{Hint: Use the change of variables
   $u=(x+y)/2$, $v=(x-y)/2$.})
- \item Find the volume of the solid bounded by $z=x^2 + y^2$ and $z^2 = 4(x^2 + y^2 )$.
- \item Find the volume inside the elliptic cylinder $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ for $0\le z\le 2$.
+ \item Find the volume of the solid bounded by $z=x^2 + y^2$ and $z^2 = 4(x^2 + y^2)$.
+ \item Find the volume inside the elliptic cylinder $\frac{x^2}{a^2} + \frac{y^2}{b^2} \le 1$ for $0\le z\le 2$.
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Show that the volume inside the ellipsoid $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$ is
   $\tfrac{4\pi abc}{3}$. (\emph{Hint: Use the change of variables $x=au$, $y=bv$, $z=cw$, then consider Example
   \ref{exmp:volsphere}.})\index{ellipsoid}
- \item Show that the \emph{Beta function}\index{Beta function}, defined by
-  \begin{displaymath}
-   B(x,y) ~=~ \int_0^1 t^{x-1} (1-t)^{y-1} \,dt ~,\quad\text{for $x > 0$, $y > 0$,}
-  \end{displaymath}
-  satisfies the relation $B(y,x)=B(x,y)$ for $x > 0$, $y > 0$.
- \item Using the substitution $t=u/(u+1)$, show that the Beta function can be written as
-  \begin{displaymath}
-   B(x,y) ~=~ \int_0^{\infty} \frac{u^{x-1}}{(u+1)^{x+y}}\,du ~,\quad\text{for $x > 0$, $y > 0$.}
-  \end{displaymath}
+\item Show that 
+\[\int\limits_{-\infty}^{+\infty}\,\int\limits_{-\infty}^{+\infty}f(x,y)\,dx\,dy
+=
+\int\limits_{-\infty}^{+\infty}\,\int\limits_{-\infty}^{+\infty}f(x+y,x+2y)\,dx\,dy\]
+For any smooth function $f(x,y)$ which vanishes outside of a bounded region in the plane.
 \end{enumerate}
 \newpage
 %Begin Section 3.6
@@ -1522,6 +1581,15 @@ $\delta(x,y,z)$.
  \item $S = \lbrace (x,y,z): x \ge 0,~ y \ge 0,~ z \ge 0, ~x^2 + y^2 + z^2 \le a^2 \rbrace$, $\delta(x,y,z) = 1$
  \item $S = \lbrace (x,y,z): 0 \le x \le 1,~ 0 \le y \le 1,~ 0 \le z \le 1~ \rbrace$, $\delta(x,y,z) = x^2 + y^2 + z^2$
  \item $S = \lbrace (x,y,z): 0 \le x \le 1,~ 0 \le y \le 1,~ 0 \le z \le 1 - x - y \rbrace$, $\delta(x,y,z) = 1$
+\suspend{enumerate}
+\probs{C}
+\resume{enumerate}[{[\bfseries 1.]}]
+\item Let $F$ be a figure in the upper half-plane;
+denote as $(x_0,y_0)$ its center of mass 
+and as $A$ its the area.
+Show that 
+\[2\pi A y_0\]
+is the volume of the body of revolution obtained by rotating $F$ around $x$-axis.
 \end{enumerate}
 \newpage
 %Begin Section 3.7
@@ -1666,7 +1734,7 @@ Also, by the Fundamental Theorem of Calculus, we have\index{probability density 
  \end{align*}
 \end{exmp}
 \hrule width \textwidth height 0.5pt
-
+\smallskip
 In addition to individual random variables, we can consider \emph{jointly distributed} random variables. For this, we
 will let $X$, $Y$ and $Z$ be three real-valued continuous random variables defined on the same sample space
 $\Omega$ in $\mathbb{R}$ (the discussion for two random variables is similar). Then the \emph{joint distribution
@@ -1844,9 +1912,9 @@ Exercise 4) to write a computer program to test this.
 \startexercises\label{sec3dot7}
 \probs{B}
 \begin{enumerate}[\bfseries 1.]
- \item Evaluate the integral $\int_{-\infty}^{\infty} e^{-x^2}\,dx$ using anything you have learned so far.
- \item For $\sigma > 0$ and $\mu > 0$, evaluate $\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}}
-  e^{-(x-\mu)^2 /2\sigma^2 } \,dx$.
+ \item Evaluate the integral \[\int_{-\infty}^{\infty} e^{-x^2}\,dx\] using anything you have learned so far.
+ \item For $\sigma > 0$ and $\mu > 0$, evaluate \[\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}}
+  e^{-(x-\mu)^2 /2\sigma^2 } \,dx.\]
  \item Show that $EY = \frac{n}{n+1}$ in Example \ref{exmp:minmaxexpval}
 \suspend{enumerate}
 \probs{C}
