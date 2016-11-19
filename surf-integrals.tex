@@ -923,15 +923,9 @@ Since $y = \ssub{y}{1}(x)$ along $\ssub{C}{1}$ (as $x$ goes from $a$ to $b$) and
    &=~ \iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA ~.
  \end{align*}
 \end{proof}\end{proofbar}
-
-Though we proved Green's Theorem only for a simple region $R$, the theorem can also be proved for more general
-regions (say, a union of simple regions).\footnote{See \cite[\S\,15.31]{tm} for a discussion of
-some of the difficulties involved when the boundary curve is ``complicated''.}
-
-\medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:greenexmp}
-  Evaluate $\oint_{C} (x^2 + y^2 )\,dx + 2xy\,dy$, where $C$ is the boundary (traversed counterclockwise) of the region
+  Evaluate \[\oint_{C} (x^2 + y^2 )\,dx + 2xy\,dy,\] where $C$ is the boundary (traversed counterclockwise) of the region
   $R = \lbrace\,(x,y): 0 \le x \le 1,~2x^2 \le y \le 2x \,\rbrace$.
 
  \piccaption[]{}\parpic[r]{\begin{tikzpicture}
@@ -968,64 +962,13 @@ some of the difficulties involved when the boundary curve is ``complicated''.}
  $F(x,y)=\frac{1}{3}x^3 + xy^2$, and so $\olineintvec{C}{f}{r} = 0$ by Corollary \ref{cor:lineintsuffpath}.
  \end{exmp}
 \hrule width \textwidth height 0.5pt
-\begin{exmp}\label{exmp:greenhole}
- Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$, where
- \begin{displaymath}
-  P(x,y) = \frac{-y}{x^2 + y^2} \quad\text{and}\quad Q(x,y) = \frac{x}{x^2 + y^2} ~,
- \end{displaymath}
- and let $R =\lbrace\,(x,y): 0 < x^2 + y^2 \le 1\,\rbrace$. For the boundary curve $C:x^2 + y^2 = 1$, traversed
- counterclockwise, it was shown in Exercise 9(b) in Section 4.2 that $\olineintvec{C}{f}{r} = 2\pi$. But
- \begin{displaymath}
-  \frac{\partial Q}{\partial x} ~=~ \frac{y^2 - x^2}{(x^2 + y^2 )^2} ~=~ \frac{\partial P}{\partial y} ~
-  \Rightarrow ~
-  \iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA ~=~
-  \iint\limits_{R} 0 \,dA = 0~.
- \end{displaymath}
-\end{exmp}
-This would seem to contradict Green's Theorem. However, note that $R$ is not the \emph{entire} region enclosed by $C$,
-since the point $(0,0)$ is not contained in $R$. That is, $R$ has a ``hole'' at the origin, so Green's Theorem does not
-apply.
-
-\piccaption[]{\quad The annulus $R$}\parpic[r]{\begin{tikzpicture}
- \usetikzlibrary{arrows}
- \filldraw [black,line width=1.2pt,fill=black!10] (0:0) circle (2);
- \filldraw [black,line width=1.2pt,fill=white] (0:0) circle (0.5);
- \draw [black!60,line width=0.3pt,-latex] (-3,0) -- (3,0,0);
- \draw [black!60,line width=0.3pt,-latex] (0,-2.5) -- (0,3,0);
- \pgfputat{\pgfpointxyz{2.9}{0.2}{0}}{\pgfbox[center,center]{\small $x$}};
- \pgfputat{\pgfpointxyz{0.2}{2.9}{0}}{\pgfbox[center,center]{\small $y$}};
- \pgfputat{\pgfpointxyz{0.15}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
- \node [above right] at (1.5,1.5) {\small $\ssub{C}{1}$};
- \node [right] at (0.35,0.35) {\small $\ssub{C}{2}$};
- \node [above left] at (0,2) {\small $1$};
- \node [below right] at (2,0) {\small $1$};
- \node [above left] at (0,0.5) {\small $1/2$};
- \node [below right] at (0.5,0) {\small $1/2$};
- \node at (1.05,1.05) {\small $R$};
- \node [rotate=45] at (-0.3536,0.3536) {\Large $\blacktriangleright$};
- \node [rotate=-45] at (1.4142,1.4142) {\Large $\blacktriangleleft$};
-\end{tikzpicture}}
-If we modify the region $R$ to be the \emph{annulus} $R =\lbrace\,(x,y): 1/4 \le x^2 + y^2 \le 1\,\rbrace$ (see
-Figure 4.3.3), and take the ``boundary'' $C$ of $R$ to be $C = \ssub{C}{1} \cup \ssub{C}{2}$,
-where $\ssub{C}{1}$ is\index{annulus}
-the unit circle $x^2 + y^2 = 1$ traversed counterclockwise and $\ssub{C}{2}$ is the circle $x^2 + y^2 = 1/4$
-traversed \emph{clockwise}, then it can be shown (see Exercise 8) that
-\begin{displaymath}
- \olineintvec{C}{f}{r} ~=~ 0 ~.
-\end{displaymath}
-We would still have $\iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA
-= 0$, so for this $R$ we would have
-\begin{displaymath}
- \olineintvec{C}{f}{r} ~=~
- \iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA ~,
-\end{displaymath}
-which shows that Green's Theorem holds for the annular region $R$.\medskip
-\hrule width \textwidth height 0.5pt
 \medskip
 
-It turns out that Green's Theorem can be extended to \emph{multiply connected} regions, that is, regions like
-the annulus in Example \ref{exmp:greenhole}, which have one or more \emph{regions} cut out from the interior, as
-opposed to discrete \emph{points} being cut out. For such
+Though we proved Green's Theorem only for a simple region $R$, the theorem can also be proved for more general
+regions; in particular to regions which admit subdivision into simple regions.\footnote{See \cite[\S\,15.31]{tm} for a discussion of
+some of the difficulties involved when the boundary curve is ``complicated''.}
+It includes  regions bounded by few closed curves. 
+For such
 regions, the ``outer'' boundary and the ``inner'' boundaries are traversed so that $R$ is always on the left
 side.\index{multiply connected}
 
@@ -1083,15 +1026,19 @@ side.\index{multiply connected}
  \label{fig:multconn}
 \end{figure}
 
-The intuitive idea for why Green's Theorem holds for multiply connected regions is shown in Figure \ref{fig:multconn}
-above. The idea is to cut ``slits'' between the boundaries of a multiply connected region $R$ so that $R$ is divided
-into subregions which do \emph{not} have any ``holes''. For example, in Figure \ref{fig:multconn}(a) the region $R$
+The idea for why Green's Theorem holds for such regions is shown in Figure \ref{fig:multconn}
+above. 
+The idea is to cut region $R$ so that it is divided
+into simple subregions. 
+For example, in Figure \ref{fig:multconn}(a) the region $R$
 is the union of the regions $\ssub{R}{1}$ and $\ssub{R}{2}$, which are divided by the slits indicated by the dashed
-lines. Those slits are part of the boundary of both $\ssub{R}{1}$ and $\ssub{R}{2}$, and we traverse then in the manner
-indicated by the arrows. Notice that along each slit
+lines. 
+Those slits are part of the boundary of both $\ssub{R}{1}$ and $\ssub{R}{2}$, and we traverse then in the manner
+indicated by the arrows. 
+Notice that along each slit
 the boundary of $\ssub{R}{1}$ is traversed in the opposite direction as that of $\ssub{R}{2}$, which means that the
 line integrals of $\mathbf{f}$ along those slits cancel each other out.
-Since $\ssub{R}{1}$ and $\ssub{R}{2}$ do not have holes in them, then Green's Theorem holds in each subregion, so that
+Assuming that Green's Theorem holds for  $\ssub{R}{1}$ and $\ssub{R}{2}$, we get
 \begin{displaymath}
  \olineintvec{\substack{\text{bdy}\\\text{of}~\ssub{R}{1}}}{f}{r} ~=~ \iint\limits_{\ssub{R}{1}}
   \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA \quad\text{and}\quad
@@ -1113,6 +1060,62 @@ and so
 \end{displaymath}
 which shows that Green's Theorem holds in the region $R$. A similar argument shows that the theorem holds in the
 region with two holes shown in Figure \ref{fig:multconn}(b).
+
+\hrule width \textwidth height 0.5pt
+\begin{exmp}\label{exmp:greenhole}
+ Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$, where
+ \begin{displaymath}
+  P(x,y) = \frac{-y}{x^2 + y^2} \quad\text{and}\quad Q(x,y) = \frac{x}{x^2 + y^2} ~,
+ \end{displaymath}
+ and let $R =\lbrace\,(x,y): 0 < x^2 + y^2 \le 1\,\rbrace$. For the boundary curve $C:x^2 + y^2 = 1$, traversed
+ counterclockwise, it was shown in Exercise 9(b) in Section 4.2 that $\olineintvec{C}{f}{r} = 2\pi$. But
+ \begin{displaymath}
+  \frac{\partial Q}{\partial x} ~=~ \frac{y^2 - x^2}{(x^2 + y^2 )^2} ~=~ \frac{\partial P}{\partial y} ~
+  \Rightarrow ~
+  \iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA ~=~
+  \iint\limits_{R} 0 \,dA = 0~.
+ \end{displaymath}
+\end{exmp}
+This would seem to contradict Green's Theorem. However, note that $R$ is not the \emph{entire} region enclosed by $C$,
+since the point $(0,0)$ is not contained in $R$. That is, $R$ has a ``hole'' at the origin, so Green's Theorem does not
+apply.
+
+\piccaption[]{\quad The annulus $R$}\parpic[r]{\begin{tikzpicture}
+ \usetikzlibrary{arrows}
+ \filldraw [black,line width=1.2pt,fill=black!10] (0:0) circle (2);
+ \filldraw [black,line width=1.2pt,fill=white] (0:0) circle (0.5);
+ \draw [black!60,line width=0.3pt,-latex] (-3,0) -- (3,0,0);
+ \draw [black!60,line width=0.3pt,-latex] (0,-2.5) -- (0,3,0);
+ \pgfputat{\pgfpointxyz{2.9}{0.2}{0}}{\pgfbox[center,center]{\small $x$}};
+ \pgfputat{\pgfpointxyz{0.2}{2.9}{0}}{\pgfbox[center,center]{\small $y$}};
+ \pgfputat{\pgfpointxyz{0.15}{-0.2}{0}}{\pgfbox[center,center]{\small $0$}};
+ \node [above right] at (1.5,1.5) {\small $\ssub{C}{1}$};
+ \node [right] at (0.35,0.35) {\small $\ssub{C}{2}$};
+ \node [above left] at (0,2) {\small $1$};
+ \node [below right] at (2,0) {\small $1$};
+ \node [above left] at (0,0.5) {\small $1/2$};
+ \node [below right] at (0.5,0) {\small $1/2$};
+ \node at (1.05,1.05) {\small $R$};
+ \node [rotate=45] at (-0.3536,0.3536) {\Large $\blacktriangleright$};
+ \node [rotate=-45] at (1.4142,1.4142) {\Large $\blacktriangleleft$};
+\end{tikzpicture}}
+If we modify the region $R$ to be the \emph{annulus} $R =\lbrace\,(x,y): 1/4 \le x^2 + y^2 \le 1\,\rbrace$ (see
+Figure 4.3.3), and take the ``boundary'' $C$ of $R$ to be $C = \ssub{C}{1} \cup \ssub{C}{2}$,
+where $\ssub{C}{1}$ is\index{annulus}
+the unit circle $x^2 + y^2 = 1$ traversed counterclockwise and $\ssub{C}{2}$ is the circle $x^2 + y^2 = 1/4$
+traversed \emph{clockwise}, then it can be shown (see Exercise 8) that
+\begin{displaymath}
+ \olineintvec{C}{f}{r} ~=~ 0 ~.
+\end{displaymath}
+We would still have $\iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA
+= 0$, so for this $R$ we would have
+\begin{displaymath}
+ \olineintvec{C}{f}{r} ~=~
+ \iint\limits_{R} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\,dA ~,
+\end{displaymath}
+which shows that Green's Theorem holds for the annular region $R$.\medskip
+\hrule width \textwidth height 0.5pt
+\medskip
 
 We know from Corollary \ref{cor:lineintsuffpath} that when a smooth vector field
 $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ on a region $R$ (whose boundary is a piecewise smooth,
@@ -1181,10 +1184,10 @@ counterclockwise.
   where $C$ is traversed so that $R$ is always on the left.
   (\emph{Hint: Use Green's Theorem and the fact that $A = \iint_{R} 1\,dA$}.)
 \suspend{enumerate}
-Use Exercise~\ref{ex:green-area} to find the area bounded by curve.
+In the following exercises, use Exercise~\ref{ex:green-area} to find the area bounded by curve. (You should figure out how the curve traversed around the region it bounds.) 
 \resume{enumerate}[{[\bfseries 1.]}]
 
-\item The curve $(\sin t,\sin(2 t))$ for $0\le t\le \pi$ 
+\item The curve $(\sin t,\sin(2 t))$ for $0\le t\le \pi$.
 
 
 \item The deltoid curve $(2\cos t+\cos 2t,2\sin t-\sin 2t)$ for $0\le t\le 2\pi$. 
@@ -1329,15 +1332,18 @@ curves on $\Sigma$ whose tangent vectors are $\frac{\partial \mathbf{r}}{\partia
 
 Now take a point $(u,v)$ in $R$ as, say,
 the lower left corner of one of the rectangular grid sections in $R$, as shown in Figure \ref{fig:surfparam}. Suppose
-that this rectangle has a small width and height of $\Delta u$ and $\Delta v$, respectively. The corner points of that
+that this rectangle has a small width and height of $\Delta u$ and $\Delta v$, respectively. 
+The corner points of that
 rectangle are $(u,v)$, $(u+\Delta u,v)$, $(u+\Delta u,v+\Delta v)$ and $(u,v+\Delta v)$.
 So the area of that
-rectangle is $A = \Delta u\,\Delta v$. Then that rectangle gets mapped by the parametrization onto some section of the
-surface $\Sigma$ which, for $\Delta u$ and $\Delta v$ small enough, will have a surface area (call it $d\sigma$) that
+rectangle is $A = \Delta u\,\Delta v$. 
+Then that rectangle gets mapped by the parametrization onto some section of the
+surface $\Sigma$ which, for $\Delta u$ and $\Delta v$ small enough, will have a surface area that
 is very close to the area of the parallelogram which has adjacent sides $\mathbf{r}(u+\Delta u,v) - \mathbf{r}(u,v)$
 (corresponding to the line segment from $(u,v)$ to $(u+\Delta u,v)$ in $R$) and
 $\mathbf{r}(u,v+\Delta v) - \mathbf{r}(u,v)$ (corresponding to the line segment from $(u,v)$ to $(u,v+\Delta v)$ in
-$R$). But by combining our usual notion of a partial derivative (see Definition \ref{defn:partial} in
+$R$). 
+Combining our usual notion of a partial derivative (see Definition \ref{defn:partial} in
 Section 2.2) with that of the derivative of a vector-valued function (see Definition \ref{defn:veccont} in
 Section 1.8) applied to a function of two variables, we have
 \begin{align*}
@@ -1465,16 +1471,7 @@ Thus, the surface area of $T$ is
 \hrule width \textwidth height 0.5pt
 \medskip
 
-Since $\frac{\partial \mathbf{r}}{\partial u}$ and $\frac{\partial \mathbf{r}}{\partial v}$ are tangent to the surface
-$\Sigma$ (i.e. lie in the tangent plane to $\Sigma$ at each point on $\Sigma$), then their cross product
-$\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}$ is perpendicular to the
-tangent plane to the surface at each point of $\Sigma$. Thus,
 
-\begin{displaymath}
- \iint\limits_{\Sigma} f(x,y,z)\,d\sigma = \iint\limits_{R} f(x(u,v),y(u,v),z(u,v))\,\norm{\mathbf{n}}\,d\sigma ~,
-\end{displaymath}
-where $\mathbf{n} = \Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}$.
-We say that $\mathbf{n}$ is a \textbf{normal vector} to $\Sigma$.\index{vector!normal}
 
 \piccaption[]{}\parpic[r]{\begin{tikzpicture}
  \usetikzlibrary{arrows}
@@ -1496,22 +1493,33 @@ We say that $\mathbf{n}$ is a \textbf{normal vector} to $\Sigma$.\index{vector!n
  \fill (-1.5,0) circle (2pt);
  \draw [line width=1.2pt,-latex] (-1.5,0) -- (-2.2,0);
 \end{tikzpicture}}
-Recall that normal vectors to a plane can point in two opposite directions. By an
-\textbf{outward unit normal vector} to a surface $\Sigma$, we will mean the unit vector that is normal to $\Sigma$ and
-points away from the ``top'' (or ``outer'' part) of the surface. This is a hazy definition, but the picture in
-Figure 4.4.4 gives a better idea of what outward normal vectors look like, in the case of a sphere.
-With this idea in mind, we make the following definition of a surface integral of a 3-dimensional
-\emph{vector field} over a surface:\index{outward normal}
+
+Assume that a surface $\Sigma$ is given by a collection of charts.
+Note that for each chart $\mathbf{r}(u,v)$ in the collection, the vectors $\tfrac{\partial\mathbf{r}}{\partial u}$ and $\tfrac{\partial\mathbf{r}}{\partial v}$
+are tangent to the surface.
+Therefore their crossproduct $\Crossprod{\tfrac{\partial\mathbf{r}}{\partial u}(u,v)}{\tfrac{\partial\mathbf{r}}{\partial v}(u,v)}$ is normal to $\Sigma$ at the point with position vector $\mathbf{r}(u,v)$.
+
+Assume further that at each point $P$ of the surface $\Sigma$ 
+one can choose a unit normal vector $\mathbf{n}$ 
+in such a way such that for every chart $\mathbf{r}(u,v)$ in the collection $\mathbf{n}$ at the point with position vector $\mathbf{r}(u,v)$, the crossproduct $\Crossprod{\tfrac{\partial\mathbf{r}}{\partial u}(u,v)}{\tfrac{\partial\mathbf{r}}{\partial v}(u,v)}$
+and is codirectional with $\mathbf{n}$.
+In this case $\Sigma$ is called oriented and the vector field $\mathbf{n}$ is called \textbf{outward unit normal vector} of $\Sigma$.
 
 \statedefn{defn:surfintvec}{
- {Let $\Sigma$ be a surface in $\Real{3}$ and let $\mathbf{f}(x,y,z) = \ssub{f}{1}(x,y,z) \mathbf{i} +
-  \ssub{f}{2}(x,y,z) \mathbf{j} + \ssub{f}{3}(x,y,z) \mathbf{k}$ be a vector field defined on some subset
-  of $\Real{3}$ that contains $\Sigma$. The \textbf{surface integral} of $\mathbf{f}$ over $\Sigma$ is
-  \begin{equation}\label{eqn:surfintvec}
-   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~=~
-   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{\mathbf{n}}\,d\sigma ~,
-  \end{equation}
-  where, at any point on $\Sigma$, $\mathbf{n}$ is the outward unit normal vector to $\Sigma$.}
+{Let $\Sigma$ be an oriented surface in $\Real{3}$ and let 
+$\mathbf{f}(x,y,z)$ 
+be a vector field defined on some subset of $\Real{3}$ that contains $\Sigma$. The \textbf{surface integral} of $\mathbf{f}$ over $\Sigma$ is
+\begin{equation}\label{eqn:surfintvec}
+\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~=~
+\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{\mathbf{n}}\,d\sigma ~,
+\end{equation}
+where, at any point on $\Sigma$, $\mathbf{n}$ is the outward unit normal vector to $\Sigma$.
+
+
+In particular, if $\Sigma$ is given by a single chart $\mathbf{r}(u,v)=x(u,v)\mathbf{i}+y(u,v)\mathbf{j}+z(u,v)\mathbf{k}$ defined on a plane region $R$ then
+\[\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} =
+\iint\limits_{R} \Dotprod{\mathbf{f}(x(u,v),y(u,v),z(u,v))}{\left(\Crossprod{\tfrac{\partial\mathbf{r}}{\partial u}(u,v)}{\tfrac{\partial\mathbf{r}}{\partial v}(u,v)}\right)}\,du\,dv.\]
+}
 }
 
 Note in the above definition that the dot product inside the integral on the right is a
@@ -1673,8 +1681,7 @@ Lastly, we note that sometimes the notation
  \oiint\limits_{\Sigma} f(x,y,z)\,d\sigma \quad\text{and}\quad \oiint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}
 \end{displaymath}
 is used to denote surface integrals of scalar and vector fields, respectively, over closed
-surfaces.\index{$\oiint\limits_{\Sigma}$} Especially in physics texts, it is common to see simply
-$\oint\limits_{\Sigma}$ instead of $\oiint\limits_{\Sigma}$.
+surfaces.\index{$\oiint\limits_{\Sigma}$}
 
 \startexercises\label{sec4dot4}
 \probs{A}
@@ -2676,11 +2683,77 @@ Since $\Sigma$ and hence $S$ was arbitrary,
 we get $\Dotprod{\nabla}{\mathbf{E}} ~=~ 4\pi\rho$.
 
 \end{exmp}
+
 \hrule width \textwidth height 0.5pt
-\medskip
+
+%\startexercises
+\centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec4dot6}
+\probs{A}
+\par\noindent For Exercises 1--6, find the Laplacian of the function $f(x,y,z)$.
+\begin{enumerate}[\bfseries 1.]
+ \begin{multicols}{3}
+  \item $f(x,y,z)=x+y+z$
+  \item $f(x,y,z)=x^5$
+  \item $f(x,y,z)=(x^2 + y^2 + z^2 )^{3/2}$
+ \end{multicols}
+ \begin{multicols}{3}
+  \item $f(x,y,z)=e^{x+y+z}$
+  \item $f(x,y,z)=x^3 + y^3 + z^3$
+  \item $f(x,y,z)=e^{-x^2 - y^2 -z^2}$
+ \end{multicols}
+\suspend{enumerate}
+\probs{B}
+\par\noindent For Exercises \ref{ex:nabla-start}--\ref{ex:nabla-end}, prove the given formula ($r = \norm{\mathbf{r}}$ is the length of the position
+vector field $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} +z\,\mathbf{k}$).
+\resume{enumerate}[{[\bfseries 1.]}]
+ \begin{multicols}{4}
+  \item\label{ex:nabla-start} $\nabla\,(1/r) = -\mathbf{r}/r^3$
+  \item $\Delta\,(1/r) = 0$
+  \item $\Dotprod{\nabla}{(\mathbf{r}/r^3 )} = 0$
+  \item $\nabla\,(\ln r) = \mathbf{r}/r^2$
+ \end{multicols}
+ \begin{multicols}{2}
+  \item $\text{div}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{div}~\mathbf{F} ~+~ \text{div}~\mathbf{G}$
+  \item $\text{curl}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{curl}~\mathbf{F} ~+~ \text{curl}~\mathbf{G}$
+ \end{multicols}
+ \begin{multicols}{2}
+  \item $\text{div}\,(f\,\mathbf{F}) ~=~ f\,\text{div}~\mathbf{F} ~+~ \Dotprod{\mathbf{F}}{\nabla f}$
+  \item $\text{div}\,(\Crossprod{\mathbf{F}}{\mathbf{G}}) ~=~ \Dotprod{\mathbf{G}}{\text{curl}~\mathbf{F}} ~-~
+   \Dotprod{\mathbf{F}}{\text{curl}~\mathbf{G}}$
+ \end{multicols}
+ \begin{multicols}{2}
+  \item $\text{div}\,(\Crossprod{\nabla f}{\nabla g}) ~=~ 0$
+  \item $\text{curl}\,(f\,\mathbf{F}) ~=~ f\,\text{curl}~\mathbf{F} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{F}}$
+ \end{multicols}
+ \begin{multicols}{2}
+  \item $\text{curl}\,(\text{curl}~\mathbf{F}) ~=~ \nabla (\text{div}~\mathbf{F}) ~-~ \Delta\,\mathbf{F}$
+  \item\label{ex:nabla-end} $\Delta\,(fg) ~=~ f\,\Delta\,g ~+~ g\,\Delta\,f ~+~2(\Dotprod{\nabla f}{\nabla g})$
+ \end{multicols}
+\suspend{enumerate}
+\probs{C}
+\resume{enumerate}[{[\bfseries 1.]}]
+ \item Prove Theorem \ref{thm:divcurl0}.
+ \item Use $\mathbf{f} = u\,\nabla v$ in the Divergence Theorem to prove:
+  \begin{enumerate}[(a)]
+   \item \emph{Green's first identity:}\index{Green's identities}
+    \[\iiint_{S} (u\,\Delta\,v ~+~ \Dotprod{(\nabla u)}{(\nabla v)})\,dV =
+    \iint_{\Sigma} \Dotprod{(u\,\nabla v)}{d\bm{\sigma}}\]
+   \item \emph{Green's second identity:}
+    \[\iiint_{S} (u\,\Delta\,v ~-~ v\,\Delta\,u)\,dV =
+    \iint_{\Sigma} \Dotprod{(u\,\nabla v ~-~ v\,\nabla u)}{d\bm{\sigma}}\]
+  \end{enumerate}
+ \item Suppose that $\Delta\,u = 0$ (i.e. $u$ is \emph{harmonic}) over $\Real{3}$.\index{harmonic}  
+  Show that 
+  \[\iint_{\Sigma} \nabla u\cdot d\sigma = 0\]
+  for any closed surface $\Sigma$.
+\end{enumerate}
+
+%Begin Section 4.7
+\section{Other coordinate systems}
 
 Often (especially in physics) it is convenient to use other coordinate systems when dealing with quantities such as the
-gradient, divergence, curl and Laplacian. We will present the formulas for these in cylindrical and spherical
+gradient, divergence, curl and Laplacian. 
+We will present the formulas for these in cylindrical and spherical
 coordinates.
 
 Recall from Section 1.7 that a point $(x,y,z)$ can be represented in cylindrical coordinates $(r, \theta , z)$, where
@@ -2982,74 +3055,20 @@ $8$ terms involving $\mathbf{e}_{\phi}$. But the algebra is straightforward and 
 %\startexercises
 \centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec4dot6}
 \probs{A}
-\par\noindent For Exercises 1--6, find the Laplacian of the function $f(x,y,z)$ in Cartesian coordinates.
 \begin{enumerate}[\bfseries 1.]
- \begin{multicols}{3}
-  \item $f(x,y,z)=x+y+z$
-  \item $f(x,y,z)=x^5$
-  \item $f(x,y,z)=(x^2 + y^2 + z^2 )^{3/2}$
- \end{multicols}
- \begin{multicols}{3}
-  \item $f(x,y,z)=e^{x+y+z}$
-  \item $f(x,y,z)=x^3 + y^3 + z^3$
-  \item $f(x,y,z)=e^{-x^2 - y^2 -z^2}$
- \end{multicols}
- \item Find the Laplacian of the function in Exercise 3 in spherical coordinates.
- \item Find the Laplacian of the function in Exercise 6 in spherical coordinates.
+ \item Let $f(x,y,z)=(x^2 + y^2 + z^2 )^{3/2}$ in Cartesian coordinates.
+ Find the Laplacian of $f$ in spherical coordinates.
+ \item Let $f(x,y,z)=e^{-x^2 - y^2 -z^2}$ in Cartesian coordinates.
+ Find the Laplacian of the function in Exercise 6 in spherical coordinates.
  \item Let $f(x,y,z) = \dfrac{z}{x^2 + y^2}$ in Cartesian coordinates. Find $\nabla f$ in cylindrical coordinates.
  \item For $\mathbf{f}(r,\theta,z) = r\,\mathbf{e}_{r} + z\,\sin\theta\,\mathbf{e}_{\theta} + rz\,\mathbf{e}_{z}$ in
   cylindrical coordinates, find $\text{div}~\mathbf{f}$ and $\text{curl}~\mathbf{f}$.
  \item For $\mathbf{f}(\rho,\theta,\phi) = \mathbf{e}_{\rho} + \rho\,\cos\theta\,\mathbf{e}_{\theta} +
   \rho\,\mathbf{e}_{\phi}$ in spherical coordinates, find $\text{div}~\mathbf{f}$ and $\text{curl}~\mathbf{f}$.
 \suspend{enumerate}
-\probs{B}
-\par\noindent For Exercises 12--23, prove the given formula ($r = \norm{\mathbf{r}}$ is the length of the position
-vector field $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} +z\,\mathbf{k}$).
-\resume{enumerate}[{[\bfseries 1.]}]
- \begin{multicols}{4}
-  \item $\nabla\,(1/r) = -\mathbf{r}/r^3$
-  \item $\Delta\,(1/r) = 0$
-  \item $\Dotprod{\nabla}{(\mathbf{r}/r^3 )} = 0$
-  \item $\nabla\,(\ln r) = \mathbf{r}/r^2$
- \end{multicols}
- \begin{multicols}{2}
-  \item $\text{div}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{div}~\mathbf{F} ~+~ \text{div}~\mathbf{G}$
-  \item $\text{curl}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{curl}~\mathbf{F} ~+~ \text{curl}~\mathbf{G}$
- \end{multicols}
- \begin{multicols}{2}
-  \item $\text{div}\,(f\,\mathbf{F}) ~=~ f\,\text{div}~\mathbf{F} ~+~ \Dotprod{\mathbf{F}}{\nabla f}$
-  \item $\text{div}\,(\Crossprod{\mathbf{F}}{\mathbf{G}}) ~=~ \Dotprod{\mathbf{G}}{\text{curl}~\mathbf{F}} ~-~
-   \Dotprod{\mathbf{F}}{\text{curl}~\mathbf{G}}$
- \end{multicols}
- \begin{multicols}{2}
-  \item $\text{div}\,(\Crossprod{\nabla f}{\nabla g}) ~=~ 0$
-  \item $\text{curl}\,(f\,\mathbf{F}) ~=~ f\,\text{curl}~\mathbf{F} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{F}}$
- \end{multicols}
- \begin{multicols}{2}
-  \item $\text{curl}\,(\text{curl}~\mathbf{F}) ~=~ \nabla (\text{div}~\mathbf{F}) ~-~ \Delta\,\mathbf{F}$
-  \item $\Delta\,(fg) ~=~ f\,\Delta\,g ~+~ g\,\Delta\,f ~+~2(\Dotprod{\nabla f}{\nabla g})$
- \end{multicols}
-\suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Prove Theorem \ref{thm:divcurl0}.
- \item Derive the gradient formula in cylindrical coordinates: $\nabla F =
+ \item Derive the gradient formula in cylindrical coordinates: \[\nabla F =
   \frac{\partial F}{\partial r}\,\mathbf{e}_{r} +
-  \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta}+\frac{\partial F}{\partial z}\,\mathbf{e}_{z}$
- \item Use $\mathbf{f} = u\,\nabla v$ in the Divergence Theorem to prove:
-  \begin{enumerate}[(a)]
-   \item \emph{Green's first identity:}\index{Green's identities}
-    \[\iiint_{S} (u\,\Delta\,v ~+~ \Dotprod{(\nabla u)}{(\nabla v)})\,dV =
-    \iint_{\Sigma} \Dotprod{(u\,\nabla v)}{d\bm{\sigma}}\]
-   \item \emph{Green's second identity:}
-    \[\iiint_{S} (u\,\Delta\,v ~-~ v\,\Delta\,u)\,dV =
-    \iint_{\Sigma} \Dotprod{(u\,\nabla v ~-~ v\,\nabla u)}{d\bm{\sigma}}\]
-  \end{enumerate}
- \item Suppose that $\Delta\,u = 0$ (i.e. $u$ is \emph{harmonic}) over $\Real{3}$.\index{harmonic} Define the
-  \emph{normal derivative}\index{normal derivative} $\frac{\partial u}{\partial n}$ of $u$ over a closed surface
-  $\Sigma$ with outward unit normal vector $\mathbf{n}$ by $\frac{\partial u}{\partial n} = \ssub{D}{\mathbf{n}}u =
-  \Dotprod{\mathbf{n}}{\nabla u}$. 
-  Show that 
-  \[\iint_{\Sigma} \frac{\partial u}{\partial n} \,d\sigma = 0.\]
-  (\emph{Hint: Use Green's second identity.})
+  \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta}+\frac{\partial F}{\partial z}\,\mathbf{e}_{z}.\]
 \end{enumerate}
