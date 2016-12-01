@@ -816,8 +816,8 @@ endpoints $A$ and $B$ are the same point, is the following important corollary:
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Let $g(x)$ and $h(y)$ be differentiable functions, and let $\mathbf{f}(x,y)=h(y)\,\mathbf{i} + g(x)\,\mathbf{j}$.
-  Can $\mathbf{f}$ have a potential $F(x,y)$? If so, find it. You may assume that $F$ would be smooth. (\emph{Hint:
-  Consider the mixed partial derivatives of $F$.})
+For which $g(x)$ and $h(y)$, the vector field $\mathbf{f}$ is potential? 
+Find the potential $F(x,y)$ for all these cases. 
 \end{enumerate}
 \newpage
 %Begin Section 4.3
@@ -826,8 +826,7 @@ We will now see a way of evaluating the line integral of a \emph{smooth} vector 
 around a simple closed curve. 
 A vector field $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ is \textbf{smooth} if its
 component functions $P(x,y)$ and $Q(x,y)$ are smooth.\index{vector field!smooth}
-We will use
-\emph{Green's Theorem} (sometimes called \emph{Green's Theorem in the plane}) to relate the \emph{line} integral around
+\emph{Green's Theorem} relates the \emph{line} integral around
 a closed curve with a \emph{double} integral over the region inside the curve:\index{Green's Theorem}
 
 \statethm{thm:green}{
@@ -2713,20 +2712,20 @@ vector field $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} +z\,\mathbf{k}$)
   \item $\nabla\,(\ln r) = \mathbf{r}/r^2$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{div}~\mathbf{F} ~+~ \text{div}~\mathbf{G}$
-  \item $\text{curl}\,(\mathbf{F} + \mathbf{G}) ~=~ \text{curl}~\mathbf{F} ~+~ \text{curl}~\mathbf{G}$
+  \item $\text{div}\,(\mathbf{f} + \mathbf{g}) ~=~ \text{div}~\mathbf{f} ~+~ \text{div}~\mathbf{g}$
+  \item $\text{curl}\,(\mathbf{f} + \mathbf{g}) ~=~ \text{curl}~\mathbf{f} ~+~ \text{curl}~\mathbf{g}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(f\,\mathbf{F}) ~=~ f\,\text{div}~\mathbf{F} ~+~ \Dotprod{\mathbf{F}}{\nabla f}$
-  \item $\text{div}\,(\Crossprod{\mathbf{F}}{\mathbf{G}}) ~=~ \Dotprod{\mathbf{G}}{\text{curl}~\mathbf{F}} ~-~
-   \Dotprod{\mathbf{F}}{\text{curl}~\mathbf{G}}$
+  \item $\text{div}\,(f\,\mathbf{g}) ~=~ f\,\text{div}~\mathbf{g} ~+~ \Dotprod{\mathbf{g}}{\nabla f}$
+  \item $\text{div}\,(\Crossprod{\mathbf{f}}{\mathbf{g}}) ~=~ \Dotprod{\mathbf{g}}{\text{curl}~\mathbf{f}} ~-~
+   \Dotprod{\mathbf{f}}{\text{curl}~\mathbf{g}}$
  \end{multicols}
  \begin{multicols}{2}
   \item $\text{div}\,(\Crossprod{\nabla f}{\nabla g}) ~=~ 0$
-  \item $\text{curl}\,(f\,\mathbf{F}) ~=~ f\,\text{curl}~\mathbf{F} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{F}}$
+  \item $\text{curl}\,(f\,\mathbf{g}) ~=~ f\,\text{curl}~\mathbf{g} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{g}}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{curl}\,(\text{curl}~\mathbf{F}) ~=~ \nabla (\text{div}~\mathbf{F}) ~-~ \Delta\,\mathbf{F}$
+  \item $\text{curl}\,(\text{curl}~\mathbf{f}) ~=~ \nabla (\text{div}~\mathbf{f}) ~-~ \Delta\,\mathbf{f}$
   \item\label{ex:nabla-end} $\Delta\,(fg) ~=~ f\,\Delta\,g ~+~ g\,\Delta\,f ~+~2(\Dotprod{\nabla f}{\nabla g})$
  \end{multicols}
 \suspend{enumerate}
@@ -3053,7 +3052,7 @@ $8$ terms involving $\mathbf{e}_{\phi}$. But the algebra is straightforward and 
 \hrule width \textwidth height 0.5pt
 
 %\startexercises
-\centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec4dot6}
+\centerline{\fbox{\textsf{\textbf{\large Exercises}}}}\label{sec4dot7}
 \probs{A}
 \begin{enumerate}[\bfseries 1.]
  \item Let $f(x,y,z)=(x^2 + y^2 + z^2 )^{3/2}$ in Cartesian coordinates.
