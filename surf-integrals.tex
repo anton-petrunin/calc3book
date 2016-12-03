@@ -1602,11 +1602,11 @@ spheres, cubes, and ellipsoids are closed surfaces, but planes and paraboloids a
   \ssub{f}{2}(x,y,z) \mathbf{j} + \ssub{f}{3}(x,y,z) \mathbf{k}$ be a vector field defined on some subset
   of $\Real{3}$ that contains $\Sigma$. Then
   \begin{equation}\label{eqn:divergence}
-   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~=~ \iiint\limits_{S} \text{div}~\mathbf{f} ~dV ~,
+   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~=~ \iiint\limits_{S} \div\mathbf{f} ~dV ~,
   \end{equation}
   where
   \begin{equation}\label{eqn:div}
-   \text{div}~\mathbf{f} ~=~ \frac{\partial \ssub{f}{1}}{\partial x} + \frac{\partial \ssub{f}{2}}{\partial y} +
+   \div\mathbf{f} ~=~ \frac{\partial \ssub{f}{1}}{\partial x} + \frac{\partial \ssub{f}{2}}{\partial y} +
    \frac{\partial \ssub{f}{3}}{\partial z}\index{divergence}
   \end{equation}
   is called the \textbf{divergence} of $\mathbf{f}$.}
@@ -1622,10 +1622,11 @@ laterally by one or more surfaces. The proof can then be extended to more genera
 \begin{exmp}
  Evaluate $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$, where $\mathbf{f}(x,y,z) = x\mathbf{i} +
   y\mathbf{j} + z\mathbf{k}$ and $\Sigma$ is the unit sphere $x^2 + y^2 + z^2 = 1$.\smallskip
- \par\noindent \emph{Solution:} We see that $\text{div}~\mathbf{f} = 1+1+1=3$, so
+\par\noindent\emph{Solution:} 
+We see that $\div\mathbf{f} = 1+1+1=3$, so
  \begin{align*}
   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~&=~
-  \iiint\limits_{S} \text{div}~\mathbf{f} ~dV
+  \iiint\limits_{S} \div\mathbf{f} ~dV
   ~=~ \iiint\limits_{S} 3 ~dV\\
   &=~ 3 \iiint\limits_{S} 1 ~dV
   ~=~ 3\,\text{vol}(S) ~=~ 3\cdot \frac{4\pi (1)^3}{3} ~=~ 4\pi ~.
@@ -1642,13 +1643,14 @@ positive flux means there is a net flow \emph{out} of the surface (i.e. in the d
 unit normal vector $\mathbf{n}$), while a negative flux indicates a net flow inward (in the direction of
 $-\mathbf{n}$).
 
-The term divergence comes from interpreting $\text{div}~\mathbf{f}$ as a measure of how much a vector field ``diverges''
+The term divergence comes from interpreting $\div\mathbf{f}$ as a measure of how much a vector field ``diverges''
 from a point. 
-This is best seen by using another definition of div $\mathbf{f}$ which is
+This is best seen by using another definition of $\div\mathbf{f}$ which is
 equivalent\footnote{See \cite{sch}, p. 36--39, for an intuitive discussion of this.} to the definition given by
-formula (\ref{eqn:div}). Namely, for a point $(x,y,z)$ in $\Real{3}$,
+formula (\ref{eqn:div}). 
+Namely, for a point $(x,y,z)$ in $\Real{3}$,
 \begin{equation}\label{eqn:divalt}
- \text{div}~\mathbf{f}(x,y,z) ~=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~,
+ \div\mathbf{f}(x,y,z) ~=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~,
 \end{equation}
 where $V$ is the volume enclosed by a closed surface $\Sigma$ around the point $(x,y,z)$. In the limit, $V \to 0$ means
 that we take smaller and smaller closed surfaces around $(x,y,z)$, which means that the volumes they enclose are going
@@ -1661,12 +1663,12 @@ The following theorem is a simple consequence of formula (\ref{eqn:divalt}).
 
 \statethm{thm:divzero}{
  {If the flux of a vector field $\mathbf{f}$ is zero through every closed surface containing a given point,
-  then $\text{div}~\mathbf{f} = 0$ at that point.}
+  then $\div\mathbf{f} = 0$ at that point.}
 }
 \begin{proofbar}\begin{proof}[Proof:]
  By formula (\ref{eqn:divalt}), at the given point $(x,y,z)$ we have 
  \begin{align*}
-  \text{div}~\mathbf{f}(x,y,z) ~&=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}
+  \div\mathbf{f}(x,y,z) ~&=~ \lim_{V \to 0} \frac{1}{V} \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}
    ~~~\text{for closed surfaces $\Sigma$ containing $(x,y,z)$, so}\\
     &=~ \lim_{V \to 0} \frac{1}{V} \,\, (0) ~~~\text{by our assumption that the flux through each $\Sigma$ is
     zero, so}\\[6pt]
@@ -1974,11 +1976,11 @@ now state Stokes' Theorem:
   $\mathbf{f}(x,y,z) = P(x,y,z) \mathbf{i} + Q(x,y,z) \mathbf{j} + R(x,y,z) \mathbf{k}$ be a smooth vector field
   defined on some subset of $\Real{3}$ that contains $\Sigma$. Then
   \begin{equation}\label{eqn:stokes}
-   \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~,
+   \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,d\sigma ~,
   \end{equation}
   where
   \begin{equation}\label{eqn:curl}
-   \text{curl}~\mathbf{f} ~=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} ~+~
+   \curl\mathbf{f} ~=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} ~+~
     \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \mathbf{j} ~+~
     \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k} ~,\index{curl}
   \end{equation}
@@ -2120,8 +2122,8 @@ now state Stokes' Theorem:
    \sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 + \left( \tfrac{\partial z}{\partial y} \right)^2}$.
  So we see that using formula (\ref{eqn:curl}) for $\text{curl}~{\mathbf{f}}$, we have
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}})}{\mathbf{n}}\,d\sigma ~&=~
-   \iint\limits_{D} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,
+  \iint\limits_{\Sigma} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,d\sigma ~&=~
+   \iint\limits_{D} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,
    \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial x}}{\frac{\partial \mathbf{r}}{\partial y}}}\,dA\\
    &=~ \iint\limits_{D} \Dotprod{\left( \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right)
     \mathbf{i} + \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \mathbf{j} +
@@ -2192,18 +2194,18 @@ Also, it should be noted that Stokes' Theorem holds even when the boundary curve
    \left( \tfrac{\partial z}{\partial y} \right)^2}} ~=~
    \frac{-2x\,\mathbf{i} - 2y\,\mathbf{j} + \mathbf{k}}{\sqrt{1 + 4x^2 + 4y^2}} ~,
  \end{displaymath}
- and $\text{curl}~\mathbf{f}= (1-0)\,\mathbf{i}+(1-0)\,\mathbf{j}+(1-0)\,\mathbf{k} = \mathbf{i}+\mathbf{j}+\mathbf{k}$,
+ and $\curl\mathbf{f}= (1-0)\,\mathbf{i}+(1-0)\,\mathbf{j}+(1-0)\,\mathbf{k} = \mathbf{i}+\mathbf{j}+\mathbf{k}$,
  so
  \begin{displaymath}
-  \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}} ~=~ (-2x-2y+1)/\sqrt{1 + 4x^2 + 4y^2} ~.
+  \Dotprod{(\curl\mathbf{f})}{\mathbf{n}} ~=~ (-2x-2y+1)/\sqrt{1 + 4x^2 + 4y^2} ~.
  \end{displaymath}
  
  \par\noindent
  Since $\Sigma$ can be parametrized as $\mathbf{r}(x,y) = x\,\mathbf{i}+y\,\mathbf{j}+(x^2 + y^2 )\,\mathbf{k}$ for
  $(x,y)$ in the region $D = \lbrace \, (x,y):\,x^2 + y^2 \le 1 \,\rbrace$, then
  \begin{align*}
-  \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~&=~
-   \iint\limits_{D} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,
+  \iint\limits_{\Sigma} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,d\sigma ~&=~
+   \iint\limits_{D} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,
    \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial x}}{\frac{\partial \mathbf{r}}{\partial y}}}\,dA\\
    &=~ \iint\limits_{D} \frac{-2x-2y+1}{\sqrt{1 + 4x^2 + 4y^2}}\,\sqrt{1 + 4x^2 + 4y^2}\,dA\\
    &=~ \iint\limits_{D} (-2x-2y+1)\,dA ~,~\text{so switching to polar coordinates gives}\\
@@ -2255,19 +2257,20 @@ always be the case.
    \frac{-\tfrac{x}{2}\,\mathbf{i} - \tfrac{2y}{9}\,\mathbf{j} + \mathbf{k}}{\sqrt{1 +\tfrac{x^2}{4}+
     \tfrac{4y^2}{9}}} ~,
  \end{displaymath}
- is a positive unit normal vector to $\Sigma$. And calculating the curl of $\mathbf{f}$ gives
+ is a positive unit normal vector to $\Sigma$. 
+And calculating the curl of $\mathbf{f}$ gives
  \begin{displaymath}
-  \text{curl}~\mathbf{f} ~=~ (-4y-0)\mathbf{i} ~+~ (9x-0)\mathbf{j} ~+~ (2-2)\mathbf{k} ~=~ -4y\,\mathbf{i} ~+~ 9x\,\mathbf{j} ~+~
+  \curl\mathbf{f} ~=~ (-4y-0)\mathbf{i} ~+~ (9x-0)\mathbf{j} ~+~ (2-2)\mathbf{k} ~=~ -4y\,\mathbf{i} ~+~ 9x\,\mathbf{j} ~+~
    0\,\mathbf{k}~,
  \end{displaymath}
  so
  \begin{displaymath}
-  \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}} ~=~ \frac{(-4y)(-\tfrac{x}{2})+(9x)(-\tfrac{2y}{9})+
+  \Dotprod{(\curl\mathbf{f})}{\mathbf{n}} ~=~ \frac{(-4y)(-\tfrac{x}{2})+(9x)(-\tfrac{2y}{9})+
    (0)(1)}{\sqrt{1 +\tfrac{x^2}{4}+\tfrac{4y^2}{9}}} ~=~ \frac{2xy-2xy+0}{\sqrt{1 +\tfrac{x^2}{4}+\tfrac{4y^2}{9}}} ~=~ 0~,
  \end{displaymath}
  and so by Stokes' Theorem
  \begin{displaymath}
-  \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~=~
+  \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,d\sigma ~=~
    \iint\limits_{\Sigma} 0\,d\sigma ~=~ 0 ~.
  \end{displaymath}
 \end{exmp}
@@ -2276,23 +2279,26 @@ always be the case.
 In physical applications, for a simple closed curve $C$ the line integral $\olineintvec{C}{f}{r}$
 is often called the \textbf{circulation}\index{circulation} of $\mathbf{f}$ around $C$. For example, if $\mathbf{E}$
 represents the electrostatic field due to a point charge, then
-it turns out\footnote{See Ch. 2 in \cite{rmc}.} that $\text{curl}~\mathbf{E} = \mathbf{0}$, which means that the
+it turns out\footnote{See Ch. 2 in \cite{rmc}.} that $\curl\mathbf{E} = \mathbf{0}$, which means that the
 circulation $\olineintvec{C}{E}{r}=0$ by Stokes' Theorem. Vector fields which have zero curl are often called
 \emph{irrotational}\index{irrotational} fields.
 
-In fact, the term curl was created by the 19\textsuperscript{th} century Scottish physicist James Clerk Maxwell in his
-study of electromagnetism, where it is used extensively. In physics, the curl is interpreted as a measure of
-\emph{circulation density}. This is best seen by using another definition of curl $\mathbf{f}$ which is
-equivalent\footnote{See \cite{sch}, p. 78--81, for the derivation.} to the definition given by
-formula (\ref{eqn:curl}). Namely, for a point $(x,y,z)$ in $\Real{3}$,
+In fact, the term curl was created by the 19\textsuperscript{th} century Scottish physicist James Clerk Maxwell in his study of electromagnetism, where it is used extensively. 
+In physics, the curl is interpreted as a measure of
+\emph{circulation density}. 
+This is best seen by using another definition of $\curl\mathbf{f}$ which is
+equivalent%
+\footnote{See \cite{sch}, p. 78--81, for the derivation.}  to the definition given by
+formula (\ref{eqn:curl}). 
+Namely, for a point $(x,y,z)$ in $\Real{3}$,
 \begin{equation}\label{eqn:curlalt}
- \Dotprod{\mathbf{n}}{(\text{curl}~\mathbf{f}\,)}(x,y,z) ~=~ \lim_{S \to 0} \frac{1}{S} \olineintvec{C}{f}{r} ~,
+ \Dotprod{\mathbf{n}}{(\curl\mathbf{f})}(x,y,z) ~=~ \lim_{S \to 0} \frac{1}{S} \olineintvec{C}{f}{r} ~,
 \end{equation}
 where $S$ is the surface area of a surface $\Sigma$ containing the point $(x,y,z)$ and with a simple closed boundary
 curve $C$ and positive unit normal vector $\mathbf{n}$ at $(x,y,z)$. In the limit, think of the curve $C$ shrinking to
 the point $(x,y,z)$, which causes $\Sigma$, the surface it bounds, to have smaller and smaller surface area. That ratio
-of circulation to surface area in the limit is what makes the curl a rough measure of circulation density (i.e.
-circulation per unit area).
+of circulation to surface area in the limit is what makes the curl a rough measure of circulation density 
+(i.e. circulation per unit area).
 
 \piccaption[]{\quad Curl and rotation}\parpic[r]{\begin{tikzpicture}[scale=1.34]
  \usetikzlibrary{arrows}
@@ -2331,17 +2337,18 @@ Since the flow is stronger (i.e. the
 magnitude of $\mathbf{f}$ is larger) as you move away from the $y$-axis, then such a wheel would rotate counterclockwise
 if it were dropped to the
 right of the $y$-axis, and it would rotate clockwise if it were dropped to the left of the $y$-axis. In both cases the
-curl would be nonzero ($\text{curl}~\mathbf{f}(x,y,z) = 2x\,\mathbf{k}$ in our example) and would obey the right-hand
-rule, that is, $\text{curl}~\mathbf{f}(x,y,z)$ points in the direction of your thumb as you cup your right hand in the
-direction of the rotation of the wheel. So the curl points outward (in the positive $z$-direction) if $x > 0$ and points
+curl would be nonzero ($\text{curl}~\mathbf{f}(x,y,z) = 2x\,\mathbf{k}$ in our example) and would obey the right-hand rule; 
+that is, $\curl\mathbf{f}(x,y,z)$ points in the direction of your thumb as you cup your right hand in the
+direction of the rotation of the wheel. 
+So the curl points outward (in the positive $z$-direction) if $x > 0$ and points
 inward (in the negative $z$-direction) if $x < 0$. Notice that if all the vectors had the same direction \emph{and} the
 same magnitude, then the wheels would not rotate and hence there would be no curl (which is why such fields are
 called irrotational, meaning no rotation).
 
 Finally, by Stokes' Theorem, we know that if $C$ is a simple closed curve in some solid region $S$ in $\Real{3}$ and if
-$\mathbf{f}(x,y,z)$ is a smooth vector field such that $\text{curl}~\mathbf{f} = \mathbf{0}$ in $S$, then
+$\mathbf{f}(x,y,z)$ is a smooth vector field such that $\curl\mathbf{f} = \mathbf{0}$ in $S$, then
 \begin{displaymath}
- \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma ~=~
+ \olineintvec{C}{f}{r} ~=~ \iint\limits_{\Sigma} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,d\sigma ~=~
    \iint\limits_{\Sigma} \Dotprod{\mathbf{0}}{\mathbf{n}}\,d\sigma ~=~ \iint\limits_{\Sigma} 0\,d\sigma ~=~ 0 ~,
 \end{displaymath}
 where $\Sigma$ is any orientable surface inside $S$ whose boundary is $C$ (such a surface is sometimes called a
@@ -2360,7 +2367,7 @@ independence}\index{exact differential form}
   \item $\displaystyle{\olineintvec{C}{f}{r}} = 0$ for every simple closed curve $C$ in $S$
   \item $\dfrac{\partial R}{\partial y} = \dfrac{\partial Q}{\partial z}$,
    $\dfrac{\partial P}{\partial z} = \dfrac{\partial R}{\partial x}$, and
-   $\dfrac{\partial Q}{\partial x} = \dfrac{\partial P}{\partial y}$ in $S$ (i.e. $\text{curl}~\mathbf{f} =
+   $\dfrac{\partial Q}{\partial x} = \dfrac{\partial P}{\partial y}$ in $S$ (i.e. $\curl\mathbf{f} =
    \mathbf{0}$ in $S$)
  \end{enumerate}}}\medskip
 
@@ -2369,10 +2376,10 @@ independence}\index{exact differential form}
 \medskip
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
- Determine if the vector field $\mathbf{f}(x,y,z) = xyz\,\mathbf{i} + xz\,\mathbf{j} + xy\,\mathbf{k}$ has a
+Determine if the vector field $\mathbf{f}(x,y,z) = xyz\,\mathbf{i} + xz\,\mathbf{j} + xy\,\mathbf{k}$ has a
  potential in $\Real{3}$.\smallskip
- \par\noindent\emph{Solution:} Since $\Real{3}$ is simply connected, we just need to check whether $\text{curl}~
- \mathbf{f} = \mathbf{0}$ throughout $\Real{3}$, that is,
+\par\noindent\emph{Solution:} 
+Since $\Real{3}$ is simply connected, we just need to check whether $\curl\mathbf{f} = \mathbf{0}$ throughout $\Real{3}$, that is,
  \begin{displaymath}
   \frac{\partial R}{\partial y} = \frac{\partial Q}{\partial z}~,\quad
   \frac{\partial P}{\partial z} = \frac{\partial R}{\partial x}~,\quad\text{and}\quad
@@ -2440,7 +2447,7 @@ surface $\Sigma$.
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
  \item Let $\Sigma$ be a closed surface and $\mathbf{f}(x,y,z)$ a smooth vector field. Show that\\
-  $\iint\limits_{\Sigma} \Dotprod{(\text{curl}~{\mathbf{f}}\,)}{\mathbf{n}}\,d\sigma = 0$. (\emph{Hint: Split $\Sigma$
+  $\iint\limits_{\Sigma} \Dotprod{(\curl\mathbf{f})}{\mathbf{n}}\,d\sigma = 0$. (\emph{Hint: Split $\Sigma$
   in half.})
  \item Show that Green's Theorem is a special case of Stokes' Theorem.
 \end{enumerate}
@@ -2475,8 +2482,10 @@ $\frac{\partial f}{\partial z}$. For instance, $\frac{\partial}{\partial x}$ ``a
 $\frac{\partial f}{\partial x}$.
 
 Is $\nabla$ \emph{really} a vector? Strictly speaking, no, since $\frac{\partial}{\partial x}$,
-$\frac{\partial}{\partial y}$ and $\frac{\partial}{\partial z}$ are not actual numbers. But it helps to
-\emph{think} of $\nabla$ as a vector, especially with the divergence and curl, as we will soon see. The process of
+$\frac{\partial}{\partial y}$ and $\frac{\partial}{\partial z}$ are not actual numbers. 
+But it helps to
+\emph{think} of $\nabla$ as a vector, especially with the divergence and curl, as we will soon see. 
+The process of
 ``applying'' $\frac{\partial}{\partial x}$, $\frac{\partial}{\partial y}$, $\frac{\partial}{\partial z}$ to a
 real-valued function $f(x,y,z)$ is normally thought of as \emph{multiplying} the quantities:
 \begin{displaymath}
@@ -2486,7 +2495,7 @@ real-valued function $f(x,y,z)$ is normally thought of as \emph{multiplying} the
 \end{displaymath}
 For this reason, $\nabla$ is often referred to as the ``del operator'', since it ``operates'' on functions.
  
-For example, it is often convenient to write the divergence $\text{div}~\mathbf{f}$ as $\Dotprod{\nabla}{\mathbf{f}}$,
+For example, it is often convenient to write the divergence $\div\mathbf{f}$ as $\Dotprod{\nabla}{\mathbf{f}}$,
 since for a vector field $\mathbf{f}(x,y,z) =
 \ssub{f}{1}(x,y,z)\mathbf{i} + \ssub{f}{2}(x,y,z) \mathbf{j} + \ssub{f}{3}(x,y,z) \mathbf{k}$, the dot product of
 $\mathbf{f}$ with $\nabla$ (thought of as a vector) makes sense:\index{divergence}
@@ -2499,10 +2508,10 @@ $\mathbf{f}$ with $\nabla$ (thought of as a vector) makes sense:\index{divergenc
     \left( \frac{\partial}{\partial z} \right) (\ssub{f}{3})\\
    &=~ \frac{\partial \ssub{f}{1}}{\partial x} ~+~ \frac{\partial \ssub{f}{2}}{\partial y} ~+~
   \frac{\partial \ssub{f}{3}}{\partial z}\\
-   &=~ \text{div}~\mathbf{f}
+   &=~ \div\mathbf{f}
 \end{align*}
 
-We can also write $\text{curl}~\mathbf{f}$ in terms of $\nabla$, namely as $\Crossprod{\nabla}{\mathbf{f}}$, since
+We can also write $\curl\mathbf{f}$ in terms of $\nabla$, namely as $\Crossprod{\nabla}{\mathbf{f}}$, since
 for a vector field $\mathbf{f}(x,y,z) = P(x,y,z)\mathbf{i} + Q(x,y,z)\mathbf{j} + R(x,y,z)\mathbf{k}$, we have:
 \begin{align*}
  \Crossprod{\nabla}{\mathbf{f}} ~&=~
@@ -2517,14 +2526,14 @@ for a vector field $\mathbf{f}(x,y,z) = P(x,y,z)\mathbf{i} + Q(x,y,z)\mathbf{j} 
  &=~ \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} ~+~
     \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) \mathbf{j} ~+~
     \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k}\\
- &=~ \text{curl}~\mathbf{f}
+ &=~ \curl\mathbf{f}
 \end{align*}
 
 For a real-valued function $f(x,y,z)$, the gradient $\nabla f(x,y,z) =\frac{\partial f}{\partial x}\,\mathbf{i} +
 \frac{\partial f}{\partial y}\,\mathbf{j} + \frac{\partial f}{\partial z}\,\mathbf{k}$ is a vector field, so we
 can take its divergence:\index{curl}
 \begin{align*}
- \text{div}~\nabla f ~&=~ \Dotprod{\nabla}{\nabla f}\\
+ \div\nabla f ~&=~ \Dotprod{\nabla}{\nabla f}\\
   &=~ \Dotprod{ \left( \frac{\partial}{\partial x}\,\mathbf{i} ~+~ \frac{\partial}{\partial y}\,\mathbf{j} ~+~
   \frac{\partial}{\partial z}\,\mathbf{k} \right) }{\left( \frac{\partial f}{\partial x}\,\mathbf{i} ~+~
   \frac{\partial f}{\partial y}\,\mathbf{j} ~+~ \frac{\partial f}{\partial z}\,\mathbf{k} \right) }\\
@@ -2613,7 +2622,8 @@ The following theorem shows that this will be the case in general:
  }
 }
 
-Another way of stating Theorem \ref{thm:curlgrad0} is that gradients are irrotational. Also,
+Another way of stating Theorem \ref{thm:curlgrad0} is that gradients are irrotational. 
+Also,
 notice that in Example \ref{exmp:laplposition} if we take the divergence of the curl of $\mathbf{r}$ we trivially get
 \begin{displaymath}
  \Dotprod{\nabla}{(\Crossprod{\nabla}{\mathbf{r}})} ~=~ \Dotprod{\nabla}{\mathbf{0}} ~=~ 0 ~.
@@ -2648,8 +2658,9 @@ throughout that region. The proof is not trivial, and physicists do not usually 
 true, and can also be applied to double and triple integrals.
 
 For instance, to prove Theorem \ref{thm:curlgrad0}, assume that $f(x,y,z)$ is a smooth real-valued function on
-$\Real{3}$. Let $C$ be a simple closed curve in $\Real{3}$ and let $\Sigma$ be any capping surface for $C$ (i.e.
-$\Sigma$ is orientable and its boundary is $C$). Since $\nabla f$ is a vector field, then
+$\Real{3}$. 
+Let $C$ be a simple closed curve in $\Real{3}$ and let $\Sigma$ be any capping surface for $C$ 
+(i.e. $\Sigma$ is orientable and its boundary is $C$). Since $\nabla f$ is a vector field, then
 \begin{align*}
  \iint\limits_{\Sigma} \Dotprod{\left( \Crossprod{\nabla}{(\nabla f)} \right) }{\mathbf{n}}\,d\sigma ~&=~
   \oint_{C}\Dotprod{\nabla f}{d\mathbf{r}} \quad\text{by Stokes' Theorem, so}\\
@@ -2712,20 +2723,20 @@ vector field $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} +z\,\mathbf{k}$)
   \item $\nabla\,(\ln r) = \mathbf{r}/r^2$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(\mathbf{f} + \mathbf{g}) ~=~ \text{div}~\mathbf{f} ~+~ \text{div}~\mathbf{g}$
-  \item $\text{curl}\,(\mathbf{f} + \mathbf{g}) ~=~ \text{curl}~\mathbf{f} ~+~ \text{curl}~\mathbf{g}$
+  \item $\div(\mathbf{f} + \mathbf{g}) ~=~ \div\mathbf{f} ~+~ \div\mathbf{g}$
+  \item $\curl(\mathbf{f} + \mathbf{g}) ~=~ \text{curl}~\mathbf{f} ~+~ \text{curl}~\mathbf{g}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(f\,\mathbf{g}) ~=~ f\,\text{div}~\mathbf{g} ~+~ \Dotprod{\mathbf{g}}{\nabla f}$
-  \item $\text{div}\,(\Crossprod{\mathbf{f}}{\mathbf{g}}) ~=~ \Dotprod{\mathbf{g}}{\text{curl}~\mathbf{f}} ~-~
-   \Dotprod{\mathbf{f}}{\text{curl}~\mathbf{g}}$
+  \item $\div(f\,\mathbf{g}) ~=~ f\,\div\mathbf{g} ~+~ \Dotprod{\mathbf{g}}{\nabla f}$
+  \item $\div\Crossprod{\mathbf{f}}{\mathbf{g}}) ~=~ \Dotprod{\mathbf{g}}{\curl\mathbf{f}} ~-~
+   \Dotprod{\mathbf{f}}{\curl\mathbf{g}}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{div}\,(\Crossprod{\nabla f}{\nabla g}) ~=~ 0$
-  \item $\text{curl}\,(f\,\mathbf{g}) ~=~ f\,\text{curl}~\mathbf{g} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{g}}$
+  \item $\div(\Crossprod{\nabla f}{\nabla g}) ~=~ 0$
+  \item $\curl(f\,\mathbf{g}) ~=~ f\,\text{curl}~\mathbf{g} ~+~ \Crossprod{(\nabla f\,)}{\mathbf{g}}$
  \end{multicols}
  \begin{multicols}{2}
-  \item $\text{curl}\,(\text{curl}~\mathbf{f}) ~=~ \nabla (\text{div}~\mathbf{f}) ~-~ \Delta\,\mathbf{f}$
+  \item $\curl(\curl\mathbf{f}) ~=~ \nabla (\div\mathbf{f}) ~-~ \Delta\,\mathbf{f}$
   \item\label{ex:nabla-end} $\Delta\,(fg) ~=~ f\,\Delta\,g ~+~ g\,\Delta\,f ~+~2(\Dotprod{\nabla f}{\nabla g})$
  \end{multicols}
 \suspend{enumerate}
@@ -2799,7 +2810,7 @@ spherical coordinates in the following tables:
    ~+~ \frac{\partial F}{\partial z}\,\mathbf{k}\\
   \text{divergence} &: & \Dotprod{\nabla}{\mathbf{f}} ~&=~ \frac{\partial \ssub{f}{1}}{\partial x} ~+~
    \frac{\partial \ssub{f}{2}}{\partial y} ~+~ \frac{\partial \ssub{f}{3}}{\partial z}\\
-  \text{curl} &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
+  \curl &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
    \left( \frac{\partial \ssub{f}{3}}{\partial y} - \frac{\partial \ssub{f}{2}}{\partial z} \right) \mathbf{i} ~+~
    \left( \frac{\partial \ssub{f}{1}}{\partial z} - \frac{\partial \ssub{f}{3}}{\partial x} \right) \mathbf{j} ~+~
    \left( \frac{\partial \ssub{f}{2}}{\partial x} - \frac{\partial \ssub{f}{1}}{\partial y} \right) \mathbf{k}\\
@@ -2816,7 +2827,7 @@ spherical coordinates in the following tables:
    \frac{1}{r}\,\frac{\partial F}{\partial \theta}\,\mathbf{e}_{\theta} ~+ ~\frac{\partial F}{\partial z}\,\mathbf{e}_{z}\\
   \text{divergence} &: & \Dotprod{\nabla}{\mathbf{f}} ~&=~ \frac{1}{r}\,\frac{\partial}{\partial r}(rf_{r}) ~+~
    \frac{1}{r}\,\frac{\partial f_{\theta}}{\partial \theta} ~+~ \frac{\partial f_{z}}{\partial z}\\
-  \text{curl} &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
+  \curl &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
    \left( \frac{1}{r}\,\frac{\partial f_{z}}{\partial \theta} - \frac{\partial f_{\theta}}{\partial z} \right)
    \mathbf{e}_{r} ~+~
    \left( \frac{\partial f_{r}}{\partial z} - \frac{\partial f_{z}}{\partial r} \right) \mathbf{e}_{\theta} ~+~
@@ -2837,7 +2848,7 @@ spherical coordinates in the following tables:
   \text{divergence} &: & \Dotprod{\nabla}{\mathbf{f}} ~&=~ \frac{1}{\rho^2}\,\frac{\partial}{\partial \rho}(\rho^2
    f_{\rho}) ~+~ \frac{1}{\rho \sin \phi}\,\frac{\partial f_{\theta}}{\partial \theta} ~+~
    \frac{1}{\rho \sin \phi}\,\frac{\partial}{\partial \phi}(\sin \phi \,f_{\theta})\\
-  \text{curl} &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
+  \curl &: ~ & \Crossprod{\nabla}{\mathbf{f}} ~&=~
    \frac{1}{\rho \sin \phi} \left( \frac{\partial}{\partial \phi}(\sin \phi\,f_{\theta}) -
     \frac{\partial f_{\phi}}{\partial \theta} \right) \mathbf{e}_{\rho} ~+~
    \frac{1}{\rho} \left( \frac{\partial}{\partial \rho}(\rho f_{\phi}) - \frac{\partial f_{\rho}}{\partial \phi}
@@ -3061,9 +3072,9 @@ $8$ terms involving $\mathbf{e}_{\phi}$. But the algebra is straightforward and 
  Find the Laplacian of the function in Exercise 6 in spherical coordinates.
  \item Let $f(x,y,z) = \dfrac{z}{x^2 + y^2}$ in Cartesian coordinates. Find $\nabla f$ in cylindrical coordinates.
  \item For $\mathbf{f}(r,\theta,z) = r\,\mathbf{e}_{r} + z\,\sin\theta\,\mathbf{e}_{\theta} + rz\,\mathbf{e}_{z}$ in
-  cylindrical coordinates, find $\text{div}~\mathbf{f}$ and $\text{curl}~\mathbf{f}$.
+  cylindrical coordinates, find $\div\mathbf{f}$ and $\curl\mathbf{f}$.
  \item For $\mathbf{f}(\rho,\theta,\phi) = \mathbf{e}_{\rho} + \rho\,\cos\theta\,\mathbf{e}_{\theta} +
-  \rho\,\mathbf{e}_{\phi}$ in spherical coordinates, find $\text{div}~\mathbf{f}$ and $\text{curl}~\mathbf{f}$.
+  \rho\,\mathbf{e}_{\phi}$ in spherical coordinates, find $\div\mathbf{f}$ and $\curl\mathbf{f}$.
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]

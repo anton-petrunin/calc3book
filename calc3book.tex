@@ -37,10 +37,10 @@ bm}
  annote
 }
 \usepackage[pdfproducer={dvips + GPL Ghostscript 9.06},pdfcreator={LaTeX + dvips},
-            pdfauthor={Michael Corral},pdftitle={Vector Calculus},
-            pdfsubject={Calculus},pdfkeywords={calculus,vector},
-            pdfdisplaydoctitle=true,dvips,bookmarks,pdfborder={0 0 0},
-            bookmarksnumbered=true,colorlinks=false]{hyperref}
+pdfauthor={Michael Corral and Anton Petrunin},pdftitle={Corral's Vector Calculus},
+pdfsubject={Calculus},pdfkeywords={calculus,vector},
+pdfdisplaydoctitle=true,dvips,bookmarks,pdfborder={0 0 0},
+bookmarksnumbered=true,colorlinks=false]{hyperref}
 \usepackage{breakurl}
 \usepackage[integrals]{wasysym}%added by Petrunin
 \usepackage{lpic,wrapfig}%added by Petrunin
@@ -135,6 +135,9 @@ bm}
 \setlength\evensidemargin{20pt}
 \setlength\topmargin{0pt}
 
+\def\div{\mathop{\mathrm{div}}\nolimits}
+\def\curl{\mathop{\mathrm{curl}}\nolimits}%Added by A. Petrunin
+
 % Define \clockint and \counterint line integral symbols
 \def\Xint#1{\mathchoice
  {\XXint\displaystyle\textstyle{#1}}%
@@ -161,8 +164,8 @@ bm}
 \centerline{\input{sincplaincover}}\vspace{-25mm}
 \centerline{\includegraphics[height=0.6\textheight]{calc3bookcover}}
 %Put the title page here
-\title{Vector Calculus}
-\author{\textsf{\textbf{Michael Corral}}}
+\title{Corral's Vector Calculus}
+\author{\textsf{\textbf{Michael Corral and Anton Petrunin}}}
 \date{\large \textsf{\textsl{Schoolcraft College}}}
 %Put the author/copyright info here
 \uppertitleback{\emph{About the author}:\\
@@ -171,7 +174,7 @@ He received a B.A. in Mathematics from the University of California at Berkeley,
 an M.S. in Industrial \& Operations Engineering from the University of Michigan.\\\\
 This text was typeset in \LaTeXe\medspace with the \textsf{KOMA-Script} bundle, using the GNU Emacs text editor on a
 Fedora Linux system. The graphics were created using MetaPost, PGF, and Gnuplot.}
-\lowertitleback{Copyright \copyright ~2008 ~Michael Corral.\\
+\lowertitleback{Copyright \copyright 2016 Anton Petrunin.\\
 Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation;
 with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. 
 A copy of the license is included in the section entitled ``GNU Free Documentation License''.}
@@ -226,6 +229,15 @@ the book, please record the pertinent information here, following the format in 
 \item[Author(s):] Michael Corral
 \item[Title:] Vector Calculus
 \item[Modification(s):] Initial version
+\end{description}
+
+\item VERSION: 1.1
+\begin{description}
+\item[Date:] 2016-12-04
+\item[Author(s):] Anton Petrunin
+\item[Title:] Corral's Vector Calculus
+\item[Modification(s):] 
+Minor corrections and more exercises.
 \end{description}
 
 \end{enumerate}
