@@ -60,12 +60,12 @@ $z$-axis direction while using the remaining four fingers to rotate the $x$-axis
 Doing the same thing
 with the left hand is what defines a \textbf{left-handed coordinate system}\index{coordinates!left-handed}.
 Notice that switching the $x$- and $y$-axes
-in a right-handed system results in a left-handed system, and that rotating either type of system does not change its
-``handedness''.  Throughout the book we will use a right-handed system.
+in a right-handed system results in a left-handed system, and that rotating either type of system does not change its ``handedness''.  
+Throughout the book we will use a right-handed system.
 
-For functions of three variables, the graphs exist in 4-dimensional space (i.e. $\Real{4}$),
-which we can not see in our 3-dimensional space, let alone simulate in 2-dimensional space.  So we
-can only think of 4-dimensional space abstractly.  For an entertaining discussion of this subject, see the book by
+For functions of three variables, the graphs exist in 4-dimensional space ($\Real{4}$),
+which we can not see in our 3-dimensional space, let alone simulate in 2-dimensional space.  
+So we can only think of 4-dimensional space abstractly.  For an entertaining discussion of this subject, see the book by
 \cite{abb}.\footnote{One thing you will learn is why a 4-dimensional creature would be able to reach inside an egg and
 remove the yolk without cracking the shell!}
 
@@ -76,16 +76,20 @@ way.  This is where the idea of a \emph{vector} comes in.
 
 You have already dealt with velocity and acceleration in single-variable calculus.  For example, for motion along a
 straight line, if $y = f(t)$ gives the displacement of an object after time $t$, then $dy/dt = f\,'(t)$ is the velocity
-of the object at time $t$.  The derivative\index{derivative}
+of the object at time $t$.  
+The derivative\index{derivative}
 $f\,'(t)$ is just a number, which is positive if the object is moving in an
 agreed-upon ``positive'' direction, and negative if it moves in the opposite of that direction. So you can think of
 that number, which was called the velocity of the object, as having two components: a \emph{magnitude}, indicated by
 a nonnegative number, preceded by a \emph{direction}, indicated by a plus or minus symbol (representing motion in the
-positive direction or the negative direction, respectively), i.e. $f\,'(t) = \pm a$ for some number $a \ge 0$.  Then
+positive direction or the negative direction, respectively); that is, $f\,'(t) = \pm a$ for some number $a \ge 0$.  
+Then
 $a$ is the magnitude of the velocity (normally called the \emph{speed} of the object), and the $\pm$ represents the
 direction of the velocity (though the $+$ is usually omitted for the positive direction).
 
-For motion along a straight line, i.e. in a 1-dimensional space, the velocities are also contained in that 1-dimensional space, since they are just numbers.  
+For motion along a straight line 
+(which is a 1-dimensional space) 
+the velocities are also contained in that 1-dimensional space, since they are just numbers.  
 For general motion along a curve in 2- or 3-dimensional space,
 however, velocity will need to be represented by a multidimensional object which should have both a magnitude and a
 direction.  
@@ -101,8 +105,9 @@ Its \textbf{magnitude} is the length of the line segment, denoted by
  segment.  The \textbf{zero vector}\index{vector!zero} is just a point, and it is denoted by $\mathbf{0}$.}
 }
 
-To indicate the direction\index{vector!direction} of a vector, we draw an arrow from its initial point to its terminal
-point. We will often denote a vector by a single bold-faced letter (e.g. $\mathbf{v}$) and use the terms
+To indicate the direction\index{vector!direction} of a vector, we draw an arrow from its initial point to its terminal point. 
+We will often denote a vector by a single bold-faced letter (for instance, $\mathbf{v}$) 
+and use the terms
 ``magnitude''\index{vector!magnitude} and ``length'' interchangeably.
 Note that our definition could apply to systems with any number of dimensions (see Figure \ref{fig:vecs}
 (a)--(c)).
@@ -120,15 +125,18 @@ Note that our definition could apply to systems with any number of dimensions (s
 
 A few things need to be noted about the zero vector\index{vector!zero}.
 Our motivation for what a vector is included the notions of
-magnitude and direction. What is the magnitude of the zero vector? We define it to be zero, i.e.
+magnitude and direction. 
+What is the magnitude of the zero vector? 
+We define it to be zero; that is,
 $\norm{\mathbf{0}} = 0$.
 This agrees with the definition of the zero vector as just a point, which has zero length.  What about the
 direction of the zero vector?  A single point really has no well-defined direction.  Notice that we were careful
 to only define the direction of a \emph{nonzero} vector, which is well-defined since the initial and
 terminal points are distinct.
 Not everyone agrees on the direction of the zero vector.  Some contend that the zero vector has \emph{arbitrary}
-direction (i.e. can take any direction), some say that it has \emph{indeterminate} direction (i.e. the direction can
-not be determined), while others say that it has \emph{no} direction. Our definition of the zero vector, however,
+direction, some say that it has \emph{indeterminate} direction (that is, the direction can
+not be determined), 
+while others say that it has \emph{no} direction. Our definition of the zero vector, however,
 does not require it to have a direction, and we will leave it at that.\footnote{In the subject of linear algebra
 there is a more abstract way of defining a vector where the concept of ``direction'' is not really used.
 See \cite{ar}.}
@@ -371,8 +379,8 @@ The proof will use the following result:
 \newpage
 %Begin Section 1.2
 \section{Vector Algebra}
-Now that we know what vectors are, we can start to perform some of the usual algebraic operations on them (e.g.
-addition, subtraction). Before doing that, we will introduce the notion of a \emph{scalar}\index{scalar}.
+Now that we know what vectors are, we can start to perform some of the usual algebraic operations on them including addition and subtraction. 
+Before doing that, we will introduce the notion of a \emph{scalar}\index{scalar}.
 \statedefn{defn:scal}{
  {A \textbf{scalar} is a quantity that can be represented by a single number.}
 }
@@ -380,9 +388,9 @@ For our purposes, scalars will always be real numbers.\footnote{The term \emph{s
 19\textsuperscript{th} century
 Irish mathematician, physicist and astronomer William Rowan Hamilton, to convey the sense of something
 that could be represented by a point
-on a scale or graduated ruler. The word vector comes from Latin, where it means ``carrier''.} Examples of
-scalar quantities are mass, electric charge, and speed (not velocity).\footnote{An alternate definition of
-scalars and vectors, used in physics, is that under certain types of coordinate transformations (e.g. rotations), a
+on a scale or graduated ruler. 
+The word vector comes from Latin, where it means ``carrier''.} 
+Examples of scalar quantities are mass, electric charge, and speed (not velocity).\footnote{An alternate definition of scalars and vectors, used in physics, is that under certain types of coordinate transformations (for example rotations), a
 quantity that is not affected is a scalar, while a quantity that is affected (in a certain way) is a vector.
 See \cite{mar} for details.}
 We can now define \emph{scalar multiplication} of a vector\index{vector!scalar multiplication}.
@@ -687,9 +695,10 @@ $d = \norm{\mathbf{w} - \mathbf{v}} = \sqrt{(\ssub{x}{2} - \ssub{x}{1})^2 + (\ss
 \resume{enumerate}[{[\bfseries 1.]}]
  \item We know that every vector in $\Real{3}$ can be written as a scalar combination of the vectors $\mathbf{i}$,
  $\mathbf{j}$, and $\mathbf{k}$. 
- Can every vector in $\Real{3}$ be written as a scalar combination of just $\mathbf{i}$ and $\mathbf{j}$; 
- i.e. for any vector $\mathbf{v}$ in $\Real{3}$, are there scalars $m$, $n$ such that 
- $\mathbf{v} = m\,\mathbf{i} + n\,\mathbf{j}$? Justify your answer.
+Can every vector in $\Real{3}$ be written as a scalar combination of just $\mathbf{i}$ and $\mathbf{j}$; 
+that is for any vector $\mathbf{v}$ in $\Real{3}$, are there scalars $m$, $n$ such that 
+ $\mathbf{v} = m\,\mathbf{i} + n\,\mathbf{j}$? 
+ Justify your answer.
 \end{enumerate}
 
 
@@ -719,11 +728,12 @@ $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, the dot product $\Dotprod{\mathbf{u}}{
 $\Dotprod{(\Dotprod{\mathbf{u}}{\mathbf{v}})}{\mathbf{w}}$ is not defined since the left side of that dot product
 (the part in parentheses) is a scalar and not a vector.
 
-For vectors $\mathbf{v} = \vecthreeijk{v}$ and $\mathbf{w} = \vecthreeijk{w}$ in component form, the dot product is
-still $\Dotprod{\mathbf{v}}{\mathbf{w}} = \ssub{v}{1}\ssub{w}{1} + \ssub{v}{2}\ssub{w}{2} +
+For vectors $\mathbf{v} = \vecthreeijk{v}$ and $\mathbf{w} = \vecthreeijk{w}$ in component form, 
+the dot product is still $\Dotprod{\mathbf{v}}{\mathbf{w}} = \ssub{v}{1}\ssub{w}{1} + \ssub{v}{2}\ssub{w}{2} +
 \ssub{v}{3}\ssub{w}{3}$.
 
-Also notice that we defined the dot product in an analytic way, i.e. by referencing vector coordinates. There is
+Also notice that we defined the dot product in an analytic way, that is, by referencing vector coordinates. 
+There is
 a geometric way of defining the dot product, which we will now develop as a consequence of the analytic
 definition.
 
@@ -1095,12 +1105,13 @@ As a consequence of the above theorem and Theorem \ref{thm:dotprop}, we have the
 }
 
 The span of any two nonzero, nonparallel vectors $\mathbf{v}$, $\mathbf{w}$ in $\Real{3}$ is a plane $P$, so the above
-corollary shows that $\Crossprod{\mathbf{v}}{\mathbf{w}}$ is perpendicular to that plane. As shown in
+corollary shows that $\Crossprod{\mathbf{v}}{\mathbf{w}}$ is perpendicular to that plane. 
+As shown in
 Figure \ref{fig:crossnormal}, there are two possible directions for $\Crossprod{\mathbf{v}}{\mathbf{w}}$, one the
 opposite of the other.
-It turns out (see Appendix B) that the direction of $\Crossprod{\mathbf{v}}{\mathbf{w}}$
-is given by the \emph{right-hand rule}\index{right-hand rule}, that is, the vectors $\mathbf{v}$, $\mathbf{w}$,
-$\Crossprod{\mathbf{v}}{\mathbf{w}}$ form a right-handed system. Recall from Section 1.1 that this means that
+The choice of direction of $\Crossprod{\mathbf{v}}{\mathbf{w}}$ can be visualized using the \emph{right-hand rule}\index{right-hand rule}, that is, the vectors $\mathbf{v}$, $\mathbf{w}$,
+$\Crossprod{\mathbf{v}}{\mathbf{w}}$ form a right-handed system. 
+Recall from Section 1.1 that this means that
 you can point your thumb upwards in the direction of $\Crossprod{\mathbf{v}}{\mathbf{w}}$
 while rotating $\mathbf{v}$ towards $\mathbf{w}$ with the remaining four fingers.
 
@@ -1321,7 +1332,8 @@ The following theorem summarizes the basic properties of the cross product.
  \par\noindent(g)
  If either $\mathbf{v}$ or $\mathbf{w}$ is $\mathbf{0}$ then $\Crossprod{\mathbf{v}}{\mathbf{w}} = \mathbf{0}$ by part (e),
  and either $\mathbf{v} = \mathbf{0} = 0\mathbf{w}$ or $\mathbf{w} = \mathbf{0} = 0\mathbf{v}$, so $\mathbf{v}$ and
- $\mathbf{w}$ are scalar multiples, i.e. they are parallel.
+$\mathbf{w}$ are scalar multiples, 
+in which case they are parallel.
  
  If both $\mathbf{v}$ and $\mathbf{w}$ are nonzero, and $\theta$ is the angle between them, then by formula
  (\ref{eqn:crossmag}), $\Crossprod{\mathbf{v}}{\mathbf{w}} = \mathbf{0}$ if and only if
@@ -1428,8 +1440,8 @@ exercise for the reader:
 An examination of the formula in Theorem \ref{thm:vectripleprod} gives some idea of the geometry of the vector triple
 product. By the right side of formula (\ref{eqn:vectripleprod}), we see that
 $\Crossprod{\mathbf{u}}{(\Crossprod{\mathbf{v}}{\mathbf{w}})}$ is a scalar combination of $\mathbf{v}$ and $\mathbf{w}$, and
-hence lies in the plane containing $\mathbf{v}$ and $\mathbf{w}$ (i.e.
-$\Crossprod{\mathbf{u}}{(\Crossprod{\mathbf{v}}{\mathbf{w}})}$, $\mathbf{v}$ and $\mathbf{w}$ are
+hence lies in the plane containing $\mathbf{v}$ and $\mathbf{w}$ 
+(that is, the vectors $\Crossprod{\mathbf{u}}{(\Crossprod{\mathbf{v}}{\mathbf{w}})}$, $\mathbf{v}$ and $\mathbf{w}$ are
 \textbf{coplanar}\index{coplanar}).
 This makes sense since, by Theorem \ref{thm:crossperp},
 $\Crossprod{\mathbf{u}}{(\Crossprod{\mathbf{v}}{\mathbf{w}})}$ is perpendicular to both $\mathbf{u}$ and
@@ -2159,8 +2171,9 @@ For example, the normal form of the plane in Example \ref{exmp:pointnormal} is $
 
 In 2-dimensional and 3-dimensional space, two points determine a line. Two points do not determine a plane in
 $\Real{3}$. 
-In fact, three \emph{collinear}\index{collinear} points (i.e. all on the same line)
-do not determine a plane; an infinite number of planes would contain the line on which those three points lie.
+In fact, three \emph{collinear}\index{collinear} points (that is, all three on the same line)
+do not determine a plane; 
+an infinite number of planes would contain the line on which those three points lie.
 However, three \emph{noncollinear} points do determine a plane. For if $Q$, $R$ and $S$ are noncollinear points in
 $\Real{3}$, then $\overrightarrow{QR}$ and $\overrightarrow{QS}$ are  nonzero vectors which are not parallel (by
 noncollinearity), and so their cross product $\Crossprod{\overrightarrow{QR}}{\overrightarrow{QS}}$ is perpendicular to
@@ -2201,7 +2214,7 @@ a plane.
 But two (nonidentical) lines which either intersect or are parallel do determine a plane. 
 In both cases, to
 find the equation of the plane that contains those two lines, simply pick from the two lines a total of three
-noncollinear points (i.e. one point from one line and two points from the other), then use the technique above, as in
+noncollinear points (one point from one line and two points from the other), then use the technique above, as in
 Example \ref{exmp:plane3pts}, to write the equation. We will leave examples of this as exercises for the reader.
 \pagebreak[3]
 \par\noindent\textbf{\large{Distance between a point and a plane}}\normalsize\smallskip
@@ -2279,7 +2292,7 @@ Likewise, $\Crossprod{\ssub{\mathbf{n}}{1}}{\ssub{\mathbf{n}}{2}} \perp \ssub{\m
 that $\Crossprod{\ssub{\mathbf{n}}{1}}{\ssub{\mathbf{n}}{2}}$ is also parallel to $\ssub{P}{2}$. 
 Thus,
 $\Crossprod{\ssub{\mathbf{n}}{1}}{\ssub{\mathbf{n}}{2}}$ is parallel to the intersection of $\ssub{P}{1}$ and
-$\ssub{P}{2}$, i.e. $\Crossprod{\ssub{\mathbf{n}}{1}}{\ssub{\mathbf{n}}{2}}$ is parallel to $L$. 
+$\ssub{P}{2}$, which is $L$. 
 Thus, we can
 write $L$ in the following vector form:\index{line!intersection of planes}\index{plane!line of intersection}
 \begin{equation}
@@ -2338,12 +2351,12 @@ Since it lies on the plane, we get
 \[\Dotprod{(\mathbf{r}+t\mathbf{v}-\mathbf{q})}{\mathbf{v}}=0.\]
 Solving for $t$, we get
 \[t=\frac{\Dotprod{(\mathbf{q}-\mathbf{r})}{\mathbf{v}}}{\Dotprod{\mathbf{v}}{\mathbf{v}}}.\]
-Therefore 
+Therefore, 
 \[\mathbf{r}+\frac{\Dotprod{(\mathbf{q}-\mathbf{r})}{\mathbf{v}}}{\Dotprod{\mathbf{v}}{\mathbf{v}}}\mathbf{v}\]
 is the position vector of the projection of $P$ on $L$.
 
 Note that $S$ is also the projecction of point $R$ with the position vector $\mathbf{r}$ to the plane $P$.
-Therefore the same formula can be used to find the projection of to the plane.
+Therefore, the same formula can be used to find the projection of to the plane.
 
 \hrule width \textwidth height 0.5pt
 \smallskip
@@ -2521,7 +2534,7 @@ Figure \ref{fig:spheres} illustrates the vectorial approach to spheres.\index{sp
 \end{figure}
 
 Note in Figure \ref{fig:spheres}(a) that the intersection of the sphere with the $xy$-plane is a circle of radius $r$
-(i.e. a \emph{great circle}, given by $x^2 + y^2 = r^2$ as a subset of $\Real{2}$). Similarly for the intersections with
+(that is, a \emph{great circle}, given by $x^2 + y^2 = r^2$ as a subset of $\Real{2}$). Similarly for the intersections with
 the $xz$-plane and the $yz$-plane. In general, a plane intersects a sphere either at a single point or in a circle.
 
 \begin{exmp}\label{exmp:sphereplane}
@@ -2718,12 +2731,12 @@ has radius $r$ is
 where the value of the $z$ coordinate is unrestricted. Similar equations can be written when the base circle
 lies in one of the other coordinate planes.
 A plane intersects a right circular cylinder in a circle, ellipse, or one or two lines,
-depending on whether that plane is parallel, oblique\footnote{i.e. at an angle strictly between $0\Degrees$ and
+depending on whether that plane is parallel, oblique\footnote{That is, at an angle strictly between $0\Degrees$ and
 $90\Degrees$.}, or perpendicular, respectively, to the plane containing $C$.
 The intersection of a surface with a plane is called the \textbf{trace}\index{trace} of the surface.
 
-The equations of spheres and cylinders are examples of \emph{second-degree equations}\index{second-degree equation}
-in $\Real{3}$, i.e. equations of the form
+The equations of spheres and cylinders are examples of \emph{second-degree equations}\index{second-degree equation} in $\Real{3}$; 
+that is, equations of the form
 \begin{equation}\label{eqn:quadric}
  Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0
 \end{equation}
@@ -2880,9 +2893,10 @@ of quadric surface, whose equation has the form:
 \end{equation}
 The traces in planes parallel to the $xy$-plane are ellipses, though in the $xy$-plane itself the trace is a
 single point. The traces in planes parallel to the $xz$- or $yz$-planes are parabolas. Figure 1.6.7 shows
-the case where $c > 0$. When $c < 0$ the surface is turned downward. In the case
+the case where $c > 0$. When $c < 0$ the surface is turned downward. 
+In the case
 where $a = b$, the surface is called a \emph{paraboloid of revolution}\index{paraboloid!of revolution},
-which is often used as a reflecting surface, e.g. in vehicle headlights.\footnote{For a
+which is often used as a reflecting surface in vehicle headlights.\footnote{For a
 discussion of this see pp. 157--158 in \cite{hec}.}
 
 A more complicated quadric surface is the \textbf{hyperbolic paraboloid}\index{hyperbolic paraboloid},
@@ -2901,7 +2915,8 @@ given by:\index{paraboloid!hyperbolic}
 
 The hyperbolic paraboloid can be tricky to draw; using graphing software on a computer can make it
 easier.
-For example, Figure \ref{fig:hyperpara} was created using the free Gnuplot package (see Appendix C). It shows the graph
+For example, Figure \ref{fig:hyperpara} was created using the free Gnuplot package. 
+It shows the graph
 of the hyperbolic paraboloid
 $z = y^2 - x^2$, which is the special case where $a = b = 1$ and $c = -1$ in equation (\ref{eqn:hyperpara}).
 The mesh lines on the surface are the traces in planes parallel to the coordinate planes.
@@ -2958,13 +2973,15 @@ Such surfaces are called \emph{doubly ruled surfaces}\index{doubly ruled surface
 and the pairs of lines are called a \emph{regulus}.
 
 It is clear that for each of the six types of quadric surfaces that we discussed, the surface can be translated away
-from the origin (e.g. by replacing $x^2$ by $(x - \ssub{x}{0})^2$ in its equation). It can be proved\footnote{See
+from the origin 
+(say, by replacing $x^2$ by $(x - \ssub{x}{0})^2$ in its equation). 
+It can be proved\footnote{See
 Ch. 7 in \cite{pog}.}
 that \emph{every}
 quadric surface can be translated and/or rotated so that its equation matches one of the six types that we described.
 
-For example, $z = k xy$ is a case of equation (\ref{eqn:quadric}) with ``mixed'' variables, e.g. with $D \ne 0$ so
-that we get an $xy$ term. 
+For example, $z = k xy$ is a case of equation (\ref{eqn:quadric}) with ``mixed'' variables;
+namely $D \ne 0$, so that we get an $xy$ term. 
 This equation does not match any of the types we considered. 
 However, by rotating the $x$-
 and $y$-axes by $45\Degrees$ in the $xy$-plane by means of the coordinate transformation
@@ -3005,12 +3022,15 @@ If so, find its radius and center.
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item It can be shown that any four \emph{noncoplanar} points (i.e. points that do not lie in the same plane)
+\item It can be shown that any four \emph{noncoplanar} points (that is, points that do not lie in the same plane)
   determine a sphere.\footnote{See \cite{wk}, p. 160, for a proof.} Find the equation of the sphere that passes through
-  the points $(0,0,0)$, $(0,0,2)$, $(1,-4,3)$ and $(0,-1,3)$. \emph{(Hint: Equation (\ref{eqn:spheregeneral}))}
- \item Show that the hyperboloid of one sheet is a doubly
-  ruled surface, i.e. each point on the surface is on two lines lying entirely on the surface.
-  \emph{(Hint: Write equation (\ref{eqn:hyperboloidone}) as } $\frac{x^2}{a^2} - \frac{z^2}{c^2} = 1 -
+  the points $(0,0,0)$, $(0,0,2)$, $(1,-4,3)$ and $(0,-1,3)$. 
+\emph{(Hint: Equation (\ref{eqn:spheregeneral}))}
+
+\item Show that the hyperboloid of one sheet is a doubly
+\emph{ruled surface}; 
+that is, each point on the surface is on two lines lying entirely on the surface.
+\emph{(Hint: Write equation (\ref{eqn:hyperboloidone}) as} $\frac{x^2}{a^2} - \frac{z^2}{c^2} = 1 -
   \frac{y^2}{b^2}$ \emph{, factor each side. Recall that two planes intersect in a line.)}
  \item Show that the hyperbolic paraboloid is a doubly ruled surface. \emph{(Hint: Exercise 11)}
  \piccaption[]{}\parpic[r]{\begin{tikzpicture}

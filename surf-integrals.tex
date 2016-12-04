@@ -14,8 +14,8 @@ W ~=~ \int_a^b f(x)\,dx.
 \end{displaymath}
 
 In this section, we will see how to define the integral of a function (either real-valued or vector-valued) of
-two variables over a general path (i.e. a curve) in $\Real{2}$. This
-definition will be motivated by the physical notion of work. We will begin with real-valued functions of
+two variables over a general curve (also called path) in $\Real{2}$. 
+This definition will be motivated by the physical notion of work. We will begin with real-valued functions of
 two variables.
 
 In physics, the intuitive idea of work is that\index{work}
@@ -204,8 +204,9 @@ $\int_C f(x,y)\,ds$ is the total area of that picket fence (see Figure \ref{fig:
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \medskip
-Note in Example \ref{exmp:lineintcyl} that if we had traversed the circle $C$ twice, i.e. let $t$ vary from $0$
-to $4\pi$, then we would have gotten an area of $4\pi r h$, i.e. twice the desired area, even though the \emph{curve}
+Note in Example \ref{exmp:lineintcyl} that if we had traversed the circle $C$ twice 
+(that is, let $t$ vary from $0$ to $4\pi$) 
+then we would have gotten an area of $4\pi r h$ --- twice the desired area, even though the \emph{curve}
 itself is still the same (namely, a circle of radius $r$). Also, notice that we traversed the circle in the
 counter-clockwise direction. If we had gone in the clockwise direction, using the parametrization
 \begin{equation}\label{eqn:lineintcylcwise}
@@ -424,7 +425,9 @@ $\int_a^b \Dotprod{\mathbf{f}}{d\mathbf{l}}$, where it is understood that the li
 the underlying parameter $t$ of the curve, and the letter $\mathbf{l}$ signifies length. Also, the formulation
 $\int_C \Dotprod{\mathbf{f}}{\mathbf{T}}\,ds$ from Theorem \ref{thm:lineinttangent} is often preferred in physics since
 it emphasizes the idea of integrating the tangential component $\Dotprod{\mathbf{f}}{\mathbf{T}}$ of $\mathbf{f}$ in the
-direction of $\mathbf{T}$ (i.e. in the direction of $C$), which is a useful physical interpretation of line integrals.
+direction of $\mathbf{T}$ 
+(that is, in the direction of $C$), 
+which is a useful physical interpretation of line integrals.
 \hrule width \textwidth height 0.5pt
 \medskip
 %\startexercises
@@ -529,12 +532,12 @@ integral of a vector field is unchanged as long as the direction of the curve $C
 parametrization is chosen:
 
 \statethm{thm:lineintreparam}{
- {Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ be a vector field, and let $C$ be a smooth
- curve parametrized by $x=x(t)$, $y=y(t)$, $a \le t \le b$. Suppose that $t=\alpha(u)$ for $c \le u \le d$, such that
- $a=\alpha(c)$, $b=\alpha(d)$, and $\alpha\,'(u) > 0$ on the open interval $(c,d)$ (i.e. $\alpha(u)$ is strictly
- increasing on $\ival{c}{d}$). Then $\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}$ has the same value for the
- parametrizations $x=x(t)$, $y=y(t)$, $a \le t \le b$ and $x=\tilde{x}(u)=x(\alpha(u))$, $y=\tilde{y}(u)=y(\alpha(u))$,
- $c \le u \le d$.}
+{Let $\mathbf{f}(x,y) = P(x,y)\,\mathbf{i} + Q(x,y)\,\mathbf{j}$ be a vector field, and let $C$ be a smooth
+curve parametrized by $x=x(t)$, $y=y(t)$, $a \le t \le b$. Suppose that $t=\alpha(u)$ for $c \le u \le d$, such that
+$a=\alpha(c)$, $b=\alpha(d)$, and $\alpha\,'(u) > 0$ on the open interval $(c,d)$ 
+(that is, $\alpha(u)$ is strictly
+increasing on $\ival{c}{d}$). Then $\int_C \Dotprod{\mathbf{f}}{d\mathbf{r}}$ has the same value for the
+parametrizations $x=x(t)$, $y=y(t)$, $a \le t \le b$ and $x=\tilde{x}(u)=x(\alpha(u))$, $y=\tilde{y}(u)=y(\alpha(u))$, $c \le u \le d$.}
 }
 \begin{proofbar}\begin{proof}[Proof:]
  Since $\alpha(u)$ is strictly increasing and maps $\ival{c}{d}$ onto $\ival{a}{b}$, then we know that $t=\alpha(u)$ has
@@ -583,7 +586,8 @@ $u=a+b-t$ we have $t=\alpha(u)=a+b-u \Rightarrow \alpha\,'(u) = -1 <0$.
 \hrule width \textwidth height 0.5pt
 \medskip
 
-By a \textbf{closed curve}, we mean a curve $C$ whose initial point and terminal point are the same, i.e. for $C:$
+By a \textbf{closed curve}, we mean a curve $C$ whose initial point and terminal point are the same;
+that is, for $C:$
 $x=x(t)$, $y=y(t)$, $a \le t \le b$, we have $(x(a),y(a)) = (x(b),y(b))$.\index{closed curve}
 
 \begin{figure}[h]
@@ -626,7 +630,7 @@ curve}\index{$\oint_C$} In some older texts you may see the notation $\;\display
 $\;\displaystyle\clockint\;$ to indicate a line integral traversing a closed curve in a counterclockwise or
 clockwise direction, respectively.
 
-So far, the examples we have seen of line integrals (e.g. Example \ref{exmp:lineintexmp}) have had the same value
+So far, the examples we have seen of line integrals (for instance, Example \ref{exmp:lineintexmp}) have had the same value
 for different curves joining the initial point to the terminal point. That is, the line integral has been
 independent of the path joining the two points. As we mentioned before, this is not always the case. The following
 theorem gives a necessary and sufficient condition for this \emph{path independence}:\index{path
@@ -735,10 +739,9 @@ A \textbf{conservative} vector field is one which has a potential.\index{potenti
  \begin{displaymath}
   \frac{\partial F}{\partial x} = x^2 + y^2 \quad\text{and}\quad \frac{\partial F}{\partial y} =  2xy ~.
  \end{displaymath}
- Suppose that $\frac{\partial F}{\partial x} = x^2 + y^2$, Then we must have $F(x,y) = \frac{1}{3}x^3 + xy^2 + g(y)$ for
- some function $g(y)$. So $\frac{\partial F}{\partial y} = 2xy + g\,'(y)$
- satisfies the condition $\frac{\partial F}{\partial y} = 2xy$ if $g\,'(y)=0$, i.e. $g(y)=K$, where $K$ is a
- constant. Since any choice for $K$ will do (why?), we pick $K=0$. Thus, a potential $F(x,y)$ for 
+Suppose that $\frac{\partial F}{\partial x} = x^2 + y^2$, Then we must have $F(x,y) = \frac{1}{3}x^3 + xy^2 + g(y)$ for some function $g(y)$. So $\frac{\partial F}{\partial y} = 2xy + g\,'(y)$ satisfies the condition $\frac{\partial F}{\partial y} = 2xy$ if $g\,'(y)=0$;
+that is, $g(y)=K$, where $K$ is a constant. 
+Since any choice for $K$ will do (why?), we pick $K=0$. Thus, a potential $F(x,y)$ for 
  $\mathbf{f}(x,y) = ( x^2 + y^2 )\,\mathbf{i} + 2xy\,\mathbf{j}$ exists, namely
  \begin{displaymath}
   F(x,y) ~=~ \frac{1}{3}x^3 + xy^2 ~.
@@ -758,9 +761,11 @@ A consequence of Theorem \ref{thm:lineintsuffpath} in the special case where $C$
 endpoints $A$ and $B$ are the same point, is the following important corollary:
 
 \statecor{cor:lineintsuffpath}{
- {If a vector field $\mathbf{f}$ has a potential in a region $R$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
- for any closed curve $C$ in $R$ (i.e. $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\mathbf{r}} = 0$ for any real-valued
- function $F(x,y)$).}
+{If a vector field $\mathbf{f}$ has a potential in a region $R$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
+for any closed curve $C$ in $R$.
+Equivalently, 
+\[\oint_{C}\Dotprod{\nabla F}{d\mathbf{r}} = 0\] 
+for any real-valued function $F(x,y)$.}
 }
 
 \medskip
@@ -1130,7 +1135,7 @@ Conversely, if $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}$ i
  \olineintvec{C}{f}{r} ~=~ \iint\limits_{R} \left( \frac{\partial Q}{\partial x} -
    \frac{\partial P}{\partial y} \right)\,dA ~=~ \iint\limits_{R} 0\,dA ~=~ 0 ~.
 \end{displaymath}
-For a \textbf{simply connected}\index{simply connected} region $R$ (i.e. a region with no holes), the following can be
+For a \textbf{simply connected}\index{simply connected} region $R$ (that is, a region with no holes), the following can be
 shown:\index{path independence}\medskip
 \statecomment{
  {The following statements are equivalent for a simply connected region $R$ in $\Real{2}$:
@@ -1496,7 +1501,7 @@ Thus, the surface area of $T$ is
 Assume that a surface $\Sigma$ is given by a collection of charts.
 Note that for each chart $\mathbf{r}(u,v)$ in the collection, the vectors $\tfrac{\partial\mathbf{r}}{\partial u}$ and $\tfrac{\partial\mathbf{r}}{\partial v}$
 are tangent to the surface.
-Therefore their crossproduct $\Crossprod{\tfrac{\partial\mathbf{r}}{\partial u}(u,v)}{\tfrac{\partial\mathbf{r}}{\partial v}(u,v)}$ is normal to $\Sigma$ at the point with position vector $\mathbf{r}(u,v)$.
+Therefore, their crossproduct $\Crossprod{\tfrac{\partial\mathbf{r}}{\partial u}(u,v)}{\tfrac{\partial\mathbf{r}}{\partial v}(u,v)}$ is normal to $\Sigma$ at the point with position vector $\mathbf{r}(u,v)$.
 
 Assume further that at each point $P$ of the surface $\Sigma$ 
 one can choose a unit normal vector $\mathbf{n}$ 
@@ -1575,8 +1580,10 @@ real-valued function, and hence we can use Definition \ref{defn:surfintreal} to 
    \Crossprod{(1,0,-1)}{(0,1,-1)} ~=~ (1,1,1) \quad\Rightarrow\quad
    \NORM{\Crossprod{\frac{\partial \mathbf{r}}{\partial u}}{\frac{\partial \mathbf{r}}{\partial v}}} = \sqrt{3}~.
  \end{displaymath}
- Thus, integrating over $R$ using vertical slices (e.g. as indicated by the dashed line in Figure 4.4.5) gives
- \begin{align*}
+Thus, integrating over $R$ using vertical slices 
+(indicated by the dashed line in Figure 4.4.5) 
+gives
+\begin{align*}
   \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}} ~&=~
    \iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{\mathbf{n}}\,d\sigma\\[6pt]
    &=~ \iint\limits_{R} (\Dotprod{\mathbf{f}(x(u,v),y(u,v),z(u,v))}{\mathbf{n}})\,
@@ -1612,9 +1619,11 @@ spheres, cubes, and ellipsoids are closed surfaces, but planes and paraboloids a
   is called the \textbf{divergence} of $\mathbf{f}$.}
 }
 
-The proof of the Divergence Theorem is very similar to the proof of Green's Theorem, i.e. it is first proved for
+The proof of the Divergence Theorem is very similar to the proof of Green's Theorem. 
+It is first proved for
 the simple case when the solid $S$ is bounded above by one surface, bounded below by another surface, and bounded
-laterally by one or more surfaces. The proof can then be extended to more general solids.\footnote{See
+laterally by one or more surfaces. 
+The proof can then be extended to more general solids.\footnote{See
 \cite[\S\,15.6]{tm} for the details.}
 
 \medskip
@@ -1639,7 +1648,7 @@ In physical applications, the surface integral $\iint\limits_{\Sigma} \Dotprod{\
 referred to as the \textbf{flux} of $\mathbf{f}$ through the surface $\Sigma$. For example, if $\mathbf{f}$
 represents the velocity field of a fluid, then the flux
 is the net quantity of fluid to flow through the surface $\Sigma$ per unit time.\index{flux} A
-positive flux means there is a net flow \emph{out} of the surface (i.e. in the direction of the outward
+positive flux means there is a net flow \emph{out} of the surface (that is, in the direction of the outward
 unit normal vector $\mathbf{n}$), while a negative flux indicates a net flow inward (in the direction of
 $-\mathbf{n}$).
 
@@ -1698,17 +1707,22 @@ surface $\Sigma$.
 \suspend{enumerate}
 \probs{B}
 \resume{enumerate}[{[\bfseries 1.]}]
- \item Show that the flux of any constant vector field through any closed surface is zero.
- \item Evaluate the surface integral from Exercise 2 \emph{without} using the Divergence Theorem, i.e. using only
-  Definition \ref{defn:surfintreal}, as in Example \ref{exmp:surfintex}. Note that there will be a different
-  outward unit normal vector to each of the six faces of the cube.
- \item Evaluate the surface integral $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$, where
+
+\item Show that the flux of any constant vector field through any closed surface is zero.
+
+\item Evaluate the surface integral from Exercise 2 \emph{without} using the Divergence Theorem;
+that is, using only Definition \ref{defn:surfintreal}, as in Example \ref{exmp:surfintex}. 
+Note that there will be a different outward unit normal vector to each of the six faces of the cube.
+
+\item Evaluate the surface integral $\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$, where
   $\mathbf{f}(x,y,z) = x^2 \mathbf{i} + xy\mathbf{j} + z\mathbf{k}$ and $\Sigma$ is the part of the plane $6x+3y+2z=6$
   with $x \ge 0$, $y \ge 0$, and $z \ge 0$, with the outward unit normal $\mathbf{n}$ pointing in the positive $z$
   direction.
- \item Use a surface integral to show that the surface area of a sphere of radius $r$ is $4\pi r^2$. (\emph{Hint: Use
-  spherical coordinates to parametrize the sphere.})
- \item Use a surface integral to show that the surface area of a right circular cone of radius $R$ and height $h$ is
+
+\item Use a surface integral to show that the surface area of a sphere of radius $r$ is $4\pi r^2$. 
+(\emph{Hint: Use spherical coordinates to parametrize the sphere.})
+
+\item Use a surface integral to show that the surface area of a right circular cone of radius $R$ and height $h$ is
   $\pi R \sqrt{h^2 + R^2}$. (\emph{Hint: Use the parametrization $x=r\cos\theta$, $y=r\sin\theta$, $z=\frac{h}{R}r$,
   for $0 \le r \le R$ and $0 \le \theta \le 2\pi$.})
  \item The ellipsoid\index{ellipsoid} $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$ can be parametrized using
@@ -1831,9 +1845,8 @@ proofs are similar to their two-variable equivalents).
 }
 
 \statecor{cor:lineintsuffpath3}{
- {If a vector field $\mathbf{f}$ has a potential in a solid $S$, then $\displaystyle\olineintvec{C}{f}{r} = 0$
- for any closed curve $C$ in $S$ (i.e. $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\mathbf{r}} = 0$ for any real-valued
- function $F(x,y,z)$).}
+{If a vector field $\mathbf{f}$ has a potential in a solid $S$, then $\displaystyle\olineintvec{C}{f}{r} = 0$ for any closed curve $C$ in $S$ 
+(that is, $\displaystyle\oint_{C}\Dotprod{\nabla F}{d\mathbf{r}} = 0$ for any real-valued function $F(x,y,z)$).}
 }
 
 \begin{exmp}\label{exmp:conhelix}
@@ -1869,8 +1882,10 @@ proofs are similar to their two-variable equivalents).
 \begin{exmp}
  Let $\mathbf{f}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} + 2z\,\mathbf{k}$ be a vector field in $\Real{3}$.
  Using the same curve $C$ from Example \ref{exmp:conhelix}, evaluate $\lineintvec{C}{f}{r}$.\smallskip
- \par\noindent \emph{Solution:} Note that $F(x,y,z)=\frac{x^2}{2}+\frac{y^2}{2}+z^2$ is a potential for
- $\mathbf{f}(x,y,z)$ (i.e. $\nabla F = \mathbf{f}$). So by Theorem \ref{thm:lineintsuffpath3} we know that
+\par\noindent \emph{Solution:} 
+Note that $F(x,y,z)=\frac{x^2}{2}+\frac{y^2}{2}+z^2$ is a potential for $\mathbf{f}(x,y,z)$ 
+(that is, $\nabla F = \mathbf{f}$). 
+So by Theorem \ref{thm:lineintsuffpath3} we know that
  \begin{align*}
   \lineintvec{C}{f}{r} ~&=~ F(B) ~-~ F(A) ~~,~\text{where $A=(x(0),y(0),z(0))$ and $B=(x(8\pi),y(8\pi),z(8\pi))$, so}\\
    &=~ F(8\pi\sin 8\pi,8\pi\cos 8\pi,8\pi) ~-~ F(0\sin 0,0\cos 0,0)\\
@@ -1885,8 +1900,10 @@ proofs are similar to their two-variable equivalents).
 We will now discuss a generalization of Green's Theorem in $\Real{2}$ to \emph{orientable} surfaces in $\Real{3}$,
 called \emph{Stokes' Theorem}.\index{Stokes' Theorem}\index{orientable}\index{surface!orientable} A surface $\Sigma$ in
 $\Real{3}$ is \textbf{orientable} if there is a continuous vector field $\mathbf{N}$ in $\Real{3}$ such that
-$\mathbf{N}$ is nonzero and normal to $\Sigma$ (i.e. perpendicular to the tangent plane) at each point of $\Sigma$. We say
-that such an $\mathbf{N}$ is a \emph{normal vector field}.\index{normal vector field}\index{vector
+$\mathbf{N}$ is nonzero and normal to $\Sigma$ 
+(that is, perpendicular to the tangent plane) 
+at each point of $\Sigma$. 
+We say that such an $\mathbf{N}$ is a \emph{normal vector field}.\index{normal vector field}\index{vector
 field!normal}
 
 \piccaption[]{}\parpic[r]{\begin{tikzpicture}
@@ -2114,7 +2131,7 @@ now state Stokes' Theorem:
    \mathbf{k}}{\sqrt{1 + \left( \tfrac{\partial z}{\partial x} \right)^2 +
    \left( \tfrac{\partial z}{\partial y} \right)^2}}
  \end{displaymath}
- is in fact a positive unit normal vector to $\Sigma$ (see Figure 4.5.4). Hence, using the parametrization
+ is, in fact, a positive unit normal vector to $\Sigma$ (see Figure 4.5.4). Hence, using the parametrization
  $\mathbf{r}(x,y) = x\,\mathbf{i} + y\,\mathbf{j} + z(x,y)\,\mathbf{k}$, for $(x,y)$ in $D$, of the surface $\Sigma$,
  we have $\frac{\partial \mathbf{r}}{\partial x} = \mathbf{i} + \frac{\partial z}{\partial x}\,\mathbf{k}$ and
  $\frac{\partial \mathbf{r}}{\partial y} = \mathbf{j} + \frac{\partial z}{\partial y}\,\mathbf{k}$, and so
@@ -2298,7 +2315,7 @@ where $S$ is the surface area of a surface $\Sigma$ containing the point $(x,y,z
 curve $C$ and positive unit normal vector $\mathbf{n}$ at $(x,y,z)$. In the limit, think of the curve $C$ shrinking to
 the point $(x,y,z)$, which causes $\Sigma$, the surface it bounds, to have smaller and smaller surface area. That ratio
 of circulation to surface area in the limit is what makes the curl a rough measure of circulation density 
-(i.e. circulation per unit area).
+(that is, circulation per unit area).
 
 \piccaption[]{\quad Curl and rotation}\parpic[r]{\begin{tikzpicture}[scale=1.34]
  \usetikzlibrary{arrows}
@@ -2333,8 +2350,8 @@ vector field $\mathbf{f}(x,y,z)$ which is always parallel to the $xy$-plane at e
 the vectors grow larger the further the point $(x,y,z)$ is from the $y$-axis. For example, $\mathbf{f}(x,y,z) =
 (1+x^2 )\,\mathbf{j}$. Think of the vector field as representing the flow of water, and imagine dropping
 two wheels with paddles into that water flow, as in Figure 4.5.6. 
-Since the flow is stronger (i.e. the
-magnitude of $\mathbf{f}$ is larger) as you move away from the $y$-axis, then such a wheel would rotate counterclockwise
+Since the flow is stronger 
+(that is, the magnitude of $\mathbf{f}$ is larger) as you move away from the $y$-axis, then such a wheel would rotate counterclockwise
 if it were dropped to the
 right of the $y$-axis, and it would rotate clockwise if it were dropped to the left of the $y$-axis. In both cases the
 curl would be nonzero ($\text{curl}~\mathbf{f}(x,y,z) = 2x\,\mathbf{k}$ in our example) and would obey the right-hand rule; 
@@ -2354,7 +2371,8 @@ $\mathbf{f}(x,y,z)$ is a smooth vector field such that $\curl\mathbf{f} = \mathb
 where $\Sigma$ is any orientable surface inside $S$ whose boundary is $C$ (such a surface is sometimes called a
 \emph{capping surface} for $C$\index{capping surface}).
 So similar to the two-variable case, we have a three-dimensional version of a result from Section 4.3, for solid regions
-in $\Real{3}$ which are \textbf{simply connected}\index{simply connected} (i.e. regions having no holes):\index{path
+in $\Real{3}$ which are \textbf{simply connected}\index{simply connected} 
+(that is, regions having no holes):\index{path
 independence}\index{exact differential form}
 
 \medskip
@@ -2362,13 +2380,13 @@ independence}\index{exact differential form}
  {The following statements are equivalent for a simply connected solid region $S$ in $\Real{3}$:
   \begin{enumerate}[(a)]
   \item $\mathbf{f}(x,y,z) = P(x,y,z)\,\mathbf{i} + Q(x,y,z)\,\mathbf{j} + R(x,y,z)\,\mathbf{k}$ has a smooth potential
-   $F(x,y,z)$ in $S$
-  \item $\displaystyle{\lineintvec{C}{f}{r}}$ is independent of the path for any curve $C$ in $S$
-  \item $\displaystyle{\olineintvec{C}{f}{r}} = 0$ for every simple closed curve $C$ in $S$
+   $F(x,y,z)$ in $S$;
+  \item $\displaystyle{\lineintvec{C}{f}{r}}$ is independent of the path for any curve $C$ in $S$;
+  \item $\displaystyle{\olineintvec{C}{f}{r}} = 0$ for every simple closed curve $C$ in $S$;
   \item $\dfrac{\partial R}{\partial y} = \dfrac{\partial Q}{\partial z}$,
    $\dfrac{\partial P}{\partial z} = \dfrac{\partial R}{\partial x}$, and
-   $\dfrac{\partial Q}{\partial x} = \dfrac{\partial P}{\partial y}$ in $S$ (i.e. $\curl\mathbf{f} =
-   \mathbf{0}$ in $S$)
+   $\dfrac{\partial Q}{\partial x} = \dfrac{\partial P}{\partial y}$ in $S$ 
+   (that is, $\curl\mathbf{f} = \mathbf{0}$ in $S$).
  \end{enumerate}}}\medskip
 
 \par\noindent Part (d) is also a way of saying that the differential form $P\,dx + Q\,dy + R\,dz$ is exact.
@@ -2435,14 +2453,12 @@ surface $\Sigma$.
  \item $\mathbf{f}(x,y,z) = 2y\,\mathbf{i} - x\,\mathbf{j} + z\,\mathbf{k}$; $\quad \Sigma: x^2 + y^2 + z^2 = 1$,
   $z \ge 0$
  \item $\mathbf{f}(x,y,z) = xy\,\mathbf{i} + xz\,\mathbf{j} + yz\,\mathbf{k}$; $\quad \Sigma: z=x^2 + y^2$, $z \le 1$
- \item Construct a M\"{o}bius strip from a piece of paper, then draw a line down its center (like the dotted line in
- Figure \ref{fig:mobius}(b)). Cut the M\"{o}bius strip along that center line completely around the strip. How many
- surfaces does this result in? How would you describe them? Are they orientable?
- \item Use Gnuplot (see Appendix C) to plot the M\"{o}bius strip parametrized as:
-  \begin{displaymath}
-   \mathbf{r}(u,v) ~=~ \cos u \,(1+v\cos \tfrac{u}{2})\,\mathbf{i} + \sin u \,(1+v\cos \tfrac{u}{2})\,\mathbf{j} +
-    v\sin \tfrac{u}{2}\,\mathbf{k} ~,~~ 0 \le u \le 2\pi ~,~~ -\tfrac{1}{2} \le v \le \tfrac{1}{2}
-  \end{displaymath}
+\item Construct a M\"{o}bius strip from a piece of paper, then draw a line down its center (like the dotted line in
+Figure \ref{fig:mobius}(b)). 
+Cut the M\"{o}bius strip along that center line completely around the strip. 
+How many surfaces does this result in? 
+How would you describe them? 
+Are they orientable?
 \suspend{enumerate}
 \probs{C}
 \resume{enumerate}[{[\bfseries 1.]}]
@@ -2660,7 +2676,7 @@ true, and can also be applied to double and triple integrals.
 For instance, to prove Theorem \ref{thm:curlgrad0}, assume that $f(x,y,z)$ is a smooth real-valued function on
 $\Real{3}$. 
 Let $C$ be a simple closed curve in $\Real{3}$ and let $\Sigma$ be any capping surface for $C$ 
-(i.e. $\Sigma$ is orientable and its boundary is $C$). Since $\nabla f$ is a vector field, then
+(that is, $\Sigma$ is orientable and its boundary is $C$). Since $\nabla f$ is a vector field, then
 \begin{align*}
  \iint\limits_{\Sigma} \Dotprod{\left( \Crossprod{\nabla}{(\nabla f)} \right) }{\mathbf{n}}\,d\sigma ~&=~
   \oint_{C}\Dotprod{\nabla f}{d\mathbf{r}} \quad\text{by Stokes' Theorem, so}\\
@@ -2752,7 +2768,7 @@ vector field $\mathbf{r}(x,y,z) = x\,\mathbf{i} + y\,\mathbf{j} +z\,\mathbf{k}$)
     \[\iiint_{S} (u\,\Delta\,v ~-~ v\,\Delta\,u)\,dV =
     \iint_{\Sigma} \Dotprod{(u\,\nabla v ~-~ v\,\nabla u)}{d\bm{\sigma}}\]
   \end{enumerate}
- \item Suppose that $\Delta\,u = 0$ (i.e. $u$ is \emph{harmonic}) over $\Real{3}$.\index{harmonic}  
+ \item Suppose that $\Delta\,u = 0$ (that is, $u$ is \emph{harmonic}) over $\Real{3}$.\index{harmonic}  
   Show that 
   \[\iint_{\Sigma} \nabla u\cdot d\sigma = 0\]
   for any closed surface $\Sigma$.

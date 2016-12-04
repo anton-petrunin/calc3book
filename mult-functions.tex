@@ -111,8 +111,10 @@ what is meant by the limit of a function of two variables.
 }
 
 A similar definition can be made for functions of three variables.
-The idea behind the above definition is that the values of $f(x,y)$ can get arbitrarily close to $L$ (i.e. within $\epsilon$ of $L$) 
-if we pick $(x,y)$ sufficiently close to $(a,b)$ (i.e. inside a circle centered at
+The idea behind the above definition is that the values of $f(x,y)$ can get arbitrarily close to $L$ 
+(that is, within $\epsilon$ of $L$) 
+if we pick $(x,y)$ sufficiently close to $(a,b)$ 
+(that is, inside a circle centered at
 $(a,b)$ with some sufficiently small radius $\delta$).
 
 If you recall the ``epsilon-delta'' proofs of limits of real-valued functions of a single variable, you may remember
@@ -121,7 +123,8 @@ In general, the
 multivariable cases are at least equally awkward to go through, so we will not bother with such proofs. 
 Instead, we
 will simply state that when the function $f(x,y)$ is given by a single formula and is defined at the point
-$(a,b)$ (e.g. is not some indeterminate form like $0/0$) then you can just substitute $(x,y) = (a,b)$ into the formula
+$(a,b)$ 
+(for example, is not some indeterminate form like $0/0$) then you can just substitute $(x,y) = (a,b)$ into the formula
 for $f(x,y)$ to find the limit.
 
 \medskip
@@ -221,7 +224,7 @@ close'' to $(a,b)$ (but excluding $(a,b)$ itself).
   \left| \frac{y^4}{x^2 + y^2} \right| \le \frac{(x^2 + y^2)^2}{x^2 + y^2} = x^2 + y^2 \rightarrow 0 \text{~~as~~}
   (x,y) \rightarrow (0,0).
  \end{displaymath}
- Therefore $\displaystyle\lim_{(x,y) \to (0,0)} \frac{y^4}{x^2 + y^2} = 0$.
+ Therefore, $\displaystyle\lim_{(x,y) \to (0,0)} \frac{y^4}{x^2 + y^2} = 0$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \medskip
@@ -249,8 +252,9 @@ modify the function from Example \ref{exmp:discont} so that it is continuous on 
    \dfrac{y^4}{x^2 + y^2} & \text{if $(x,y) \ne (0,0)$}
   \end{cases}
  \end{displaymath}
- Then $f(x,y)$ is well-defined for all $(x,y)$ in $\Real{2}$ (i.e. there are no indeterminate forms for any
- $(x,y)$), and we see that
+Then $f(x,y)$ is well-defined for all $(x,y)$ in $\Real{2}$
+(that is, there are no indeterminate forms for any $(x,y)$), 
+and we see that
  \begin{displaymath}
   \lim_{(x,y) \to (a,b)} f(x,y) = \frac{b^4}{a^2 + b^2} = f(a,b) \text{~~~for $(a,b) \ne (0,0)$.}
  \end{displaymath}
@@ -926,7 +930,7 @@ Then
  \end{align*}
  By chain rule
  \[g\,'(\alpha)=\frac{\partial f}{\partial y}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) h\ssub{v}{2}.\]
- Therefore 
+ Therefore, 
  \[f(a+h\ssub{v}{1},b+h\ssub{v}{2}) - f(a+h\ssub{v}{1},b)
  =
  h\ssub{v}{2}\frac{\partial f}{\partial x}(a+h\ssub{v}{1},b+\alpha h\ssub{v}{2}) .\]
@@ -1049,7 +1053,8 @@ level curve $f(x,y) = c$ (see Figure \ref{fig:gradlevel}).
 \end{figure}
 
 The value of $f(x,y)$ is constant along a level curve, so since $\mathbf{v}$ is a tangent vector to this curve, then
-the rate of change of $f$ in the direction of $\mathbf{v}$ is 0, i.e. $\ssub{D}{\mathbf{v}}f = 0$. 
+the rate of change of $f$ in the direction of $\mathbf{v}$ is $0$;
+that is, $\ssub{D}{\mathbf{v}}f = 0$. 
 But we know that
 $\ssub{D}{\mathbf{v}}f = \Dotprod{\mathbf{v}}{\nabla f}$.
 In other words, $\nabla f
@@ -1201,8 +1206,8 @@ variables; functions of three or more variables require methods using linear alg
 
 \statedefn{defn:localext}{\index{local maximum}\index{local minimum}\index{global maximum}\index{global minimum}
  {Let $f(x,y)$ be a real-valued function, and let $(x_0,y_0)$ be a point in the domain of $f$. We say that $f$ has a
-  \textbf{local maximum} at $(x_0,y_0)$ if $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ inside some disk of positive radius centered
-  at $(x_0,y_0)$, i.e. there is some sufficiently small $r > 0$ such that $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ for
+\textbf{local maximum} at $(x_0,y_0)$ if $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ inside some disk of positive radius centered at $(x_0,y_0)$;
+that is, there is some sufficiently small $r > 0$ such that $f(x,y) \le f(x_0,y_0)$ for all $(x,y)$ for
   which $(x-x_0)^2 + (y-y_0)^2 < r^2$.
   
   Likewise, we say that $f$ has a \textbf{local minimum} at $(x_0,y_0)$ if $f(x,y) \ge f(x_0,y_0)$ for all $(x,y)$ inside some
@@ -1247,8 +1252,9 @@ Similar to the single-variable case, the \emph{necessary} condition that $\nabla
  xy < 0 = f(0,0)$). In fact, along the path $y=x$ in $\Real{2}$, $f(x,y) = x^2$, which has a
 
 \noindent local minimum at $(0,0)$,
- while along the path $y=-x$ we have $f(x,y)=-x^2$, which has a local maximum at $(0,0)$. So $(0,0)$ is an example of a
- \emph{saddle point}, i.e. it is a local maximum in one direction and a local minimum in another direction. The graph
+while along the path $y=-x$ we have $f(x,y)=-x^2$, which has a local maximum at $(0,0)$. So $(0,0)$ is an example of a \emph{saddle point};
+that is, it is a local maximum in one direction and a local minimum in another direction. 
+The graph
  of $f(x,y)$ is shown in Figure \ref{fig:xy}, which is a hyperbolic paraboloid.\index{paraboloid!hyperbolic}
 \end{exmp}
 \begin{figure}[h]
@@ -1290,21 +1296,21 @@ D^2_{\mathbf{v}}f(x_0,y_0)&=D_{\mathbf{v}}(a\tfrac{\partial f}{\partial x}+b\tfr
 \\
 &=a^2\tfrac{\partial^2 f}{\partial x^2}+2ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2},
 \end{align*}
-the last equality holds since the function $f$ is smooth and therefore $\tfrac{\partial^2 f}{\partial x\partial y}=\tfrac{\partial^2 f}{\partial y\partial x}$
+the last equality holds since the function $f$ is smooth and, therefore, $\tfrac{\partial^2 f}{\partial x\partial y}=\tfrac{\partial^2 f}{\partial y\partial x}$
 
 
-Therefore the condition $D_{\mathbf{v}}^2f(x_0,y_0)>0$ for any $\mathbf{v}\ne\mathbf{0}$
+Therefore, the condition $D_{\mathbf{v}}^2f(x_0,y_0)>0$ for any $\mathbf{v}\ne\mathbf{0}$
 means that 
 \[a^2\tfrac{\partial^2 f}{\partial x^2}+2ab\tfrac{\partial^2 f}{\partial y\partial x}+b^2\tfrac{\partial^2 f}{\partial y^2}>0\]
 for any pair of real numbers $(a,b)$ at least one of which is not zero.
 
 Analyzing the last inequality for all possible pairs $(a,b)$ leads to the following theorem which is true analog of second derivative test for smooth functions of two variables; it gives sufficient conditions for a critical point to be a local maximum or\index{$D$}
-minimum of a \emph{smooth function}\index{smooth function} (i.e. a function whose partial derivatives of all orders
+minimum of a \emph{smooth function}\index{smooth function} (that is, a function whose partial derivatives of all orders
 exist and are continuous).
 The theorem will not be proved here.\footnote{See \cite[\S\,7.6]{tm}.}\index{Second Derivative Test}
 
 \statethm{thm:extsuff}{
- {Let $f(x,y)$ be a smooth real-valued function, with a critical point at $(x_0,y_0)$ (i.e.
+{Let $f(x,y)$ be a smooth real-valued function, with a critical point at $(x_0,y_0)$ (that is,
  $\nabla f(x_0,y_0) = \mathbf{0}$). Define
  \begin{displaymath}
   D = \dfrac{\partial^2 f}{\partial x^2}(x_0,y_0) \, \dfrac{\partial^2 f}{\partial y^2}(x_0,y_0) -
@@ -1343,7 +1349,10 @@ $\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$ if desired.
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = x^2 + xy + y^2 - 3x$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
+\par\noindent\emph{Solution:} 
+First find the critical points;
+that is, solve $\nabla f = \mathbf{0}$. 
+Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = 2x + y -3 \quad \text{and} \quad \frac{\partial f}{\partial y} = x + 2y
  \end{displaymath}
@@ -1369,7 +1378,10 @@ $\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$ if desired.
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = xy - x^3 - y^2$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
+\par\noindent\emph{Solution:} 
+First find the critical points;
+that is, solve $\nabla f = \mathbf{0}$. 
+Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = y - 3x^2 \quad \text{and} \quad \frac{\partial f}{\partial y} = x - 2y
  \end{displaymath}
@@ -1407,7 +1419,10 @@ then the critical points $(x,y)$ are the common solutions of the equations
 \hrule width \textwidth height 0.5pt
 \begin{exmp}\label{exmp:globalmin}
  Find all local maxima and minima of $f(x,y) = (x-2)^4 + (x-2y)^2$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
+\par\noindent\emph{Solution:} 
+First find the critical points;
+that is, solve $\nabla f = \mathbf{0}$. 
+Since
  \begin{displaymath}
   \frac{\partial f}{\partial x} = 4(x-2)^3 + 2(x-2y) \quad \text{and} \quad \frac{\partial f}{\partial y} = -4(x-2y)
  \end{displaymath}
@@ -1432,12 +1447,15 @@ So
  and so the test fails. What can be done in this situation? Sometimes it is possible to examine the function to see
  directly the nature of a critical point. In our case, we see that $f(x,y) \ge 0$ for all $(x,y)$, since $f(x,y)$ is
  the sum of fourth and second powers of numbers and hence must be nonnegative. But we also see that $f(2,1) = 0$.
- Thus $f(x,y) \ge 0 = f(2,1)$ for all $(x,y)$, and hence $(2,1)$ is in fact a \emph{global} minimum for $f$.
+ Thus $f(x,y) \ge 0 = f(2,1)$ for all $(x,y)$, and hence $(2,1)$ is, in fact, a \emph{global} minimum for $f$.
 \end{exmp}
 \hrule width \textwidth height 0.5pt
 \begin{exmp}
  Find all local maxima and minima of $f(x,y) = (x^2 + y^2 ) e^{-(x^2 + y^2 )}$.\smallskip
- \par\noindent\emph{Solution:} First find the critical points, i.e. where $\nabla f = \mathbf{0}$. Since
+\par\noindent\emph{Solution:} 
+First find the critical points;
+that is, solve $\nabla f = \mathbf{0}$. 
+Since
  \begin{align*}
   \frac{\partial f}{\partial x} ~ &= ~ 2x(1 - (x^2 + y^2 )) e^{-(x^2 + y^2 )}\\[6pt]
   \frac{\partial f}{\partial y} ~ &= ~ 2y(1 - (x^2 + y^2 )) e^{-(x^2 + y^2 )}
@@ -1891,10 +1909,11 @@ The Lagrange multiplier method for solving such problems can now be stated:
 }
 
 Recall that $\nabla g(x,y)$ is perpendicular to tangent line of the curve $g(x,y) = c$ at the point $(x,y)$.
-Therefore condition $\nabla f(x,y) = \lambda \nabla g(x,y)$ simply means that $\nabla f(x,y)$ is perpendicular to tangent line of the curve $g(x,y) = c$ at the point $(x,y)$.
+Therefore,
+the condition $\nabla f(x,y) = \lambda \nabla g(x,y)$ simply means that $\nabla f(x,y)$ is perpendicular to tangent line of the curve $g(x,y) = c$ at the point $(x,y)$.
 It should be intuitively clear that if $\nabla f(x,y)$ is not perpendicular to the tangent line then slight movement along the curve $g(x,y) = c$ can increase and decrease the value $f(x,y)$;
 in particular, $(x,y)$ is neither minimum nor maximum point.
-A rigorous proof however requires use of the Implicit Function Theorem, which is beyond the scope of this
+A rigorous proof, however, requires use of the Implicit Function Theorem, which is beyond the scope of this
 text.\footnote{See \cite[\S\,6.8]{tm} for more detail.} 
 
 Note that the theorem only gives a \emph{necessary} condition
@@ -1956,7 +1975,8 @@ The equation $\nabla f=\lambda \nabla g$ from Theorem~\ref{thm:lagrange} takes f
 Since $yx=1$, we have two critical points: 
 $(1,1)$ with the multiplier $1$ 
 and $(-1,-1)$ with the multiplier $-1$.
-Non of these points is maximum, nor minimum, in fact $f$ can positive and negative values with arbitrary large absolute value.
+Non of these points is maximum, nor minimum; 
+in fact, $f$ can positive and negative values with arbitrary large absolute value.
 On the other hand, it might happen that by the nature of the problem, $x$ and $y$ have to be positive (it is called implicit constraints) 
 then only one point $(1,1)$ satisfies is the constrained minimum point and the minimum is $2$.
 
