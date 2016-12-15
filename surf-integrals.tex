@@ -1696,7 +1696,7 @@ surfaces.\index{$\oiint\limits_{\Sigma}$}
 \startexercises\label{sec4dot4}
 \probs{A}
 \par\noindent For Exercises 1--4, use the Divergence Theorem to evaluate the surface integral
-$\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}$ of the given vector field $\mathbf{f}(x,y,z)$ over the
+\[\iint\limits_{\Sigma} \Dotprod{\mathbf{f}}{d\bm{\sigma}}\] of the given vector field $\mathbf{f}(x,y,z)$ over the
 surface $\Sigma$.
 \begin{enumerate}[\bfseries 1.]
  \item $\mathbf{f}(x,y,z) = x\mathbf{i} + 2y\mathbf{j} + 3z\mathbf{k}$, $\Sigma: x^2 + y^2 + z^2 = 9$
@@ -2307,9 +2307,9 @@ This is best seen by using another definition of $\curl\mathbf{f}$ which is
 equivalent%
 \footnote{See \cite{sch}, p. 78--81, for the derivation.}  to the definition given by
 formula (\ref{eqn:curl}). 
-Namely, for a point $(x,y,z)$ in $\Real{3}$,
+Namely, the value of $\Dotprod{\mathbf{n}}{(\curl\mathbf{f})}$ at a point $(x,y,z)$, is
 \begin{equation}\label{eqn:curlalt}
- \Dotprod{\mathbf{n}}{(\curl\mathbf{f})}(x,y,z) ~=~ \lim_{S \to 0} \frac{1}{S} \olineintvec{C}{f}{r} ~,
+\lim_{S \to 0} \frac{1}{S} \olineintvec{C}{f}{r},
 \end{equation}
 where $S$ is the surface area of a surface $\Sigma$ containing the point $(x,y,z)$ and with a simple closed boundary
 curve $C$ and positive unit normal vector $\mathbf{n}$ at $(x,y,z)$. In the limit, think of the curve $C$ shrinking to
@@ -2654,8 +2654,8 @@ The following theorem shows that this will be the case in general:
 The proof is straightforward and left as an exercise for the reader.
 
 \statecor{cor:divcurl0}{
- {The flux of the curl of a smooth vector field $\mathbf{f}(x,y,z)$ through any closed surface is zero.
- }
+{The flux of the curl of a smooth vector field $\mathbf{f}(x,y,z)$ through any closed surface is zero.
+}
 }
 \begin{proofbar}\begin{proof}[Proof:]
  Let $\Sigma$ be a closed surface which bounds a solid $S$. The flux of $\Crossprod{\nabla}{\mathbf{f}}$

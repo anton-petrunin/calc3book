@@ -6,10 +6,10 @@ Now that we are familiar with vectors and their operations, we can begin discuss
 vectors.\index{function!vector-valued}
 
 \statedefn{defn:vecfcn}{
- {A \textbf{vector-valued function of a real variable} is a rule that associates a vector $\mathbf{f}(t)$ with a real
-  number $t$, where $t$ is in $\Real{}$ or its interval (called the \textbf{domain} of $\mathbf{f}$). 
-  We write
-  $\mathbf{f}: D \rightarrow \Real{3}$ to denote that $\mathbf{f}$ is a mapping of $D$ into $\Real{3}$.}
+{A \textbf{vector-valued function of a real variable} is a rule that associates a vector $\mathbf{f}(t)$ with a real
+number $t$, where $t$ is in $\Real{}$ or its interval (called the \textbf{domain} of $\mathbf{f}$). 
+We write
+$\mathbf{f}: D \rightarrow \Real{3}$ to denote that $\mathbf{f}$ is a mapping of $D$ into $\Real{3}$.}
 }
 
 For example, $\mathbf{f}(t) = t \mathbf{i} + t^2 \mathbf{j} + t^3 \mathbf{k}$ is a vector-valued function in $\Real{3}$,
@@ -932,21 +932,22 @@ the osculating plane and the curvature at each point of the curve  $\mathbf{f}(t
   \begin{displaymath}
    \mathbf{T}(t) = \dfrac{\mathbf{f}'(t)}{\norm{\mathbf{f}'(t)}} .
   \end{displaymath}
-   \begin{enumerate}[(a)]
-  \item 
-  Show that
-  \begin{displaymath}
-   \mathbf{T}'(t) = \dfrac{\Crossprod{\mathbf{f}'(t)\,}{(\Crossprod{\mathbf{f}''(t)\,}{\,\mathbf{f}'(t)})}}{
-    \norm{\mathbf{f}'(t)}^3} .
-  \end{displaymath}
-  \item Use this formula to get an other proof of Theorem~\ref{thm:curvature-expressions}.
-   \end{enumerate}
-   \item\label{ex:g'''} Let $\mathbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
+\begin{enumerate}[(a)]
+\item Show that
+\begin{displaymath}
+\mathbf{T}'(t) = \dfrac{\Crossprod{\mathbf{f}'(t)\,}{(\Crossprod{\mathbf{f}''(t)\,}{\,\mathbf{f}'(t)})}}{
+\norm{\mathbf{f}'(t)}^3} .
+\end{displaymath}
+
+\item Use this formula to get an other proof of Theorem~\ref{thm:curvature-expressions}.
+\end{enumerate}
+
+\item\label{ex:g'''} Let $\mathbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
   Show that 
   \[\Dotprod{\mathbf{g}'''(s)}{\mathbf{g}'(s)}=-\kappa(s)^2.\]
   
   \item Let $\mathbf{g}$ be a smooth plane curve with arc length parametrization.
-  The curve $\mathbf{h}(s)=\mathbf{g}(s)-s\mathbf{g}'(s)$ is called \index{involute}\emph{involute} of $\mathbf{g}(s)$.
+  The curve \[\mathbf{h}(s)=\mathbf{g}(s)-s\mathbf{g}'(s)\] is called \index{involute}\emph{involute} of $\mathbf{g}(s)$.
   \begin{enumerate}[(a)]
   \item Show that 
   \[\norm{\mathbf{h}'(s)}=s\,\kappa(s)\] 
